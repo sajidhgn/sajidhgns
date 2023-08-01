@@ -22,7 +22,8 @@ export default function LanguageSwitcher() {
         id="languageSwitcher"
         className="form-select"
         value={currentLocale}
-        onChange={(e) => switchLanguage(e.target.value)}>
+        onChange={(e) => switchLanguage(e.target.value)}
+        >
         <option value="en"> English </option>
         <option value="ar">Arabic</option>
       </select>
