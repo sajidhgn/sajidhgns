@@ -28,8 +28,8 @@ const Header = (props) => {
                       }}
                       priority
                       quality={75}
-                      width={250}
-                      height={70}
+                      width={80}
+                      height={55}
                     />
                   </Link>
                 </div>
