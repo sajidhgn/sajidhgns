@@ -7,18 +7,13 @@ const ProjectSection = () => {
   return (
     <div className="wpo-project-area section-padding" id="portfolio">
       <div className="container">
-        <div className="wpo-section-title-s2">
           <div className="row align-items-center">
             <div className="col-lg-12 col-12">
-              <div className="title text-center">
+              <div className="wpo-section-title text-center">
                 <h2>Portfolio</h2>
-                <p>A curated selection of my recent work and expertise.</p>
               </div>
             </div>
-          
           </div>
-        </div>
-
         <div className="row">
           <div className="col-12">
             <div className="wpo-work-area bg-transparent">
@@ -43,6 +38,10 @@ const ProjectSection = () => {
                             width={0}
                             height={0}
                           />
+                          <div className="wpo-project-hover">
+                            <Link
+                              className="link-hover-project" href="/"><i className="fa fa-eye"></i></Link>
+                              </div>
                         </div>
                       </div>
                       <div className="col-lg-8 col-12">
@@ -52,9 +51,7 @@ const ProjectSection = () => {
                            
                             className="mb-4"
                           >
-                            <Link className="link-hover" href="/" target="_blank" rel="noopener noreferrer">
-                                                                    {project.title}
-                                                                </Link>
+                            <Link className="link-hover" href="/" target="_blank" rel="noopener noreferrer">{project.title}</Link>
                             
                           </h2>
                           <span>{project.subTitle}</span>

@@ -6,7 +6,6 @@ const SectionTitle = (props) => {
             <div className="col-lg-6 col-12">
                 <div className="wpo-section-title">
                     <h2>{props.Title}</h2>
-                    <p>A Journey Through My Professional Milestones.</p>
                 </div>
             </div>
         </div>

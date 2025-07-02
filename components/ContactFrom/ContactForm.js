@@ -28,13 +28,13 @@ const ContactForm = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="contact-validation-active">
       <div className="row">
-        <div className="col col-lg-6 col-12">
+        <div className="col col-lg-12 col-12">
           <div className="form-field">
             <input {...register('name')} type="text" placeholder="Your Name" />
             {errors.name && <p className="errorMessage">{errors.name.message}</p>}
           </div>
         </div>
-        <div className="col col-lg-6 col-12">
+        <div className="col col-lg-12 col-12">
           <div className="form-field">
             <input {...register('email')} type="email" placeholder="Your Email" />
             {errors.email && <p className="errorMessage">{errors.email.message}</p>}
