@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const Scrollbar = () => {

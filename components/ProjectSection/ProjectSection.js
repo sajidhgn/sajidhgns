@@ -1,16 +1,20 @@
-import React from "react";
+'use client';
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import Projects from "../../api/project";
 
 const ProjectSection = () => {
+    const t = useTranslations("projects_section");
+  const projects = t.raw("projects");
+
   return (
-    <div className="wpo-project-area section-padding" id="portfolio">
+    <div className="wpo-project-area section-padding" id="projects">
       <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-12 col-12">
               <div className="wpo-section-title text-center">
-                <h2>Portfolio</h2>
+                <h2> {t('title')}</h2>
               </div>
             </div>
           </div>
@@ -18,7 +22,7 @@ const ProjectSection = () => {
           <div className="col-12">
             <div className="wpo-work-area bg-transparent">
               <div className="wpo-work-wrap">
-                {Projects.map((project, pro) => (
+                {projects.map((project, pro) => (
                   <div className="wpo-work-item p-0" key={pro}>
                     <div className="row">
                       <div className="col-lg-4 col-12">

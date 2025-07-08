@@ -1,45 +1,13 @@
-import React, { Fragment, useState } from 'react';
-import List from "@mui/material/List";
-import ListItem from "@mui/material/List";
-import Collapse from "@mui/material/Collapse";
+"use client";
+import React, { useState } from 'react';
 import { Link } from 'react-scroll'
-import NavLink from 'next/link'
-
-const menus = [
-    {
-        id: 1,
-        title: 'Home',
-        link: 'home',
-        submenu: [
-            {
-                id: 11,
-                title: 'Home style 1',
-                link: '/'
-            },
-            {
-                id: 12,
-                title: 'Home style 2',
-                link: '/home2'
-            },
-            {
-                id: 13,
-                title: 'Home style 3',
-                link: '/home3'
-            }
-        ]
-    },
-
-]
 
 
 const MobileMenu = () => {
 
-    const [openId, setOpenId] = useState(0);
     const [menuActive, setMenuState] = useState(false);
 
-    const ClickHandler = () => {
-        window.scrollTo(10, 0);
-    }
+
 
     return (
         <div>
@@ -57,10 +25,10 @@ const MobileMenu = () => {
                         <Link activeClass="active" to="about" spy={true} smooth={true} duration={500}>About</Link>
                     </li>
                     <li>
-                        <Link activeClass="active" to="portfolio" spy={true} smooth={true} duration={500} onClick={ClickHandler}>Portfolio</Link>
+                        <Link activeClass="active" to="experience" spy={true} smooth={true} duration={500}>Experience</Link>
                     </li>
-                                        <li>
-                        <Link activeClass="active" to="testimonial" spy={true} smooth={true} duration={500}>Testimonial</Link>
+                    <li>
+                        <Link activeClass="active" to="portfolio" spy={true} smooth={true} duration={500} >Portfolio</Link>
                     </li>
                     <li>
                         <Link activeClass="active" to="contact" spy={true} smooth={true} duration={500}>Contact</Link>

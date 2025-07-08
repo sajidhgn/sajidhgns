@@ -1,4 +1,4 @@
-import React from "react";
+'use client';
 import Head from "next/head";
 
 const CommonHead = ({ title = "Sajidhgn | Senior Software Engineer", description, keywords }) => {
@@ -27,17 +27,6 @@ const CommonHead = ({ title = "Sajidhgn | Senior Software Engineer", description
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description || "Portfolio website of Sajidhgn, a Senior Software Engineer."} />
       <meta name="twitter:creator" content="@sajidhgn" />
-
-      {/* Favicon */}
-      <link rel="icon" href="/favicon.ico" />
-
-      {/* Fonts */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet"
-      />
 
       {/* Canonical URL */}
       <link rel="canonical" href="https://www.sajidhgn.com" />

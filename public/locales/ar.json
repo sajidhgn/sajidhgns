@@ -1,0 +1,152 @@
+{
+  "menu": [
+    {
+      "name": "الرئيسية",
+      "link": "home"
+    },
+    {
+      "name": "من أنا",
+      "link": "about"
+    },
+    {
+      "name": "الخبرات",
+      "link": "experience"
+    },
+    {
+      "name": "المشاريع",
+      "link": "projects"
+    },
+    {
+      "name": "تواصل",
+      "link": "contact"
+    }
+  ],
+  "banner": {
+    "greatings": "مرحبًا",
+    "subTitle": "أنا ساجد إتش جي إن",
+    "title": "مهندس برمجيات أول",
+    "description": "شغوف بالبرمجة وتحقيق أفكار العملاء على أرض الواقع.",
+    "button": "وظفني"
+  },
+  "about": {
+    "exp_duration": "08",
+    "exp_detail": "سنوات من الخبرة",
+    "satisfy_percentage": "100",
+    "satisfy_detail": "رضا العملاء",
+    "title": "من أنا",
+    "description": "شغوف بتصميم وتطوير مواقع وتطبيقات ويب جميلة تركز على تجربة المستخدم، مع الالتزام بكتابة كود نظيف وسهل الصيانة. أعمل بروح الفريق، أُقدّر التواصل الواضح، وأرحب بالنقد البناء، وأسعى دائمًا للتعلم والتطور."
+  },
+  "experience_section": {
+    "title": "خبرتي العملية",
+    "work_experience": [
+      {
+        "date": "2024 - حتى الآن",
+        "logo": "images/work/1.jpeg",
+        "position": "مطور Full Stack",
+        "companyName": "دبي",
+        "workFrom": "(عن بُعد)",
+        "webLink": "/",
+        "button": "اذهب إلى الموقع"
+      },
+      {
+        "date": "2023 - 2024",
+        "logo": "images/work/2.png",
+        "position": "مطور الواجهة الأمامية",
+        "companyName": "لاهور، البنجاب، باكستان",
+        "workFrom": "(عن بُعد)",
+        "webLink": "https://dycoders.com/",
+        "button": "اذهب إلى الموقع"
+      },
+      {
+        "date": "2021 - 2023",
+        "logo": "images/work/3.jpeg",
+        "position": "مطور الواجهة الأمامية",
+        "companyName": "لاهور، البنجاب، باكستان",
+        "workFrom": "(في المكتب)",
+        "webLink": "https://tanbits.com/",
+        "button": "اذهب إلى الموقع"
+      },
+      {
+        "date": "2019 - 2021",
+        "logo": "images/work/4.png",
+        "position": "مطور الواجهة الأمامية",
+        "companyName": "تورنتو، أونتاريو، كندا",
+        "workFrom": "(عن بُعد)",
+        "webLink": "http://mdhov.com/",
+        "button": "اذهب إلى الموقع"
+      },
+      {
+        "date": "2017 - 2019",
+        "logo": "images/work/5.jpeg",
+        "position": "مصمم واجهات المستخدم وتجربة المستخدم",
+        "companyName": "لاهور، البنجاب، باكستان",
+        "workFrom": "(في المكتب)",
+        "webLink": "https://www.linkedin.com/in/teambee/",
+        "button": "اذهب إلى الموقع"
+      }
+    ]
+  },
+  "projects_section": {
+    "title": "أعمالي",
+    "projects": [
+      {
+        "id": 1,
+        "pImg": "images/project/img-1.jpg",
+        "ps1img": "images/project-single/img-1.jpg",
+        "psub1img1": "images/project-single/p1.jpg",
+        "psub1img2": "images/project-single/p2.jpg",
+        "title": "Arkio - قالب ووردبريس للهندسة الداخلية والمعمارية",
+        "tags": ["تصميم ويب", "ووردبريس", "تصميم واجهات المستخدم"],
+        "subTitle": "Arkio هو قالب ووردبريس متعدد الاستخدامات مصمم لمتخصصي الهندسة الداخلية والمعمارية.",
+        "features": [
+          "تصميم متجاوب",
+          "تخطيطات قابلة للتخصيص",
+          "محسّن لمحركات البحث",
+          "دعم WooCommerce",
+          "استيراد تجريبي بنقرة واحدة",
+          "منشئ صفحات بالسحب والإفلات"
+        ]
+      },
+      {
+        "id": 2,
+        "pImg": "images/project/img-1.jpg",
+        "ps1img": "images/project-single/img-1.jpg",
+        "psub1img1": "images/project-single/p1.jpg",
+        "psub1img2": "images/project-single/p2.jpg",
+        "title": "Arkio - قالب ووردبريس للهندسة الداخلية والمعمارية",
+        "tags": ["تصميم ويب", "ووردبريس", "تصميم واجهات المستخدم"],
+        "subTitle": "Arkio هو قالب ووردبريس متعدد الاستخدامات مصمم لمتخصصي الهندسة الداخلية والمعمارية.",
+        "features": [
+          "تصميم متجاوب",
+          "تخطيطات قابلة للتخصيص",
+          "محسّن لمحركات البحث",
+          "دعم WooCommerce",
+          "استيراد تجريبي بنقرة واحدة",
+          "منشئ صفحات بالسحب والإفلات"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "اتصل بي",
+    "description": "إذا كنت مهتمًا بالعمل معي، لا تتردد في التواصل من خلال النموذج أدناه. هل ترغب في معرفة المزيد عن مهاراتي وخبرتي؟ تصفّح محفظتي وسيرتي الذاتية.",
+    "sub_description": "يمكنك أيضًا أن تجدني على القنوات التالية",
+    "get_in_touch": "تواصل معي",
+    "form": {
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "message": "الرسالة",
+      "submitButton": "إرسال"
+    },
+    "formErrors": {
+      "nameRequired": "الاسم مطلوب",
+      "nameInvalid": "يسمح فقط بالحروف والمسافات",
+      "emailRequired": "البريد الإلكتروني مطلوب",
+      "emailInvalid": "بريد إلكتروني غير صالح",
+      "messageRequired": "الرسالة مطلوبة"
+    }
+  },
+  "footer": {
+  "copyright": "جميع الحقوق محفوظة."
+  }
+}

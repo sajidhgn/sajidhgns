@@ -1,5 +1,4 @@
-import React from 'react'
-
+'use client';
 const SectionTitle = (props) => {
     return (
         <div className="row justify-content-center">

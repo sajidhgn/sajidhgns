@@ -1,12 +1,14 @@
-import React from "react";
+'use client';
 import { Link } from "react-scroll";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import MobileMenu from "../MobileMenu/MobileMenu";
+import LanguageSwitcher from "../language-switcher";
 
-const Header = (props) => {
-  const ClickHandler = () => {
-    window.scrollTo(10, 0);
-  };
+const Header = () => {
+    const t = useTranslations();
+    const menus = t.raw("menu");
+
 
   return (
     <header id="header" className="wpo-header-style-1">
@@ -43,69 +45,28 @@ const Header = (props) => {
                     <i className="ti-close"></i>
                   </button>
                   <ul className="nav navbar-nav mb-2 mb-lg-0">
-                    <li>
-                      <Link
-                        activeClass="active"
-                        to="home"
-                        spy={true}
-                        smooth={true}
-                        duration={500}
-                      >
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        activeClass="active"
-                        to="about"
-                        spy={true}
-                        smooth={true}
-                        duration={500}
-                      >
-                        About
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        activeClass="active"
-                        to="portfolio"
-                        spy={true}
-                        smooth={true}
-                        duration={500}
-                        onClick={ClickHandler}
-                      >
-                        Portfolio
-                      </Link>
-                    </li>
 
-                    <li>
-                      <Link
-                        activeClass="active"
-                        to="testimonial"
-                        spy={true}
-                        smooth={true}
-                        duration={500}
-                      >
-                        Testimonial
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        activeClass="active"
-                        to="contact"
-                        spy={true}
-                        smooth={true}
-                        duration={500}
-                      >
-                        Contact
-                      </Link>
-                    </li>
+                    {
+                      menus.map((menu, index) => (
+                        <li key={index}>
+                          <Link
+                            activeClass="active"
+                            to={menu.link}
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                          >
+                            {menu.name}
+                          </Link>
+                        </li>
+                      ))
+                    }
                   </ul>
                 </div>
               </div>
               <div className="col-lg-2 col-md-2 col-2">
                 <div className="header-right">
-                  <div className="header-btn">
+                  {/* <div className="header-btn">
                     <a
                       onClick={ClickHandler}
                       className="theme-btn"
@@ -120,7 +81,8 @@ const Header = (props) => {
                       />
                       Resume
                     </a>
-                  </div>
+                  </div> */}
+                  <LanguageSwitcher />
                 </div>
               </div>
             </div>

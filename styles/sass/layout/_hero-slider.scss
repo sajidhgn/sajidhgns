@@ -459,10 +459,6 @@
 		z-index: 1;
 		transform: translateY(-50%);
 
-		img {
-			border-radius: 50%;
-		}
-
 		@media(max-width:1600px) {
 			right: 100px;
 		}

@@ -1,8 +1,9 @@
-import React from 'react'
-
+'use client';
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
-      const currentYear = new Date().getFullYear();
+
+    const t = useTranslations("footer");
 
     return (
         <footer className="wpo-site-footer">
@@ -10,7 +11,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="separator"></div>
-                        <p className="copyright">Copyright &copy; {currentYear} Sajidhgn. All rights reserved.</p>
+                        <p className="copyright">{t('copyright')}</p>
                     </div>
                 </div>
             </div>

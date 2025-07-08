@@ -1,10 +1,14 @@
-import React from "react";
+'use client';
 import ContactForm from "../ContactFrom/ContactForm";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const ContactArea = (props) => {
+    const t = useTranslations("contact");
+
+
   return (
     <section
       className={`wpo-contact-area section-padding ${props.contactclass}`}
@@ -13,7 +17,7 @@ const ContactArea = (props) => {
       <div className="wpo-wpo-contact-form-map">
         <div className="container">
           <div className="row justify-content-center">
-            <SectionTitle Title={"Contact"} />
+            <SectionTitle Title={t('title')} />
             <div className="col-lg-6 col-md-12 col-12">
               <div className="wpo-contact-profile">
                 <Image
@@ -33,14 +37,10 @@ const ContactArea = (props) => {
               </div>
               <div className="wpo-contact-about">
                 <p>
-                  If you're interested in working together, feel free to reach
-                  out using the form below. Want to learn more about my skills
-                  and experience? Take a look at my{" "}
-                  <Link href="/">portfolio</Link> and{" "}
-                  <Link href="/">resume</Link>.
+                 {t('description')}
                 </p>
                 <div className="wpo-contact-social">
-                  <p>You can also find me on the following channels</p>
+                  <p>{t('sub_description')}</p>
                   <ul>
                     <li>
                       <Link href="/"><i className="fa fa-github"></i></Link>
@@ -58,7 +58,7 @@ const ContactArea = (props) => {
               <div className="row justify-content-center">
                 <div className="col col-lg-6 col-md-12 col-12">
                   <div className="wpo-contact-form">
-                    <h2>Get In Touch</h2>
+                    <h2>{t('get_in_touch')}</h2>
                     <ContactForm />
                   </div>
                 </div>

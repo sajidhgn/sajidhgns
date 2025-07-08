@@ -1,0 +1,153 @@
+{
+  "menu": [
+    {
+      "name": "Home",
+      "link": "home"
+    },
+    {
+      "name": "About",
+      "link": "about"
+    },
+    {
+      "name": "Experience",
+      "link": "experience"
+    },
+    {
+      "name": "Projects",
+      "link": "projects"
+    },
+    {
+      "name": "Contact",
+      "link": "contact"
+    }
+  ],
+  "banner": {
+    "greatings": "Hello",
+    "subTitle": "I am Sajidhgn",
+    "title": "Senior Software Engineer",
+    "description": "Passionate about coding, and making my client ideas come true.",
+    "button": "Hire me"
+  },
+  "about": {
+    "exp_duration": "08",
+    "exp_detail": "Years of Experience",
+    "satisfy_percentage": "100",
+    "satisfy_detail": "Clients Satisfections",
+    "title": "About me",
+    "description": "Passionate about designing and building beautiful, user-centric websites and applications, with a focus on clean, maintainable code. Enthusiastic team player who values clear communication, embraces feedback, and is always eager to learn and grow."
+  },
+  "experience_section": {
+    "title": "My Work Experience",
+    "work_experience": [
+      {
+        "date": "2024 - Present",
+        "logo": "images/work/1.jpeg",
+        "position": "Full Stack Developer",
+        "companyName": "Dubai",
+        "workFrom": "(Remote)",
+        "webLink": "/",
+        "button": "Go to Website"
+      },
+      {
+        "date": "2023 - 2024",
+        "logo": "images/work/2.png",
+        "position": "Frontend Developer",
+        "companyName": "Lahore, Punjab, Pakistan",
+        "workFrom": "(Remote)",
+        "webLink": "https://dycoders.com/",
+        "button": "Go to Website"
+      },
+      {
+        "date": "2021 - 2023",
+        "logo": "images/work/3.jpeg",
+        "position": "Frontend Developer",
+        "companyName": "Lahore, Punjab, Pakistan",
+        "workFrom": "(Onsite)",
+        "webLink": "https://tanbits.com/",
+        "button": "Go to Website"
+      },
+      {
+        "date": "2019 - 2021",
+        "logo": "images/work/4.png",
+        "position": "Frontend Developer",
+        "companyName": "Toronto Ontario, Canada",
+        "workFrom": "(Remote)",
+        "webLink": "http://mdhov.com/",
+        "button": "Go to Website"
+      },
+      {
+        "date": "2017 - 2019",
+        "logo": "images/work/5.jpeg",
+        "position": "UI/UX Developer",
+        "companyName": "Lahore, Punjab, Pakistan",
+        "workFrom": "(Onsite)",
+        "webLink": "https://www.linkedin.com/in/teambee/",
+        "button": "Go to Website"
+      }
+    ]
+  },
+  "projects_section": {
+    "title": "Portfolio",
+    "projects": [
+      {
+        "id": 1,
+        "pImg": "images/project/img-1.jpg",
+        "ps1img": "images/project-single/img-1.jpg",
+        "psub1img1": "images/project-single/p1.jpg",
+        "psub1img2": "images/project-single/p2.jpg",
+        "title": "Arkio - Architecture & Interior WordPress Theme",
+        "tags": ["Web Design", "WordPress", "UI/UX Design"],
+        "subTitle": "Arkio is a versatile WordPress theme designed for architecture and interior design professionals.",
+        "features": [
+          "Responsive Design",
+          "Customizable Layouts",
+          "SEO Optimized",
+          "WooCommerce Support",
+          "One-Click Demo Import",
+          "Drag and Drop Page Builder"
+        ]
+      },
+      {
+        "id": 2,
+        "pImg": "images/project/img-1.jpg",
+        "ps1img": "images/project-single/img-1.jpg",
+        "psub1img1": "images/project-single/p1.jpg",
+        "psub1img2": "images/project-single/p2.jpg",
+        "title": "Arkio - Architecture & Interior WordPress Theme",
+        "tags": ["Web Design", "WordPress", "UI/UX Design"],
+        "subTitle": "Arkio is a versatile WordPress theme designed for architecture and interior design professionals.",
+        "features": [
+          "Responsive Design",
+          "Customizable Layouts",
+          "SEO Optimized",
+          "WooCommerce Support",
+          "One-Click Demo Import",
+          "Drag and Drop Page Builder"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "If you're interested in working together, feel free to reach out using the form below. Want to learn more about my skills and experience? Take a look at my portfolio and resume.",
+    "sub_description": "You can also find me on the following channels",
+    "get_in_touch": "Get in Touch",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submitButton": "Send"
+    },
+    "formErrors": {
+      "nameRequired": "Name is required",
+      "nameInvalid": "Only letters and spaces allowed",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email",
+      "messageRequired": "Message is required"
+    }
+  }
+  ,
+  "footer": {
+  "copyright": "All Rights Reserved."
+  }
+}

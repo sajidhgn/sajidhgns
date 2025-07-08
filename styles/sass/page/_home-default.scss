@@ -1976,12 +1976,12 @@
   padding-top: 20px;
 
   ul {
-	display: flex;
-	align-items: center;
-	column-gap: 10px;
-	justify-content: center;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    justify-content: center;
     li {
-		list-style: none;
+      list-style: none;
       a {
         display: inline-block;
         width: 40px;
@@ -1999,6 +1999,58 @@
         &:hover {
           background-color: $theme-primary-color-s2;
           color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+#languageSwitcher {
+  background-color: #00bcd4;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  color: #ffffff;
+  width: 120px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-align: left;
+  font-size: 13px;
+}
+
+// RTL Styles
+
+.br-app.rtl {
+  .static-hero {
+    .static-hero-right {
+      position: absolute;
+      top: 53%;
+      right: auto;
+      z-index: 1;
+      transform: translateY(-50%);
+      left: 200px;
+    }
+    .wpo-static-hero-inner {
+      text-align: right;
+    }
+  }
+  .wpo-work-area {
+    .wpo-work-wrap {
+      .wpo-work-item {
+        ul.tags-list {
+          justify-content: right;
+          padding-right: 0;
+        }
+        ul.features-list {
+          padding-right: 0;
+          .ti-arrow-right:before {
+            content: "\e629";
+          }
         }
       }
     }
