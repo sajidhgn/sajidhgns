@@ -1,12 +1,14 @@
 "use client";
 import React, { useState } from 'react';
-import { Link } from 'react-scroll'
+import { Link } from 'react-scroll';
+import { useTranslations } from 'next-intl';
 
 
 const MobileMenu = () => {
 
     const [menuActive, setMenuState] = useState(false);
-
+    const t = useTranslations();
+    const menus = t.raw("menu");
 
 
     return (
@@ -17,23 +19,22 @@ const MobileMenu = () => {
                 </div>
 
                 <ul className="responsivemenu">
-                
-                    <li>
-                        <Link activeClass="active" to="home" spy={true} smooth={true} duration={500}>Home</Link>
-                    </li>
-                    <li>
-                        <Link activeClass="active" to="about" spy={true} smooth={true} duration={500}>About</Link>
-                    </li>
-                    <li>
-                        <Link activeClass="active" to="experience" spy={true} smooth={true} duration={500}>Experience</Link>
-                    </li>
-                    <li>
-                        <Link activeClass="active" to="portfolio" spy={true} smooth={true} duration={500} >Portfolio</Link>
-                    </li>
-                    <li>
-                        <Link activeClass="active" to="contact" spy={true} smooth={true} duration={500}>Contact</Link>
-                    </li>
 
+                    {
+                        menus.map((menu, index) => (
+                            <li key={index}>
+                                <Link
+                                    activeClass="active"
+                                    to={menu.link}
+                                    spy={true}
+                                    smooth={true}
+                                    duration={500}
+                                >
+                                    {menu.name}
+                                </Link>
+                            </li>
+                        ))
+                    }
                 </ul>
 
             </div>

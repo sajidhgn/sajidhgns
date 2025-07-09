@@ -66,22 +66,6 @@ const Header = () => {
               </div>
               <div className="col-lg-2 col-md-2 col-2">
                 <div className="header-right">
-                  {/* <div className="header-btn">
-                    <a
-                      onClick={ClickHandler}
-                      className="theme-btn"
-                      download="My Cv"
-                      href="images/cv.jpg"
-                      title="ImageName"
-                    >
-                      <img
-                        className="hide-img"
-                        alt="ImageName"
-                        src="images/cv.jpg"
-                      />
-                      Resume
-                    </a>
-                  </div> */}
                   <LanguageSwitcher />
                 </div>
               </div>

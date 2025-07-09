@@ -43,10 +43,10 @@ const ContactArea = (props) => {
                   <p>{t('sub_description')}</p>
                   <ul>
                     <li>
-                      <Link href="/"><i className="fa fa-github"></i></Link>
+                      <Link target="_blank" href="https://github.com/sajidhgn"><i className="fa fa-github"></i></Link>
                     </li>
                     <li>
-                      <Link href="/"><i className="fa fa-linkedin"></i></Link>
+                      <Link  target="_blank" href="https://www.linkedin.com/in/sajidhgn/"><i className="fa fa-linkedin"></i></Link>
                     </li>
                   </ul>
                 </div>

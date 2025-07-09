@@ -29,7 +29,7 @@
     "button": "Hire me"
   },
   "about": {
-    "exp_duration": "08",
+    "exp_duration": "+5",
     "exp_detail": "Years of Experience",
     "satisfy_percentage": "100",
     "satisfy_detail": "Clients Satisfections",
@@ -91,39 +91,82 @@
     "projects": [
       {
         "id": 1,
-        "pImg": "images/project/img-1.jpg",
-        "ps1img": "images/project-single/img-1.jpg",
-        "psub1img1": "images/project-single/p1.jpg",
-        "psub1img2": "images/project-single/p2.jpg",
-        "title": "Arkio - Architecture & Interior WordPress Theme",
-        "tags": ["Web Design", "WordPress", "UI/UX Design"],
-        "subTitle": "Arkio is a versatile WordPress theme designed for architecture and interior design professionals.",
+        "pImg": "images/project/workinaus.png",
+        "title": "Work in Aus - A Job Portal",
+        "tags": ["Reactjs", "Nextjs", "Redux", "Bootstrap","Api Integration", "Elastic Search Integration"],
+        "subTitle": "Work in AUS is a job portal connecting job seekers with top employers across Australia. Like Rozee, Mustakbil, and Indeed, it offers a wide range of job listings, easy applications, and career resources for local and international candidates.",
         "features": [
           "Responsive Design",
-          "Customizable Layouts",
           "SEO Optimized",
-          "WooCommerce Support",
-          "One-Click Demo Import",
-          "Drag and Drop Page Builder"
-        ]
+          "User Roles (Employer, Job Seeker)",
+          "Job Listings and Applications",
+          "Search and Filter Jobs",
+          "User Authentication"
+        ],
+        "button": "https://workinaus.com.au/"
       },
       {
         "id": 2,
-        "pImg": "images/project/img-1.jpg",
-        "ps1img": "images/project-single/img-1.jpg",
-        "psub1img1": "images/project-single/p1.jpg",
-        "psub1img2": "images/project-single/p2.jpg",
-        "title": "Arkio - Architecture & Interior WordPress Theme",
-        "tags": ["Web Design", "WordPress", "UI/UX Design"],
-        "subTitle": "Arkio is a versatile WordPress theme designed for architecture and interior design professionals.",
+        "pImg": "images/project/tvhub.png",
+        "title": "Learning Hub - Online Learning Platform like Udemy",
+        "tags": ["Reactjs", "Nextjs", "Redux Toolkit", "Bootstrap", "Api Integration", "Stripe Integration", "Social Authentication" ],
+        "subTitle": "Learning hub is a learning platform that connects learners with top-notch courses and instructors, offering a seamless online education experience.",
         "features": [
           "Responsive Design",
-          "Customizable Layouts",
           "SEO Optimized",
-          "WooCommerce Support",
-          "One-Click Demo Import",
-          "Drag and Drop Page Builder"
-        ]
+          "Chat integraton",
+          "Follow, Unfollow, Like, Comment",
+          "Payment Integration",
+          "Community Like LinkedIn"
+        ],
+        "button": "https://localhost.mycontenthub.tv/"
+      },
+      {
+        "id": 3,
+        "pImg": "images/project/peepskill.png",
+        "title": "PeepSkill - A Sports Social Media Platform",
+        "tags": ["Reactjs", "Nextjs", "TailwindCSS", "Api Integration", "WebSockets" ,"Nodejs", "Expressjs","MySQL" ],
+        "subTitle": "The global social media platform built for athletes, coaches, and spectators to connect, inspire, and grow together",
+        "features": [
+          "Responsive Design",
+          "SEO Optimized",
+          "Live Chat",
+          "Role Management (Athletes, Coaches, Guests)", 
+          "Community Like LinkedIn",
+          "Blogs and Articles"
+        ],
+        "button": "http://peepskill.com/"
+      },
+       {
+        "id": 4,
+        "pImg": "images/project/pms.png",
+        "title": "ShahJeePetrolium - A Fuel Management System",
+        "tags": ["Reactjs", "Nextjs", "TailwindCSS", "Api Integration" ],
+        "subTitle": "This system is designed to streamline fuel operations across multiple roles and branches, ensuring smooth, secure, and efficient transactions.",
+        "features": [
+          "Responsive Design",
+          "Role Management (Super-Admin, Admin, Clients, Delivery)", 
+          "QR Code Card with Scanning",
+          "Charts Integrations",
+          "Printal Reciepts and Invoices",
+          "Balance Sheet"
+        ],
+        "button": "https://shahjeepetroleum.com/"
+      },
+      {
+        "id": 5,
+        "pImg": "images/project/travel.png",
+        "title": "Royal Vision Dubai - A Travel Agency",
+        "tags": ["Reactjs", "Nextjs", "TailwindCSS", "Api Integration", "React Query", "CCAvenue Payment" ],
+        "subTitle": "the global social media platform built for athletes, coaches, and spectators to connect, inspire, and grow together",
+        "features": [
+          "Responsive Design",
+          "SEO Optimized",
+          "Ecommerce Functionality",
+          "Payment Integration",
+          "TripAdvisor, Google Reviews Integration"
+        ],
+        "button": "https://www.royalvisiondubai.com/"
       }
     ]
   },

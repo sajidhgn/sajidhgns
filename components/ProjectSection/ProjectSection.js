@@ -34,6 +34,7 @@ const ProjectSection = () => {
                             className="img-fluid"
                             style={{
                               objectFit: "cover",
+                              objectPosition: "top",
                               width: "100%",
                               height: "290px",
                             }}
@@ -43,8 +44,8 @@ const ProjectSection = () => {
                             height={0}
                           />
                           <div className="wpo-project-hover">
-                            <Link
-                              className="link-hover-project" href="/"><i className="fa fa-eye"></i></Link>
+                            <a
+                              className="link-hover-project" target="_blank" href={project.button}><i className="fa fa-eye"></i></a>
                               </div>
                         </div>
                       </div>
@@ -55,7 +56,7 @@ const ProjectSection = () => {
                            
                             className="mb-4"
                           >
-                            <Link className="link-hover" href="/" target="_blank" rel="noopener noreferrer">{project.title}</Link>
+                            <a className="link-hover" href={project.button} target="_blank" rel="noopener noreferrer">{project.title}</a>
                             
                           </h2>
                           <span>{project.subTitle}</span>
@@ -83,6 +84,17 @@ const ProjectSection = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+                <div className="mt-4 d-flex justify-content-center">
+                  <a
+                    className="theme-btn"
+                    href="https://photos.app.goo.gl/yyxDsvG7kfbDi6cc9"
+                    title="view-more"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                     View More
+                  </a>
               </div>
             </div>
           </div>

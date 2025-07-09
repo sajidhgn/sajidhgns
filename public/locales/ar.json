@@ -29,7 +29,7 @@
     "button": "وظفني"
   },
   "about": {
-    "exp_duration": "08",
+    "exp_duration": "+5",
     "exp_detail": "سنوات من الخبرة",
     "satisfy_percentage": "100",
     "satisfy_detail": "رضا العملاء",
@@ -91,39 +91,82 @@
     "projects": [
       {
         "id": 1,
-        "pImg": "images/project/img-1.jpg",
-        "ps1img": "images/project-single/img-1.jpg",
-        "psub1img1": "images/project-single/p1.jpg",
-        "psub1img2": "images/project-single/p2.jpg",
-        "title": "Arkio - قالب ووردبريس للهندسة الداخلية والمعمارية",
-        "tags": ["تصميم ويب", "ووردبريس", "تصميم واجهات المستخدم"],
-        "subTitle": "Arkio هو قالب ووردبريس متعدد الاستخدامات مصمم لمتخصصي الهندسة الداخلية والمعمارية.",
+        "pImg": "images/project/workinaus.png",
+        "title": "Work in Aus - بوابة وظائف",
+        "tags": ["Reactjs", "Nextjs", "Redux", "Bootstrap", "Api Integration", "Elastic Search Integration"],
+        "subTitle": "Work in AUS هي بوابة وظائف تربط الباحثين عن عمل بأفضل أصحاب العمل في أستراليا. مثل Rozee وMustakbil وIndeed، تقدم مجموعة واسعة من الوظائف وطرق تقديم سهلة وموارد مهنية للمحليين والدوليين.",
         "features": [
           "تصميم متجاوب",
-          "تخطيطات قابلة للتخصيص",
           "محسّن لمحركات البحث",
-          "دعم WooCommerce",
-          "استيراد تجريبي بنقرة واحدة",
-          "منشئ صفحات بالسحب والإفلات"
-        ]
+          "أدوار المستخدمين (صاحب عمل، باحث عن عمل)",
+          "إعلانات وظائف وتقديمات",
+          "البحث والتصفية عن الوظائف",
+          "تسجيل دخول وتوثيق المستخدمين"
+        ],
+        "button": "https://workinaus.com.au/"
       },
       {
         "id": 2,
-        "pImg": "images/project/img-1.jpg",
-        "ps1img": "images/project-single/img-1.jpg",
-        "psub1img1": "images/project-single/p1.jpg",
-        "psub1img2": "images/project-single/p2.jpg",
-        "title": "Arkio - قالب ووردبريس للهندسة الداخلية والمعمارية",
-        "tags": ["تصميم ويب", "ووردبريس", "تصميم واجهات المستخدم"],
-        "subTitle": "Arkio هو قالب ووردبريس متعدد الاستخدامات مصمم لمتخصصي الهندسة الداخلية والمعمارية.",
+        "pImg": "images/project/tvhub.png",
+        "title": "Learning Hub - منصة تعليمية مثل Udemy",
+        "tags": ["Reactjs", "Nextjs", "Redux Toolkit", "Bootstrap", "API Integration", "Stripe Integration", "Elastic Search Integration"],
+        "subTitle": "Learning Hub هي منصة تعليمية تربط المتعلمين بأفضل الدورات والمدربين، وتوفر تجربة تعليمية عبر الإنترنت سلسة.",
         "features": [
           "تصميم متجاوب",
-          "تخطيطات قابلة للتخصيص",
           "محسّن لمحركات البحث",
-          "دعم WooCommerce",
-          "استيراد تجريبي بنقرة واحدة",
-          "منشئ صفحات بالسحب والإفلات"
-        ]
+          "دمج المحادثات",
+          "متابعة، إلغاء المتابعة، إعجاب، تعليق",
+          "تكامل الدفع الإلكتروني",
+          "مجتمع مثل LinkedIn"
+        ],
+        "button": "https://localhost.mycontenthub.tv/"
+      },
+      {
+        "id": 3,
+        "pImg": "images/project/peepskill.png",
+        "title": "PeepSkill - منصة تواصل رياضية",
+        "tags": ["Reactjs", "Nextjs", "TailwindCSS", "Api Integration", "WebSockets", "Nodejs", "Expressjs","MySQL"],
+        "subTitle": "منصة تواصل اجتماعي عالمية مصممة للرياضيين والمدربين والجماهير للتواصل والإلهام والنمو معًا.",
+        "features": [
+          "تصميم متجاوب",
+          "محسّن لمحركات البحث",
+          "محادثة مباشرة",
+          "إدارة الأدوار (رياضيين، مدربين، زوار)",
+          "مجتمع مثل LinkedIn",
+          "مدونات ومقالات"
+        ],
+        "button": "http://peepskill.com/"
+      },
+      {
+        "id": 4,
+        "pImg": "images/project/pms.png",
+        "title": "ShahJeePetrolium - نظام إدارة الوقود",
+        "tags": ["Reactjs", "Nextjs", "TailwindCSS", "API Integration"],
+        "subTitle": "تم تصميم هذا النظام لتبسيط عمليات الوقود عبر أدوار وفروع متعددة، لضمان عمليات آمنة وسلسة وفعّالة.",
+        "features": [
+          "تصميم متجاوب",
+          "إدارة الأدوار (سوبر أدمن، أدمن، العملاء، التوصيل)",
+          "بطاقة QR ومسح ضوئي",
+          "دمج الرسوم البيانية",
+          "طباعة الإيصالات والفواتير",
+          "ميزانية وتقارير مالية"
+        ],
+        "button": "https://shahjeepetroleum.com/"
+      },
+      {
+        "id": 5,
+        "pImg": "images/project/travel.png",
+        "title": "Royal Vision Dubai - وكالة سفر",
+        "tags": ["Reactjs", "Nextjs", "TailwindCSS", "API Integration", "React Query", "CCAvenue Payment"],
+        "subTitle": "منصة تواصل اجتماعي عالمية مصممة للرياضيين والمدربين والجماهير للتواصل والإلهام والنمو معًا.",
+        "features": [
+          "تصميم متجاوب",
+          "محسّن لمحركات البحث",
+          "وظائف التجارة الإلكترونية",
+          "تكامل الدفع الإلكتروني",
+          "دمج تقييمات TripAdvisor وGoogle"
+        ],
+        "button": "https://www.royalvisiondubai.com/"
       }
     ]
   },
