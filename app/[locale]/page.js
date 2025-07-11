@@ -14,7 +14,6 @@ const Home=()=>{
   return (
     <div id="scrool">
       <CommonHead />
-     
       <Fragment>
         <div className="br-app">
           <Navbar />
