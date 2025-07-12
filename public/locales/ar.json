@@ -201,21 +201,13 @@
       },
       {
         "id": 6,
-        "pImg": "images/project/mdhov.png",
-        "title": "MDHOV - وكالة رقمية",
-        "tags": ["Html5", "CSS", "Bootstrap", "Wordpress", "AJAX", "Laravel"],
-        "subTitle": "وكالة رقمية مقرها كندا متخصصة في تطوير الويب، التصميم، وحلول التسويق الرقمي.",
-        "features": ["تصميم متجاوب", "مدونات ومقالات", "دمج البريد الإلكتروني"],
-        "button": "https://www.mdhov.com/"
-      },
-      {
-        "id": 7,
         "pImg": "images/project/ounlab.png",
         "title": "OUNLAB - نظام إدارة المشاريع",
         "tags": [
           "Reactjs",
           "Nextjs",
           "TailwindCSS",
+          "Redux Toolkit",
           "API Integration",
           "WebSockets",
           "Stripe Payment"
@@ -230,7 +222,17 @@
           "تحميل الملفات وإدارتها"
         ],
         "button": "https://oun.ai"
+      },
+      {
+        "id": 7,
+        "pImg": "images/project/mdhov.png",
+        "title": "MDHOV - وكالة رقمية",
+        "tags": ["Html5", "CSS", "Bootstrap", "Wordpress", "AJAX", "Laravel"],
+        "subTitle": "وكالة رقمية مقرها كندا متخصصة في تطوير الويب، التصميم، وحلول التسويق الرقمي.",
+        "features": ["تصميم متجاوب", "مدونات ومقالات", "دمج البريد الإلكتروني"],
+        "button": "https://www.mdhov.com/"
       }
+      
     ]
   },
   "contact": {

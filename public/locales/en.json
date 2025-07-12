@@ -170,22 +170,9 @@
       },
       {
         "id": 6,
-        "pImg": "images/project/mdhov.png",
-        "title": "MDHOV - A Digital Agency",
-        "tags": ["Html5", "CSS", "Bootstrap", "WordPress", "AJAX", "Laravel" ],
-        "subTitle": "A canadian based digital agency that specializes in web development, design, and digital marketing solutions.",
-        "features": [
-          "Responsive Design",
-          "Blogs and Articles",
-          "Email Integration"
-        ],
-        "button": "https://www.mdhov.com/"
-      },
-      {
-        "id": 7,
         "pImg": "images/project/ounlab.png",
         "title": "OUNLAB - A Project Management System",
-        "tags": ["Reactjs", "Nextjs", "TailwindCSS", "Api Integration", "WebSockets", "Stripe Payment" ],
+        "tags": ["Reactjs", "Nextjs", "TailwindCSS","Redux Toolkit", "Api Integration", "WebSockets", "Stripe Payment" ],
         "subTitle": "The global social media platform built for athletes, coaches, and spectators to connect, inspire, and grow together",
         "features": [
           "Responsive Design",
@@ -196,7 +183,21 @@
           "File Upload and Management"
         ],
         "button": "https://oun.ai"
+      },
+      {
+        "id": 7,
+        "pImg": "images/project/mdhov.png",
+        "title": "MDHOV - A Digital Agency",
+        "tags": ["Html5", "CSS", "Bootstrap", "WordPress", "AJAX", "Laravel" ],
+        "subTitle": "A canadian based digital agency that specializes in web development, design, and digital marketing solutions.",
+        "features": [
+          "Responsive Design",
+          "Blogs and Articles",
+          "Email Integration"
+        ],
+        "button": "https://www.mdhov.com/"
       }
+      
     ]
   },
   "contact": {
