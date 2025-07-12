@@ -359,7 +359,7 @@ export default function About() {
                       width="64"
                       height="64"
                       viewBox="0 0 512 512"
-                      enable-background="new 0 0 512 512"
+                      enableBackground="new 0 0 512 512"
                     >
                       <title>Shopify</title>
                       <g id="c2be471c56fc5b4dd571614bb3052f50">

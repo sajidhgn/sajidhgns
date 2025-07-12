@@ -93,7 +93,14 @@
         "id": 1,
         "pImg": "images/project/workinaus.png",
         "title": "Work in Aus - بوابة وظائف",
-        "tags": ["Reactjs", "Nextjs", "Redux", "Bootstrap", "Api Integration", "Elastic Search Integration"],
+        "tags": [
+          "Reactjs",
+          "Nextjs",
+          "Redux",
+          "Bootstrap",
+          "Api Integration",
+          "Elastic Search Integration"
+        ],
         "subTitle": "Work in AUS هي بوابة وظائف تربط الباحثين عن عمل بأفضل أصحاب العمل في أستراليا. مثل Rozee وMustakbil وIndeed، تقدم مجموعة واسعة من الوظائف وطرق تقديم سهلة وموارد مهنية للمحليين والدوليين.",
         "features": [
           "تصميم متجاوب",
@@ -109,7 +116,15 @@
         "id": 2,
         "pImg": "images/project/tvhub.png",
         "title": "Learning Hub - منصة تعليمية مثل Udemy",
-        "tags": ["Reactjs", "Nextjs", "Redux Toolkit", "Bootstrap", "API Integration", "Stripe Integration", "Elastic Search Integration"],
+        "tags": [
+          "Reactjs",
+          "Nextjs",
+          "Redux Toolkit",
+          "Bootstrap",
+          "API Integration",
+          "Stripe Integration",
+          "Elastic Search Integration"
+        ],
         "subTitle": "Learning Hub هي منصة تعليمية تربط المتعلمين بأفضل الدورات والمدربين، وتوفر تجربة تعليمية عبر الإنترنت سلسة.",
         "features": [
           "تصميم متجاوب",
@@ -125,7 +140,16 @@
         "id": 3,
         "pImg": "images/project/peepskill.png",
         "title": "PeepSkill - منصة تواصل رياضية",
-        "tags": ["Reactjs", "Nextjs", "TailwindCSS", "Api Integration", "WebSockets", "Nodejs", "Expressjs","MySQL"],
+        "tags": [
+          "Reactjs",
+          "Nextjs",
+          "TailwindCSS",
+          "Api Integration",
+          "WebSockets",
+          "Nodejs",
+          "Expressjs",
+          "MySQL"
+        ],
         "subTitle": "منصة تواصل اجتماعي عالمية مصممة للرياضيين والمدربين والجماهير للتواصل والإلهام والنمو معًا.",
         "features": [
           "تصميم متجاوب",
@@ -157,7 +181,14 @@
         "id": 5,
         "pImg": "images/project/travel.png",
         "title": "Royal Vision Dubai - وكالة سفر",
-        "tags": ["Reactjs", "Nextjs", "TailwindCSS", "API Integration", "React Query", "CCAvenue Payment"],
+        "tags": [
+          "Reactjs",
+          "Nextjs",
+          "TailwindCSS",
+          "API Integration",
+          "React Query",
+          "CCAvenue Payment"
+        ],
         "subTitle": "منصة تواصل اجتماعي عالمية مصممة للرياضيين والمدربين والجماهير للتواصل والإلهام والنمو معًا.",
         "features": [
           "تصميم متجاوب",
@@ -167,6 +198,38 @@
           "دمج تقييمات TripAdvisor وGoogle"
         ],
         "button": "https://www.royalvisiondubai.com/"
+      },
+      {
+        "id": 6,
+        "pImg": "images/project/mdhov.png",
+        "title": "MDHOV - وكالة رقمية",
+        "tags": ["Html5", "CSS", "Bootstrap", "Wordpress", "AJAX", "Laravel"],
+        "subTitle": "وكالة رقمية مقرها كندا متخصصة في تطوير الويب، التصميم، وحلول التسويق الرقمي.",
+        "features": ["تصميم متجاوب", "مدونات ومقالات", "دمج البريد الإلكتروني"],
+        "button": "https://www.mdhov.com/"
+      },
+      {
+        "id": 7,
+        "pImg": "images/project/ounlab.png",
+        "title": "OUNLAB - نظام إدارة المشاريع",
+        "tags": [
+          "Reactjs",
+          "Nextjs",
+          "TailwindCSS",
+          "API Integration",
+          "WebSockets",
+          "Stripe Payment"
+        ],
+        "subTitle": "منصة تواصل اجتماعي عالمية بُنيت للرياضيين والمدربين والمشجعين للتواصل والإلهام والنمو معًا.",
+        "features": [
+          "تصميم متجاوب",
+          "إدارة الأدوار (مشرف، مستخدم)",
+          "تكامل الدفع",
+          "لوحة تحكم مع الرسوم البيانية",
+          "إدارة المهام",
+          "تحميل الملفات وإدارتها"
+        ],
+        "button": "https://oun.ai"
       }
     ]
   },
@@ -190,6 +253,6 @@
     }
   },
   "footer": {
-  "copyright": "جميع الحقوق محفوظة."
+    "copyright": "جميع الحقوق محفوظة."
   }
 }

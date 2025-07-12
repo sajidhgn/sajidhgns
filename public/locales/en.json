@@ -158,7 +158,7 @@
         "pImg": "images/project/travel.png",
         "title": "Royal Vision Dubai - A Travel Agency",
         "tags": ["Reactjs", "Nextjs", "TailwindCSS", "Api Integration", "React Query", "CCAvenue Payment" ],
-        "subTitle": "the global social media platform built for athletes, coaches, and spectators to connect, inspire, and grow together",
+        "subTitle": "The global social media platform built for athletes, coaches, and spectators to connect, inspire, and grow together",
         "features": [
           "Responsive Design",
           "SEO Optimized",
@@ -167,6 +167,35 @@
           "TripAdvisor, Google Reviews Integration"
         ],
         "button": "https://www.royalvisiondubai.com/"
+      },
+      {
+        "id": 6,
+        "pImg": "images/project/mdhov.png",
+        "title": "MDHOV - A Digital Agency",
+        "tags": ["Html5", "CSS", "Bootstrap", "WordPress", "AJAX", "Laravel" ],
+        "subTitle": "A canadian based digital agency that specializes in web development, design, and digital marketing solutions.",
+        "features": [
+          "Responsive Design",
+          "Blogs and Articles",
+          "Email Integration"
+        ],
+        "button": "https://www.mdhov.com/"
+      },
+      {
+        "id": 7,
+        "pImg": "images/project/ounlab.png",
+        "title": "OUNLAB - A Project Management System",
+        "tags": ["Reactjs", "Nextjs", "TailwindCSS", "Api Integration", "WebSockets", "Stripe Payment" ],
+        "subTitle": "The global social media platform built for athletes, coaches, and spectators to connect, inspire, and grow together",
+        "features": [
+          "Responsive Design",
+          "Role Management (Admin, User)", 
+          "Payment Integration",
+          "Dashboard with Charts",
+          "Task Management",
+          "File Upload and Management"
+        ],
+        "button": "https://oun.ai"
       }
     ]
   },
