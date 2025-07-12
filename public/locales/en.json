@@ -186,6 +186,22 @@
       },
       {
         "id": 7,
+        "pImg": "images/project/papaz.jpg",
+        "title": "Papaz Pizza - A Restaurant Management System",
+        "tags": ["Reactjs", "ElectronJs", "TailwindCSS", "Stripe Payment" ],
+        "subTitle": "A restaurant management system that allows users to manage their restaurant operations efficiently, including order management, inventory tracking, and customer management.",
+        "features": [
+          "Responsive Design",
+          "Role Management (Admin, User)", 
+          "Payment Integration",
+          "Dashboard with Charts",
+          "Order Management",
+          "Inventory Tracking"
+        ],
+        "button": "/"
+      },
+      {
+        "id": 8,
         "pImg": "images/project/mdhov.png",
         "title": "MDHOV - A Digital Agency",
         "tags": ["Html5", "CSS", "Bootstrap", "WordPress", "AJAX", "Laravel" ],

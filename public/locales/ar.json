@@ -225,6 +225,22 @@
       },
       {
         "id": 7,
+        "pImg": "images/project/papaz.jpg",
+        "title": "باباز بيتزا - نظام إدارة مطاعم",
+        "tags": ["Reactjs", "ElectronJs", "TailwindCSS", "Stripe Payment"],
+        "subTitle": "نظام إدارة مطاعم يتيح للمستخدمين إدارة عمليات المطعم بكفاءة، بما في ذلك إدارة الطلبات، وتتبع المخزون، وإدارة العملاء.",
+        "features": [
+          "تصميم متجاوب",
+          "إدارة الأدوار (مدير، مستخدم)",
+          "تكامل الدفع",
+          "لوحة تحكم تحتوي على مخططات",
+          "إدارة الطلبات",
+          "تتبع المخزون"
+        ],
+        "button": "/"
+      },
+      {
+        "id": 8,
         "pImg": "images/project/mdhov.png",
         "title": "MDHOV - وكالة رقمية",
         "tags": ["Html5", "CSS", "Bootstrap", "Wordpress", "AJAX", "Laravel"],
@@ -232,7 +248,6 @@
         "features": ["تصميم متجاوب", "مدونات ومقالات", "دمج البريد الإلكتروني"],
         "button": "https://www.mdhov.com/"
       }
-      
     ]
   },
   "contact": {
