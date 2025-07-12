@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import CommonHead from "../../components/commonHead";
 import ContactArea from "../../components/ContactArea";
 import ExprienceSec from "../../components/Exprience/Exprience";
 import Footer from "../../components/footer/Footer";
@@ -50,7 +49,6 @@ const Home=()=>{
   
   return (
     <div id="scrool">
-      <CommonHead />
       <Fragment>
         <div className="br-app">
           <Navbar />
