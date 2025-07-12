@@ -155,11 +155,15 @@
 
         @media (max-width: 767px) {
           font-size: 35px;
+          text-align: center;
         }
       }
 
       p {
         color: $light;
+         @media (max-width: 767px) {
+          text-align: center;
+        }
       }
     }
 
@@ -246,6 +250,10 @@
             }
           }
         }
+      }
+
+      @media (max-width: 767px) {
+        justify-content: center;
       }
     }
   }
@@ -575,7 +583,7 @@
             flex-basis: 15%;
 
             @media (max-width: 450px) {
-              flex-basis: 100%;
+              // flex-basis: 100%;
               text-align: center;
             }
 
@@ -649,7 +657,7 @@
 
             @media (max-width: 450px) {
               flex-basis: 100%;
-              text-align: center;
+              text-align: center !important;
               margin-top: 10px;
             }
 
@@ -2092,3 +2100,4 @@
     }
 
 }
+
