@@ -332,16 +332,16 @@ export default function About() {
             
                 
               </div>
-              {/* <div className="header-btn mt-4">
+              <div className="header-btn mt-4">
                 <a
                   className="theme-btn"
-                  download="My Cv"
-                  href="images/cv.jpg"
+                  download="sajid-frontend-resume"
+                  href="/sajid-frontend-resume.pdf"
                   title="ImageName"
                 >
                   Resume
                 </a>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
