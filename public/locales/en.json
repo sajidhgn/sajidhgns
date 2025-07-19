@@ -140,7 +140,7 @@
        {
         "id": 4,
         "pImg": "images/project/pms.png",
-        "title": "ShahJeePetrolium - A Fuel Management System",
+        "title": "Shah Jee Petrolium - A Fuel Management System",
         "tags": ["Reactjs", "Nextjs", "TailwindCSS", "Api Integration" ],
         "subTitle": "This system is designed to streamline fuel operations across multiple roles and branches, ensuring smooth, secure, and efficient transactions.",
         "features": [

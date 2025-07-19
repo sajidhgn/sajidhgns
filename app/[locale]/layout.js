@@ -1,5 +1,3 @@
-// app/[locale]/layout.js or layout.tsx
-
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server'; // ✅ include setRequestLocale
 import { notFound } from 'next/navigation';
