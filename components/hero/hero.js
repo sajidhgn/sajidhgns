@@ -27,15 +27,13 @@ export default function Hero() {
                   </div>
                   <div className="clearfix"></div>
                   <div className="slide-btn">
-                    <Link
+                    <a
                       className="theme-btn"
-                      to="contact"
-                      spy={true}
-                      smooth={true}
-                      duration={500}
+                      download="sajid-frontend-resume"
+                      href="/sajid-frontend-resume.pdf"
                     >
                       {t("button")}
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>

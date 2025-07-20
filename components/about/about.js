@@ -1,5 +1,6 @@
 "use client";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export default function About() {
   const t = useTranslations("about");
@@ -370,14 +371,14 @@ export default function About() {
                 </div>
               </div>
               <div className="header-btn mt-4">
-                <a
+                <Link
                   className="theme-btn"
                   download="sajid-frontend-resume"
                   href="/sajid-frontend-resume.pdf"
                   title="ImageName"
                 >
                   Resume
-                </a>
+                </Link>
               </div>
             </div>
           </div>
