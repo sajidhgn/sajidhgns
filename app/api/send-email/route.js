@@ -14,7 +14,7 @@ export async function POST(req) {
     });
 
     await transporter.sendMail({
-      from: `"${name}" <sajidhgn1@gmail.com>`, // Must match Gmail account
+      from: `"${name}" <${email}>`, // Must match Gmail account
       replyTo: email, // ✅ reply goes to user's email
       to: 'sajidhgn1@gmail.com',
       subject: 'New Contact Message',

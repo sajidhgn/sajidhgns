@@ -329,8 +329,7 @@ export default function About() {
                     </svg>
                   </div>
                 </div>
-            
-                
+
               </div>
               <div className="header-btn mt-4">
                 <a
