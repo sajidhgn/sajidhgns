@@ -1,8 +1,6 @@
 'use client';
 import Image from "next/image";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
-import Projects from "../../api/project";
 
 const ProjectSection = () => {
     const t = useTranslations("projects_section");
