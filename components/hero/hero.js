@@ -1,5 +1,4 @@
 "use client";
-import { Link } from "react-scroll";
 import { useTranslations } from "next-intl";
 
 export default function Hero() {
