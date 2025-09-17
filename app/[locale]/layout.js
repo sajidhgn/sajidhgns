@@ -3,6 +3,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server'; // ✅ include
 import { notFound } from 'next/navigation';
 import { ToastContainer } from 'react-toastify';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'animate.css/animate.min.css';
 import '../../styles/sass/style.scss';
 import '../../styles/font-awesome.min.css';
 import '../../styles/themify-icons.css';

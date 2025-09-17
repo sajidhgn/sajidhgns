@@ -1,12 +1,12 @@
 import React, { Fragment } from "react";
-import ContactArea from "../../components/ContactArea";
-import ExprienceSec from "../../components/Exprience/Exprience";
-import Footer from "../../components/footer/Footer";
-import Hero from "../../components/hero/hero";
-import Navbar from "../../components/Navbar/Navbar";
-import About from "../../components/about/about";
-import ProjectSection from "../../components/ProjectSection/ProjectSection";
-import Scrollbar from "../../components/scrollbar/scrollbar";
+import ContactArea from "../../client/components/ContactArea";
+import ExprienceSec from "../../client/components/Exprience/Exprience";
+import Footer from "../../client/components/footer/Footer";
+import Hero from "../../client/components/hero/hero";
+import Navbar from "../../client/components/Navbar/Navbar";
+import About from "../../client/components/about/about";
+import ProjectSection from "../../client/components/ProjectSection/ProjectSection";
+import Scrollbar from "../../client/components/scrollbar/scrollbar";
 
 export const metadata = {
    metadataBase: new URL('https://www.sajidhgn.versal.app'),

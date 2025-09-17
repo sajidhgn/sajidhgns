@@ -12,6 +12,7 @@ export default function Hero() {
             <div className="row align-items-center">
               <div className="col-xl-6 col-lg-6 col-12">
                 <div className="wpo-static-hero-inner">
+                  {/* animate__animated animate__fadeInDown */}
                   <div data-swiper-parallax="300" className="slide-title">
                     <h2>
                       <span>{t("greatings")}, </span>
@@ -44,18 +45,6 @@ export default function Hero() {
         <div className="static-hero-img">
           <div className="static-hero-img-inner">
             <img src="/images/hero-graphic.svg" alt="" />
-            {/* <div className="icon-1 floating-item"><img src='images/icon/photoshop.svg' alt="" /></div>
-                        <div className="icon-2 floating-item"><img src='images/icon/illustrator.svg' alt="" /></div>
-                        <div className="icon-3 floating-item"><img src='images/icon/diamond.svg' alt="" /></div> */}
-            {/* <div className="project floating-item">
-                            <div className="icon">
-                                <i className="fi flaticon-verified"></i>
-                            </div>
-                            <div className="p-text">
-                                <h3><span data-count="1500">1500</span>+</h3>
-                                <p>Complete Project</p>
-                            </div>
-                        </div> */}
           </div>
         </div>
       </div>
