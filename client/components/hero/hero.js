@@ -1,5 +1,6 @@
 "use client";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   const t = useTranslations("banner");
@@ -11,7 +12,13 @@ export default function Hero() {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-xl-6 col-lg-6 col-12">
-                <div className="wpo-static-hero-inner">
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                  className="wpo-static-hero-inner"
+                >
                   {/* animate__animated animate__fadeInDown */}
                   <div data-swiper-parallax="300" className="slide-title">
                     <h2>
@@ -35,19 +42,25 @@ export default function Hero() {
                       {t("button")}
                     </a>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="static-hero-right">
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, y: "-50%" }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="static-hero-right"
+      >
         <div className="static-hero-img">
           <div className="static-hero-img-inner">
             <img src="/images/hero-graphic.svg" alt="" />
           </div>
         </div>
-      </div>
+      </motion.div>
       <div className="shape-1">
         <svg width="1038" height="938" viewBox="0 0 1038 938" fill="none">
           <g opacity="0.5" filter="url(#filter0_f_39_4392)">

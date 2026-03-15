@@ -1,27 +1,35 @@
 'use client';
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 const ProjectSection = () => {
-    const t = useTranslations("projects_section");
+  const t = useTranslations("projects_section");
   const projects = t.raw("projects");
 
   return (
     <div className="wpo-project-area section-padding" id="projects">
       <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-12 col-12">
-              <div className="wpo-section-title text-center">
-                <h2> {t('title')}</h2>
-              </div>
+        <div className="row align-items-center">
+          <div className="col-lg-12 col-12">
+            <div className="wpo-section-title text-center">
+              <h2> {t("title")}</h2>
             </div>
           </div>
+        </div>
         <div className="row">
           <div className="col-12">
             <div className="wpo-work-area bg-transparent">
               <div className="wpo-work-wrap">
                 {projects.map((project, pro) => (
-                  <div className="wpo-work-item p-0" key={pro}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: pro * 0.1 }}
+                    className="wpo-work-item p-0"
+                    key={pro}
+                  >
                     <div className="row">
                       <div className="col-lg-4 col-12">
                         <div className="wpo-project-img position-relative p-3">
@@ -43,56 +51,64 @@ const ProjectSection = () => {
                           />
                           <div className="wpo-project-hover">
                             <a
-                              className="link-hover-project" target="_blank" href={project.button}><i className="fa fa-eye"></i></a>
-                              </div>
+                              className="link-hover-project"
+                              target="_blank"
+                              href={project.button}
+                            >
+                              <i className="fa fa-eye"></i>
+                            </a>
+                          </div>
                         </div>
                       </div>
                       <div className="col-lg-8 col-12">
                         <div className="wpo-pros p-3">
-                        <div className="wpo-project-text">
-                          <h2
-                           
-                            className="mb-4"
-                          >
-                            <a className="link-hover" href={project.button} target="_blank" rel="noopener noreferrer">{project.title}</a>
-                            
-                          </h2>
-                          <span>{project.subTitle}</span>
-                          <ul className="row mt-4 features-list">
-                            {project?.features?.map((item, index) => (
-                              <li
-                                key={index}
-                                className="col-lg-6 col-md-6 col-12 py-1"
+                          <div className="wpo-project-text">
+                            <h2 className="mb-4">
+                              <a
+                                className="link-hover"
+                                href={project.button}
+                                target="_blank"
+                                rel="noopener noreferrer"
                               >
-                                <i className="ti-arrow-right"> </i>
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
+                                {project.title}
+                              </a>
+                            </h2>
+                            <span>{project.subTitle}</span>
+                            <ul className="row mt-4 features-list">
+                              {project?.features?.map((item, index) => (
+                                <li
+                                  key={index}
+                                  className="col-lg-6 col-md-6 col-12 py-1"
+                                >
+                                  <i className="ti-arrow-right"> </i>
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <ul className="tags-list mt-4">
+                              {project?.tags?.map((item, index) => (
+                                <li key={index}>{item}</li>
+                              ))}
+                            </ul>
+                          </div>
                         </div>
-                        <div>
-                        <ul className="tags-list mt-4">
-                          {project?.tags?.map((item, index) => (
-                            <li key={index}>{item}</li>
-                          ))}
-                        </ul>
-                        </div>
-                      </div>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-                <div className="mt-4 d-flex justify-content-center">
-                  <a
-                    className="theme-btn"
-                    href="https://photos.app.goo.gl/yyxDsvG7kfbDi6cc9"
-                    title="view-more"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                     View More
-                  </a>
+              <div className="mt-4 d-flex justify-content-center">
+                <a
+                  className="theme-btn"
+                  href="https://photos.app.goo.gl/yyxDsvG7kfbDi6cc9"
+                  title="view-more"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View More
+                </a>
               </div>
             </div>
           </div>

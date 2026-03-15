@@ -1,6 +1,7 @@
 "use client";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function About() {
   const t = useTranslations("about");
@@ -10,7 +11,13 @@ export default function About() {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-5 col-md-12 col-sm-12">
-            <div className="wpo-about-exprience-wrap">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="wpo-about-exprience-wrap"
+            >
               <div className="wpo-about-exprience">
                 <h2>{t("exp_duration")}</h2>
                 <span>{t("exp_detail")}</span>
@@ -21,10 +28,16 @@ export default function About() {
                 </h3>
                 <p>{t("satisfy_detail")}</p>
               </div>
-            </div>
+            </motion.div>
           </div>
           <div className="col-lg-7 col-md-12 col-sm-12">
-            <div className="wpo-about-content">
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="wpo-about-content"
+            >
               <div className="wpo-about-title">
                 <h2> {t("title")}</h2>
                 <p>{t("description")}</p>
@@ -380,7 +393,7 @@ export default function About() {
                   Resume
                 </Link>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -450,6 +463,6 @@ export default function About() {
       <div className="line-shape-2">
         <img src="images/about/shape2.png" alt="" />
       </div>
-    </div>
+    </div >
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 import SectionTitle from "../SectionTitle/SectionTitle";
 
 export default function ExprienceSec() {
@@ -13,7 +14,14 @@ export default function ExprienceSec() {
         <SectionTitle Title={t("title")} />
         <div className="wpo-work-wrap">
           {experiences.map((exprience, exp) => (
-            <div className="wpo-work-item" key={exp}>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: exp * 0.1 }}
+              className="wpo-work-item"
+              key={exp}
+            >
               <ul>
                 <li className="date">{exprience.date}</li>
                 <li className="logo">
@@ -37,7 +45,7 @@ export default function ExprienceSec() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

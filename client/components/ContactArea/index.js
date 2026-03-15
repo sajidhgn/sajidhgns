@@ -4,9 +4,10 @@ import SectionTitle from "../SectionTitle/SectionTitle";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 const ContactArea = (props) => {
-    const t = useTranslations("contact");
+  const t = useTranslations("contact");
 
 
   return (
@@ -18,7 +19,13 @@ const ContactArea = (props) => {
         <div className="container">
           <div className="row justify-content-center">
             <SectionTitle Title={t('title')} />
-            <div className="col-lg-6 col-md-12 col-12">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="col-lg-6 col-md-12 col-12"
+            >
               <div className="wpo-contact-profile">
                 <Image
                   src="/sajidhgn.png"
@@ -37,7 +44,7 @@ const ContactArea = (props) => {
               </div>
               <div className="wpo-contact-about">
                 <p>
-                 {t('description')}
+                  {t('description')}
                 </p>
                 <div className="wpo-contact-social">
                   <p>{t('sub_description')}</p>
@@ -46,22 +53,28 @@ const ContactArea = (props) => {
                       <Link target="_blank" href="https://github.com/sajidhgn"><i className="fa fa-github"></i></Link>
                     </li>
                     <li>
-                      <Link  target="_blank" href="https://www.linkedin.com/in/sajidhgn/"><i className="fa fa-linkedin"></i></Link>
+                      <Link target="_blank" href="https://www.linkedin.com/in/sajidhgn/"><i className="fa fa-linkedin"></i></Link>
                     </li>
                   </ul>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
           <div className="row">
             <div className="col-12">
               <div className="row justify-content-center">
-                <div className="col col-lg-6 col-md-12 col-12">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="col col-lg-6 col-md-12 col-12"
+                >
                   <div className="wpo-contact-form">
                     <h2>{t('get_in_touch')}</h2>
                     <ContactForm />
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>

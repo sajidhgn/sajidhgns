@@ -1,3 +1,4 @@
+import { Cairo } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server'; // ✅ include setRequestLocale
 import { notFound } from 'next/navigation';
@@ -8,6 +9,12 @@ import '../../styles/sass/style.scss';
 import '../../styles/font-awesome.min.css';
 import '../../styles/themify-icons.css';
 import '../../styles/flaticon.css';
+
+const cairo = Cairo({
+  subsets: ['arabic', 'latin'],
+  display: 'swap',
+  variable: '--font-cairo',
+});
 
 const locales = ['en', 'ar'];
 
@@ -25,7 +32,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} translate="no">
+    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} translate="no" className={cairo.variable}>
       <body className={`br-app ${locale === 'ar' ? 'rtl' : 'ltr'}`}>
         <NextIntlClientProvider messages={messages}>
           {children}
