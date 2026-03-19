@@ -17,6 +17,10 @@
       "link": "projects"
     },
     {
+      "name": "Testimonials",
+      "link": "testimonials"
+    },
+    {
       "name": "Contact",
       "link": "contact"
     }
@@ -321,5 +325,31 @@
     "title": "Sajidhgn | Senior Software Engineer",
     "description": "Sajidhgn is a Senior Software Engineer, experienced in creating beautiful and functional websites and web applications.",
     "keywords": "portfolio, personal website, web developer, senior software engineer, frontend developer"
+  },
+  "testimonial": {
+    "title": "What My Clients Say",
+    "testimonials": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "designation": "CEO at TechCorp",
+        "description": "Sajid is an exceptional engineer. He transformed our complex requirements into a seamless, high-performance web application.",
+        "image": "images/testimonial/avatar1.png"
+      },
+      {
+        "id": 2,
+        "name": "Sarah Smith",
+        "designation": "Senior Developer at DevStudio",
+        "description": "Working with Sajid was a pleasure. His attention to detail and expertise in React and Next.js is truly impressive.",
+        "image": "images/testimonial/avatar2.png"
+      },
+      {
+        "id": 3,
+        "name": "Alex Johnson",
+        "designation": "Product Manager at InnovateLLC",
+        "description": "He delivered the project ahead of schedule and with top-notch quality. Highly recommended for any frontend needs!",
+        "image": "images/testimonial/avatar3.png"
+      }
+    ]
   }
 }

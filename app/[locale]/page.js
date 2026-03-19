@@ -7,6 +7,7 @@ import Navbar from "../../client/components/Navbar/Navbar";
 import About from "../../client/components/about/about";
 import ProjectSection from "../../client/components/ProjectSection/ProjectSection";
 import Scrollbar from "../../client/components/scrollbar/scrollbar";
+import Testimonial from "../../client/components/Testimonial/Testimonial";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({ params: { locale } }) {
@@ -75,6 +76,7 @@ const Home = () => {
           <About />
           <ExprienceSec />
           <ProjectSection />
+          <Testimonial />
           <ContactArea />
           <Footer />
           <Scrollbar />

@@ -1466,36 +1466,15 @@
 .fixed-navbar.active .wpo-header-style-1 .wpo-site-header {
   position: fixed;
   z-index: 555;
-  top: 50px;
+  top: 0px;
   left: 0;
   right: 0;
-  margin: 0 auto;
-  width: fit-content;
+  width: 100%;
   background: rgba($bg-color, 0.8);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 60px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   animation: fadeInDown 0.5s ease-in-out;
-  padding: 0 30px;
-
-  .container {
-    width: auto;
-    max-width: unset;
-  }
-
-  .navbar-header {
-    padding-left: 15px;
-  }
-
-  @media (max-width: 991px) {
-    top: 20px;
-    width: calc(100% - 20px);
-
-    .container {
-      width: 100%;
-    }
-  }
 }
 
 //   mobail-menu

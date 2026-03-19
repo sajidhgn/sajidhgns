@@ -17,6 +17,10 @@
       "link": "projects"
     },
     {
+      "name": "التوصيات",
+      "link": "testimonials"
+    },
+    {
       "name": "تواصل",
       "link": "contact"
     }
@@ -228,7 +232,7 @@
         ],
         "button": "https://oun.ai"
       },
-       {
+      {
         "id": 7,
         "pImg": "images/project/eduhub.png",
         "title": "EduHub Pak - منصة تعليمية",
@@ -321,5 +325,31 @@
     "title": "ساجد هجن | مهندس برمجيات أول",
     "description": "ساجد هجن هو مهندس برمجيات أول، من ذوي الخبرة في إنشاء مواقع وتطبيقات ويب جميلة وعملية.",
     "keywords": "محفظة، موقع شخصي، مطور ويب، مهندس برمجيات أول، مطور واجهة أمامية"
+  },
+  "testimonial": {
+    "title": "ماذا يقول عملائي",
+    "testimonials": [
+      {
+        "id": 1,
+        "name": "جون دو",
+        "designation": "الرئيس التنفيذي في TechCorp",
+        "description": "ساجد مهندس استثنائي. لقد حول متطلباتنا المعقدة إلى تطبيق ويب سلس وعالي الأداء.",
+        "image": "images/testimonial/avatar1.png"
+      },
+      {
+        "id": 2,
+        "name": "سارة سميث",
+        "designation": "مطورة أولى في DevStudio",
+        "description": "العمل مع ساجد كان متعة. اهتمامه بالتفاصيل وخبرته في React و Next.js مثيرة للإعجاب حقًا.",
+        "image": "images/testimonial/avatar2.png"
+      },
+      {
+        "id": 3,
+        "name": "أليكس جونسون",
+        "designation": "مدير المنتج في InnovateLLC",
+        "description": "لقد سلم المشروع قبل الموعد المحدد وبجودة عالية. موصى به بشدة لأي احتياجات واجهة أمامية!",
+        "image": "images/testimonial/avatar3.png"
+      }
+    ]
   }
 }
