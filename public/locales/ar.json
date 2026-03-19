@@ -165,7 +165,12 @@
         "id": 4,
         "pImg": "images/project/pms.png",
         "title": "ShahJeePetrolium - نظام إدارة الوقود",
-        "tags": ["Reactjs", "Nextjs", "TailwindCSS", "API Integration"],
+        "tags": [
+          "Reactjs",
+          "Nextjs",
+          "TailwindCSS",
+          "API Integration"
+        ],
         "subTitle": "تم تصميم هذا النظام لتبسيط عمليات الوقود عبر أدوار وفروع متعددة، لضمان عمليات آمنة وسلسة وفعّالة.",
         "features": [
           "تطبيق ويب تقدمي",
@@ -223,11 +228,40 @@
         ],
         "button": "https://oun.ai"
       },
-      {
+       {
         "id": 7,
+        "pImg": "images/project/eduhub.png",
+        "title": "EduHub Pak - منصة تعليمية",
+        "tags": [
+          "Next.js (App Router, SSR, ISR)",
+          "React",
+          "Tailwind CSS / Custom UI system",
+          "TypeScript",
+          "Graphql APIs",
+          "Headless WordPress (WPGraphQL)",
+          "SEO Optimized"
+        ],
+        "subTitle": "منصة تعليمية شاملة مصممة لمساعدة الطلاب في باكستان على اكتشاف ومقارنة والتقديم للجامعات والمنح الدراسية والبرامج الأكاديمية بطريقة مبسطة. توفر أدوات مثل مقارنة الجامعات وتتبع القبول واكتشاف المنح الدراسية لتوجيه الطلاب من التعليم المتوسط إلى التعليم العالي.",
+        "features": [
+          "تصميم متجاوب",
+          "اكتشاف الجامعات والبرامج مع خيارات تصفية متقدمة",
+          "تتبع القبول مع المواعيد النهائية وتواريخ الاختبار",
+          "قاعدة بيانات المنح الدراسية مع فلاتر الأهلية",
+          "آخر الأخبار والتحديثات التعليمية في الوقت الفعلي",
+          "صفحات محسّنة لمحركات البحث لنمو حركة المرور العضوية"
+        ],
+        "button": "https://eduhubpak.com/"
+      },
+      {
+        "id": 8,
         "pImg": "images/project/papaz.jpg",
         "title": "باباز بيتزا - نظام إدارة مطاعم",
-        "tags": ["Reactjs", "ElectronJs", "TailwindCSS", "Stripe Payment"],
+        "tags": [
+          "Reactjs",
+          "ElectronJs",
+          "TailwindCSS",
+          "Stripe Payment"
+        ],
         "subTitle": "نظام إدارة مطاعم يتيح للمستخدمين إدارة عمليات المطعم بكفاءة، بما في ذلك إدارة الطلبات، وتتبع المخزون، وإدارة العملاء.",
         "features": [
           "تصميم متجاوب",
@@ -240,12 +274,23 @@
         "button": "/"
       },
       {
-        "id": 8,
+        "id": 9,
         "pImg": "images/project/mdhov.png",
         "title": "MDHOV - وكالة رقمية",
-        "tags": ["Html5", "CSS", "Bootstrap", "Wordpress", "AJAX", "Laravel"],
+        "tags": [
+          "Html5",
+          "CSS",
+          "Bootstrap",
+          "Wordpress",
+          "AJAX",
+          "Laravel"
+        ],
         "subTitle": "وكالة رقمية مقرها كندا متخصصة في تطوير الويب، التصميم، وحلول التسويق الرقمي.",
-        "features": ["تصميم متجاوب", "مدونات ومقالات", "دمج البريد الإلكتروني"],
+        "features": [
+          "تصميم متجاوب",
+          "مدونات ومقالات",
+          "دمج البريد الإلكتروني"
+        ],
         "button": "https://www.mdhov.com/"
       }
     ]
@@ -271,5 +316,10 @@
   },
   "footer": {
     "copyright": "جميع الحقوق محفوظة."
+  },
+  "SEO": {
+    "title": "ساجد هجن | مهندس برمجيات أول",
+    "description": "ساجد هجن هو مهندس برمجيات أول، من ذوي الخبرة في إنشاء مواقع وتطبيقات ويب جميلة وعملية.",
+    "keywords": "محفظة، موقع شخصي، مطور ويب، مهندس برمجيات أول، مطور واجهة أمامية"
   }
 }

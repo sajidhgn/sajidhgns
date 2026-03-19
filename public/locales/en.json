@@ -93,7 +93,14 @@
         "id": 1,
         "pImg": "images/project/workinaus.png",
         "title": "Work in Aus - A Job Portal",
-        "tags": ["Reactjs", "Nextjs", "Redux", "Bootstrap","Api Integration", "Elastic Search Integration"],
+        "tags": [
+          "Reactjs",
+          "Nextjs",
+          "Redux",
+          "Bootstrap",
+          "Api Integration",
+          "Elastic Search Integration"
+        ],
         "subTitle": "Work in AUS is a job portal connecting job seekers with top employers across Australia. Like Rozee, Mustakbil, and Indeed, it offers a wide range of job listings, easy applications, and career resources for local and international candidates.",
         "features": [
           "Responsive Design",
@@ -109,7 +116,15 @@
         "id": 2,
         "pImg": "images/project/tvhub.png",
         "title": "Learning Hub - Online Learning Platform like Udemy",
-        "tags": ["Reactjs", "Nextjs", "Redux Toolkit", "Bootstrap", "Api Integration", "Stripe Integration", "Social Authentication" ],
+        "tags": [
+          "Reactjs",
+          "Nextjs",
+          "Redux Toolkit",
+          "Bootstrap",
+          "Api Integration",
+          "Stripe Integration",
+          "Social Authentication"
+        ],
         "subTitle": "Learning hub is a learning platform that connects learners with top-notch courses and instructors, offering a seamless online education experience.",
         "features": [
           "Responsive Design",
@@ -125,27 +140,41 @@
         "id": 3,
         "pImg": "images/project/peepskill.png",
         "title": "PeepSkill - A Sports Social Media Platform",
-        "tags": ["Reactjs", "Nextjs", "TailwindCSS", "Api Integration", "WebSockets" ,"Nodejs", "Expressjs","MySQL" ],
+        "tags": [
+          "Reactjs",
+          "Nextjs",
+          "TailwindCSS",
+          "Api Integration",
+          "WebSockets",
+          "Nodejs",
+          "Expressjs",
+          "MySQL"
+        ],
         "subTitle": "The global social media platform built for athletes, coaches, and spectators to connect, inspire, and grow together",
         "features": [
           "Responsive Design",
           "SEO Optimized",
           "Live Chat",
-          "Role Management (Athletes, Coaches, Guests)", 
+          "Role Management (Athletes, Coaches, Guests)",
           "Community Like LinkedIn",
           "Blogs and Articles"
         ],
         "button": "http://peepskill.com/"
       },
-       {
+      {
         "id": 4,
         "pImg": "images/project/pms.png",
         "title": "Shah Jee Petrolium - A Fuel Management System",
-        "tags": ["Reactjs", "Nextjs", "TailwindCSS", "Api Integration" ],
+        "tags": [
+          "Reactjs",
+          "Nextjs",
+          "TailwindCSS",
+          "Api Integration"
+        ],
         "subTitle": "This system is designed to streamline fuel operations across multiple roles and branches, ensuring smooth, secure, and efficient transactions.",
         "features": [
-                     "Progressive Web App",
-          "Role Management (Super-Admin, Admin, Clients, Delivery)", 
+          "Progressive Web App",
+          "Role Management (Super-Admin, Admin, Clients, Delivery)",
           "QR Code Card with Scanning",
           "Charts Integrations",
           "Printal Reciepts and Invoices",
@@ -157,7 +186,14 @@
         "id": 5,
         "pImg": "images/project/travel.png",
         "title": "Royal Vision Dubai - A Travel Agency",
-        "tags": ["Reactjs", "Nextjs", "TailwindCSS", "Api Integration", "React Query", "CCAvenue Payment" ],
+        "tags": [
+          "Reactjs",
+          "Nextjs",
+          "TailwindCSS",
+          "Api Integration",
+          "React Query",
+          "CCAvenue Payment"
+        ],
         "subTitle": "The global social media platform built for athletes, coaches, and spectators to connect, inspire, and grow together",
         "features": [
           "Responsive Design",
@@ -172,11 +208,19 @@
         "id": 6,
         "pImg": "images/project/ounlab.png",
         "title": "OUNLAB - A Project Management System",
-        "tags": ["Reactjs", "Nextjs", "TailwindCSS","Redux Toolkit", "Api Integration", "WebSockets", "Stripe Payment" ],
+        "tags": [
+          "Reactjs",
+          "Nextjs",
+          "TailwindCSS",
+          "Redux Toolkit",
+          "Api Integration",
+          "WebSockets",
+          "Stripe Payment"
+        ],
         "subTitle": "The global social media platform built for athletes, coaches, and spectators to connect, inspire, and grow together",
         "features": [
           "Responsive Design",
-          "Role Management (Admin, User)", 
+          "Role Management (Admin, User)",
           "Payment Integration",
           "Dashboard with Charts",
           "Task Management",
@@ -186,13 +230,42 @@
       },
       {
         "id": 7,
+        "pImg": "images/project/eduhub.png",
+        "title": "EduHub Pak - An E-Learning Platform",
+        "tags": [
+          "Next.js (App Router, SSR, ISR)",
+          "React",
+          "Tailwind CSS / Custom UI system",
+          "TypeScript",
+          "Graphql APIs",
+          "Headless WordPress (WPGraphQL)",
+          "SEO Optimized"
+        ],
+        "subTitle": "Built a scalable education platform using Next.js (SSR/ISR) and headless WordPress, enabling users to explore universities, scholarships, and admissions with real-time data and SEO-optimized architecture.",
+        "features": [
+          "Responsive Design",
+          "University & program discovery with advanced filtering",
+          "Admission tracking with deadlines & test dates",
+          "Scholarship database with eligibility filters",
+          "Real-time education news & updates",
+          "SEO-optimized pages for organic traffic growth"
+        ],
+        "button": "https://eduhubpak.com/"
+      },
+      {
+        "id": 8,
         "pImg": "images/project/papaz.jpg",
         "title": "Papaz Pizza - A Restaurant Management System",
-        "tags": ["Reactjs", "ElectronJs", "TailwindCSS", "Stripe Payment" ],
+        "tags": [
+          "Reactjs",
+          "ElectronJs",
+          "TailwindCSS",
+          "Stripe Payment"
+        ],
         "subTitle": "A restaurant management system that allows users to manage their restaurant operations efficiently, including order management, inventory tracking, and customer management.",
         "features": [
           "Responsive Design",
-          "Role Management (Admin, User)", 
+          "Role Management (Admin, User)",
           "Payment Integration",
           "Dashboard with Charts",
           "Order Management",
@@ -201,10 +274,17 @@
         "button": "/"
       },
       {
-        "id": 8,
+        "id": 9,
         "pImg": "images/project/mdhov.png",
         "title": "MDHOV - A Digital Agency",
-        "tags": ["Html5", "CSS", "Bootstrap", "WordPress", "AJAX", "Laravel" ],
+        "tags": [
+          "Html5",
+          "CSS",
+          "Bootstrap",
+          "WordPress",
+          "AJAX",
+          "Laravel"
+        ],
         "subTitle": "A canadian based digital agency that specializes in web development, design, and digital marketing solutions.",
         "features": [
           "Responsive Design",
@@ -213,7 +293,6 @@
         ],
         "button": "https://www.mdhov.com/"
       }
-      
     ]
   },
   "contact": {
@@ -234,9 +313,13 @@
       "emailInvalid": "Invalid email",
       "messageRequired": "Message is required"
     }
-  }
-  ,
+  },
   "footer": {
-  "copyright": "All Rights Reserved."
+    "copyright": "All rights reserved."
+  },
+  "SEO": {
+    "title": "Sajidhgn | Senior Software Engineer",
+    "description": "Sajidhgn is a Senior Software Engineer, experienced in creating beautiful and functional websites and web applications.",
+    "keywords": "portfolio, personal website, web developer, senior software engineer, frontend developer"
   }
 }

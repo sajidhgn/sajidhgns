@@ -37,17 +37,11 @@ const ProjectSection = () => {
                             src={`/${project.pImg}`}
                             alt={project.title}
                             quality={75}
-                            className="img-fluid"
-                            style={{
-                              objectFit: "cover",
-                              objectPosition: "top",
-                              width: "100%",
-                              height: "290px",
-                            }}
+                            className="img-fluid project-scroll-img"
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             loading="lazy"
-                            width={0}
-                            height={0}
+                            width={500}
+                            height={290}
                           />
                           <div className="wpo-project-hover">
                             <a

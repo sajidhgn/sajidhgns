@@ -15,6 +15,14 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            <a
+                href="https://api.whatsapp.com/send?phone=923434366924"
+                className="whatsapp-sticky"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i className="fa fa-whatsapp"></i>
+            </a>
         </footer>
     )
 }

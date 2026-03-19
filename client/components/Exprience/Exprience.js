@@ -26,7 +26,7 @@ export default function ExprienceSec() {
                 <li className="date">{exprience.date}</li>
                 <li className="logo">
                   <span>
-                    <img src={exprience.logo} alt="" />
+                    <img src={exprience.logo} alt="exprience-logo" title="exprience-logo" />
                   </span>
                 </li>
                 <li className="position">

@@ -57,7 +57,7 @@ export default function Hero() {
       >
         <div className="static-hero-img">
           <div className="static-hero-img-inner">
-            <img src="/images/hero-graphic.svg" alt="" />
+            <img src="/images/hero-graphic.svg" alt="hero-graphic" title="hero-graphic" />
           </div>
         </div>
       </motion.div>
@@ -152,10 +152,10 @@ export default function Hero() {
         </svg>
       </div>
       <div className="line-shape-1">
-        <img src="images/slider/line-1.png" alt="" />
+        <img src="images/slider/line-1.png" alt="line-1" title="line-1" />
       </div>
       <div className="line-shape-2">
-        <img src="images/slider/line-2.png" alt="" />
+        <img src="images/slider/line-2.png" alt="line-2" title="line-2" />
       </div>
     </section>
   );

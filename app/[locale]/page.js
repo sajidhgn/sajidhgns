@@ -7,13 +7,17 @@ import Navbar from "../../client/components/Navbar/Navbar";
 import About from "../../client/components/about/about";
 import ProjectSection from "../../client/components/ProjectSection/ProjectSection";
 import Scrollbar from "../../client/components/scrollbar/scrollbar";
+import { getTranslations } from "next-intl/server";
 
-export const metadata = {
-   metadataBase: new URL('https://www.sajidhgn.versal.app'),
-    title: `Sajidhgn | Senior Software Engineer`,
-    description: 'Sajidhgn is a Senior Software Engineer, experienced in creating beautiful and functional websites and web applications.',
-    keywords: "portfolio, personal website, web developer",
-    authors: [{ name: 'Sajidhgn', url: 'https://sajidhgn.versal.app' }],
+export async function generateMetadata({ params: { locale } }) {
+  const t = await getTranslations({ locale, namespace: 'SEO' });
+
+  return {
+    metadataBase: new URL('https://sajidhgn.vercel.app'),
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+    authors: [{ name: 'Sajidhgn', url: 'https://sajidhgn.vercel.app' }],
     publisher: 'Sajidhgn',
     robots: {
       index: true,
@@ -29,24 +33,39 @@ export const metadata = {
       },
     },
     alternates: {
-      canonical: '/',
+      canonical: `/${locale}`,
       languages: {
-        'en-US': '/en-US',
-        'ar-AR': '/ar-AR',
+        'en': '/en',
+        'ar': '/ar',
       },
     },
     openGraph: {
-      title: `Sajidhgn | Senior Software Engineer`,
-      description: 'Sajidhgn is a Senior Software Engineer, experienced in creating beautiful and functional websites and web applications.',
-      url: `https://www.sajidhgn.versal.app`,
-      images: [{ url: "/images/sajidhgn.png" }],
+      title: t('title'),
+      description: t('description'),
+      url: `https://sajidhgn.vercel.app/${locale}`,
+      images: [
+        {
+          url: "/images/sajidhgn.png",
+          width: 1200,
+          height: 630,
+          alt: "Sajidhgn Portfolio Screenshot",
+        },
+      ],
       siteName: 'Sajidhgn',
-      locale: ['en-US', 'ar-AR'],
-      type: 'website'},
+      locale: locale,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+      images: ['/images/sajidhgn.png'],
+    },
   };
+}
 
-const Home=()=>{
-  
+const Home = () => {
+
   return (
     <div id="scrool">
       <Fragment>

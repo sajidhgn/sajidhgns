@@ -2,10 +2,10 @@
 #0.5	footer
 --------------------------------------------------------------*/
 .wpo-site-footer,
-.wpo-site-footer-s2{
+.wpo-site-footer-s2 {
 	background-color: $dark-gray;
 	position: relative;
-    z-index: 1;
+	z-index: 1;
 
 	ul {
 		list-style: none;
@@ -45,7 +45,7 @@
 				z-index: -1;
 			}
 
-			.left-shape{
+			.left-shape {
 				position: absolute;
 				left: -40%;
 				top: 0;
@@ -67,34 +67,36 @@
 			}
 		}
 
-		.contact-grids{
-			h2{
+		.contact-grids {
+			h2 {
 				font-weight: 700;
 				font-size: 50px;
 				line-height: 60px;
 				color: $white;
 
-				@media(max-width:1400px){
-				  font-size: 45px;
-				} 
-				@media(max-width:1200px){
-				  font-size: 36px;
-				  line-height: 50px;
-				} 
+				@media(max-width:1400px) {
+					font-size: 45px;
+				}
+
+				@media(max-width:1200px) {
+					font-size: 36px;
+					line-height: 50px;
+				}
 			}
-			
-			.send-message-btn{
+
+			.send-message-btn {
 				text-align: right;
 
-				.theme-btn{
+				.theme-btn {
 					background: $dark-gray;
 					border-radius: 5px;
 					cursor: pointer;
 
-					&:after{
+					&:after {
 						display: none;
 					}
-					&:before{
+
+					&:before {
 						content: "\f10d";
 						font-family: 'Flaticon';
 					}
@@ -105,7 +107,7 @@
 
 	.upper-footer {
 		padding: 90px 0;
-        z-index: 1;
+		z-index: 1;
 		overflow: hidden;
 		position: relative;
 
@@ -121,15 +123,15 @@
 			padding: 80px 0 10px;
 		}
 
-		.shadow-shape{
+		.shadow-shape {
 			position: absolute;
 			top: -140%;
-			right:0;
+			right: 0;
 			z-index: -1;
-	
-			svg{
-				circle{
-					fill:$theme-primary-color;
+
+			svg {
+				circle {
+					fill: $theme-primary-color;
 				}
 			}
 		}
@@ -194,7 +196,7 @@
 				max-width: 90%;
 			}
 
-			.site-logo{
+			.site-logo {
 				font-size: 45px;
 				font-weight: 700;
 				display: flex;
@@ -202,7 +204,7 @@
 				color: $white;
 				cursor: pointer;
 
-				img{
+				img {
 					border-radius: 50%;
 					margin-right: 10px;
 				}
@@ -230,7 +232,7 @@
 				float: left;
 			}
 
-			> li + li {
+			>li+li {
 				margin-left: 15px;
 			}
 
@@ -285,7 +287,7 @@
 			color: $theme-primary-color;
 		}
 
-		ul > li + li {
+		ul>li+li {
 			margin-top: 17px;
 		}
 	}
@@ -349,7 +351,7 @@
 		}
 
 		.copyright {
-            text-align: center;
+			text-align: center;
 			font-size: 14px;
 			font-size: calc-rem-value(14);
 			margin-bottom: 0 !important;
@@ -361,11 +363,43 @@
 			}
 		}
 	}
+
+	.whatsapp-sticky {
+		position: fixed;
+		bottom: 25px;
+		left: 30px;
+		width: 50px;
+		height: 50px;
+		background: #25D366;
+		color: #fff;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 28px;
+		z-index: 999;
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+		transition: all 0.3s ease;
+
+		&:hover {
+			transform: scale(1.1);
+			color: #fff;
+			background: darken(#25D366, 5%);
+		}
+
+		@media (max-width: 767px) {
+			bottom: 20px;
+			left: 20px;
+			width: 45px;
+			height: 45px;
+			font-size: 24px;
+		}
+	}
 }
 
-.wpo-site-footer-s2{
-    .upper-footer{
-        @include widther(992px) {
+.wpo-site-footer-s2 {
+	.upper-footer {
+		@include widther(992px) {
 			padding-top: 90px;
 		}
 
@@ -376,5 +410,5 @@
 		@include media-query(767px) {
 			padding: 80px 0 10px;
 		}
-    }
+	}
 }

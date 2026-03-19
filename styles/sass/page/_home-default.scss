@@ -484,6 +484,25 @@
 
       &:hover {
         border: 1px solid #494949;
+
+        .wpo-project-img {
+          .project-scroll-img {
+            object-position: bottom;
+          }
+        }
+      }
+
+      .wpo-project-img {
+        overflow: hidden;
+        height: 290px;
+
+        .project-scroll-img {
+          object-fit: cover;
+          object-position: top;
+          transition: object-position 3s ease-in-out;
+          width: 100%;
+          height: 100%;
+        }
       }
 
       &:last-child {
