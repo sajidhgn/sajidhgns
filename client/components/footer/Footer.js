@@ -20,6 +20,7 @@ const Footer = () => {
                 className="whatsapp-sticky"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="Contact me on WhatsApp"
             >
                 <i className="fa fa-whatsapp"></i>
             </a>

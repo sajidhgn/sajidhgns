@@ -38,6 +38,7 @@ export default function Hero() {
                       className="theme-btn"
                       download="sajid-frontend-resume"
                       href="/sajid-frontend-resume.pdf"
+                      title={t("button")}
                     >
                       {t("button")}
                     </a>
@@ -57,7 +58,7 @@ export default function Hero() {
       >
         <div className="static-hero-img">
           <div className="static-hero-img-inner">
-            <img src="/images/hero-graphic.svg" alt="hero-graphic" title="hero-graphic" />
+            <img src="/images/hero-graphic.svg" alt="Professional Web Development Illustration" title="Web Development Services" />
           </div>
         </div>
       </motion.div>
@@ -152,10 +153,10 @@ export default function Hero() {
         </svg>
       </div>
       <div className="line-shape-1">
-        <img src="images/slider/line-1.png" alt="line-1" title="line-1" />
+        <img src="images/slider/line-1.png" alt="Decorative background line" title="Decorative Element" />
       </div>
       <div className="line-shape-2">
-        <img src="images/slider/line-2.png" alt="line-2" title="line-2" />
+        <img src="images/slider/line-2.png" alt="Decorative background shape" title="Decorative Element" />
       </div>
     </section>
   );

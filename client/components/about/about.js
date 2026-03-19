@@ -388,7 +388,7 @@ export default function About() {
                   className="theme-btn"
                   download="sajid-frontend-resume"
                   href="/sajid-frontend-resume.pdf"
-                  title="ImageName"
+                  title="Download Sajid's Frontend Resume"
                 >
                   Resume
                 </Link>
@@ -458,10 +458,10 @@ export default function About() {
         </svg>
       </div>
       <div className="line-shape-1">
-        <img src="images/about/shape1.png" alt="" />
+        <img src="images/about/shape1.png" alt="Abstract Background Shape" title="Background Decoration" />
       </div>
       <div className="line-shape-2">
-        <img src="images/about/shape2.png" alt="" />
+        <img src="images/about/shape2.png" alt="Abstract Background Curve" title="Background Decoration" />
       </div>
     </div >
   );

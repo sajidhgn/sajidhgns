@@ -49,7 +49,8 @@ const Testimonial = () => {
                                         <div className="client-img">
                                             <Image
                                                 src={`/${testimonials[currentIndex].image}`}
-                                                alt={testimonials[currentIndex].name}
+                                                alt={`Testimonial from ${testimonials[currentIndex].name}`}
+                                                title={`Client avatar: ${testimonials[currentIndex].name}`}
                                                 width={60}
                                                 height={60}
                                             />
@@ -68,10 +69,10 @@ const Testimonial = () => {
                             </AnimatePresence>
 
                             <div className="testimonial-navigation">
-                                <button onClick={prevTestimonial} className="nav-btn prev">
+                                <button onClick={prevTestimonial} className="nav-btn prev" title="Previous Testimonial">
                                     <i className="ti-angle-left"></i>
                                 </button>
-                                <button onClick={nextTestimonial} className="nav-btn next">
+                                <button onClick={nextTestimonial} className="nav-btn next" title="Next Testimonial">
                                     <i className="ti-angle-right"></i>
                                 </button>
                             </div>

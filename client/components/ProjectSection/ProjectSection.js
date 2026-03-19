@@ -41,6 +41,7 @@ const ProjectSection = () => {
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             loading="lazy"
                             width={500}
+                            title={project.title}
                             height={290}
                           />
                           <div className="wpo-project-hover">
@@ -48,6 +49,7 @@ const ProjectSection = () => {
                               className="link-hover-project"
                               target="_blank"
                               href={project.button}
+                              title={`View ${project.title} live demo`}
                             >
                               <i className="fa fa-eye"></i>
                             </a>
@@ -63,6 +65,7 @@ const ProjectSection = () => {
                                 href={project.button}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                title={`Learn more about ${project.title}`}
                               >
                                 {project.title}
                               </a>
@@ -97,7 +100,7 @@ const ProjectSection = () => {
                 <a
                   className="theme-btn"
                   href="https://photos.app.goo.gl/yyxDsvG7kfbDi6cc9"
-                  title="view-more"
+                  title="Explore all my projects on Google Photos"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -139,10 +142,10 @@ const ProjectSection = () => {
         </svg>
       </div>
       <div className="line-shape-1">
-        <img src="images/project/line-1.png" alt="" />
+        <img src="images/project/line-1.png" alt="Decorative geometric line" title="Background Graphic" />
       </div>
       <div className="line-shape-2">
-        <img src="images/project/line-2.png" alt="" />
+        <img src="images/project/line-2.png" alt="Decorative geometric shape" title="Background Graphic" />
       </div>
     </div>
   );

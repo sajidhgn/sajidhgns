@@ -38,6 +38,7 @@ const ContactArea = (props) => {
                   }}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   loading="lazy"
+                  title="Sajidhgn"
                   width={96}
                   height={96}
                 />

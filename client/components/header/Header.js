@@ -23,7 +23,8 @@ const Header = () => {
                   <div className="navbar-brand site-logo">
                     <Image
                       src="/images/logo.png"
-                      alt=""
+                      alt="Sajidhgn Logo"
+                      title="Sajidhgn Home"
                       style={{
                         objectFit: "cover",
                       }}
@@ -40,7 +41,7 @@ const Header = () => {
                   id="navbar"
                   className="collapse navbar-collapse navigation-holder"
                 >
-                  <button className="menu-close">
+                  <button className="menu-close" title="Close Menu">
                     <i className="ti-close"></i>
                   </button>
                   <ul className="nav navbar-nav mb-2 mb-lg-0">
@@ -55,6 +56,7 @@ const Header = () => {
                             spy={true}
                             smooth={true}
                             duration={500}
+                            title={menu.name}
                           >
                             {menu.name}
                           </Link>
