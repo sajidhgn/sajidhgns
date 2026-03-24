@@ -92,6 +92,13 @@
   },
   "projects_section": {
     "title": "Portfolio",
+    "problem_label": "Problem",
+    "solution_label": "Solution",
+    "challenges_label": "Challenges",
+    "result_label": "Result",
+    "tech_stack_label": "Tech Stack",
+    "case_study_label": "Case Study",
+    "view_live": "View Live Demo",
     "projects": [
       {
         "id": 1,
@@ -114,7 +121,19 @@
           "Search and Filter Jobs",
           "User Authentication"
         ],
-        "button": "https://workinaus.com.au/"
+        "button": "https://workinaus.com.au/",
+        "problem": "Job seekers in Australia often struggle to find a centralized platform that aggregates high-quality job listings with a user-friendly interface, while employers find it difficult to reach a targeted pool of diverse candidates.",
+        "solution": "Developed a comprehensive job portal using React and Next.js that features advanced filtering, real-time search, and a streamlined application process, connecting talent with opportunity efficiently.",
+        "challenges": "Integrating Elastic Search for high-performance job filtering and ensuring a responsive design that works seamlessly across all devices was a significant technical challenge.",
+        "result": "Successfully launched the platform, which now hosts thousands of job listings and has significantly improved the hiring process for both employers and job seekers in the Australian market.",
+        "caseStudy": "The development of 'Work in Aus' focused on bridging the communication gap between Australian employers and international talent. By implementing a custom matching algorithm, we ensured that both parties find the best fit with minimum effort. The platform handles thousands of monthly active users with sub-second response times.",
+        "techStack": [
+          "React.js",
+          "Next.js",
+          "Redux",
+          "Bootstrap",
+          "Elastic Search"
+        ]
       },
       {
         "id": 2,
@@ -138,7 +157,19 @@
           "Payment Integration",
           "Community Like LinkedIn"
         ],
-        "button": "https://localhost.mycontenthub.tv/"
+        "button": "https://localhost.mycontenthub.tv/",
+        "problem": "Students often struggle with fragmented learning experiences and lack of community engagement on traditional e-learning platforms.",
+        "solution": "Built a unified learning hub that combines high-quality course delivery with social networking features like LinkedIn, fostering a collaborative learning environment.",
+        "challenges": "Implementing real-time chat and community interactions while maintaining high performance for video streaming was a key challenge.",
+        "result": "Created a vibrant platform where students not only learn but also interact, leading to higher course completion rates and better student satisfaction.",
+        "caseStudy": "Learning Hub was designed to solve the isolation often felt in online education. We integrated social features usually found on LinkedIn to encourage peer-to-peer learning. This approach resulted in a 60% increase in user engagement compared to standard e-learning platforms.",
+        "techStack": [
+          "React",
+          "Next.js",
+          "Redux Toolkit",
+          "Stripe",
+          "WebSockets"
+        ]
       },
       {
         "id": 3,
@@ -163,7 +194,19 @@
           "Community Like LinkedIn",
           "Blogs and Articles"
         ],
-        "button": "http://peepskill.com/"
+        "button": "http://peepskill.com/",
+        "problem": "Athletes and coaches lack a dedicated social space to showcase their skills, connect with scouts, and share specialized sports content.",
+        "solution": "Developed a sports-centric social media platform that allows for role-based interactions, skill showcasing, and community building tailored for the athletic world.",
+        "challenges": "Managing diverse user roles and complex media uploads while ensuring low-latency interactions across global users.",
+        "result": "Launched a unique niche platform that has become a go-to space for athletes to build their digital presence and connect with opportunities.",
+        "caseStudy": "PeepSkill's primary goal was to provide a professional home for the sports community. We focused heavily on media optimization to handle high-quality training videos and performance clips. The platform's success lies in its ability to serve as a digital CV for young athletes looking for scholarships and professional contracts.",
+        "techStack": [
+          "Next.js",
+          "TailwindCSS",
+          "Node.js",
+          "MySQL",
+          "WebSockets"
+        ]
       },
       {
         "id": 4,
@@ -184,7 +227,18 @@
           "Printal Reciepts and Invoices",
           "Balance Sheet"
         ],
-        "button": "https://shahjeepetroleum.com/"
+        "button": "https://shahjeepetroleum.com/",
+        "problem": "Fuel stations faced inefficiencies and security risks in managing manual transactions, branch operations, and client balances.",
+        "solution": "Designed a robust Fuel Management System with QR code card scanning, real-time balance sheets, and role-specific dashboards to automate operations.",
+        "challenges": "Ensuring 100% accuracy in financial reporting and high availability for the scanning system at remote fuel stations.",
+        "result": "Significantly reduced operational errors and improved transparency, with the system now processing thousands of secure transactions daily.",
+        "techStack": [
+          "React",
+          "PWA",
+          "TailwindCSS",
+          "Node.js",
+          "Charts.js"
+        ]
       },
       {
         "id": 5,

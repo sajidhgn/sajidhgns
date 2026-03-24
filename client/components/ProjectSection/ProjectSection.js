@@ -3,9 +3,19 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
-const ProjectSection = () => {
+const ProjectSection = ({ data, locale }) => {
   const t = useTranslations("projects_section");
-  const projects = t.raw("projects");
+  const staticProjects = t.raw("projects");
+
+  const projects = data && data.length > 0 ? data.map(p => ({
+    id: p.id,
+    pImg: p.pImg,
+    title: p.title[locale],
+    subTitle: p.subTitle[locale],
+    tags: p.tags,
+    features: p.features[locale],
+    button: p.buttonUrl
+  })) : staticProjects;
 
   return (
     <div className="wpo-project-area section-padding" id="projects">
@@ -62,9 +72,7 @@ const ProjectSection = () => {
                             <h2 className="mb-4">
                               <a
                                 className="link-hover"
-                                href={project.button}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                href={`/${locale}/project/${project.id}`}
                                 title={`Learn more about ${project.title}`}
                               >
                                 {project.title}

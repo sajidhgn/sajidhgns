@@ -3,8 +3,15 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export default function About() {
+export default function About({ data, locale }) {
   const t = useTranslations("about");
+
+  const expDuration = data?.expDuration || t("exp_duration");
+  const expDetail = data?.expDetail?.[locale] || t("exp_detail");
+  const satisfyPercentage = data?.satisfyPercentage || t("satisfy_percentage");
+  const satisfyDetail = data?.satisfyDetail?.[locale] || t("satisfy_detail");
+  const title = data?.title?.[locale] || t("title");
+  const description = data?.description?.[locale] || t("description");
 
   return (
     <div className="wpo-about-area section-padding" id="about">
@@ -19,14 +26,14 @@ export default function About() {
               className="wpo-about-exprience-wrap"
             >
               <div className="wpo-about-exprience">
-                <h2>{t("exp_duration")}</h2>
-                <span>{t("exp_detail")}</span>
+                <h2>{expDuration}</h2>
+                <span>{expDetail}</span>
               </div>
               <div className="client">
                 <h3>
-                  <span data-count="100">{t("satisfy_percentage")}</span>%
+                  <span data-count="100">{satisfyPercentage}</span>%
                 </h3>
-                <p>{t("satisfy_detail")}</p>
+                <p>{satisfyDetail}</p>
               </div>
             </motion.div>
           </div>
@@ -39,8 +46,8 @@ export default function About() {
               className="wpo-about-content"
             >
               <div className="wpo-about-title">
-                <h2> {t("title")}</h2>
-                <p>{t("description")}</p>
+                <h2> {title}</h2>
+                <p>{description}</p>
               </div>
               <div className="wpo-about-funfact">
                 <div className="grid">

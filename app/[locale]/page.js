@@ -65,18 +65,25 @@ export async function generateMetadata({ params: { locale } }) {
   };
 }
 
-const Home = () => {
+import prisma from "../../lib/prisma";
+
+const Home = async ({ params: { locale } }) => {
+  const heroData = await prisma.hero.findFirst();
+  const aboutData = await prisma.about.findFirst();
+  const experiencesData = await prisma.experience.findMany({ orderBy: { order: 'asc' } });
+  const projectsData = await prisma.project.findMany({ orderBy: { order: 'asc' } });
+  const testimonialsData = await prisma.testimonial.findMany({ orderBy: { order: 'asc' } });
 
   return (
     <div id="scrool">
       <Fragment>
         <div className="br-app">
           <Navbar />
-          <Hero />
-          <About />
-          <ExprienceSec />
-          <ProjectSection />
-          <Testimonial />
+          <Hero data={heroData} locale={locale} />
+          <About data={aboutData} locale={locale} />
+          <ExprienceSec data={experiencesData} locale={locale} />
+          <ProjectSection data={projectsData} locale={locale} />
+          <Testimonial data={testimonialsData} locale={locale} />
           <ContactArea />
           <Footer />
           <Scrollbar />

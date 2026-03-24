@@ -4,9 +4,17 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 
-const Testimonial = () => {
+const Testimonial = ({ data, locale }) => {
     const t = useTranslations("testimonial");
-    const testimonials = t.raw("testimonials");
+    const staticTestimonials = t.raw("testimonials");
+
+    const testimonials = data && data.length > 0 ? data.map(testi => ({
+        id: testi.id,
+        name: testi.name,
+        designation: testi.designation[locale],
+        description: testi.description[locale],
+        image: testi.image
+    })) : staticTestimonials;
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const nextTestimonial = () => {

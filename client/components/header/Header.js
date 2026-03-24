@@ -2,6 +2,7 @@
 import { Link } from "react-scroll";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import NextLink from "next/link";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import LanguageSwitcher from "../language-switcher";
 
@@ -21,6 +22,10 @@ const Header = () => {
               <div className="col-lg-2 col-md-6 col-6">
                 <div className="navbar-header">
                   <div className="navbar-brand site-logo">
+                    <NextLink
+                      href="/"
+                      title="Sajidhgn Home"
+                    >
                     <Image
                       src="/images/logo.png"
                       alt="Sajidhgn Logo"
@@ -33,6 +38,7 @@ const Header = () => {
                       width={80}
                       height={55}
                     />
+                    </NextLink>
                   </div>
                 </div>
               </div>

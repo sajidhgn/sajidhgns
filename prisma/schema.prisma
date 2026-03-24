@@ -1,0 +1,85 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Hero {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  greetings   Json     // { en: string, ar: string }
+  subTitle    Json
+  title       Json
+  description Json
+  buttonText  Json
+  resumeUrl   String   @default("/sajid-frontend-resume.pdf")
+  imageUrl    String   @default("/images/hero-graphic.svg")
+  updatedAt   DateTime @updatedAt
+}
+
+model About {
+  id                String   @id @default(auto()) @map("_id") @db.ObjectId
+  expDuration       String   @default("+5")
+  expDetail         Json
+  satisfyPercentage String   @default("100")
+  satisfyDetail     Json
+  title             Json
+  description       Json
+  updatedAt         DateTime @updatedAt
+}
+
+model Experience {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  date        String
+  logo        String
+  position    Json
+  companyName Json
+  workFrom    Json
+  webLink     String
+  buttonText  Json
+  order       Int      @default(0)
+  updatedAt   DateTime @updatedAt
+}
+
+model Project {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  pImg        String
+  title       Json
+  tags        String[]
+  subTitle    Json
+  features    Json     // Array of strings per locale: { en: string[], ar: string[] }
+  problem     Json?    // { en: string, ar: string }
+  solution    Json?
+  challenges  Json?
+  result      Json?
+  caseStudy   Json?
+  techStack   String[]
+  gallery     String[]
+  buttonUrl   String
+  order       Int      @default(0)
+  updatedAt   DateTime @updatedAt
+}
+
+model Testimonial {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  designation Json
+  description Json
+  image       String
+  order       Int      @default(0)
+  updatedAt   DateTime @updatedAt
+}
+
+model User {
+  id               String    @id @default(auto()) @map("_id") @db.ObjectId
+  username         String
+  email            String?
+  password         String    // Hashed
+  resetToken       String?
+  resetTokenExpiry DateTime?
+}

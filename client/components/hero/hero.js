@@ -2,8 +2,14 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
-export default function Hero() {
+export default function Hero({ data, locale }) {
   const t = useTranslations("banner");
+
+  const greetings = data?.greetings?.[locale] || t("greatings");
+  const subTitle = data?.subTitle?.[locale] || t("subTitle");
+  const title = data?.title?.[locale] || t("title");
+  const description = data?.description?.[locale] || t("description");
+  const buttonText = data?.buttonText?.[locale] || t("button");
 
   return (
     <section className="static-hero" id="home">
@@ -22,25 +28,25 @@ export default function Hero() {
                   {/* animate__animated animate__fadeInDown */}
                   <div data-swiper-parallax="300" className="slide-title">
                     <h2>
-                      <span>{t("greatings")}, </span>
-                      {t("subTitle")}.
+                      <span>{greetings}, </span>
+                      {subTitle}.
                     </h2>
                   </div>
                   <div data-swiper-parallax="300" className="slide-sub-title">
-                    <h5>{t("title")}</h5>
+                    <h5>{title}</h5>
                   </div>
                   <div data-swiper-parallax="400" className="slide-text">
-                    <p>{t("description")}</p>
+                    <p>{description}</p>
                   </div>
                   <div className="clearfix"></div>
                   <div className="slide-btn">
                     <a
                       className="theme-btn"
                       download="sajid-frontend-resume"
-                      href="/sajid-frontend-resume.pdf"
-                      title={t("button")}
+                      href={data?.resumeUrl || "/sajid-frontend-resume.pdf"}
+                      title={buttonText}
                     >
-                      {t("button")}
+                      {buttonText}
                     </a>
                   </div>
                 </motion.div>

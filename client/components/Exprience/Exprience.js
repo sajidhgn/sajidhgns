@@ -4,9 +4,19 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import SectionTitle from "../SectionTitle/SectionTitle";
 
-export default function ExprienceSec() {
+export default function ExprienceSec({ data, locale }) {
   const t = useTranslations("experience_section");
-  const experiences = t.raw("work_experience");
+  const staticExperiences = t.raw("work_experience");
+
+  const experiences = data && data.length > 0 ? data.map(exp => ({
+    date: exp.date,
+    logo: exp.logo,
+    position: exp.position[locale],
+    companyName: exp.companyName[locale],
+    workFrom: exp.workFrom[locale],
+    webLink: exp.webLink,
+    button: exp.buttonText[locale]
+  })) : staticExperiences;
 
   return (
     <div className="wpo-work-area section-padding" id="experience">
