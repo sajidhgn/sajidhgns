@@ -16,7 +16,7 @@ const Footer = () => {
                 </div>
             </div>
             <a
-                href="https://api.whatsapp.com/send?phone=923434366924"
+                href="https://api.whatsapp.com/send?phone=966576452059"
                 className="whatsapp-sticky"
                 target="_blank"
                 rel="noopener noreferrer"

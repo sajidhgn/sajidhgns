@@ -17,6 +17,7 @@
                 @media(max-width:767px) {
                     font-size: 25px;
                 }
+
                 @media(max-width:575px) {
                     font-size: 20px;
                 }
@@ -91,7 +92,7 @@
                         justify-content: space-between;
                         font-weight: 600;
 
-                        @media(max-width:575px){
+                        @media(max-width:575px) {
                             padding: 6px 0;
                             font-size: 12px;
                             font-weight: 600;
@@ -173,6 +174,7 @@
                     font-size: 16px;
                     margin-bottom: 20px;
                 }
+
                 @media(max-width:575px) {
                     font-size: 15px;
                     margin-bottom: 10px;
@@ -264,7 +266,7 @@
                     }
                 }
 
-                .errorMessage{
+                .errorMessage {
                     color: red;
                     margin-top: 10px;
                     font-size: 14px;
@@ -312,7 +314,8 @@
                         font-size: 20px;
                         line-height: 30px;
                         cursor: default;
-                        &:hover{
+
+                        &:hover {
                             color: $white;
                         }
                     }
@@ -329,8 +332,8 @@
 }
 
 
-.project-modal{
-    @media(max-width:767px){
-      padding: 0;
+.project-modal {
+    @media(max-width:767px) {
+        padding: 0;
     }
 }
