@@ -1,0 +1,44 @@
+.custom-cursor-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 99999;
+  transition: opacity 0.3s ease;
+
+  .cursor-dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: var(--theme-primary-color, #00bcd4);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .cursor-outline {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1.5px solid var(--theme-primary-color, #00bcd4);
+    border-radius: 50%;
+    pointer-events: none;
+    backdrop-filter: blur(1px);
+    z-index: 0;
+  }
+}
+
+// Hide default cursor on desktop
+@media (min-width: 992px) {
+
+  html,
+  body,
+  a,
+  button,
+  input,
+  textarea {
+    cursor: none !important;
+  }
+}

@@ -3,6 +3,8 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server'; // ✅ include setRequestLocale
 import { notFound } from 'next/navigation';
 import { ToastContainer } from 'react-toastify';
+import AnimatedCursor from '../../client/components/AnimatedCursor/AnimatedCursor';
+import SmoothScroll from '../../client/components/SmoothScroll/SmoothScroll';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css/animate.min.css';
 import '../../styles/sass/style.scss';
@@ -34,6 +36,8 @@ export default async function LocaleLayout({ children, params: { locale } }) {
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} translate="no" className={cairo.variable}>
       <body className={`br-app ${locale === 'ar' ? 'rtl' : 'ltr'}`}>
+        <SmoothScroll />
+        <AnimatedCursor />
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

@@ -33,7 +33,7 @@
     "button": "وظفني"
   },
   "about": {
-    "exp_duration": "+5",
+    "exp_duration": "+6",
     "exp_detail": "سنوات من الخبرة",
     "satisfy_percentage": "100",
     "satisfy_detail": "رضا العملاء",
@@ -47,8 +47,8 @@
         "date": "2024 - حتى الآن",
         "logo": "images/work/1.jpeg",
         "position": "مطور واجهات أمامية أول",
-        "companyName": "دبي",
-        "workFrom": "(عن بُعد)",
+        "companyName": "الرياض، السعودية",
+        "workFrom": "(في المكتب)",
         "webLink": "/",
         "button": "اذهب إلى الموقع"
       },
@@ -56,7 +56,7 @@
         "date": "2023 - 2024",
         "logo": "images/work/2.png",
         "position": "مطور الواجهة الأمامية",
-        "companyName": "لاهور، البنجاب، باكستان",
+        "companyName": "كاليفورنيا، الولايات المتحدة الأمريكية",
         "workFrom": "(عن بُعد)",
         "webLink": "https://dycoders.com/",
         "button": "اذهب إلى الموقع"

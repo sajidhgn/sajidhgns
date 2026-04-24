@@ -33,7 +33,7 @@
     "button": "Hire me"
   },
   "about": {
-    "exp_duration": "+5",
+    "exp_duration": "+6",
     "exp_detail": "Years of Experience",
     "satisfy_percentage": "100",
     "satisfy_detail": "Clients Satisfections",
@@ -47,8 +47,8 @@
         "date": "2024 - Present",
         "logo": "images/work/1.jpeg",
         "position": "Senior Frontend Developer",
-        "companyName": "Dubai",
-        "workFrom": "(Remote)",
+        "companyName": "Al Riyadh, KSA",
+        "workFrom": "(Onsite)",
         "webLink": "/",
         "button": "Go to Website"
       },
@@ -56,7 +56,7 @@
         "date": "2023 - 2024",
         "logo": "images/work/2.png",
         "position": "Frontend Developer",
-        "companyName": "Lahore, Punjab, Pakistan",
+        "companyName": "California, USA",
         "workFrom": "(Remote)",
         "webLink": "https://dycoders.com/",
         "button": "Go to Website"
