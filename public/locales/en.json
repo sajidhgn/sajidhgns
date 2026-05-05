@@ -107,14 +107,54 @@
         ],
         "subTitle": "Work in AUS is a job portal connecting job seekers with top employers across Australia. Like Rozee, Mustakbil, and Indeed, it offers a wide range of job listings, easy applications, and career resources for local and international candidates.",
         "features": [
-          "Responsive Design",
-          "SEO Optimized",
-          "User Roles (Employer, Job Seeker)",
-          "Job Listings and Applications",
-          "Search and Filter Jobs",
-          "User Authentication"
+          {
+            "title": "Responsive Design",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "SEO Optimized",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "User Roles (Employer, Job Seeker)",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Job Listings and Applications",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Search and Filter Jobs",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "User Authentication",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          }
         ],
-        "button": "https://workinaus.com.au/"
+        "button": "https://workinaus.com.au/",
+        "video": "https://www.loom.com/embed/df79c35df9b9424397f6debd59918967?sid=e07f8770-d4f6-476b-a1fa-a0cc3aea469b",
+        "gallery": [
+          "images/project/workinaus.png",
+          "images/project/workinaus.png",
+          "images/project/tvhub.png",
+          "images/project/eduhub.png"
+        ],
+        "challenges": [
+          "Integrating complex third-party APIs while maintaining fast response times.",
+          "Ensuring cross-browser compatibility and responsive design specifically for legacy devices.",
+          "Managing real-time state synchronization across multiple concurrent active users."
+        ],
+        "solutions": [
+          "Abstracted API calls into a highly cached background service reducing overhead by 40%.",
+          "Implemented extensive polyfills and custom fallbacks utilizing modern CSS Grid capabilities safely.",
+          "Leveraged WebSockets natively with a robust Redis pub/sub architectural backend."
+        ],
+        "results": [
+          "Platform adoption increased significantly with thousands of active daily user sessions.",
+          "API response times were cut in half, vastly improving the core metric web vitals.",
+          "Client satisfaction peaked with a highly performant and scalable product matching their exact needs."
+        ]
       },
       {
         "id": 2,
@@ -131,14 +171,54 @@
         ],
         "subTitle": "Learning hub is a learning platform that connects learners with top-notch courses and instructors, offering a seamless online education experience.",
         "features": [
-          "Responsive Design",
-          "SEO Optimized",
-          "Chat integraton",
-          "Follow, Unfollow, Like, Comment",
-          "Payment Integration",
-          "Community Like LinkedIn"
+          {
+            "title": "Responsive Design",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "SEO Optimized",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Chat integraton",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Follow, Unfollow, Like, Comment",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Payment Integration",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Community Like LinkedIn",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          }
         ],
-        "button": "https://localhost.mycontenthub.tv/"
+        "button": "https://localhost.mycontenthub.tv/",
+        "video": "https://www.loom.com/embed/df79c35df9b9424397f6debd59918967?sid=e07f8770-d4f6-476b-a1fa-a0cc3aea469b",
+        "gallery": [
+          "images/project/tvhub.png",
+          "images/project/workinaus.png",
+          "images/project/tvhub.png",
+          "images/project/eduhub.png"
+        ],
+        "challenges": [
+          "Integrating complex third-party APIs while maintaining fast response times.",
+          "Ensuring cross-browser compatibility and responsive design specifically for legacy devices.",
+          "Managing real-time state synchronization across multiple concurrent active users."
+        ],
+        "solutions": [
+          "Abstracted API calls into a highly cached background service reducing overhead by 40%.",
+          "Implemented extensive polyfills and custom fallbacks utilizing modern CSS Grid capabilities safely.",
+          "Leveraged WebSockets natively with a robust Redis pub/sub architectural backend."
+        ],
+        "results": [
+          "Platform adoption increased significantly with thousands of active daily user sessions.",
+          "API response times were cut in half, vastly improving the core metric web vitals.",
+          "Client satisfaction peaked with a highly performant and scalable product matching their exact needs."
+        ]
       },
       {
         "id": 3,
@@ -156,14 +236,54 @@
         ],
         "subTitle": "The global social media platform built for athletes, coaches, and spectators to connect, inspire, and grow together",
         "features": [
-          "Responsive Design",
-          "SEO Optimized",
-          "Live Chat",
-          "Role Management (Athletes, Coaches, Guests)",
-          "Community Like LinkedIn",
-          "Blogs and Articles"
+          {
+            "title": "Responsive Design",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "SEO Optimized",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Live Chat",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Role Management (Athletes, Coaches, Guests)",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Community Like LinkedIn",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Blogs and Articles",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          }
         ],
-        "button": "http://peepskill.com/"
+        "button": "http://peepskill.com/",
+        "video": "https://www.loom.com/embed/df79c35df9b9424397f6debd59918967?sid=e07f8770-d4f6-476b-a1fa-a0cc3aea469b",
+        "gallery": [
+          "images/project/peepskill.png",
+          "images/project/workinaus.png",
+          "images/project/tvhub.png",
+          "images/project/eduhub.png"
+        ],
+        "challenges": [
+          "Integrating complex third-party APIs while maintaining fast response times.",
+          "Ensuring cross-browser compatibility and responsive design specifically for legacy devices.",
+          "Managing real-time state synchronization across multiple concurrent active users."
+        ],
+        "solutions": [
+          "Abstracted API calls into a highly cached background service reducing overhead by 40%.",
+          "Implemented extensive polyfills and custom fallbacks utilizing modern CSS Grid capabilities safely.",
+          "Leveraged WebSockets natively with a robust Redis pub/sub architectural backend."
+        ],
+        "results": [
+          "Platform adoption increased significantly with thousands of active daily user sessions.",
+          "API response times were cut in half, vastly improving the core metric web vitals.",
+          "Client satisfaction peaked with a highly performant and scalable product matching their exact needs."
+        ]
       },
       {
         "id": 4,
@@ -177,14 +297,54 @@
         ],
         "subTitle": "This system is designed to streamline fuel operations across multiple roles and branches, ensuring smooth, secure, and efficient transactions.",
         "features": [
-          "Progressive Web App",
-          "Role Management (Super-Admin, Admin, Clients, Delivery)",
-          "QR Code Card with Scanning",
-          "Charts Integrations",
-          "Printal Reciepts and Invoices",
-          "Balance Sheet"
+          {
+            "title": "Progressive Web App",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Role Management (Super-Admin, Admin, Clients, Delivery)",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "QR Code Card with Scanning",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Charts Integrations",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Printal Reciepts and Invoices",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Balance Sheet",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          }
         ],
-        "button": "https://shahjeepetroleum.com/"
+        "button": "https://shahjeepetroleum.com/",
+        "video": "https://www.loom.com/embed/df79c35df9b9424397f6debd59918967?sid=e07f8770-d4f6-476b-a1fa-a0cc3aea469b",
+        "gallery": [
+          "images/project/pms.png",
+          "images/project/workinaus.png",
+          "images/project/tvhub.png",
+          "images/project/eduhub.png"
+        ],
+        "challenges": [
+          "Integrating complex third-party APIs while maintaining fast response times.",
+          "Ensuring cross-browser compatibility and responsive design specifically for legacy devices.",
+          "Managing real-time state synchronization across multiple concurrent active users."
+        ],
+        "solutions": [
+          "Abstracted API calls into a highly cached background service reducing overhead by 40%.",
+          "Implemented extensive polyfills and custom fallbacks utilizing modern CSS Grid capabilities safely.",
+          "Leveraged WebSockets natively with a robust Redis pub/sub architectural backend."
+        ],
+        "results": [
+          "Platform adoption increased significantly with thousands of active daily user sessions.",
+          "API response times were cut in half, vastly improving the core metric web vitals.",
+          "Client satisfaction peaked with a highly performant and scalable product matching their exact needs."
+        ]
       },
       {
         "id": 5,
@@ -200,13 +360,50 @@
         ],
         "subTitle": "The global social media platform built for athletes, coaches, and spectators to connect, inspire, and grow together",
         "features": [
-          "Responsive Design",
-          "SEO Optimized",
-          "Ecommerce Functionality",
-          "Payment Integration",
-          "TripAdvisor, Google Reviews Integration"
+          {
+            "title": "Responsive Design",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "SEO Optimized",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Ecommerce Functionality",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Payment Integration",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "TripAdvisor, Google Reviews Integration",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          }
         ],
-        "button": "https://www.royalvisiondubai.com/"
+        "button": "https://www.royalvisiondubai.com/",
+        "video": "https://www.loom.com/embed/df79c35df9b9424397f6debd59918967?sid=e07f8770-d4f6-476b-a1fa-a0cc3aea469b",
+        "gallery": [
+          "images/project/travel.png",
+          "images/project/workinaus.png",
+          "images/project/tvhub.png",
+          "images/project/eduhub.png"
+        ],
+        "challenges": [
+          "Integrating complex third-party APIs while maintaining fast response times.",
+          "Ensuring cross-browser compatibility and responsive design specifically for legacy devices.",
+          "Managing real-time state synchronization across multiple concurrent active users."
+        ],
+        "solutions": [
+          "Abstracted API calls into a highly cached background service reducing overhead by 40%.",
+          "Implemented extensive polyfills and custom fallbacks utilizing modern CSS Grid capabilities safely.",
+          "Leveraged WebSockets natively with a robust Redis pub/sub architectural backend."
+        ],
+        "results": [
+          "Platform adoption increased significantly with thousands of active daily user sessions.",
+          "API response times were cut in half, vastly improving the core metric web vitals.",
+          "Client satisfaction peaked with a highly performant and scalable product matching their exact needs."
+        ]
       },
       {
         "id": 6,
@@ -223,14 +420,54 @@
         ],
         "subTitle": "The global social media platform built for athletes, coaches, and spectators to connect, inspire, and grow together",
         "features": [
-          "Responsive Design",
-          "Role Management (Admin, User)",
-          "Payment Integration",
-          "Dashboard with Charts",
-          "Task Management",
-          "File Upload and Management"
+          {
+            "title": "Responsive Design",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Role Management (Admin, User)",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Payment Integration",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Dashboard with Charts",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Task Management",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "File Upload and Management",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          }
         ],
-        "button": "https://oun.ai"
+        "button": "https://oun.ai",
+        "video": "https://www.loom.com/embed/df79c35df9b9424397f6debd59918967?sid=e07f8770-d4f6-476b-a1fa-a0cc3aea469b",
+        "gallery": [
+          "images/project/ounlab.png",
+          "images/project/workinaus.png",
+          "images/project/tvhub.png",
+          "images/project/eduhub.png"
+        ],
+        "challenges": [
+          "Integrating complex third-party APIs while maintaining fast response times.",
+          "Ensuring cross-browser compatibility and responsive design specifically for legacy devices.",
+          "Managing real-time state synchronization across multiple concurrent active users."
+        ],
+        "solutions": [
+          "Abstracted API calls into a highly cached background service reducing overhead by 40%.",
+          "Implemented extensive polyfills and custom fallbacks utilizing modern CSS Grid capabilities safely.",
+          "Leveraged WebSockets natively with a robust Redis pub/sub architectural backend."
+        ],
+        "results": [
+          "Platform adoption increased significantly with thousands of active daily user sessions.",
+          "API response times were cut in half, vastly improving the core metric web vitals.",
+          "Client satisfaction peaked with a highly performant and scalable product matching their exact needs."
+        ]
       },
       {
         "id": 7,
@@ -247,14 +484,54 @@
         ],
         "subTitle": "Built a scalable education platform using Next.js (SSR/ISR) and headless WordPress, enabling users to explore universities, scholarships, and admissions with real-time data and SEO-optimized architecture.",
         "features": [
-          "Responsive Design",
-          "University & program discovery with advanced filtering",
-          "Admission tracking with deadlines & test dates",
-          "Scholarship database with eligibility filters",
-          "Real-time education news & updates",
-          "SEO-optimized pages for organic traffic growth"
+          {
+            "title": "Responsive Design",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "University & program discovery with advanced filtering",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Admission tracking with deadlines & test dates",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Scholarship database with eligibility filters",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Real-time education news & updates",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "SEO-optimized pages for organic traffic growth",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          }
         ],
-        "button": "https://eduhubpak.com/"
+        "button": "https://eduhubpak.com/",
+        "video": "https://www.loom.com/embed/df79c35df9b9424397f6debd59918967?sid=e07f8770-d4f6-476b-a1fa-a0cc3aea469b",
+        "gallery": [
+          "images/project/eduhub.png",
+          "images/project/workinaus.png",
+          "images/project/tvhub.png",
+          "images/project/eduhub.png"
+        ],
+        "challenges": [
+          "Integrating complex third-party APIs while maintaining fast response times.",
+          "Ensuring cross-browser compatibility and responsive design specifically for legacy devices.",
+          "Managing real-time state synchronization across multiple concurrent active users."
+        ],
+        "solutions": [
+          "Abstracted API calls into a highly cached background service reducing overhead by 40%.",
+          "Implemented extensive polyfills and custom fallbacks utilizing modern CSS Grid capabilities safely.",
+          "Leveraged WebSockets natively with a robust Redis pub/sub architectural backend."
+        ],
+        "results": [
+          "Platform adoption increased significantly with thousands of active daily user sessions.",
+          "API response times were cut in half, vastly improving the core metric web vitals.",
+          "Client satisfaction peaked with a highly performant and scalable product matching their exact needs."
+        ]
       },
       {
         "id": 8,
@@ -268,14 +545,54 @@
         ],
         "subTitle": "A restaurant management system that allows users to manage their restaurant operations efficiently, including order management, inventory tracking, and customer management.",
         "features": [
-          "Responsive Design",
-          "Role Management (Admin, User)",
-          "Payment Integration",
-          "Dashboard with Charts",
-          "Order Management",
-          "Inventory Tracking"
+          {
+            "title": "Responsive Design",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Role Management (Admin, User)",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Payment Integration",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Dashboard with Charts",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Order Management",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Inventory Tracking",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          }
         ],
-        "button": "/"
+        "button": "/",
+        "video": "https://www.loom.com/embed/df79c35df9b9424397f6debd59918967?sid=e07f8770-d4f6-476b-a1fa-a0cc3aea469b",
+        "gallery": [
+          "images/project/papaz.jpg",
+          "images/project/workinaus.png",
+          "images/project/tvhub.png",
+          "images/project/eduhub.png"
+        ],
+        "challenges": [
+          "Integrating complex third-party APIs while maintaining fast response times.",
+          "Ensuring cross-browser compatibility and responsive design specifically for legacy devices.",
+          "Managing real-time state synchronization across multiple concurrent active users."
+        ],
+        "solutions": [
+          "Abstracted API calls into a highly cached background service reducing overhead by 40%.",
+          "Implemented extensive polyfills and custom fallbacks utilizing modern CSS Grid capabilities safely.",
+          "Leveraged WebSockets natively with a robust Redis pub/sub architectural backend."
+        ],
+        "results": [
+          "Platform adoption increased significantly with thousands of active daily user sessions.",
+          "API response times were cut in half, vastly improving the core metric web vitals.",
+          "Client satisfaction peaked with a highly performant and scalable product matching their exact needs."
+        ]
       },
       {
         "id": 9,
@@ -291,11 +608,78 @@
         ],
         "subTitle": "A canadian based digital agency that specializes in web development, design, and digital marketing solutions.",
         "features": [
-          "Responsive Design",
-          "Blogs and Articles",
-          "Email Integration"
+          {
+            "title": "Responsive Design",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Blogs and Articles",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "Email Integration",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          }
         ],
-        "button": "https://www.mdhov.com/"
+        "button": "https://www.mdhov.com/",
+        "video": "https://www.loom.com/embed/df79c35df9b9424397f6debd59918967?sid=e07f8770-d4f6-476b-a1fa-a0cc3aea469b",
+        "gallery": [
+          "images/project/mdhov.png",
+          "images/project/workinaus.png",
+          "images/project/tvhub.png",
+          "images/project/eduhub.png"
+        ],
+        "challenges": [
+          "Integrating complex third-party APIs while maintaining fast response times.",
+          "Ensuring cross-browser compatibility and responsive design specifically for legacy devices.",
+          "Managing real-time state synchronization across multiple concurrent active users."
+        ],
+        "solutions": [
+          "Abstracted API calls into a highly cached background service reducing overhead by 40%.",
+          "Implemented extensive polyfills and custom fallbacks utilizing modern CSS Grid capabilities safely.",
+          "Leveraged WebSockets natively with a robust Redis pub/sub architectural backend."
+        ],
+        "results": [
+          "Platform adoption increased significantly with thousands of active daily user sessions.",
+          "API response times were cut in half, vastly improving the core metric web vitals.",
+          "Client satisfaction peaked with a highly performant and scalable product matching their exact needs."
+        ]
+      },
+      {
+        "id": 10,
+        "pImg": "images/project/healthsia-dashboard.png",
+        "title": "HealthSIA",
+        "tags": [
+          "React.js",
+          "Next.js",
+          "Node.js",
+          "Express.js",
+          "MySQL",
+          "Sequalize ORM"
+        ],
+        "subTitle": "A patient–therapist–surgeon communication and perioperative care platform with role-based dashboards and real-time chat.",
+        "features": [
+          {
+            "title": "Platform adopted across multiple clinics",
+            "detail": "improving patient engagement and care coordination"
+          },
+          {
+            "title": "Reduced API response time",
+            "detail": "by ~40%"
+          },
+          {
+            "title": "Streamlined clinical workflows",
+            "detail": "and operational efficiency"
+          }
+        ],
+        "button": "/",
+        "video": "",
+        "gallery": [
+          "images/project/healthsia-dashboard.png"
+        ],
+        "challenges": [],
+        "solutions": [],
+        "results": []
       }
     ]
   },

@@ -1,14 +1,21 @@
 "use client";
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
+import NextLink from 'next/link';
+import { usePathname, useParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
 
 const MobileMenu = () => {
 
     const [menuActive, setMenuState] = useState(false);
+    const pathname = usePathname();
+    const params = useParams();
+    const currentLocale = params?.locale || 'en';
+    const isHome = pathname === '/' || pathname === `/${currentLocale}`;
+
     const t = useTranslations();
-    const menus = t.raw("menu");
+    const menus = t.raw("menu") || [];
 
 
     return (
@@ -21,19 +28,33 @@ const MobileMenu = () => {
                 <ul className="responsivemenu">
 
                     {
-                        menus.map((menu, index) => (
-                            <li key={index}>
-                                <Link
-                                    activeClass="active"
-                                    to={menu.link}
-                                    spy={true}
-                                    smooth={true}
-                                    duration={500}
-                                >
-                                    {menu.name}
-                                </Link>
-                            </li>
-                        ))
+                        menus.map((menu, index) => {
+                            if (!menu.link) return null;
+                            return (
+                                <li key={index}>
+                                    {isHome ? (
+                                        <Link
+                                            activeClass="active"
+                                            to={menu.link}
+                                            spy={true}
+                                            smooth={true}
+                                            duration={500}
+                                            onClick={() => setMenuState(false)}
+                                            style={{ cursor: 'pointer' }}
+                                        >
+                                            {menu.name}
+                                        </Link>
+                                    ) : (
+                                        <NextLink
+                                            href={`/${currentLocale}/#${menu.link}`}
+                                            onClick={() => setMenuState(false)}
+                                        >
+                                            {menu.name}
+                                        </NextLink>
+                                    )}
+                                </li>
+                            );
+                        })
                     }
                 </ul>
 

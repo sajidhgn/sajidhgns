@@ -1,5 +1,6 @@
 'use client';
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
@@ -45,14 +46,13 @@ const ProjectSection = () => {
                             height={290}
                           />
                           <div className="wpo-project-hover">
-                            <a
+                            <Link
                               className="link-hover-project"
-                              target="_blank"
-                              href={project.button}
-                              title={`View ${project.title} live demo`}
+                              href={`/project/${project.id}`}
+                              title={`View ${project.title} case study`}
                             >
                               <i className="fa fa-eye"></i>
-                            </a>
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -60,15 +60,13 @@ const ProjectSection = () => {
                         <div className="wpo-pros p-3">
                           <div className="wpo-project-text">
                             <h2 className="mb-4">
-                              <a
+                              <Link
                                 className="link-hover"
-                                href={project.button}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                href={`/project/${project.id}`}
                                 title={`Learn more about ${project.title}`}
                               >
                                 {project.title}
-                              </a>
+                              </Link>
                             </h2>
                             <span>{project.subTitle}</span>
                             <ul className="row mt-4 features-list">
@@ -78,7 +76,7 @@ const ProjectSection = () => {
                                   className="col-lg-6 col-md-6 col-12 py-1"
                                 >
                                   <i className="ti-arrow-right"> </i>
-                                  {item}
+                                  {typeof item === 'string' ? item : item.title || ''}
                                 </li>
                               ))}
                             </ul>

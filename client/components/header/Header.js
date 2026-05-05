@@ -1,5 +1,7 @@
 "use client";
 import { Link } from "react-scroll";
+import NextLink from "next/link";
+import { usePathname, useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import MobileMenu from "../MobileMenu/MobileMenu";
@@ -7,7 +9,12 @@ import LanguageSwitcher from "../language-switcher";
 
 const Header = () => {
   const t = useTranslations();
+  const pathname = usePathname();
+  const params = useParams();
+
   const menus = t.raw("menu") || [];
+  const currentLocale = params?.locale || "en";
+  const isHome = pathname === "/" || pathname === `/${currentLocale}`;
 
   return (
     <header id="header" className="wpo-header-style-1">
@@ -50,16 +57,26 @@ const Header = () => {
 
                       return (
                         <li key={index}>
-                          <Link
-                            activeClass="active"
-                            to={menu.link}
-                            spy={true}
-                            smooth={true}
-                            duration={500}
-                            title={menu.name}
-                          >
-                            {menu.name}
-                          </Link>
+                          {isHome ? (
+                            <Link
+                              activeClass="active"
+                              to={menu.link}
+                              spy={true}
+                              smooth={true}
+                              duration={500}
+                              title={menu.name}
+                              style={{ cursor: "pointer" }}
+                            >
+                              {menu.name}
+                            </Link>
+                          ) : (
+                            <NextLink
+                              href={`/${currentLocale}/#${menu.link}`}
+                              title={menu.name}
+                            >
+                              {menu.name}
+                            </NextLink>
+                          )}
                         </li>
                       );
                     })}

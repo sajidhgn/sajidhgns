@@ -107,14 +107,54 @@
         ],
         "subTitle": "Work in AUS هي بوابة وظائف تربط الباحثين عن عمل بأفضل أصحاب العمل في أستراليا. مثل Rozee وMustakbil وIndeed، تقدم مجموعة واسعة من الوظائف وطرق تقديم سهلة وموارد مهنية للمحليين والدوليين.",
         "features": [
-          "تصميم متجاوب",
-          "محسّن لمحركات البحث",
-          "أدوار المستخدمين (صاحب عمل، باحث عن عمل)",
-          "إعلانات وظائف وتقديمات",
-          "البحث والتصفية عن الوظائف",
-          "تسجيل دخول وتوثيق المستخدمين"
+          {
+            "title": "تصميم متجاوب",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "محسّن لمحركات البحث",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "أدوار المستخدمين (صاحب عمل، باحث عن عمل)",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "إعلانات وظائف وتقديمات",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "البحث والتصفية عن الوظائف",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "تسجيل دخول وتوثيق المستخدمين",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          }
         ],
-        "button": "https://workinaus.com.au/"
+        "button": "https://workinaus.com.au/",
+        "video": "https://www.loom.com/embed/df79c35df9b9424397f6debd59918967?sid=e07f8770-d4f6-476b-a1fa-a0cc3aea469b",
+        "gallery": [
+          "images/project/workinaus.png",
+          "images/project/workinaus.png",
+          "images/project/tvhub.png",
+          "images/project/eduhub.png"
+        ],
+        "challenges": [
+          "Integrating complex third-party APIs while maintaining fast response times.",
+          "Ensuring cross-browser compatibility and responsive design specifically for legacy devices.",
+          "Managing real-time state synchronization across multiple concurrent active users."
+        ],
+        "solutions": [
+          "Abstracted API calls into a highly cached background service reducing overhead by 40%.",
+          "Implemented extensive polyfills and custom fallbacks utilizing modern CSS Grid capabilities safely.",
+          "Leveraged WebSockets natively with a robust Redis pub/sub architectural backend."
+        ],
+        "results": [
+          "Platform adoption increased significantly with thousands of active daily user sessions.",
+          "API response times were cut in half, vastly improving the core metric web vitals.",
+          "Client satisfaction peaked with a highly performant and scalable product matching their exact needs."
+        ]
       },
       {
         "id": 2,
@@ -131,14 +171,54 @@
         ],
         "subTitle": "Learning Hub هي منصة تعليمية تربط المتعلمين بأفضل الدورات والمدربين، وتوفر تجربة تعليمية عبر الإنترنت سلسة.",
         "features": [
-          "تصميم متجاوب",
-          "محسّن لمحركات البحث",
-          "دمج المحادثات",
-          "متابعة، إلغاء المتابعة، إعجاب، تعليق",
-          "تكامل الدفع الإلكتروني",
-          "مجتمع مثل LinkedIn"
+          {
+            "title": "تصميم متجاوب",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "محسّن لمحركات البحث",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "دمج المحادثات",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "متابعة، إلغاء المتابعة، إعجاب، تعليق",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "تكامل الدفع الإلكتروني",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "مجتمع مثل LinkedIn",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          }
         ],
-        "button": "https://localhost.mycontenthub.tv/"
+        "button": "https://localhost.mycontenthub.tv/",
+        "video": "https://www.loom.com/embed/df79c35df9b9424397f6debd59918967?sid=e07f8770-d4f6-476b-a1fa-a0cc3aea469b",
+        "gallery": [
+          "images/project/tvhub.png",
+          "images/project/workinaus.png",
+          "images/project/tvhub.png",
+          "images/project/eduhub.png"
+        ],
+        "challenges": [
+          "Integrating complex third-party APIs while maintaining fast response times.",
+          "Ensuring cross-browser compatibility and responsive design specifically for legacy devices.",
+          "Managing real-time state synchronization across multiple concurrent active users."
+        ],
+        "solutions": [
+          "Abstracted API calls into a highly cached background service reducing overhead by 40%.",
+          "Implemented extensive polyfills and custom fallbacks utilizing modern CSS Grid capabilities safely.",
+          "Leveraged WebSockets natively with a robust Redis pub/sub architectural backend."
+        ],
+        "results": [
+          "Platform adoption increased significantly with thousands of active daily user sessions.",
+          "API response times were cut in half, vastly improving the core metric web vitals.",
+          "Client satisfaction peaked with a highly performant and scalable product matching their exact needs."
+        ]
       },
       {
         "id": 3,
@@ -156,14 +236,54 @@
         ],
         "subTitle": "منصة تواصل اجتماعي عالمية مصممة للرياضيين والمدربين والجماهير للتواصل والإلهام والنمو معًا.",
         "features": [
-          "تصميم متجاوب",
-          "محسّن لمحركات البحث",
-          "محادثة مباشرة",
-          "إدارة الأدوار (رياضيين، مدربين، زوار)",
-          "مجتمع مثل LinkedIn",
-          "مدونات ومقالات"
+          {
+            "title": "تصميم متجاوب",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "محسّن لمحركات البحث",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "محادثة مباشرة",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "إدارة الأدوار (رياضيين، مدربين، زوار)",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "مجتمع مثل LinkedIn",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "مدونات ومقالات",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          }
         ],
-        "button": "http://peepskill.com/"
+        "button": "http://peepskill.com/",
+        "video": "https://www.loom.com/embed/df79c35df9b9424397f6debd59918967?sid=e07f8770-d4f6-476b-a1fa-a0cc3aea469b",
+        "gallery": [
+          "images/project/peepskill.png",
+          "images/project/workinaus.png",
+          "images/project/tvhub.png",
+          "images/project/eduhub.png"
+        ],
+        "challenges": [
+          "Integrating complex third-party APIs while maintaining fast response times.",
+          "Ensuring cross-browser compatibility and responsive design specifically for legacy devices.",
+          "Managing real-time state synchronization across multiple concurrent active users."
+        ],
+        "solutions": [
+          "Abstracted API calls into a highly cached background service reducing overhead by 40%.",
+          "Implemented extensive polyfills and custom fallbacks utilizing modern CSS Grid capabilities safely.",
+          "Leveraged WebSockets natively with a robust Redis pub/sub architectural backend."
+        ],
+        "results": [
+          "Platform adoption increased significantly with thousands of active daily user sessions.",
+          "API response times were cut in half, vastly improving the core metric web vitals.",
+          "Client satisfaction peaked with a highly performant and scalable product matching their exact needs."
+        ]
       },
       {
         "id": 4,
@@ -177,14 +297,54 @@
         ],
         "subTitle": "تم تصميم هذا النظام لتبسيط عمليات الوقود عبر أدوار وفروع متعددة، لضمان عمليات آمنة وسلسة وفعّالة.",
         "features": [
-          "تطبيق ويب تقدمي",
-          "إدارة الأدوار (سوبر أدمن، أدمن، العملاء، التوصيل)",
-          "بطاقة QR ومسح ضوئي",
-          "دمج الرسوم البيانية",
-          "طباعة الإيصالات والفواتير",
-          "ميزانية وتقارير مالية"
+          {
+            "title": "تطبيق ويب تقدمي",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "إدارة الأدوار (سوبر أدمن، أدمن، العملاء، التوصيل)",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "بطاقة QR ومسح ضوئي",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "دمج الرسوم البيانية",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "طباعة الإيصالات والفواتير",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "ميزانية وتقارير مالية",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          }
         ],
-        "button": "https://shahjeepetroleum.com/"
+        "button": "https://shahjeepetroleum.com/",
+        "video": "https://www.loom.com/embed/df79c35df9b9424397f6debd59918967?sid=e07f8770-d4f6-476b-a1fa-a0cc3aea469b",
+        "gallery": [
+          "images/project/pms.png",
+          "images/project/workinaus.png",
+          "images/project/tvhub.png",
+          "images/project/eduhub.png"
+        ],
+        "challenges": [
+          "Integrating complex third-party APIs while maintaining fast response times.",
+          "Ensuring cross-browser compatibility and responsive design specifically for legacy devices.",
+          "Managing real-time state synchronization across multiple concurrent active users."
+        ],
+        "solutions": [
+          "Abstracted API calls into a highly cached background service reducing overhead by 40%.",
+          "Implemented extensive polyfills and custom fallbacks utilizing modern CSS Grid capabilities safely.",
+          "Leveraged WebSockets natively with a robust Redis pub/sub architectural backend."
+        ],
+        "results": [
+          "Platform adoption increased significantly with thousands of active daily user sessions.",
+          "API response times were cut in half, vastly improving the core metric web vitals.",
+          "Client satisfaction peaked with a highly performant and scalable product matching their exact needs."
+        ]
       },
       {
         "id": 5,
@@ -200,13 +360,50 @@
         ],
         "subTitle": "منصة تواصل اجتماعي عالمية مصممة للرياضيين والمدربين والجماهير للتواصل والإلهام والنمو معًا.",
         "features": [
-          "تصميم متجاوب",
-          "محسّن لمحركات البحث",
-          "وظائف التجارة الإلكترونية",
-          "تكامل الدفع الإلكتروني",
-          "دمج تقييمات TripAdvisor وGoogle"
+          {
+            "title": "تصميم متجاوب",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "محسّن لمحركات البحث",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "وظائف التجارة الإلكترونية",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "تكامل الدفع الإلكتروني",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "دمج تقييمات TripAdvisor وGoogle",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          }
         ],
-        "button": "https://www.royalvisiondubai.com/"
+        "button": "https://www.royalvisiondubai.com/",
+        "video": "https://www.loom.com/embed/df79c35df9b9424397f6debd59918967?sid=e07f8770-d4f6-476b-a1fa-a0cc3aea469b",
+        "gallery": [
+          "images/project/travel.png",
+          "images/project/workinaus.png",
+          "images/project/tvhub.png",
+          "images/project/eduhub.png"
+        ],
+        "challenges": [
+          "Integrating complex third-party APIs while maintaining fast response times.",
+          "Ensuring cross-browser compatibility and responsive design specifically for legacy devices.",
+          "Managing real-time state synchronization across multiple concurrent active users."
+        ],
+        "solutions": [
+          "Abstracted API calls into a highly cached background service reducing overhead by 40%.",
+          "Implemented extensive polyfills and custom fallbacks utilizing modern CSS Grid capabilities safely.",
+          "Leveraged WebSockets natively with a robust Redis pub/sub architectural backend."
+        ],
+        "results": [
+          "Platform adoption increased significantly with thousands of active daily user sessions.",
+          "API response times were cut in half, vastly improving the core metric web vitals.",
+          "Client satisfaction peaked with a highly performant and scalable product matching their exact needs."
+        ]
       },
       {
         "id": 6,
@@ -223,14 +420,54 @@
         ],
         "subTitle": "منصة تواصل اجتماعي عالمية بُنيت للرياضيين والمدربين والمشجعين للتواصل والإلهام والنمو معًا.",
         "features": [
-          "تصميم متجاوب",
-          "إدارة الأدوار (مشرف، مستخدم)",
-          "تكامل الدفع",
-          "لوحة تحكم مع الرسوم البيانية",
-          "إدارة المهام",
-          "تحميل الملفات وإدارتها"
+          {
+            "title": "تصميم متجاوب",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "إدارة الأدوار (مشرف، مستخدم)",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "تكامل الدفع",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "لوحة تحكم مع الرسوم البيانية",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "إدارة المهام",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "تحميل الملفات وإدارتها",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          }
         ],
-        "button": "https://oun.ai"
+        "button": "https://oun.ai",
+        "video": "https://www.loom.com/embed/df79c35df9b9424397f6debd59918967?sid=e07f8770-d4f6-476b-a1fa-a0cc3aea469b",
+        "gallery": [
+          "images/project/ounlab.png",
+          "images/project/workinaus.png",
+          "images/project/tvhub.png",
+          "images/project/eduhub.png"
+        ],
+        "challenges": [
+          "Integrating complex third-party APIs while maintaining fast response times.",
+          "Ensuring cross-browser compatibility and responsive design specifically for legacy devices.",
+          "Managing real-time state synchronization across multiple concurrent active users."
+        ],
+        "solutions": [
+          "Abstracted API calls into a highly cached background service reducing overhead by 40%.",
+          "Implemented extensive polyfills and custom fallbacks utilizing modern CSS Grid capabilities safely.",
+          "Leveraged WebSockets natively with a robust Redis pub/sub architectural backend."
+        ],
+        "results": [
+          "Platform adoption increased significantly with thousands of active daily user sessions.",
+          "API response times were cut in half, vastly improving the core metric web vitals.",
+          "Client satisfaction peaked with a highly performant and scalable product matching their exact needs."
+        ]
       },
       {
         "id": 7,
@@ -247,14 +484,54 @@
         ],
         "subTitle": "منصة تعليمية شاملة مصممة لمساعدة الطلاب في باكستان على اكتشاف ومقارنة والتقديم للجامعات والمنح الدراسية والبرامج الأكاديمية بطريقة مبسطة. توفر أدوات مثل مقارنة الجامعات وتتبع القبول واكتشاف المنح الدراسية لتوجيه الطلاب من التعليم المتوسط إلى التعليم العالي.",
         "features": [
-          "تصميم متجاوب",
-          "اكتشاف الجامعات والبرامج مع خيارات تصفية متقدمة",
-          "تتبع القبول مع المواعيد النهائية وتواريخ الاختبار",
-          "قاعدة بيانات المنح الدراسية مع فلاتر الأهلية",
-          "آخر الأخبار والتحديثات التعليمية في الوقت الفعلي",
-          "صفحات محسّنة لمحركات البحث لنمو حركة المرور العضوية"
+          {
+            "title": "تصميم متجاوب",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "اكتشاف الجامعات والبرامج مع خيارات تصفية متقدمة",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "تتبع القبول مع المواعيد النهائية وتواريخ الاختبار",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "قاعدة بيانات المنح الدراسية مع فلاتر الأهلية",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "آخر الأخبار والتحديثات التعليمية في الوقت الفعلي",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "صفحات محسّنة لمحركات البحث لنمو حركة المرور العضوية",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          }
         ],
-        "button": "https://eduhubpak.com/"
+        "button": "https://eduhubpak.com/",
+        "video": "https://www.loom.com/embed/df79c35df9b9424397f6debd59918967?sid=e07f8770-d4f6-476b-a1fa-a0cc3aea469b",
+        "gallery": [
+          "images/project/eduhub.png",
+          "images/project/workinaus.png",
+          "images/project/tvhub.png",
+          "images/project/eduhub.png"
+        ],
+        "challenges": [
+          "Integrating complex third-party APIs while maintaining fast response times.",
+          "Ensuring cross-browser compatibility and responsive design specifically for legacy devices.",
+          "Managing real-time state synchronization across multiple concurrent active users."
+        ],
+        "solutions": [
+          "Abstracted API calls into a highly cached background service reducing overhead by 40%.",
+          "Implemented extensive polyfills and custom fallbacks utilizing modern CSS Grid capabilities safely.",
+          "Leveraged WebSockets natively with a robust Redis pub/sub architectural backend."
+        ],
+        "results": [
+          "Platform adoption increased significantly with thousands of active daily user sessions.",
+          "API response times were cut in half, vastly improving the core metric web vitals.",
+          "Client satisfaction peaked with a highly performant and scalable product matching their exact needs."
+        ]
       },
       {
         "id": 8,
@@ -268,14 +545,54 @@
         ],
         "subTitle": "نظام إدارة مطاعم يتيح للمستخدمين إدارة عمليات المطعم بكفاءة، بما في ذلك إدارة الطلبات، وتتبع المخزون، وإدارة العملاء.",
         "features": [
-          "تصميم متجاوب",
-          "إدارة الأدوار (مدير، مستخدم)",
-          "تكامل الدفع",
-          "لوحة تحكم تحتوي على مخططات",
-          "إدارة الطلبات",
-          "تتبع المخزون"
+          {
+            "title": "تصميم متجاوب",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "إدارة الأدوار (مدير، مستخدم)",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "تكامل الدفع",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "لوحة تحكم تحتوي على مخططات",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "إدارة الطلبات",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "تتبع المخزون",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          }
         ],
-        "button": "/"
+        "button": "/",
+        "video": "https://www.loom.com/embed/df79c35df9b9424397f6debd59918967?sid=e07f8770-d4f6-476b-a1fa-a0cc3aea469b",
+        "gallery": [
+          "images/project/papaz.jpg",
+          "images/project/workinaus.png",
+          "images/project/tvhub.png",
+          "images/project/eduhub.png"
+        ],
+        "challenges": [
+          "Integrating complex third-party APIs while maintaining fast response times.",
+          "Ensuring cross-browser compatibility and responsive design specifically for legacy devices.",
+          "Managing real-time state synchronization across multiple concurrent active users."
+        ],
+        "solutions": [
+          "Abstracted API calls into a highly cached background service reducing overhead by 40%.",
+          "Implemented extensive polyfills and custom fallbacks utilizing modern CSS Grid capabilities safely.",
+          "Leveraged WebSockets natively with a robust Redis pub/sub architectural backend."
+        ],
+        "results": [
+          "Platform adoption increased significantly with thousands of active daily user sessions.",
+          "API response times were cut in half, vastly improving the core metric web vitals.",
+          "Client satisfaction peaked with a highly performant and scalable product matching their exact needs."
+        ]
       },
       {
         "id": 9,
@@ -291,11 +608,78 @@
         ],
         "subTitle": "وكالة رقمية مقرها كندا متخصصة في تطوير الويب، التصميم، وحلول التسويق الرقمي.",
         "features": [
-          "تصميم متجاوب",
-          "مدونات ومقالات",
-          "دمج البريد الإلكتروني"
+          {
+            "title": "تصميم متجاوب",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "مدونات ومقالات",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          },
+          {
+            "title": "دمج البريد الإلكتروني",
+            "detail": "This is a detailed explanation of the feature. It spans multiple lines to provide deep insights into how this functionality was built, the specific technologies involved, and the value it delivers to end users. Providing clear three-line descriptions like this ensures the case study is robust."
+          }
         ],
-        "button": "https://www.mdhov.com/"
+        "button": "https://www.mdhov.com/",
+        "video": "https://www.loom.com/embed/df79c35df9b9424397f6debd59918967?sid=e07f8770-d4f6-476b-a1fa-a0cc3aea469b",
+        "gallery": [
+          "images/project/mdhov.png",
+          "images/project/workinaus.png",
+          "images/project/tvhub.png",
+          "images/project/eduhub.png"
+        ],
+        "challenges": [
+          "Integrating complex third-party APIs while maintaining fast response times.",
+          "Ensuring cross-browser compatibility and responsive design specifically for legacy devices.",
+          "Managing real-time state synchronization across multiple concurrent active users."
+        ],
+        "solutions": [
+          "Abstracted API calls into a highly cached background service reducing overhead by 40%.",
+          "Implemented extensive polyfills and custom fallbacks utilizing modern CSS Grid capabilities safely.",
+          "Leveraged WebSockets natively with a robust Redis pub/sub architectural backend."
+        ],
+        "results": [
+          "Platform adoption increased significantly with thousands of active daily user sessions.",
+          "API response times were cut in half, vastly improving the core metric web vitals.",
+          "Client satisfaction peaked with a highly performant and scalable product matching their exact needs."
+        ]
+      },
+      {
+        "id": 10,
+        "pImg": "images/project/healthsia-dashboard.png",
+        "title": "HealthSIA",
+        "tags": [
+          "React.js",
+          "Next.js",
+          "Node.js",
+          "Express.js",
+          "MySQL",
+          "Sequalize ORM"
+        ],
+        "subTitle": "منصة تواصل بين المريض والمعالج والجراح للرعاية المحيطة بالجراحة مع لوحات معلومات قائمة على الأدوار ومحادثة مباشرة.",
+        "features": [
+          {
+            "title": "اعتماد المنصة عبر عيادات متعددة",
+            "detail": "تحسين مشاركة المرضى وتنسيق الرعاية"
+          },
+          {
+            "title": "تقليل وقت استجابة واجهة برمجة التطبيقات",
+            "detail": "بنسبة ~40%"
+          },
+          {
+            "title": "تبسيط سير العمل السريري",
+            "detail": "والكفاءة التشغيلية"
+          }
+        ],
+        "button": "/",
+        "video": "",
+        "gallery": [
+          "images/project/healthsia-dashboard.png"
+        ],
+        "challenges": [],
+        "solutions": [],
+        "results": []
       }
     ]
   },
