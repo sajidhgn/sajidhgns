@@ -5,6 +5,7 @@ import Scrollbar from "../../../../client/components/scrollbar/scrollbar";
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import Image from "next/image";
+import ProjectGallery from "../../../../client/components/ProjectGallery/ProjectGallery";
 
 export async function generateMetadata({ params: { locale, id } }) {
     const t = await getTranslations({ locale, namespace: 'projects_section' });
@@ -59,7 +60,7 @@ const ProjectSinglePage = async ({ params: { locale, id } }) => {
                             <div className="row align-items-center">
                                 {/* Left Content */}
                                 <div className="col-lg-6 col-12 text-center text-lg-start mb-5 mb-lg-0">
-                                    <h1 className="display-4 fw-bold text-white mb-4">{project.title.split(' - ')[0]}</h1>
+                                    <h1 className="display-4 fw-bold text-white mb-4">{project.title}</h1>
                                     <p className="lead text-light mb-4" style={{ opacity: 0.9, lineHeight: '1.8' }}>
                                         {project.subTitle}
                                     </p>
@@ -128,25 +129,18 @@ const ProjectSinglePage = async ({ params: { locale, id } }) => {
 
                                         <div className="features-section mb-5" id="features">
                                             <h2 className="mb-4 fs-3 text-white border-bottom border-secondary pb-3">Key Features & Highlights</h2>
-                                            <div className="row">
+                                            <ul className="row mt-4 list-unstyled">
                                                 {project.features?.map((feature, i) => (
-                                                    <div key={i} className="col-12 mb-4">
-                                                        <div className="d-flex align-items-start p-4 rounded shadow-sm" style={{ backgroundColor: '#1e293b', borderLeft: '4px solid #ff4a57' }}>
-                                                            <div className="bg-dark rounded-circle d-flex align-items-center justify-content-center me-4 mt-1 flex-shrink-0" style={{ width: '40px', height: '40px' }}>
-                                                                <span className="text-primary fw-bold">{i + 1}</span>
-                                                            </div>
-                                                            <div>
-                                                                <h4 className="fs-5 text-white mb-2">{typeof feature === 'string' ? feature : feature.title || ''}</h4>
-                                                                {feature.detail && (
-                                                                    <p className="text-light mb-0" style={{ lineHeight: '1.7', opacity: 0.85, fontSize: '0.95rem' }}>
-                                                                        {feature.detail}
-                                                                    </p>
-                                                                )}
-                                                            </div>
+                                                    <li key={i} className="col-lg-6 col-md-6 col-12 py-2 mb-2 d-flex align-items-start">
+                                                        <div className="bg-dark rounded-circle d-flex align-items-center justify-content-center me-3 mt-1 flex-shrink-0" style={{ width: '28px', height: '28px', border: '1px solid #ff4a57' }}>
+                                                            <i className="ti-arrow-right" style={{ color: '#ff4a57', fontSize: '12px' }}></i>
                                                         </div>
-                                                    </div>
+                                                        <span className="text-light" style={{ fontSize: '1.05rem', lineHeight: '1.6' }}>
+                                                            {typeof feature === 'string' ? feature : feature.title || ''}
+                                                        </span>
+                                                    </li>
                                                 ))}
-                                            </div>
+                                            </ul>
                                         </div>
 
                                         {project.challenges && (
@@ -228,11 +222,11 @@ const ProjectSinglePage = async ({ params: { locale, id } }) => {
                                                         <i className="fa fa-line-chart text-primary"></i> Results
                                                     </a>
                                                 </li>
-                                                {/* <li className="mb-3">
+                                                <li className="mb-3">
                                                     <a href="#gallery" className="text-light text-decoration-none d-flex align-items-center gap-2 hover-text-primary">
                                                         <i className="fa fa-photo text-primary"></i> Interactive Gallery
                                                     </a>
-                                                </li> */}
+                                                </li>
                                             </ul>
                                         </div>
 

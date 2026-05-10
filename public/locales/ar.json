@@ -675,11 +675,63 @@
         "button": "/",
         "video": "",
         "gallery": [
-          "images/project/healthsia-dashboard.png"
+          "images/project/healthsia/health-1.jpeg",
+          "images/project/healthsia/health-2.png",
+          "images/project/healthsia/health-(3).png",
+          "images/project/healthsia/health-(4).png",
+          "images/project/healthsia/health-(5).png",
+          "images/project/healthsia/health-(6).png",
+          "images/project/healthsia/health-(7).png",
+          "images/project/healthsia/health-(8).png",
+          "images/project/healthsia/health-(9).png",
+          "images/project/healthsia/health-(10).png",
+          "images/project/healthsia/health-(11).png",
+          "images/project/healthsia/health-(12).png",
+          "images/project/healthsia/health-(13).png",
+          "images/project/healthsia/health-(14).png",
+          "images/project/healthsia/health-(15).png",
+          "images/project/healthsia/health-(16).png",
+          "images/project/healthsia/health-(17).png",
+          "images/project/healthsia/health-(18).png",
+          "images/project/healthsia/health-(19).png",
+          "images/project/healthsia/health-(20).png",
+          "images/project/healthsia/health-(21).png",
+          "images/project/healthsia/health-(22).png",
+          "images/project/healthsia/health-(23).png",
+          "images/project/healthsia/health-(24).png",
+          "images/project/healthsia/health-(25).png",
+          "images/project/healthsia/health-(26).png",
+          "images/project/healthsia/health-(27).png",
+          "images/project/healthsia/health-(28).png",
+          "images/project/healthsia/health-(29).png",
+          "images/project/healthsia/health-(30).png",
+          "images/project/healthsia/health-(31).png",
+          "images/project/healthsia/health-(32).png",
+          "images/project/healthsia/health-(33).png"
         ],
-        "challenges": [],
-        "solutions": [],
-        "results": []
+        "challenges": [
+          "Serving concurrent users with low-latency APIs",
+          "Secure role-based access across different user types",
+          "Real-time chat reliability and message delivery",
+          "Dynamic multi-phase questionnaires and meal/exercise adherence",
+          "Scheduling conflicts and slot availability management",
+          "Ensuring frequent, safe releases via CI/CD"
+        ],
+        "solutions": [
+          "Optimized database queries and added indexes to reduce response time",
+          "Implemented JWT-based auth and strict RBAC for backend and frontend",
+          "Built Socket.io room-based architecture for chat scalability and offline notifications",
+          "Developed dynamic multi-phase questionnaires with status tracking and reminders",
+          "Implemented alternative meal options and advanced scheduling conflict resolution",
+          "Automated testing, CI/CD pipelines, and GCP deployment for safe, reliable releases"
+        ],
+        "results": [
+          "Platform adopted across multiple clinics, improving patient engagement and care coordination",
+          "Reduced API response time by ~40%",
+          "Streamlined clinical workflows and operational efficiency",
+          "Improved patient adherence and communication through real-time tools",
+          "Faster, safer releases through automated CI/CD"
+        ]
       }
     ]
   },

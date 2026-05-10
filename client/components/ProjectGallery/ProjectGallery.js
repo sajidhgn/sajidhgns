@@ -24,14 +24,22 @@ const ProjectGallery = ({ project }) => {
 
             {/* Thumbnails */}
             {galleryItems.length > 1 && (
-                <div className="thumbnails-wrapper d-flex flex-wrap gap-2 justify-content-center">
+                <div
+                    className="thumbnails-wrapper d-flex gap-2"
+                    style={{
+                        overflowX: 'auto',
+                        paddingBottom: '15px',
+                        scrollbarWidth: 'thin',
+                        WebkitOverflowScrolling: 'touch'
+                    }}
+                >
                     {galleryItems.map((imgSrc, idx) => {
                         const isActive = idx === activeIndex;
                         return (
                             <button
                                 key={idx}
                                 onClick={() => setActiveIndex(idx)}
-                                className={`thumbnail-btn border-0 p-0 ${isActive ? 'active-thumb shadow' : ''}`}
+                                className={`thumbnail-btn flex-shrink-0 border-0 p-0 ${isActive ? 'active-thumb shadow' : ''}`}
                                 style={{
                                     width: '100px',
                                     height: '70px',

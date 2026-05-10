@@ -386,9 +386,9 @@ export default function About() {
               <div className="header-btn mt-4">
                 <Link
                   className="theme-btn"
-                  download="sajid-frontend-resume"
-                  href="/sajid-frontend-resume.pdf"
-                  title="Download Sajid's Frontend Resume"
+                  download="sajid-ali-frontend-focused-full-stack"
+                  href="/sajid-ali-frontend-focused-full-stack"
+                  title="Download Sajid's Resume"
                 >
                   Resume
                 </Link>
