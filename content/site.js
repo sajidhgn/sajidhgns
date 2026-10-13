@@ -24,7 +24,7 @@ export const site = {
     workModes: ["onsite", "hybrid", "remote"],
   },
   // NOTE: this PDF does not exist yet in public/ — it must be added before launch.
-  resumePdf: "/sajid-ali-senior-ui-ux-designer-resume.pdf",
+  resumePdf: "/Sajid-Ali-AI-Full-Stack-Engineer.pdf",
   // Owner's studio headshot (navy suit). `portrait` = the cut-out on a warm dark backdrop (About card, OG,
   // JSON-LD); `cutout` = transparent PNG for the hero ring; `headshot` = the original photo as supplied.
   portrait: { src: "/images/sajid-ali-portrait.jpg", width: 800, height: 800 },

@@ -36,8 +36,8 @@ export default function Hero() {
                   <div className="slide-btn">
                     <a
                       className="theme-btn"
-                      download="sajid-ali-frontend-focused-full-stack"
-                      href="/sajid-ali-frontend-focused-full-stack.pdf"
+                      download="Sajid-Ali-AI-Full-Stack-Engineer"
+                      href="/Sajid-Ali-AI-Full-Stack-Engineer.pdf"
                       title={t("button")}
                     >
                       {t("button")}

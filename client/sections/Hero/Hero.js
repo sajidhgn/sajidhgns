@@ -143,7 +143,7 @@ export default async function Hero({ locale }) {
   return (
     <Panel id="home" className={styles.hero} labelledBy="hero-title">
       <div className={styles.copy}>
-        {t.has('hero.badge') ? <Badge>{t('hero.badge')}</Badge> : null}
+        {t.has('hero.badge') ? <Badge dot={false}>{t('hero.badge')}</Badge> : null}
         <h1 id="hero-title" className={styles.title}>
           <Segments segments={t.has('hero.headline') ? t.raw('hero.headline') : ''} />
         </h1>

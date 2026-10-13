@@ -4,59 +4,93 @@
 //   eyebrow centre 32px below the panel top → gold line 62 → logo tiles 91 → title baseline 105 → company 130
 //   → dates 152 → summary baselines 179 / 199 → panel bottom 225.
 //   Dots ≈ 13–14px, solid gold with a glow halo and a short fading stem below; the line fades in just
-//   before the first dot and fades out well past the last one. Tile → text gap ≈ 13px.
+//   before the first dot and fades out past the last one. Tile → text gap ≈ 13px.
 //   Type (glyph widths vs DM Sans): title 15px/600, company 14px, dates 12.5px; summary ≈ 11.5px in the
 //   reference — kept at 12.5px (the readable floor the foundation uses for body copy).
 //   Colours calibrated by pushing renders through the reference's pipeline (×0.65, JPEG, ×2, JPEG) and
 //   comparing ink brightness: company = --text, dates and summary = --text-lead (SPEC: --text-2 /
 //   --text-subtle read too dim). Line: 1px --gold-hi with a tight glow (peak/falloff match the reference).
+//
+// Layout: the gold line is fixed across the panel; the roles scroll horizontally along it (snap, no visible
+// scrollbar), moved by the prev / next arrows in the header (TestimonialsNav) or touch / trackpad / keys.
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
 
 .timeline {
   --dot: 13px;
-  --rail: 30px; // vertical layout: inline-start room for the rail and the dots
-  --col-gap: 20px;
-  --line-gold: var(--gold-hi);
+  --col: min(280px, 78vw);
+  --col-gap: 24px;
+  --pad-top: 14px; // room for the dots' glow above the line (overflow-x clips both axes)
   position: relative;
-  margin-top: 26px;
+  margin-top: 4px;
+
+  @include up(xl) {
+    --col: 300px;
+    --col-gap: 28px;
+  }
 }
 
-// Horizontal line (≥ 1100px only).
+// Still line across the whole panel width, fading in and out at both edges. The drop-shadows follow the
+// alpha, so the fades keep a proportional glow.
 .line {
-  display: none;
+  position: absolute;
+  top: var(--pad-top);
+  inset-inline: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-hi) 48px, var(--gold-hi) calc(100% - 140px), transparent);
+  filter: drop-shadow(0 0 1px rgba(249, 190, 78, 0.9)) drop-shadow(0 0 2px rgba(249, 190, 78, 0.6));
+  pointer-events: none;
+}
+
+[dir='rtl'] .line {
+  background: linear-gradient(270deg, transparent, var(--gold-hi) 48px, var(--gold-hi) calc(100% - 140px), transparent);
 }
 
 .list {
   display: grid;
-  gap: 26px;
-  padding-inline-start: var(--rail);
+  grid-auto-flow: column;
+  grid-auto-columns: var(--col);
+  column-gap: var(--col-gap);
+  padding-block: var(--pad-top) 4px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; // hidden scrollbar: the arrows, touch and keys scroll it
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--gold-hi);
+    outline-offset: 2px;
+    border-radius: var(--r-btn);
+  }
 }
 
 .item {
   position: relative;
-  display: grid;
-  grid-template-columns: 48px minmax(0, 1fr);
-  column-gap: 14px;
-  align-items: start;
-  // Items stretch to the tallest column; keep their rows packed at the top (no drifting text).
-  align-content: start;
+  padding-top: 30px;
+  scroll-snap-align: start;
 }
 
-// Vertical rail: one segment from this role's dot to the next role's dot.
-.item:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  inset-inline-start: calc(-1 * var(--rail) + var(--dot) / 2 - 0.5px);
-  top: 24px;
-  width: 1px;
-  height: calc(100% + 26px);
-  background: linear-gradient(180deg, rgba(249, 190, 78, 0.75), rgba(249, 190, 78, 0.35));
+.content {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  column-gap: 13px;
+  align-items: start;
 }
 
 .dot {
   position: absolute;
   z-index: 1;
-  inset-inline-start: calc(-1 * var(--rail));
-  top: calc(24px - var(--dot) / 2);
+  top: calc(0.5px - var(--dot) / 2);
+  inset-inline-start: calc(50% - var(--dot) / 2);
   width: var(--dot);
   height: var(--dot);
   border-radius: 50%;
@@ -64,6 +98,19 @@
   box-shadow:
     0 0 0 3px rgba(249, 190, 78, 0.1),
     0 0 12px 1px var(--gold-glow);
+}
+
+// The short glowing stem under each dot.
+.dot::after {
+  content: '';
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 50%;
+  width: 2px;
+  height: 12px;
+  margin-left: -1px;
+  border-radius: 1px;
+  background: linear-gradient(180deg, rgba(249, 190, 78, 0.45), rgba(249, 190, 78, 0));
 }
 
 // ---- Logo tile: white, so the companies' own logos (made for white) read as they should ----
@@ -146,99 +193,4 @@
   color: var(--text-lead);
   font-size: var(--t-xs);
   line-height: 1.6;
-}
-
-// ---- ≥ 1100px: horizontal timeline ----
-@include up(xl) {
-  .timeline {
-    // Width of one column (cqw = the timeline's width, so it means the same in every descendant).
-    --col: calc((100cqw - (var(--count, 5) - 1) * var(--col-gap)) / var(--count, 5));
-    container-type: inline-size;
-    margin-top: 17px;
-  }
-
-  // Solid from the first dot to the last; the pseudo-elements fade it in (48px) and out (140px). The
-  // drop-shadows follow the alpha, so the fades keep a proportional glow.
-  .line {
-    display: block;
-    position: absolute;
-    top: 0;
-    inset-inline: calc(var(--col) / 2);
-    height: 1px;
-    background: var(--line-gold);
-    filter: drop-shadow(0 0 1px rgba(249, 190, 78, 0.9)) drop-shadow(0 0 2px rgba(249, 190, 78, 0.6));
-  }
-
-  .line::before,
-  .line::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    height: 1px;
-  }
-
-  .line::before {
-    inset-inline-end: 100%;
-    width: 48px;
-    background: linear-gradient(90deg, transparent, var(--line-gold));
-  }
-
-  // Long fade past the last dot (reference ≈ 140px), stopping short of the panel edge on narrower screens.
-  .line::after {
-    inset-inline-start: 100%;
-    width: min(140px, var(--col) / 2 + 28px);
-    background: linear-gradient(90deg, var(--line-gold), transparent);
-  }
-
-  [dir='rtl'] .line::before {
-    background: linear-gradient(270deg, transparent, var(--line-gold));
-  }
-
-  [dir='rtl'] .line::after {
-    background: linear-gradient(270deg, var(--line-gold), transparent);
-  }
-
-  .list {
-    grid-template-columns: repeat(var(--count, 5), minmax(0, 1fr));
-    column-gap: var(--col-gap);
-    row-gap: 0;
-    padding-inline-start: 0;
-  }
-
-  // 1100–1399px: five columns are too narrow for tile + text side by side, so the tile sits on top.
-  .item {
-    grid-template-columns: minmax(0, 1fr);
-    row-gap: 14px;
-    padding-top: 30px;
-  }
-
-  .item:not(:last-child)::after {
-    content: none;
-  }
-
-  .dot {
-    top: calc(0.5px - var(--dot) / 2);
-    inset-inline-start: calc(50% - var(--dot) / 2);
-  }
-
-  // The short glowing stem under each dot.
-  .dot::after {
-    content: '';
-    position: absolute;
-    top: calc(100% + 1px);
-    left: 50%;
-    width: 2px;
-    height: 12px;
-    margin-left: -1px;
-    border-radius: 1px;
-    background: linear-gradient(180deg, rgba(249, 190, 78, 0.45), rgba(249, 190, 78, 0));
-  }
-}
-
-// ≥ 1400px (the container is at its full 1280px): tile and text side by side, as in the reference.
-@media (min-width: 1400px) {
-  .item {
-    grid-template-columns: 48px minmax(0, 1fr);
-    column-gap: 13px;
-  }
 }

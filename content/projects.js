@@ -22,6 +22,7 @@
 const img = (src, width, height) => ({ src, width, height });
 
 const covers = {
+  rawbit: img("/images/project/covers/rawbit.jpg", 1440, 900),
   healthsia: img("/images/project/covers/healthsia.jpg", 1480, 925),
   ounlab: img("/images/project/covers/ounlab.jpg", 1077, 673),
   workinaus: img("/images/project/covers/workinaus.jpg", 1000, 625),
@@ -38,10 +39,25 @@ const hs = (n, ext, width, height) => img(`/images/project/healthsia/health-(${n
 
 export const projects = [
   {
+    slug: "rawbit",
+    legacyId: null,
+    featured: true,
+    order: 1,
+    liveUrl: "https://therawbit.ai",
+    year: 2026,
+    cover: { ...covers.rawbit, position: "top" },
+    figures: {
+      cover: covers.rawbit,
+      full: img("/images/project/rawbit.jpg", 1440, 2300),
+      "studio-ar": img("/images/project/rawbit-ar.jpg", 1440, 900),
+    },
+    stack: ["React", "Node.js", "PostgreSQL", "pgvector", "WebSockets", "LLM APIs", "Moyasar", "N-Genius", "ZATCA"],
+  },
+  {
     slug: "healthsia",
     legacyId: 10,
     featured: true,
-    order: 1,
+    order: 2,
     liveUrl: null,
     year: null,
     cover: { ...covers.healthsia, position: "left top" },
@@ -89,7 +105,7 @@ export const projects = [
     slug: "ounlab",
     legacyId: 6,
     featured: true,
-    order: 2,
+    order: 3,
     liveUrl: "https://oun.ai",
     year: null,
     cover: { ...covers.ounlab, position: "top" },
@@ -103,7 +119,7 @@ export const projects = [
     slug: "workinaus",
     legacyId: 1,
     featured: true,
-    order: 3,
+    order: 4,
     liveUrl: "https://workinaus.com.au/",
     year: null,
     cover: { ...covers.workinaus, position: "top" },
@@ -117,7 +133,7 @@ export const projects = [
     slug: "eduhub",
     legacyId: 7,
     featured: true,
-    order: 4,
+    order: 5,
     liveUrl: "https://eduhubpak.com/",
     year: null,
     cover: { ...covers.eduhub, position: "top" },
@@ -131,7 +147,7 @@ export const projects = [
     slug: "shahjee",
     legacyId: 4,
     featured: false,
-    order: 5,
+    order: 6,
     liveUrl: "https://shahjeepetroleum.com/",
     year: null,
     cover: { ...covers.shahjee, position: "left top" },
@@ -145,7 +161,7 @@ export const projects = [
     slug: "peepskill",
     legacyId: 3,
     featured: false,
-    order: 6,
+    order: 7,
     liveUrl: "http://peepskill.com/",
     year: null,
     cover: { ...covers.peepskill, position: "top" },
@@ -159,7 +175,7 @@ export const projects = [
     slug: "learninghub",
     legacyId: 2,
     featured: false,
-    order: 7,
+    order: 8,
     liveUrl: null,
     year: null,
     cover: { ...covers.learninghub, position: "left top" },
@@ -173,7 +189,7 @@ export const projects = [
     slug: "royalvision",
     legacyId: 5,
     featured: false,
-    order: 8,
+    order: 9,
     liveUrl: "https://www.royalvisiondubai.com/",
     year: null,
     cover: { ...covers.royalvision, position: "top" },
@@ -187,7 +203,7 @@ export const projects = [
     slug: "papaz",
     legacyId: 8,
     featured: false,
-    order: 9,
+    order: 10,
     liveUrl: null,
     year: null,
     cover: { ...covers.papaz, position: "left top" },
@@ -201,7 +217,7 @@ export const projects = [
     slug: "mdhov",
     legacyId: 9,
     featured: false,
-    order: 10,
+    order: 11,
     liveUrl: "https://www.mdhov.com/",
     year: null,
     cover: { ...covers.mdhov, position: "top" },
@@ -218,7 +234,7 @@ const byOrder = (a, b) => a.order - b.order;
 /** All slugs, in display order (for generateStaticParams and the sitemap). */
 export const projectSlugs = [...projects].sort(byOrder).map((project) => project.slug);
 
-/** Featured projects in display order: healthsia, ounlab, workinaus, eduhub. */
+/** Featured projects in display order: rawbit, healthsia, ounlab, workinaus, eduhub. */
 export const featuredProjects = projects.filter((project) => project.featured).sort(byOrder);
 
 /** "More work" in display order: shahjee, peepskill, learninghub, royalvision, papaz, mdhov. */

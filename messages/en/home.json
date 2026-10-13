@@ -3,7 +3,7 @@
     "badge": "Available now · Transferable Iqama",
     "headline": [
       {
-        "text": "I Design Intuitive"
+        "text": "I Build AI-Powered"
       },
       {
         "break": true
@@ -12,15 +12,15 @@
         "text": "Digital "
       },
       {
-        "text": "Experiences",
+        "text": "Products",
         "accent": true
       }
     ],
-    "summary": "Senior UI/UX designer in Riyadh. I design dashboards, SaaS and healthcare products — then build them in React and Next.js.",
+    "summary": "Full-stack AI engineer in Riyadh. I build AI-powered SaaS end to end — React and Next.js frontends, Node.js APIs, PostgreSQL and LLM integrations.",
     "ctaPrimary": "Hire Me",
     "ctaSecondary": "View My Work",
     "followLabel": "Find me on",
-    "portraitAlt": "Sajid Ali, Senior UI/UX Designer, in a navy suit and white open-collar shirt",
+    "portraitAlt": "Sajid Ali, Full-Stack AI Engineer, in a navy suit and white open-collar shirt",
     "stats": [
       {
         "id": "years",
@@ -29,7 +29,7 @@
       },
       {
         "id": "projects",
-        "value": "10+",
+        "value": "100+",
         "label": "Projects Delivered"
       },
       {
@@ -43,7 +43,7 @@
     "label": "About Me",
     "heading": [
       {
-        "text": "From user flows"
+        "text": "From AI idea"
       },
       {
         "break": true
@@ -52,15 +52,15 @@
         "text": "to "
       },
       {
-        "text": "production code.",
+        "text": "production SaaS.",
         "accent": true
       }
     ],
-    "body": "Since 2017 I’ve turned complex workflows in healthcare, SaaS, hiring and education into clear, accessible interfaces — and built them myself.",
+    "body": "Since 2017 I’ve built web products across healthcare, SaaS, hiring and education. Today I ship AI-powered platforms end to end — frontend, APIs, databases, LLM integrations, testing and deployment.",
     "points": [
-      "UX for complex, multi-role products",
-      "Design systems & reusable components",
-      "Fast, accessible React & Next.js UI"
+      "AI & LLM integrations in real products",
+      "Multi-tenant SaaS, secure APIs & RBAC",
+      "React, Next.js, Node.js & PostgreSQL"
     ],
     "cta": "Download CV",
     "photoAlt": "Sajid Ali in a navy suit and white open-collar shirt, against a warm dark background",
@@ -128,6 +128,26 @@
       {
         "id": "graphql",
         "name": "GraphQL"
+      },
+      {
+        "id": "python",
+        "name": "Python"
+      },
+      {
+        "id": "fastapi",
+        "name": "FastAPI"
+      },
+      {
+        "id": "langchain",
+        "name": "LangChain"
+      },
+      {
+        "id": "langgraph",
+        "name": "LangGraph"
+      },
+      {
+        "id": "kubernetes",
+        "name": "Kubernetes"
       }
     ],
     "note": "Always learning new technologies"
@@ -188,7 +208,9 @@
   },
   "experience": {
     "label": "Experience",
-    "present": "Present"
+    "present": "Present",
+    "prev": "Previous roles",
+    "next": "Next roles"
   },
   "testimonials": {
     "label": "Testimonials",

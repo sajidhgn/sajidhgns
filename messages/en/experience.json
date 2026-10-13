@@ -1,5 +1,19 @@
 {
   "roles": {
+    "rawstudio": {
+      "title": "Full-Stack AI Engineer",
+      "location": "Riyadh, Saudi Arabia",
+      "mode": "Onsite",
+      "summary": "Shipping AI SaaS end to end, including Rawbit.",
+      "highlights": [
+        "Build and ship AI-powered SaaS and enterprise applications end to end, from frontend and backend APIs to databases, AI integrations, testing and production deployment.",
+        "Architect multi-tenant platforms and internal management systems with secure REST APIs, authentication, RBAC, tenant isolation and granular permissions.",
+        "Integrate AI/LLM APIs and intelligent workflows into production features, connecting AI capabilities with business logic and user data.",
+        "Integrate payment gateways (Moyasar, N-Genius) and ZATCA e-invoicing via Qoyod, alongside other third-party services.",
+        "Design and optimize PostgreSQL schemas, queries and API data flows for performance, scalability and maintainability.",
+        "Automate E2E and component testing with Playwright and React Testing Library; containerize and deploy with Docker on VPS infrastructure."
+      ]
+    },
     "oxcoders": {
       "title": "Full Stack Engineer (Frontend Focused)",
       "location": "Riyadh, Saudi Arabia",

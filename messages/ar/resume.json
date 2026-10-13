@@ -69,6 +69,10 @@
   ],
   "selectedProjects": [
     {
+      "name": "Rawbit",
+      "summary": "استوديو تصوير منتجات وإعلانات بالذكاء الاصطناعي بالعربية أولاً على therawbit.ai: تطبيق React وNode.js لحظي مع pgvector/RAG وواجهات LLM، ومدفوعات Moyasar وN-Genius وفوترة ZATCA."
+    },
+    {
       "name": "HealthSIA",
       "summary": "TODO: one sentence, résumé facts only"
     },

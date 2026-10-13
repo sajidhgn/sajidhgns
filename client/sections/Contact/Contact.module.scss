@@ -73,13 +73,7 @@
 
 .formSide {
   min-width: 0;
-  padding: 16px;
-}
-
-@include up(md) {
-  .formSide {
-    padding: 10px 22px 11px;
-  }
+  padding: 10px;
 }
 
 .info {
@@ -87,13 +81,12 @@
   align-content: start;
   gap: 18px;
   margin: 0;
-  padding: 20px 16px 22px;
+  padding: 10px;
   border-block-start: 1px solid var(--line);
 }
 
 @include up(md) {
   .info {
-    padding: 20px 22px;
     border-block-start: 0;
     border-inline-start: 1px solid var(--line);
   }

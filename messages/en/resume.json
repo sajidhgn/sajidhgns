@@ -85,6 +85,10 @@
   ],
   "selectedProjects": [
     {
+      "name": "Rawbit",
+      "summary": "Arabic-first AI product-photography and ad studio, live at therawbit.ai: real-time React and Node.js app with WebSockets, pgvector/RAG and LLM APIs, Moyasar and N-Genius payments and ZATCA e-invoicing."
+    },
+    {
       "name": "HealthSIA",
       "summary": "Perioperative care platform with role-based dashboards and admin panels, adopted across multiple clinics; cut API response time by ~40% through query optimization and database indexes."
     },

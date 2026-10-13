@@ -6,7 +6,7 @@
  *   locale  "en" | "ar"
  *   number  eyebrow number ("02") — computed by app/[locale]/page.js from the rendered order
  *
- * Eyebrow as the panel's <h2> → 15 tiles, 5 × 3 like the reference (3 columns when the panel is narrow), each a
+ * Eyebrow as the panel's <h2> → 20 tiles, 5 × 4 (3 columns when the panel is narrow), each a
  * full-colour BrandIcon + name → note pill straddling the panel's bottom edge (the panel's overflow is visible).
  * Tile set and order = the icon set (BrandIcon BRAND_IDS, i.e. SCHEMA.md home.skills.items in the reference's
  * order). Names come from messages home.skills.items by id, falling back to the brand's own name, so the grid

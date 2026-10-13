@@ -386,8 +386,8 @@ export default function About() {
               <div className="header-btn mt-4">
                 <Link
                   className="theme-btn"
-                  download="sajid-ali-frontend-focused-full-stack"
-                  href="/sajid-ali-frontend-focused-full-stack"
+                  download="Sajid-Ali-AI-Full-Stack-Engineer"
+                  href="/Sajid-Ali-AI-Full-Stack-Engineer.pdf"
                   title="Download Sajid's Resume"
                 >
                   Resume

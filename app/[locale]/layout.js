@@ -72,7 +72,13 @@ export async function generateMetadata({ params: { locale } }) {
     creator: name,
     publisher: name,
     keywords: t('keywords'),
-    icons: { icon: '/favicon.ico' },
+    icons: {
+      icon: [
+        { url: '/favicon.ico', sizes: '48x48' },
+        { url: '/icon.svg', type: 'image/svg+xml' },
+      ],
+      apple: '/apple-touch-icon.png',
+    },
     formatDetection: { telephone: false, email: false, address: false },
     openGraph,
   };

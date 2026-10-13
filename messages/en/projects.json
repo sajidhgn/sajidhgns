@@ -1,5 +1,78 @@
 {
   "items": {
+    "rawbit": {
+      "title": "Rawbit",
+      "category": "AI SaaS · Product photography & ad studio",
+      "headline": "An Arabic-first AI ad studio for products, live at therawbit.ai",
+      "summary": "Product photoshoots, video, Saudi-voice UGC ads and brand-consistent templates from one AI studio, with Saudi payments and ZATCA e-invoicing.",
+      "meta": {
+        "role": "Full-stack AI engineering at Raw Studio",
+        "platform": "Web app (Arabic & English)",
+        "industry": "AI · E-commerce · Marketing",
+        "timeline": "2026 – present",
+        "team": ""
+      },
+      "tldr": {
+        "problem": "Merchants in Saudi Arabia need a steady stream of product photos, videos and ads, but studio shoots and agencies are slow and expensive, and most AI tools are English-only.",
+        "approach": "I build Rawbit end to end: a real-time React and Node.js app over WebSockets, LLM-driven generation with pgvector/RAG, and Saudi payments (Moyasar, N-Genius) with ZATCA e-invoicing.",
+        "impact": "Live at therawbit.ai in Arabic and English."
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "id": "context",
+          "title": "One studio for every product creative",
+          "body": [
+            "Rawbit is an AI product-photography and ad studio. A merchant adds a product once and can then generate studio photos, edit backgrounds, animate images into short clips, make influencer-style UGC ads with a Saudi voice, and start from ready-made ad templates.",
+            "It opens in Arabic, writes in Saudi dialect, and ships catalogues of inspirations for local categories such as perfume, abayas, food and dairy."
+          ]
+        },
+        {
+          "type": "list",
+          "id": "product",
+          "title": "What’s inside",
+          "intro": "",
+          "items": [
+            "Photoshoot: pick a product and a scene for plain-background catalogue shots or advertising-studio looks.",
+            "Image editor: swap backgrounds or add elements without reshooting.",
+            "Video and UGC: turn a photo into a short clip, or a presenter and Saudi voice into a ready-to-publish ad.",
+            "Brand DNA: add a website link once so every ad carries the brand’s logo and colors.",
+            "Rawbit Agent: describe the idea in your own words and get the photos and videos.",
+            "Workflows: connect a product, a scene and a prompt into a reusable node pipeline."
+          ]
+        },
+        {
+          "type": "list",
+          "id": "ownership",
+          "title": "What I own",
+          "intro": "I work across the whole stack:",
+          "items": [
+            "The React front end and the real-time generation experience over WebSockets.",
+            "Node.js APIs and the PostgreSQL data model, with pgvector and RAG behind brand- and product-aware generation.",
+            "LLM API integrations that turn plain-language requests into image, video and voice jobs.",
+            "Payments with Moyasar and N-Genius, and ZATCA e-invoicing."
+          ]
+        },
+        {
+          "type": "figure",
+          "figure": "studio-ar"
+        }
+      ],
+      "figures": {
+        "cover": {
+          "alt": "Rawbit Ad Studio home in English: sidebar with create, library and brand tools, three feature cards for brand identity, ready-made templates and the Rawbit Agent, and a row of generation tools",
+          "caption": ""
+        },
+        "full": {
+          "alt": "The full Rawbit studio page: feature cards, generation tools, video ad templates, inspiration categories such as perfume and abayas, and photoshoot presets for plain backgrounds and advertising-studio shots",
+          "caption": "The studio home, from feature cards down to photoshoot presets."
+        },
+        "studio-ar": {
+          "alt": "Rawbit studio home in Arabic, right-to-left, with the sidebar on the right",
+          "caption": "Arabic is the default: the whole studio runs right to left."
+        }
+      }
+    },
     "healthsia": {
       "title": "HealthSIA",
       "category": "Healthcare · Web platform + patient app",
