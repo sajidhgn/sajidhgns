@@ -1,0 +1,9 @@
+// Global stylesheet — imported once by app/[locale]/layout.js.
+// Order matters: _tokens declares the cascade-layer order (reset < base < ui < utilities < unlayered).
+//
+// Component modules can share the Sass helpers with:  @use '../../../styles/mixins' as *;
+@use 'tokens';
+@use 'base';
+@use 'utilities';
+@use 'decor';
+@use 'print';

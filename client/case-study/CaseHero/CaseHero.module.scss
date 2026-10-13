@@ -1,0 +1,104 @@
+@use '../../../styles/mixins' as *;
+
+// Case hero: text column + "Project details" card (stacked below 1024px).
+.hero {
+  display: grid;
+  gap: 28px;
+  padding-top: 16px;
+  padding-bottom: 24px;
+
+  @include up(lg) {
+    grid-template-columns: minmax(0, 1.22fr) minmax(340px, 1fr);
+    align-items: center;
+    gap: 56px;
+    padding-top: 24px;
+    padding-bottom: 40px;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+// "← All projects": same treatment as the home "View all projects →" link (14px --text-2, gold arrow).
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  border-radius: var(--r-tile);
+  color: var(--text-2);
+  font-size: var(--t-nav);
+  font-weight: 500;
+  line-height: 1;
+  transition: color var(--dur-1) var(--ease);
+}
+
+.back:hover {
+  color: var(--gold-text);
+}
+
+.backIcon {
+  color: var(--gold);
+  transition: translate var(--dur-2) var(--ease);
+}
+
+@include motion {
+  .back:hover .backIcon {
+    translate: -3px 0;
+  }
+
+  [dir='rtl'] .back:hover .backIcon {
+    translate: 3px 0;
+  }
+}
+
+.eyebrow {
+  margin-top: 14px;
+}
+
+// The page's only <h1>: one step above --t-h2-lg (SPEC: 26–32px) so it clearly outranks the 20–24px
+// block headings further down — 28px on phones, 40px from ~1440px.
+.title {
+  margin-top: 16px;
+  font-size: clamp(1.75rem, 1.2rem + 1.6vw, 2.5rem);
+  font-weight: 600;
+  line-height: var(--lh-h2-lg);
+  letter-spacing: var(--tr-display);
+}
+
+// Deck: the outcome-first headline.
+.headline {
+  max-width: 34em;
+  margin-top: 14px;
+  color: var(--text-2);
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.summary {
+  max-width: 40em;
+  margin-top: 10px;
+  color: var(--text-muted);
+  font-size: var(--t-body);
+  line-height: var(--lh-body);
+}
+
+.headline:lang(ar) {
+  line-height: 1.8;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.meta {
+  width: 100%;
+}

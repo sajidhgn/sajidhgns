@@ -1,0 +1,159 @@
+@use '../../../styles/mixins' as *;
+
+// Footer (SPEC §4.8), measured on the reference (h_footer.jpg + the bottom of ref.jpg) at 1440:
+//   10px under the last panel, a faint box as wide as the panels: a 1px top border and side borders that fade
+//   out downward, 20px top corners, a barely lighter fill, open at the page bottom (the artboard ends there).
+//   Content row centred 32px under the top line: logo (27px mark, 18px wordmark) · copyright 13px
+//   --text-subtle · links 13px, 80px apart · a 38px back-to-top circle 50px after the last link.
+//   The copyright is not centred: the free space splits 3 : 2 around it (285px / 192px at 1440).
+//   The mark sits 43px and the circle 40px inside the box edges.
+
+.footer {
+  margin-top: var(--gap);
+}
+
+.box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 26px var(--panel-pad-inline) max(26px, env(safe-area-inset-bottom));
+  border-radius: var(--r-panel) var(--r-panel) 0 0;
+  background: rgba(255, 255, 255, 0.012);
+  text-align: center;
+}
+
+// The border: bright along the top, fading out down the sides (a 1px ring masked to the border area).
+.box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px 1px 0;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.035) 24px, rgba(255, 255, 255, 0.012) 60px, transparent 96px);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box exclude,
+    linear-gradient(#000 0 0);
+  pointer-events: none;
+}
+
+// The logo, at the footer's smaller size (Logo primitive: <a> > svg mark + wordmark span).
+.logo > svg {
+  width: 27px;
+  height: 31px;
+}
+
+.logo > span {
+  font-size: 1.125rem; // 18px
+}
+
+.copy {
+  order: 3;
+  margin: 0;
+  color: var(--text-subtle);
+  font-size: 0.8125rem; // 13px (reference)
+  font-weight: 500; // the reference's footer text carries ~40% more ink than 400 (same finding as the nav)
+  line-height: 1.5;
+}
+
+.legal {
+  order: 2;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 32px;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  color: var(--text-subtle);
+  font-size: 0.8125rem; // 13px (reference)
+  font-weight: 500;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: color var(--dur-1) var(--ease);
+}
+
+.link:hover {
+  color: var(--gold-text);
+}
+
+.link:focus-visible {
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.top {
+  order: 4;
+}
+
+@include up(lg) {
+  .box {
+    display: grid;
+    grid-template-columns: auto minmax(24px, 3fr) auto minmax(24px, 2fr) auto auto;
+    align-items: center;
+    gap: 0;
+    min-height: 65px;
+    padding: 10px 37px 10px 42px;
+    text-align: start;
+  }
+
+  // One row, DOM order (the mobile `order` values would make auto-placement wrap to a second row).
+  .logo,
+  .copy,
+  .legal,
+  .top {
+    grid-row: 1;
+    order: 0;
+  }
+
+  .logo {
+    grid-column: 1;
+    justify-self: start;
+  }
+
+  .copy {
+    grid-column: 3;
+    white-space: nowrap;
+  }
+
+  .legal {
+    grid-column: 5;
+  }
+
+  .links {
+    flex-wrap: nowrap;
+    gap: 80px;
+  }
+
+  .link {
+    min-height: 44px;
+    white-space: nowrap;
+  }
+
+  .top {
+    grid-column: 6;
+    margin-inline-start: 48px;
+  }
+}
+
+// 1024–1279: the same row, with tighter fixed gaps so it never wraps.
+@media (min-width: 1024px) and (max-width: 1279.98px) {
+  .links {
+    gap: 48px;
+  }
+
+  .top {
+    margin-inline-start: 32px;
+  }
+}

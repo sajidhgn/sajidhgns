@@ -1,0 +1,335 @@
+@use '../../../styles/mixins' as *;
+
+// Contact form (SPEC §4.7), measured on g_contact.jpg at the 1440 design scale:
+//   Name | Email boxes ≈ 47px tall, 14px apart · Subject ≈ 39px (the reference's subject row is shorter) ·
+//   Message ≈ 100px · rows ≈ 6–7px apart · "Send Message" 185 × 43px, 21px under the message.
+//   Placeholder text (our resting labels) ≈ 12px, near-white, 15px from the box's inline-start edge,
+//   vertically centred (top-aligned in the message box, cap top ≈ 15px down). Boxes: --field fill, 1px
+//   --line border, ≈ 10px corners, on the lighter card surface.
+
+.form {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px 14px;
+}
+
+@include up(md) {
+  .form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .wide {
+    grid-column: 1 / -1;
+  }
+}
+
+.group {
+  min-width: 0;
+}
+
+// ---- The visible box (border, fill, focus ring) wraps the borderless control and its label ----
+.box {
+  position: relative;
+  height: 46px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-btn);
+  background: var(--field);
+  transition:
+    border-color var(--dur-1) var(--ease),
+    box-shadow var(--dur-1) var(--ease);
+}
+
+.box:hover {
+  border-color: var(--line-strong);
+}
+
+.box:focus-within {
+  border-color: rgba(249, 190, 78, 0.55);
+  box-shadow: 0 0 0 3px rgba(249, 190, 78, 0.14);
+}
+
+.invalid .box {
+  border-color: rgba(255, 122, 112, 0.6);
+}
+
+.invalid .box:focus-within {
+  border-color: var(--danger);
+  box-shadow: 0 0 0 3px rgba(255, 122, 112, 0.16);
+}
+
+// Reference: the Subject row is a little shorter than Name / Email (≈ 39 vs 47px). Same height on phones.
+@include up(md) {
+  .subject .box {
+    height: 40px;
+  }
+}
+
+.boxMultiline {
+  height: auto;
+}
+
+.control {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 19px 15px 5px;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  color: var(--text);
+  font-size: 0.875rem; // 14px
+  line-height: 20px;
+  box-shadow: none;
+  outline: none; // the box shows focus (:focus-within)
+  appearance: none;
+}
+
+.control:focus-visible {
+  outline: none;
+}
+
+// Browsers' own invalid styling (Firefox) — errors are shown by the box and the message instead.
+.control:invalid {
+  box-shadow: none;
+}
+
+@include up(md) {
+  .subject .control {
+    padding-top: 16px;
+    padding-bottom: 2px;
+  }
+}
+
+// The message box: the textarea starts under a 21px strip that holds the floated label, so long
+// messages scroll under nothing; it can be resized vertically like the reference's grip shows.
+textarea.control {
+  height: 77px; // box: 1 + 21 + 77 + 1 = 100px (reference)
+  min-height: 77px;
+  max-height: 420px;
+  margin-top: 21px;
+  padding: 0 15px 9px;
+  resize: vertical;
+}
+
+// Email addresses are left-to-right; in Arabic they sit at the start (right) side like the label.
+[dir='rtl'] .email .control {
+  text-align: right;
+}
+
+// Autofill: keep the dark field instead of the browser's yellow / blue fill.
+.control:-webkit-autofill,
+.control:-webkit-autofill:hover,
+.control:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text);
+  caret-color: var(--text);
+  -webkit-box-shadow: 0 0 0 1000px var(--field) inset;
+  transition: background-color 100000s ease-out 0s;
+}
+
+// ---- Floating label: at rest exactly where the reference's placeholder text sits ----
+.label {
+  position: absolute;
+  inset-inline: 15px;
+  top: 50%;
+  overflow: hidden;
+  color: var(--text-2);
+  font-size: var(--t-xs); // 12.5px (reference ≈ 12px)
+  line-height: 1.2;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: text;
+  translate: 0 -50%;
+}
+
+.boxMultiline .label {
+  top: 11px;
+  translate: none;
+}
+
+// Floated: focused, filled (the placeholder is a single space), or autofilled.
+.control:focus + .label,
+.control:not(:placeholder-shown) + .label {
+  top: 7px;
+  color: var(--text-subtle);
+  font-size: 0.6875rem; // 11px
+  translate: none;
+}
+
+.control:-webkit-autofill + .label {
+  top: 7px;
+  color: var(--text-subtle);
+  font-size: 0.6875rem;
+  translate: none;
+}
+
+.control:focus + .label {
+  color: var(--gold-text);
+}
+
+@include up(md) {
+  .subject .control:focus + .label,
+  .subject .control:not(:placeholder-shown) + .label {
+    top: 4px;
+  }
+}
+
+.boxMultiline .control:focus + .label,
+.boxMultiline .control:not(:placeholder-shown) + .label {
+  top: 6px;
+}
+
+.invalid .label {
+  color: var(--danger);
+}
+
+@include motion {
+  .label {
+    transition:
+      top var(--dur-2) var(--ease),
+      translate var(--dur-2) var(--ease),
+      font-size var(--dur-2) var(--ease),
+      color var(--dur-1) var(--ease);
+  }
+}
+
+.error {
+  margin: 6px 2px 0;
+  color: var(--danger);
+  font-size: var(--t-xs);
+  line-height: 1.45;
+}
+
+// ---- Honeypot: off-screen for people, still in the DOM for bots (never display: none) ----
+.honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+// ---- Submit + status ----
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 13px;
+}
+
+@include up(md) {
+  .footer {
+    grid-column: 1 / -1;
+  }
+}
+
+// Reference button: 185 × 43px (the Button primitive's md is 50px).
+.submit {
+  height: 44px;
+}
+
+@include down(md) {
+  .submit {
+    height: 48px;
+  }
+}
+
+.submit[aria-disabled='true'] {
+  opacity: 0.85;
+  cursor: progress;
+}
+
+// The two labels share one grid cell, so the button keeps its width while "Sending…" shows.
+.submit > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.submitLabels {
+  display: inline-grid;
+}
+
+.submitText {
+  grid-area: 1 / 1;
+  text-align: center;
+}
+
+.isHidden {
+  visibility: hidden;
+}
+
+.submitIcon {
+  display: block;
+}
+
+.spinner {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid currentColor;
+  border-inline-end-color: transparent;
+  border-radius: 50%;
+}
+
+@include motion {
+  .spinner {
+    animation: spin 0.8s linear infinite;
+  }
+}
+
+@keyframes spin {
+  to {
+    rotate: 360deg;
+  }
+}
+
+.status {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  max-width: 60ch;
+  color: var(--text-2);
+  font-size: var(--t-xs);
+  line-height: 1.6;
+}
+
+.status:not(:empty) {
+  margin-top: 12px;
+}
+
+.statusIcon {
+  flex: none;
+  margin-top: 2px;
+}
+
+.status[data-kind='success'] {
+  color: var(--mint);
+}
+
+.status[data-kind='not_configured'] .statusIcon {
+  color: var(--gold);
+}
+
+.status[data-kind='invalid'],
+.status[data-kind='rate_limited'],
+.status[data-kind='error'],
+.status[data-kind='network'] {
+  color: var(--danger);
+}
+
+.statusLink {
+  color: var(--gold-text);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  overflow-wrap: anywhere;
+}
+
+.statusLink:hover {
+  text-decoration-thickness: 2px;
+}

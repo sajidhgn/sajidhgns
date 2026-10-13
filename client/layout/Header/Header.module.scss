@@ -1,0 +1,227 @@
+@use '../../../styles/mixins' as *;
+
+// Header (SPEC §3), measured on the reference (z_logo_nav.jpg) at 1440:
+//   88px bar (64px < 1024px) · logo at the container start · nav centred, 40px between items · active item:
+//   gold text, a 1px gold line ≈ 2px wider than the word on each side (soft ends) 16.7px under the baseline,
+//   a 5px glowing dot on it · "Let's Talk" 46px outline, 22px padding, 16px text→icon gap, 16px paper plane,
+//   flush with the panels' inline-end edge.
+// Type: the reference's nav and button labels carry ~45% more ink than DM Sans 14px/500 in --text-2, while
+// the paper-plane icon beside them matches within 6% — so the labels are heavier and brighter (part of it is
+// the reference image's bloom: even 14px/700 falls short). 13.5px/600 in --text matches the word widths
+// (±1px) and reads as the same weight side by side; SPEC says 15px/500 --text-2.
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--header-h);
+}
+
+// Blurred background + bottom line once the page has scrolled 8px. It lives on a pseudo-element: a
+// backdrop-filter on the header itself would make the header the containing block of fixed descendants.
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+  background: color-mix(in srgb, var(--bg) 72%, transparent);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.header[data-scrolled]::before {
+  opacity: 1;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  height: var(--header-h);
+}
+
+.logo {
+  justify-self: start;
+}
+
+// ---- Desktop nav ----
+.nav {
+  display: none;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  // 40px at 1440 (reference) → 16px at 1024, so eight items still fit next to the logo and the actions.
+  gap: clamp(16px, 5.4vw - 37.8px, 40px);
+}
+
+.link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  color: var(--text);
+  font-size: 0.84375rem; // 13.5px (see the note at the top)
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.link:hover {
+  color: var(--gold-text);
+}
+
+.link:focus-visible {
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.link[aria-current] {
+  color: var(--gold-text);
+}
+
+// The active indicator: a gold hairline as wide as the label with a hot 5px dot in its middle.
+.link::before,
+.link::after {
+  content: '';
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.link::before {
+  inset-inline: -2px;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold) 14%, var(--gold) 86%, transparent);
+  filter: drop-shadow(0 0 2px rgba(249, 190, 78, 0.55));
+}
+
+.link::after {
+  bottom: -2px;
+  inset-inline-start: calc(50% - 2.5px);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--text) 0 25%, var(--gold-hi) 75%);
+  box-shadow:
+    0 0 3px 1px rgba(250, 210, 130, 0.85),
+    0 0 7px 2px var(--gold-glow),
+    0 0 14px 3px rgba(249, 190, 78, 0.18);
+}
+
+.link[aria-current]::before,
+.link[aria-current]::after {
+  opacity: 1;
+}
+
+// ---- Actions ----
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cta {
+  display: none;
+}
+
+@include up(lg) {
+  .inner {
+    // Side columns at least as wide as their content, otherwise equal: the nav is centred on the
+    // container when there is room and slides toward the logo only when space runs out (1024–1100).
+    display: grid;
+    grid-template-columns: minmax(max-content, 1fr) auto minmax(max-content, 1fr);
+    // 24px, down to 16px at 1024 so all eight items (with Testimonials) still fit inside the container.
+    column-gap: clamp(16px, 2.6vw - 10px, 24px);
+  }
+
+  .nav {
+    display: block;
+  }
+
+  .actions {
+    justify-self: end;
+    gap: 12px;
+  }
+
+  // The reference button reads warm: a muted gold outline and a faint gold wash over the dark bar.
+  .cta {
+    display: inline-flex;
+    height: 46px;
+    padding: 0 22px;
+    gap: 16px;
+    border-color: rgba(240, 200, 120, 0.24);
+    background: rgba(249, 190, 78, 0.045);
+    color: var(--text);
+    font-size: 0.84375rem; // 13.5px/600, like the nav
+    font-weight: 600;
+  }
+
+  .cta:hover {
+    border-color: var(--line-gold-hover);
+    background: var(--gold-wash);
+  }
+
+  .cta svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+// ---- No-JavaScript fallback (rendered inside <noscript>) ----
+.fallback {
+  padding-bottom: 12px;
+}
+
+.fallbackList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+}
+
+.fallbackLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  color: var(--text-2);
+  font-size: var(--t-nav);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+@media (scripting: none) {
+  .header {
+    height: auto;
+    min-height: var(--header-h);
+  }
+}
+
+@include up(lg) {
+  .fallback {
+    display: none;
+  }
+}
+
+@include motion {
+  .header::before {
+    transition: opacity var(--dur-2) var(--ease);
+  }
+
+  .link {
+    transition: color var(--dur-1) var(--ease);
+  }
+
+  .link::before,
+  .link::after {
+    transition: opacity var(--dur-2) var(--ease);
+  }
+}

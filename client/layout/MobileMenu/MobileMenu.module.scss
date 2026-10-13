@@ -1,0 +1,226 @@
+@use '../../../styles/mixins' as *;
+
+// MobileMenu (SPEC §3, < 1024px): 44×44 outline toggle → a full-height sheet: the header row again (logo +
+// close button exactly where the toggle sits), a bento panel of large nav links, then language + Let's Talk.
+
+.button {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-btn);
+  background: var(--white-2);
+  color: var(--text);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    border-color var(--dur-1) var(--ease),
+    background-color var(--dur-1) var(--ease),
+    color var(--dur-1) var(--ease);
+}
+
+.button:hover {
+  border-color: var(--line-gold-hover);
+  background: var(--gold-wash);
+}
+
+@include up(lg) {
+  .toggle {
+    display: none;
+  }
+}
+
+// Without JavaScript the toggle can't open anything: the header shows its plain link row instead.
+@media (scripting: none) {
+  .toggle {
+    display: none;
+  }
+}
+
+// ---- Sheet ----
+.sheet {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--bg);
+  background: color-mix(in srgb, var(--bg) 94%, transparent);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+@include up(lg) {
+  .sheet {
+    display: none;
+  }
+}
+
+.bar {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  height: var(--header-h);
+}
+
+.body {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  gap: var(--gap);
+  padding-bottom: max(var(--gap), env(safe-area-inset-bottom));
+}
+
+.panel {
+  flex: 1 0 auto;
+  padding: 8px var(--panel-pad-inline) 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-panel);
+  background:
+    radial-gradient(420px 260px at 100% 0%, rgba(249, 190, 78, 0.07), transparent 70%),
+    var(--panel-grad);
+  box-shadow: var(--shadow-panel);
+}
+
+[dir='rtl'] .panel {
+  background:
+    radial-gradient(420px 260px at 0% 0%, rgba(249, 190, 78, 0.07), transparent 70%),
+    var(--panel-grad);
+}
+
+.list {
+  display: grid;
+}
+
+.list li + li {
+  border-top: 1px solid var(--line);
+}
+
+.link {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  min-height: 60px;
+  padding-block: 8px;
+  color: var(--text-2);
+  font-size: 1.375rem; // 22px
+  font-weight: 600;
+  line-height: var(--lh-h3);
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: color var(--dur-1) var(--ease);
+}
+
+.link:hover {
+  color: var(--text);
+}
+
+.link:focus-visible {
+  outline-offset: -2px;
+  border-radius: var(--r-tile);
+}
+
+// The numbered badge of the section eyebrows, at the same size.
+.index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 24px;
+  padding: 0 6px;
+  border: 1px solid rgba(249, 190, 78, 0.18);
+  border-radius: var(--r-chip);
+  background: var(--gold-faint);
+  color: var(--gold-text);
+  font-size: 0.71875rem; // 11.5px, like the eyebrow badge
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.label {
+  min-width: 0;
+}
+
+.arrow {
+  color: var(--text-subtle);
+  transition: color var(--dur-1) var(--ease);
+}
+
+.link:hover .arrow {
+  color: var(--gold);
+}
+
+.link[aria-current] {
+  color: var(--gold-text);
+}
+
+.link[aria-current] .index {
+  border-color: var(--line-gold);
+  box-shadow:
+    inset 0 -1px 0 rgba(249, 190, 78, 0.35),
+    0 0 10px rgba(249, 190, 78, 0.18);
+}
+
+.link[aria-current] .arrow {
+  color: var(--gold);
+}
+
+.actions {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--gap);
+}
+
+// The switch matches the CTA's height in this row.
+.actions > :first-child {
+  height: 48px;
+  padding-inline: 6px;
+}
+
+.cta {
+  flex: 1;
+}
+
+@include motion {
+  .sheet {
+    transition:
+      opacity var(--dur-2) var(--ease),
+      visibility 0s linear var(--dur-2);
+  }
+
+  .open {
+    transition:
+      opacity var(--dur-2) var(--ease),
+      visibility 0s;
+  }
+
+  .panel,
+  .actions {
+    transition: transform var(--dur-3) var(--ease);
+    transform: translateY(10px);
+  }
+
+  .open .panel,
+  .open .actions {
+    transform: none;
+  }
+}

@@ -1,0 +1,240 @@
+@use '../../../styles/mixins' as *;
+
+// Testimonials panel (SPEC §4.6), measured on f_testimonials.jpg at the 1440 design scale:
+//   cards start ≈ 15px under the eyebrow, 3 columns ≈ 22px apart, ≈ 178px tall; padding ≈ 19 / 26 / 12px;
+//   gold "66" mark ≈ 18 × 17px inline before the first words (its foot on the first baseline), quote ≈ 13.5px
+//   on a 24px pitch; caption: ≈ 50px round avatar, name ≈ 13.5px/600, role ≈ 11.5px, five ≈ 10px gold stars at
+//   the inline-end on the role line. Prev / next: small rounded squares at the header's inline-end.
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+// ---- Prev / next (TestimonialsNav) ----
+.nav {
+  display: flex;
+  gap: 12px;
+  margin-block: -4px; // 32px buttons centred on the 24px eyebrow row without making the header taller
+}
+
+.navButton {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-tile);
+  background: var(--white-2);
+  color: var(--text);
+  transition:
+    border-color var(--dur-1) var(--ease),
+    color var(--dur-1) var(--ease),
+    opacity var(--dur-1) var(--ease);
+}
+
+// 44 × 44px hit area around the 32px box (the two areas meet in the 12px gap without overlapping).
+.navButton::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+}
+
+.navButton:hover:not([aria-disabled='true']) {
+  border-color: var(--line-gold-hover);
+  color: var(--gold-text);
+}
+
+.navButton[aria-disabled='true'] {
+  cursor: default;
+  opacity: 0.45;
+}
+
+// ---- Track ----
+.track {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  margin-top: 18px;
+}
+
+@include up(md) {
+  .track {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@include up(lg) {
+  .track {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 15px;
+  }
+}
+
+// More than three entries: one scroll-snapping row, moved by TestimonialsNav (or touch / trackpad / keys).
+.scroller {
+  grid-template-columns: none;
+  grid-auto-flow: column;
+  grid-auto-columns: 86%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  border-radius: var(--r-card);
+}
+
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+
+@include up(md) {
+  .scroller {
+    grid-template-columns: none;
+    grid-auto-columns: calc((100% - 16px) / 2);
+  }
+}
+
+@include up(lg) {
+  .scroller {
+    grid-template-columns: none;
+    grid-auto-columns: calc((100% - 2 * 22px) / 3);
+  }
+}
+
+@include motion {
+  .scroller {
+    scroll-behavior: smooth;
+  }
+}
+
+.slide {
+  display: flex;
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+// ---- Card ----
+.card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 22px;
+  min-width: 0;
+  min-height: 178px;
+  margin: 0;
+  padding: 18px 24px 13px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-card);
+  background: linear-gradient(180deg, var(--card-2), var(--card));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.quote {
+  margin: 0;
+  color: var(--text-lead); // same ink brightness as the reference's other small body copy
+  font-size: var(--t-small);
+  line-height: 1.78;
+}
+
+// The gold "66" sits inline before the first words, its foot on the first baseline.
+.mark {
+  margin-inline-end: 14px;
+  color: var(--gold);
+  vertical-align: -3px;
+  fill: currentColor;
+}
+
+// On narrow cards the stars wrap onto their own line instead of squeezing the name and role.
+.caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  min-width: 0;
+}
+
+.avatar {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.08);
+}
+
+.monogram {
+  display: grid;
+  place-items: center;
+  background: var(--gold-soft);
+  color: var(--gold-text);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.who {
+  display: grid;
+  flex: 1 1 9.5rem;
+  gap: 3px;
+  min-width: 0;
+}
+
+.name {
+  color: var(--text);
+  font-size: var(--t-small);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.role {
+  color: var(--text-subtle);
+  font-size: var(--t-tile);
+  line-height: 1.4;
+}
+
+.source,
+.sourceText {
+  color: var(--gold-text);
+  font-size: var(--t-tile);
+  line-height: 1.4;
+}
+
+.source {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.source:hover {
+  text-decoration-thickness: 2px;
+}
+
+// Stars sit at the inline-end, on the role line (the reference aligns them with the caption's second row).
+.rating {
+  flex: none;
+  align-self: flex-end;
+  margin-inline-start: auto;
+  margin-block-end: 9px;
+}
+
+.stars {
+  display: flex;
+  gap: 5px;
+}
+
+.star {
+  display: block;
+  color: var(--gold);
+  fill: currentColor;
+}
+
+.starOff {
+  color: var(--text-subtle);
+  fill: none;
+  opacity: 0.6;
+}

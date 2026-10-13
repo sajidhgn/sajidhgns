@@ -1,89 +1,48 @@
-import React, { Fragment } from "react";
-import ContactArea from "../../client/components/ContactArea";
-import ExprienceSec from "../../client/components/Exprience/Exprience";
-import Footer from "../../client/components/footer/Footer";
-import Hero from "../../client/components/hero/hero";
-import Navbar from "../../client/components/Navbar/Navbar";
-import About from "../../client/components/about/about";
-import ProjectSection from "../../client/components/ProjectSection/ProjectSection";
-import Scrollbar from "../../client/components/scrollbar/scrollbar";
-import Testimonial from "../../client/components/Testimonial/Testimonial";
-import { getTranslations } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
+import { buildMetadata } from '../../lib/seo';
+import Hero from '../../client/sections/Hero/Hero';
+import About from '../../client/sections/About/About';
+import Skills from '../../client/sections/Skills/Skills';
+import Expertise from '../../client/sections/Expertise/Expertise';
+import Projects from '../../client/sections/Projects/Projects';
+import Experience from '../../client/sections/Experience/Experience';
+import Testimonials from '../../client/sections/Testimonials/Testimonials';
+import Contact from '../../client/sections/Contact/Contact';
+import JsonLd from '../../client/seo/JsonLd/JsonLd';
+import styles from './home.module.scss';
 
 export async function generateMetadata({ params: { locale } }) {
-  const t = await getTranslations({ locale, namespace: 'SEO' });
-
-  return {
-    metadataBase: new URL('https://sajidhgn.vercel.app'),
-    title: t('title'),
-    description: t('description'),
-    keywords: t('keywords'),
-    authors: [{ name: 'Sajidhgn', url: 'https://sajidhgn.vercel.app' }],
-    publisher: 'Sajidhgn',
-    robots: {
-      index: true,
-      follow: true,
-      nocache: false,
-      googleBot: {
-        index: true,
-        follow: true,
-        noimageindex: false,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
-    alternates: {
-      canonical: `/${locale}`,
-      languages: {
-        'en': '/en',
-        'ar': '/ar',
-      },
-    },
-    openGraph: {
-      title: t('title'),
-      description: t('description'),
-      url: `https://sajidhgn.vercel.app/${locale}`,
-      images: [
-        {
-          url: "/images/sajidhgn.png",
-          width: 1200,
-          height: 630,
-          alt: "Sajidhgn Portfolio Screenshot",
-        },
-      ],
-      siteName: 'Sajidhgn',
-      locale: locale,
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: t('title'),
-      description: t('description'),
-      images: ['/images/sajidhgn.png'],
-    },
-  };
+  const t = await getTranslations({ locale, namespace: 'meta' });
+  return buildMetadata({ locale, path: '', title: t('home.title'), description: t('home.description') });
 }
 
-const Home = () => {
+export default async function HomePage({ params: { locale } }) {
+  setRequestLocale(locale);
+
+  // Testimonials render only with REAL entries (SPEC allowed deviation 3); section numbers follow the
+  // rendered order, so they re-flow when it is hidden.
+  const messages = await getMessages({ locale });
+  const testimonials = messages.home?.testimonials?.items;
+  const showTestimonials = Array.isArray(testimonials) && testimonials.length > 0;
+
+  const order = ['about', 'skills', 'expertise', 'projects', 'experience', showTestimonials && 'testimonials', 'contact'].filter(Boolean);
+  const number = (id) => String(order.indexOf(id) + 1).padStart(2, '0');
 
   return (
-    <div id="scrool">
-      <Fragment>
-        <div className="br-app">
-          <Navbar />
-          <Hero />
-          <About />
-          <ExprienceSec />
-          <ProjectSection />
-          <Testimonial />
-          <ContactArea />
-          <Footer />
-          <Scrollbar />
+    <>
+      <JsonLd kind="person" locale={locale} />
+      <div className="container bento">
+        <Hero locale={locale} />
+        <div className={styles.split}>
+          <About locale={locale} number={number('about')} />
+          <Skills locale={locale} number={number('skills')} />
         </div>
-      </Fragment>
-    </div>
+        <Expertise locale={locale} number={number('expertise')} />
+        <Projects locale={locale} number={number('projects')} />
+        <Experience locale={locale} number={number('experience')} />
+        {showTestimonials ? <Testimonials locale={locale} number={number('testimonials')} /> : null}
+        <Contact locale={locale} number={number('contact')} />
+      </div>
+    </>
   );
 }
-
-export default Home;

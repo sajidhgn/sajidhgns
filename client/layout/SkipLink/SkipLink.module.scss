@@ -1,0 +1,35 @@
+// SkipLink: off screen (but focusable and announced) until keyboard focus brings it in as a gold pill.
+.skip {
+  position: fixed;
+  top: 12px;
+  inset-inline-start: 12px;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: var(--r-pill);
+  background: linear-gradient(180deg, var(--gold-hi), var(--gold-lo));
+  box-shadow: var(--shadow-gold-btn);
+  color: var(--on-gold);
+  font-size: var(--t-btn);
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transform: translateY(calc(-100% - 24px));
+}
+
+// Shown for keyboard focus only (a script that focuses it after a mouse click leaves it hidden)…
+.skip:focus-visible {
+  transform: none;
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+}
+
+// …and for any focus in browsers without :focus-visible.
+@supports not selector(:focus-visible) {
+  .skip:focus {
+    transform: none;
+  }
+}

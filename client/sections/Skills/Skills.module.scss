@@ -1,0 +1,139 @@
+@use '../../../styles/mixins' as *;
+
+// Skills & Stack (SPEC §4.2), measured on b_about.jpg at 1440 (1 crop px = 1/1.2986 design px): panel 570×422;
+// tiles ≈ 95×97 with ≈ 9px column / 10px row gaps, inset ≈ 28px; logos ≈ 44px, 17px from the tile top, label
+// 12px ≈ 13px below; tile fill a shade lighter than the panel with a bright top edge; the note pill (≈ 31px tall)
+// rides on the panel's bottom edge, about two thirds inside.
+//
+// Layout follows the panel's own width (container query), so it holds in any page split: 5 columns when the
+// panel content is ≥ 430px wide (5 × 3 like the reference; tiles ≥ 80px), otherwise 3.
+
+.panel {
+  --panel-pad-inline: 28px;
+
+  container-type: inline-size;
+  overflow: visible; // the note pill straddles the bottom edge
+  padding: 20px var(--panel-pad-inline) 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: 1fr; // rows stay equal even if a long name wraps
+  gap: 10px;
+  margin: 24px 0 0;
+}
+
+@container (min-width: 430px) {
+  .grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px 9px;
+  }
+}
+
+.cell {
+  display: flex;
+  min-width: 0;
+}
+
+.tile {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+  min-height: 97px;
+  padding: 16px 4px 6px; // 1 + 16 + 44 + 13 + 16 + 6 + 1 ≈ 97px, the reference's tile height
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--r-tile);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.058), rgba(255, 255, 255, 0.026));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09);
+  transition:
+    border-color var(--dur-2) var(--ease),
+    background-color var(--dur-2) var(--ease),
+    transform var(--dur-2) var(--ease);
+
+  &:hover {
+    border-color: var(--line-gold);
+    background-color: var(--gold-faint);
+  }
+
+  @include motion {
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+}
+
+// One line, allowed into the tile's side padding ("Tailwind CSS" needs ≈ 73px; tiles are ≥ 80px wide).
+.name {
+  max-width: calc(100% + 8px);
+  margin-inline: -4px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--text-2);
+  font-size: 0.71875rem; // 11.5px semibold: "JavaScript" measures ≈ 57px wide on the reference
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: center;
+}
+
+// The note pill, centred on the panel's bottom edge (top ≈ 23px inside, bottom ≈ 9px outside — clear of the
+// next panel, which starts --gap (10px) below).
+.note {
+  position: absolute;
+  inset-inline: 0;
+  bottom: -9px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  max-width: calc(100% - 2 * var(--panel-pad-inline));
+  min-height: 31px;
+  margin: 0 auto;
+  padding: 5px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-tile);
+  background: var(--card);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  color: var(--text-muted);
+  font-size: var(--t-tile);
+  line-height: 1.3;
+}
+
+.heart {
+  flex: none;
+  color: var(--gold);
+  fill: currentColor;
+}
+
+@include down(md) {
+  .panel {
+    --panel-pad-inline: 20px;
+
+    padding-bottom: 36px;
+  }
+
+  .grid {
+    margin-top: 20px;
+  }
+}
+
+// Desktop: the reference's Skills eyebrow sits lower and closer to the tiles (centre ≈ 41px from the panel top,
+// tiles from ≈ 68px), so the 5 × 3 grid and the pill land exactly where they are in the reference (422px row).
+@include up(lg) {
+  .panel {
+    padding-top: 29px;
+  }
+
+  .grid {
+    margin-top: 15px;
+  }
+}

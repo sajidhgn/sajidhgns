@@ -1,0 +1,165 @@
+@use '../../../styles/mixins' as *;
+
+// Dark browser chrome around project screenshots (SPEC §5). Radius 12px, three muted dots, a faint address
+// pill. The frame is a touch lighter than the panel so the screenshot reads as an object on the panel.
+.frame {
+  position: relative;
+  width: 100%;
+  margin-inline: auto;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-card);
+  background: var(--card);
+  box-shadow:
+    0 28px 60px -36px rgba(0, 0, 0, 0.85),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  // Lets the hint/fade siblings read the scroll position of .viewport (scroll-driven animation below).
+  timeline-scope: --frame-scroll;
+}
+
+.bar {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 36%) 1fr;
+  align-items: center;
+  height: 34px;
+  padding-inline: 14px;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012));
+}
+
+.dots {
+  display: inline-flex;
+  gap: 7px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 236, 200, 0.16);
+}
+
+.address {
+  display: none;
+  height: 18px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--white-2);
+
+  @include up(md) {
+    display: block;
+  }
+}
+
+// ---- Media ----
+.media,
+.viewport {
+  position: relative;
+  background: var(--panel);
+
+  // next/image renders a plain <img>; keep it a block so no inline gap appears under it.
+  > img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
+}
+
+.media {
+  overflow: hidden;
+}
+
+// Hide a captured browser scrollbar track: scale the image so the track falls past the physical right edge
+// (the media box is dir="ltr", so the overflow is always on the right — screenshots are never mirrored).
+.trimmed .media > img,
+.trimmed .viewport > img {
+  width: calc(100% * var(--frame-trim, 1));
+}
+
+// ---- Tall full-page captures: fixed-height scroll region ----
+.viewport {
+  max-height: max(360px, 70vh);
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-timeline: --frame-scroll block;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(249, 190, 78, 0.45) transparent;
+
+  @include down(md) {
+    max-height: max(320px, 62vh);
+  }
+}
+
+.compact .viewport {
+  max-height: min(440px, 62vh);
+}
+
+.viewport:focus-visible {
+  outline: 2px solid var(--gold-hi);
+  outline-offset: -2px;
+}
+
+// Where :has() exists, ring the whole frame instead (matches the site's 3px-offset focus ring).
+@supports selector(:has(*)) {
+  .viewport:focus-visible {
+    outline: none;
+  }
+
+  .frame:has(.viewport:focus-visible) {
+    outline: 2px solid var(--gold-hi);
+    outline-offset: 3px;
+  }
+}
+
+.fade {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 88px;
+  background: linear-gradient(180deg, transparent, rgba(8, 8, 6, 0.88));
+  pointer-events: none;
+}
+
+.hint {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  height: 30px;
+  margin-inline: auto;
+  padding: 0 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-pill);
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  color: var(--text-2);
+  font-size: var(--t-xs);
+  font-weight: 500;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.hintIcon {
+  color: var(--gold);
+}
+
+// The hint and the fade step aside once the visitor has started scrolling the frame (where supported).
+@supports (animation-timeline: scroll()) {
+  .fade,
+  .hint {
+    animation: scrolled linear both;
+    animation-timeline: --frame-scroll;
+    animation-range: 0 140px;
+  }
+}
+
+@keyframes scrolled {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

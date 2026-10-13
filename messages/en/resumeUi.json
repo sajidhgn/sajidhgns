@@ -1,0 +1,25 @@
+{
+  "label": "Résumé",
+  "download": "Download PDF",
+  "print": "Print",
+  "printHint": "Tip: choose “Save as PDF” in the print dialog.",
+  "present": "Present",
+  "availability": [
+    "Riyadh, Saudi Arabia",
+    "Transferable Iqama",
+    "Immediate joiner"
+  ],
+  "caseStudy": "View case study",
+  "sections": {
+    "summary": "Summary",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Selected projects",
+    "education": "Education",
+    "certifications": "Certifications",
+    "languages": "Languages"
+  },
+  "contact": {
+    "label": "Contact details"
+  }
+}

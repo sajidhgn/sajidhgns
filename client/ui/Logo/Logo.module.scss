@@ -1,0 +1,40 @@
+@layer reset, base, ui, utilities;
+
+// Reference (z_logo_nav / h_footer): 34px hexagon mark, gold; wordmark 19px white, 10px after the mark.
+@layer ui {
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    border-radius: 8px; // rounds the focus ring
+    color: var(--text);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mark {
+    display: block;
+    flex: none;
+    color: var(--gold);
+    filter: drop-shadow(0 0 6px rgba(249, 190, 78, 0.18));
+  }
+
+  .word {
+    display: inline-flex;
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-size: 1.1875rem; // 19px
+    line-height: 1;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    unicode-bidi: isolate;
+  }
+
+  .strong {
+    font-weight: 700;
+  }
+
+  .light {
+    font-weight: 400;
+  }
+}

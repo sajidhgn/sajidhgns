@@ -1,0 +1,104 @@
+{
+  "headline": "Senior UI/UX Designer · Design Engineer",
+  "summary": "TODO: 3–4 sentences, ATS keywords, true",
+  "skills": [
+    {
+      "group": "الواجهات الأمامية",
+      "items": [
+        "React",
+        "Next.js",
+        "JavaScript",
+        "TypeScript",
+        "Redux Toolkit",
+        "Context API",
+        "React Query / TanStack Query",
+        "Tailwind CSS",
+        "HTML5",
+        "CSS3",
+        "التصميم المتجاوب",
+        "الأداء"
+      ]
+    },
+    {
+      "group": "الواجهات الخلفية وقواعد البيانات",
+      "items": [
+        "Node.js",
+        "Express",
+        "REST",
+        "GraphQL",
+        "مصادقة JWT",
+        "RBAC",
+        "WebSockets",
+        "MySQL",
+        "MongoDB"
+      ]
+    },
+    {
+      "group": "الاختبار وDevOps",
+      "items": [
+        "Playwright",
+        "الاختبار الشامل (E2E)",
+        "تصحيح الأخطاء",
+        "ضمان الجودة",
+        "Docker",
+        "GitHub Actions",
+        "CI/CD",
+        "Vercel",
+        "Netlify"
+      ]
+    },
+    {
+      "group": "أنظمة إدارة المحتوى والتجارة الإلكترونية",
+      "items": [
+        "WordPress بنمط Headless (WPGraphQL)",
+        "Shopify",
+        "قوالب مخصصة"
+      ]
+    },
+    {
+      "group": "الأداء وتحسين محركات البحث",
+      "items": [
+        "Core Web Vitals",
+        "Lighthouse",
+        "SSR",
+        "ISR",
+        "تقسيم الشيفرة",
+        "التحميل الكسول"
+      ]
+    }
+  ],
+  "selectedProjects": [
+    {
+      "name": "HealthSIA",
+      "summary": "TODO: one sentence, résumé facts only"
+    },
+    {
+      "name": "OunLab (OUN.AI)",
+      "summary": "TODO: one sentence, résumé facts only"
+    },
+    {
+      "name": "Work in Aus",
+      "summary": "TODO: one sentence, résumé facts only"
+    },
+    {
+      "name": "EduHub Pak",
+      "summary": "TODO: one sentence, résumé facts only"
+    }
+  ],
+  "education": {
+    "degree": "ماجستير في تقنية المعلومات",
+    "school": "Lahore Leads University",
+    "location": "باكستان",
+    "year": "2015"
+  },
+  "certifications": [
+    "Advanced JavaScript Development",
+    "Next.js 15 & React – The Complete Guide"
+  ],
+  "languages": [
+    "الإنجليزية",
+    "الأردية",
+    "الهندية",
+    "العربية (أساسي)"
+  ]
+}

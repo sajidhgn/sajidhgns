@@ -1,0 +1,62 @@
+{
+  "skipToContent": "Skip to main content",
+  "brand": {
+    "name": "Sajid Ali",
+    "homeLink": "Sajid Ali — home"
+  },
+  "nav": {
+    "label": "Main navigation",
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "services": "Services",
+    "projects": "Projects",
+    "experience": "Experience",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "cta": "Let’s Talk",
+    "work": "Work",
+    "resume": "Résumé"
+  },
+  "menu": {
+    "label": "Menu",
+    "open": "Open menu",
+    "close": "Close menu"
+  },
+  "language": {
+    "label": "Language",
+    "current": "current language",
+    "en": "English",
+    "ar": "العربية"
+  },
+  "footer": {
+    "copyright": "© {year} Sajid Ali. All rights reserved.",
+    "rights": "All rights reserved.",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "backToTop": "Back to top",
+    "social": "Social links",
+    "email": "Email",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "location": "Riyadh, Saudi Arabia"
+  },
+  "notFound": {
+    "code": "404",
+    "eyebrow": "Error",
+    "title": "Page not found",
+    "body": "The page you’re looking for doesn’t exist or has moved. Head back to the home page or browse the case studies instead.",
+    "home": "Back to home",
+    "work": "View case studies",
+    "metaTitle": "Page not found · Sajid Ali"
+  },
+  "a11y": {
+    "opensInNewTab": "(opens in new tab)",
+    "externalLink": "External link",
+    "loading": "Loading…",
+    "close": "Close"
+  }
+}

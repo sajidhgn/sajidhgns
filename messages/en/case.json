@@ -1,0 +1,74 @@
+{
+  "backToWork": "All projects",
+  "detailsLabel": "Project details",
+  "meta": {
+    "role": "Role",
+    "platform": "Platform",
+    "industry": "Industry",
+    "timeline": "Timeline",
+    "team": "Team",
+    "stack": "Stack"
+  },
+  "visitLiveSite": "Visit live site",
+  "downloadCv": "Download CV",
+  "tldr": {
+    "label": "At a glance",
+    "problem": "Problem",
+    "approach": "Approach",
+    "impact": "Impact"
+  },
+  "sections": {
+    "context": "Context",
+    "problem": "Problem",
+    "users": "Users",
+    "journey": "Journey",
+    "process": "Process",
+    "ownership": "My role",
+    "decisions": "Key decisions",
+    "craft": "Craft",
+    "gallery": "Screens",
+    "outcomes": "Outcomes",
+    "learnings": "Learnings",
+    "overview": "Overview",
+    "highlights": "Highlights"
+  },
+  "decision": {
+    "problem": "Problem",
+    "decision": "Decision",
+    "tradeoff": "Trade-off"
+  },
+  "figure": {
+    "testData": "Shown with test data",
+    "testDataPhrases": [
+      "Shown with test data"
+    ],
+    "fallbackAlt": "Screenshot of {title}",
+    "scrollRegion": "Scrollable screenshot: {name}",
+    "scrollHint": "Scroll to explore"
+  },
+  "gallery": {
+    "open": "View full size",
+    "dialog": "{title} — image viewer",
+    "close": "Close image viewer",
+    "previous": "Previous image",
+    "next": "Next image",
+    "counter": "Image {current} of {total}"
+  },
+  "next": {
+    "label": "Next project",
+    "all": "View all projects"
+  },
+  "cta": {
+    "label": "Get in touch",
+    "title": [
+      { "text": "Have a role or " },
+      { "text": "project", "accent": true },
+      { "text": " in mind?" }
+    ],
+    "body": "I’m based in Riyadh with a transferable Iqama and can join immediately. Tell me about your team and your product.",
+    "email": "Email",
+    "phone": "Phone",
+    "primary": "Hire Me",
+    "secondary": "Download CV"
+  }
+}

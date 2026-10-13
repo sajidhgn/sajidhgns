@@ -1,0 +1,48 @@
+{
+  "siteName": "Sajid Ali",
+  "jobTitle": "Senior UI/UX Designer",
+  "home": {
+    "title": "Sajid Ali — Senior UI/UX Designer in Riyadh, Saudi Arabia",
+    "description": "Senior UI/UX & product designer in Riyadh, Saudi Arabia, designing and building accessible dashboards, SaaS apps and design systems in React and Next.js."
+  },
+  "workIndex": {
+    "title": "UI/UX Case Studies & Projects — Sajid Ali",
+    "description": "UI/UX and front-end case studies by Sajid Ali: healthcare, SaaS and AI tools, hiring, e-learning, fuel operations and travel, built in React and Next.js."
+  },
+  "work": {
+    "titleTemplate": "{title} — UI/UX Case Study · Sajid Ali",
+    "descriptionFallback": "UI/UX and front-end case study by Sajid Ali, Senior UI/UX Designer in Riyadh, Saudi Arabia: product design, dashboards and React/Next.js."
+  },
+  "resume": {
+    "title": "Résumé — Sajid Ali, Senior UI/UX Designer in Riyadh",
+    "description": "Sajid Ali’s résumé — Senior UI/UX Designer in Riyadh, Saudi Arabia: design systems, dashboards, React and Next.js. Transferable Iqama, immediate joiner."
+  },
+  "privacy": {
+    "title": "Privacy Policy · Sajid Ali",
+    "description": "How this portfolio handles your data: the contact form emails your message to Sajid Ali. No database, no analytics and no advertising cookies."
+  },
+  "terms": {
+    "title": "Terms of Service · Sajid Ali",
+    "description": "Terms for using Sajid Ali’s portfolio: content and screenshots belong to the owner or his clients and are provided as-is to evaluate his work."
+  },
+  "notFound": {
+    "title": "Page not found · Sajid Ali",
+    "description": "This page doesn’t exist or has moved. Explore Sajid Ali’s UI/UX case studies, résumé and contact details instead."
+  },
+  "keywords": "Sajid Ali, Senior UI/UX Designer, UI/UX Designer Riyadh, UX Designer Saudi Arabia, Product Designer, Design Engineer, Design Systems, Dashboard Design, Accessibility, React, Next.js",
+  "knowsAbout": [
+    "UI/UX design",
+    "Product design",
+    "Design systems",
+    "Dashboard design",
+    "Accessibility (WCAG)",
+    "Front-end development",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "JavaScript",
+    "Node.js",
+    "Web performance",
+    "Core Web Vitals"
+  ]
+}

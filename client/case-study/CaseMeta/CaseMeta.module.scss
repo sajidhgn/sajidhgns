@@ -1,0 +1,91 @@
+// "Project details" card — the reference's contact info list (40px icon tile, 14px/600 label, 13.5px
+// muted value, rows 18–22px apart) on the hero stats' glass card.
+.card {
+  position: relative;
+  min-width: 0;
+  padding: 24px 26px 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-card);
+  background: var(--glass);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+.title {
+  margin-bottom: 20px;
+  color: var(--text-subtle);
+  font-size: var(--t-label);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: var(--tr-label);
+  text-transform: var(--tt-label);
+}
+
+.list {
+  display: grid;
+  gap: 18px;
+  margin: 0;
+}
+
+.row {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 40px;
+  padding-inline-start: 54px;
+}
+
+.term {
+  color: var(--text);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.tile {
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-btn);
+  background: var(--white-3);
+  color: var(--gold);
+}
+
+.value {
+  margin: 3px 0 0;
+  color: var(--text-muted);
+  font-size: 0.84375rem;
+  line-height: 1.5;
+}
+
+.stackRow {
+  justify-content: flex-start;
+  padding-top: 10px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 0;
+}
+
+// Same chip as the project-card tags (SPEC §4.4): --chip fill, 7px radius, 12px gold text.
+.chip {
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 10px;
+  border-radius: var(--r-chip);
+  background: var(--chip);
+  color: var(--gold-text);
+  font-size: var(--t-tile);
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}

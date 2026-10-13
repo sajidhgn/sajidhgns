@@ -1,0 +1,68 @@
+// Page background decoration (SPEC §3 "Page background & decoration"): one fixed, decorative layer —
+// a soft gold beam from the top-right corner going down-left plus a warm glow. No canvas, no JS.
+// Rendered by the root layout as <div class="page-decor" aria-hidden="true">.
+//
+// Calibrated on the reference (1440 wide): the header's right half and the right gutter are lit by a pale
+// warm haze (≈ rgba(255,250,170,.14) at the top-right corner, ≈ .10 at x 1000 in the header, ≈ .03 at
+// y 500 in the gutter) and a narrow beam core (≈ .25) crosses the right gutter near (1400, 150) at ≈ -38°.
+// SPEC's literal beam (1400×260 rotated around its far end) peaks behind the opaque hero panel, so it is
+// re-anchored here to light the visible gutter and header like the reference.
+//
+// Physical left/right on purpose: the whole layer is mirrored for RTL (SPEC §7), which would double-flip
+// logical properties.
+
+@layer base {
+  .page-decor {
+    position: fixed;
+    inset: 0;
+    // Behind every in-flow box; the body background is painted on the canvas underneath.
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    background:
+      radial-gradient(900px 700px at 100% 0%, rgba(255, 250, 185, 0.1), rgba(255, 250, 185, 0.05) 50%, transparent 100%),
+      radial-gradient(800px 500px at 85% 0%, rgba(249, 190, 78, 0.03), transparent 70%);
+    contain: strict;
+  }
+
+  .page-decor::before,
+  .page-decor::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    transform-origin: 100% 50%;
+  }
+
+  // The beam: axis pivots 100px beyond the right edge at y ≈ 40 and runs down-left at -38°.
+  .page-decor::before {
+    top: 16px;
+    right: -100px;
+    width: 1100px;
+    height: 50px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 214, 150, 0.03) 45%,
+      rgba(255, 218, 165, 0.15) 78%,
+      rgba(255, 226, 180, 0.18) 88%,
+      transparent 100%
+    );
+    filter: blur(12px);
+    transform: rotate(-38deg);
+  }
+
+  // A wider, softer halo around the beam.
+  .page-decor::after {
+    top: -95px;
+    right: -160px;
+    width: 1300px;
+    height: 200px;
+    background: linear-gradient(90deg, transparent 10%, rgba(249, 190, 78, 0.04) 65%, rgba(249, 200, 110, 0.06) 85%, transparent);
+    filter: blur(40px);
+    transform: rotate(-36deg);
+  }
+
+  [dir='rtl'] .page-decor {
+    transform: scaleX(-1);
+  }
+}

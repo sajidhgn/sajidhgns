@@ -1,0 +1,1110 @@
+{
+  "items": {
+    "healthsia": {
+      "title": "HealthSIA",
+      "category": "Healthcare · Web platform + patient app",
+      "headline": "A perioperative care platform adopted across multiple clinics",
+      "summary": "Role-based dashboards, questionnaires, care plans and chat for patients and care teams.",
+      "meta": {
+        "role": "UI/UX design & full-stack development",
+        "platform": "Web console + patient mobile app",
+        "industry": "Healthcare · Perioperative care",
+        "timeline": "",
+        "team": ""
+      },
+      "tldr": {
+        "problem": "Surgery care involves surgeons, therapists, nutritionists, clinic staff and the patient. They needed one platform where each role sees only its own data and tools.",
+        "approach": "I designed and built role-based dashboards with strict access control, a reusable list pattern, step-by-step wizards, a questionnaire builder and real-time chat.",
+        "impact": "Adopted across multiple clinics. API responses got ~40% faster after I optimized database queries and added indexes."
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "id": "context",
+          "title": "Six roles, one patient journey",
+          "body": [
+            "HealthSIA supports patients before and after surgery. Each patient has a care team of surgeons, therapists and nutritionists, backed by clinic admins and a super admin.",
+            "It has two sides: a web console for the care team and administrators, and a mobile app where patients answer questionnaires, follow meal and exercise plans, request appointments and chat with their team."
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "users",
+          "title": "Each role needed its own view of the same data",
+          "items": [
+            {
+              "title": "Super admin",
+              "body": "Sets up clinics, admins and specializations, and shared data such as foods and exercises."
+            },
+            {
+              "title": "Clinic admins",
+              "body": "Manage their clinic’s physicians, therapists, nutritionists and patients."
+            },
+            {
+              "title": "Care team",
+              "body": "Sends questionnaires, plans meals and exercises, and follows up through appointments and chat."
+            },
+            {
+              "title": "Patients",
+              "body": "Follow one guided journey in the app, from onboarding questions to the plan after surgery."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "id": "problem",
+          "title": "Four requirements behind every screen",
+          "intro": "",
+          "items": [
+            "Strict access: every screen and API call limited to the signed-in role.",
+            "Multi-phase questionnaires, including surgery questionnaires, with status tracking and reminders.",
+            "Appointments that catch scheduling conflicts before they reach a patient.",
+            "Real-time chat that still notifies people who are offline."
+          ]
+        },
+        {
+          "type": "list",
+          "id": "ownership",
+          "title": "What I owned",
+          "intro": "I worked across design and code. Clinical content — questions, foods, exercises — is managed by admins in the console.",
+          "items": [
+            "UI/UX and front-end of the web console in React and Next.js: dashboards, list and form patterns, wizards, the questionnaire builder.",
+            "The Node.js and Express API on MySQL and Sequelize, with JWT authentication and strict role-based access.",
+            "Socket.io chat rooms with offline notifications; meal plans, exercise programs and conflict-checked scheduling.",
+            "Query optimization and indexes (~40% faster API responses), CI/CD and Google Cloud deployments."
+          ]
+        },
+        {
+          "type": "decisions",
+          "id": "decisions",
+          "title": "Four decisions that shaped the console",
+          "items": [
+            {
+              "title": "Choose your role before you sign in",
+              "problem": "Several roles share one console, each with different menus, data and actions.",
+              "decision": "Make the role the first choice at sign-in — Super Admin, Clinical Admin or Physician — so each session opens in the right workspace.",
+              "tradeoff": "One extra step at sign-in. In return, nobody lands in a view meant for someone else.",
+              "figure": "signin-roles"
+            },
+            {
+              "title": "One list template for every record",
+              "problem": "Admins manage over a dozen record types, from clinics and staff to foods and questionnaires.",
+              "decision": "One page template everywhere: breadcrumb, search, “+ New”, an Active/Inactive summary and a paged table with row actions.",
+              "tradeoff": "Some records could use a custom layout. Consistency won: admins learn the console once, and new modules ship faster.",
+              "figure": "exercises"
+            },
+            {
+              "title": "Long records as step-by-step wizards",
+              "problem": "A new nutritionist or therapist needs six kinds of information, from profile and address to permissions and emergency contacts.",
+              "decision": "A vertical six-step wizard: every step visible, one open at a time, each ticked off when complete — and reused for editing.",
+              "tradeoff": "More clicks than one long page, but each step validates on its own and an edit jumps straight to the right step.",
+              "figure": "nutritionist-create-wizard"
+            },
+            {
+              "title": "Questionnaires as data, not code",
+              "problem": "Clinics run onboarding, well-being, feedback and surgery questionnaires, and the list keeps growing.",
+              "decision": "A builder where admins pick a category and one of nine question types, from single choice to rating, so new questionnaires need no release.",
+              "tradeoff": "Fixed question types rule out unusual formats. In return every answer is structured, which tracking and reminders rely on.",
+              "figure": "questionnaire-builder"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "craft",
+          "title": "Two themes, one design language",
+          "body": [
+            "The dashboard leads with counts of patients, surgeons, therapists and nutritionists, each with a trend badge, then surgeries and six months of appointments — in light and dark themes built from the same components.",
+            "Lists and detail pages have real empty states, so an empty clinic reads as empty, not broken."
+          ]
+        },
+        {
+          "type": "metrics",
+          "id": "outcomes",
+          "title": "Adopted across multiple clinics",
+          "items": [
+            {
+              "value": "~40%",
+              "label": "Faster API responses"
+            },
+            {
+              "value": "Live",
+              "label": "Across multiple clinics"
+            },
+            {
+              "value": "6",
+              "label": "Roles on one platform"
+            }
+          ],
+          "body": [
+            "I only quote what was measured: the ~40% is API response time after query optimization and new indexes.",
+            "I have no usage data to share; adoption across multiple clinics is the clearest sign the workflows hold up in daily use."
+          ]
+        },
+        {
+          "type": "gallery",
+          "id": "gallery",
+          "title": "Screens from the console and the patient app",
+          "figures": [
+            "dashboard-light",
+            "dashboard-dark",
+            "clinics",
+            "admin-create-permissions",
+            "questionnaire-detail",
+            "food-item-create",
+            "app-splash",
+            "app-onboarding-health-journey",
+            "app-onboarding-every-log-matters",
+            "app-onboarding-care-plan",
+            "app-onboarding-track-activities",
+            "app-onboarding-stay-connected"
+          ]
+        },
+        {
+          "type": "text",
+          "id": "learnings",
+          "title": "With more time I would…",
+          "body": [
+            "Time the most frequent jobs with clinic staff — adding a patient, sending a questionnaire, booking an appointment — so the next decisions rest on evidence.",
+            "Document the list, form and wizard patterns as a component library with written states and accessibility checks."
+          ]
+        }
+      ],
+      "figures": {
+        "cover": {
+          "alt": "HealthSIA super-admin dashboard in the light theme: sidebar menu, a welcome message and stat cards for patients, surgeons and therapists",
+          "caption": ""
+        },
+        "signin-roles": {
+          "alt": "HealthSIA sign-in page with three role cards — Super Admin, Clinical Admin and Physician — beside a photo of a caregiver helping someone with a walking frame",
+          "caption": "Sign-in starts with the role."
+        },
+        "dashboard-light": {
+          "alt": "Super-admin dashboard, light theme: four pastel stat cards for patients, surgeons, therapists and nutritionists, a surgeries panel and a six-month appointments chart",
+          "caption": "Super-admin dashboard, light theme. Shown with test data."
+        },
+        "dashboard-dark": {
+          "alt": "The same dashboard in the dark theme: pastel stat cards on a near-black navy background, with empty surgery and appointment charts",
+          "caption": "The same dashboard in the dark theme. Shown with test data."
+        },
+        "countries": {
+          "alt": "Countries list under Manage Location: a table of country names, ISO codes, phone codes, capitals and currencies",
+          "caption": "Reference data: countries, with states and cities in the sub-menu."
+        },
+        "races": {
+          "alt": "Races list: a table of race and ethnicity categories with descriptions and row actions",
+          "caption": "Reference data: race and ethnicity categories."
+        },
+        "clinics": {
+          "alt": "Clinics list with an Active/Inactive donut chart and a table showing one clinic’s address, phone, email, website and status",
+          "caption": "Clinics, with an Active/Inactive summary. Shown with test data."
+        },
+        "clinic-admins": {
+          "alt": "Clinic Admins list with a total-count donut and a table of names, phone numbers, emails, status and address verification",
+          "caption": "Clinic admins, with address verification per record. Shown with test data."
+        },
+        "specializations": {
+          "alt": "Specializations table with one entry, Orthopedics, which has seven sub-specializations",
+          "caption": "Specializations and sub-specializations organize the care team."
+        },
+        "admins": {
+          "alt": "Admins list with a total-count donut and a table of names, emails, contact numbers, dates of birth, verification and status",
+          "caption": "Admin accounts with verification and status. Shown with test data."
+        },
+        "admin-create-permissions": {
+          "alt": "Create a New Admin User form with personal details and an Assign Permissions card holding a Select All checkbox and a permissions multi-select",
+          "caption": "New admins get explicit permissions."
+        },
+        "nutritionists": {
+          "alt": "Nutritionists list with a total-count donut and a table of names, addresses, phone numbers, emails and verification status",
+          "caption": "Nutritionists list. Shown with test data."
+        },
+        "nutritionist-create-wizard": {
+          "alt": "Create a New Nutritionist as a six-step vertical wizard: the Profile step is open with photo upload and personal fields; the other five steps are collapsed",
+          "caption": "Six steps, one open at a time."
+        },
+        "therapists": {
+          "alt": "Therapists list with a total-count donut and a table of names, addresses, phone numbers, emails and verification status",
+          "caption": "Therapists list. Shown with test data."
+        },
+        "therapist-detail": {
+          "alt": "Therapist Details page with basic information, a personal address, statistics cards for clinics and patients, and empty states for specializations and emergency contacts",
+          "caption": "A therapist’s record, with clear empty states. Shown with test data."
+        },
+        "therapist-edit-address": {
+          "alt": "Edit Therapist wizard with all six steps ticked and the Address step open: country, state and city dropdowns, address fields and a Verify Address button",
+          "caption": "Editing reuses the wizard, with completed steps ticked. Shown with test data."
+        },
+        "patients": {
+          "alt": "Patients list in its empty state: a total of zero and table headers for names, contact details, provider status and program status",
+          "caption": "The patients list before any records exist."
+        },
+        "search-by-therapists": {
+          "alt": "Search by Therapists page with a pie chart and a table of therapists with their patient and clinic counts",
+          "caption": "Search by listing: therapists with their patient and clinic counts. Shown with test data."
+        },
+        "exercises": {
+          "alt": "Exercises table under Manage Exercise with exercise names, types, descriptions, status toggles and row actions, and a New Exercise button",
+          "caption": "The shared list template on Exercises. Shown with test data."
+        },
+        "food-items": {
+          "alt": "Food Items table with names, food sub-categories, serving units and default serving quantities",
+          "caption": "Food items that feed the patients’ meal plans. Shown with test data."
+        },
+        "food-item-create": {
+          "alt": "Create a New Food Item form with category, sub-category and serving-unit dropdowns, a nutrients table with amount fields and an attachments upload",
+          "caption": "Food items carry nutrients per serving unit."
+        },
+        "food-item-detail": {
+          "alt": "Food Item Details card for an apple, with basic information and empty states for nutrients and attachments",
+          "caption": "Food item details with empty states. Shown with test data."
+        },
+        "questionnaires": {
+          "alt": "Questionnaire table with a category filter, listing feedback and well-being questions with their type and number of options",
+          "caption": "Each question is stored with a category, a type and its options. Shown with test data."
+        },
+        "questionnaire-categories": {
+          "alt": "The questionnaire list with the Category filter open: All, ON_BOARDING, THERAPIST_QUESTIONS, NUTRITIONIST_QUESTION and FIP_AEROBIC_CAPACITY",
+          "caption": "Categories keep onboarding, therapist and nutritionist questions apart."
+        },
+        "questionnaire-builder": {
+          "alt": "Create a New Questionnaire with the question-type dropdown open, listing nine types including single choice, yes/no, number and text input, multiple choice and rating",
+          "caption": "Pick a category, then one of nine question types."
+        },
+        "questionnaire-detail": {
+          "alt": "Questionnaire Details for “How satisfied are you with your nutritional care?” with five emoji-labeled answers from Very satisfied to Very dissatisfied",
+          "caption": "A single-choice question with emoji-labeled answers."
+        },
+        "surgery-questionnaires": {
+          "alt": "Surgery Questionnaire list in its empty state, with the category dropdown open: HOOS JR, VR12, PROMIS Depression and KOOS JR",
+          "caption": "Standard surgery questionnaires — HOOS JR, KOOS JR, VR-12, PROMIS — have their own library."
+        },
+        "app-splash": {
+          "alt": "Patient app splash screen on deep teal with a bright green shape and the headline “A Trusted Healthcare Partner”",
+          "caption": "The patient app’s splash screen."
+        },
+        "app-onboarding-health-journey": {
+          "alt": "App store screen titled Health Journey: a phone shows a welcome message and an onboarding-questionnaire prompt with Skip for now and Start Questionnaire buttons",
+          "caption": "Onboarding questions personalize the plan. Shown with test data."
+        },
+        "app-onboarding-every-log-matters": {
+          "alt": "App store screen titled Every log Matters: the patient home screen with journey progress, care team, questionnaire progress, daily activity and nutrition",
+          "caption": "Home: progress, care team and today’s activity. Shown with test data."
+        },
+        "app-onboarding-care-plan": {
+          "alt": "App store screen titled Care Plan: an eight-step journey timeline from enrollment and questionnaires through surgery to the post-op plan",
+          "caption": "The eight-step journey, from enrollment to the post-op plan. Shown with test data."
+        },
+        "app-onboarding-track-activities": {
+          "alt": "App store screen titled Track Activities: a week strip and the day’s nutrition, with calories, protein, carbs and fats per meal",
+          "caption": "Meals and exercises, day by day. Shown with test data."
+        },
+        "app-onboarding-appointments": {
+          "alt": "App store screen titled Appointments: an upcoming in-person appointment card with a physical therapist, date, time, location and pending status",
+          "caption": "Appointments: upcoming and completed visits. Shown with test data."
+        },
+        "app-onboarding-stay-connected": {
+          "alt": "App store screen titled Stay Connected: a chat list with messages from a physical therapist and a nutritionist",
+          "caption": "Real-time chat with the care team. Shown with test data."
+        }
+      }
+    },
+    "ounlab": {
+      "title": "OunLab (OUN.AI)",
+      "category": "AI SaaS · Project management",
+      "headline": "AI project management with real-time collaboration, live at oun.ai",
+      "summary": "Tasks, files, dashboards and payments for owners and freelancers, with OpenAI built in.",
+      "meta": {
+        "role": "UI/UX design & full-stack development",
+        "platform": "Web app + marketing site",
+        "industry": "AI · B2B SaaS",
+        "timeline": "",
+        "team": ""
+      },
+      "tldr": {
+        "problem": "OUN connects business owners with freelance developers. Both sides needed one place to plan the work, share files, talk in real time and handle payments.",
+        "approach": "I designed and built a real-time web app — tasks, dashboards and files over WebSockets, admin and user roles, Stripe payments and OpenAI integration — plus the dark marketing site.",
+        "impact": "Live at oun.ai, with the AI assistant greeting visitors on the landing page."
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "id": "context",
+          "title": "A software-development partner with AI built in",
+          "body": [
+            "OUN.AI (OunLab) is a platform where business owners get software built and freelancers find projects, join teams and get paid. The landing page sums it up: “Reshaping and Innovating Software Development”.",
+            "Underneath the marketing site is a project-management SaaS: tasks, files, dashboards and payments, with OpenAI built in."
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "users",
+          "title": "Two sides of every project",
+          "items": [
+            {
+              "title": "Business owners",
+              "body": "Get software built, follow progress on dashboards and pay inside the platform."
+            },
+            {
+              "title": "Freelancers",
+              "body": "Find projects, join teams, track their tasks and get paid securely."
+            },
+            {
+              "title": "Admins",
+              "body": "Manage users and roles across the platform."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "id": "problem",
+          "title": "What the workspace had to do",
+          "intro": "",
+          "items": [
+            "Show every change to everyone as it happens, without a refresh.",
+            "Keep tasks, files, dashboards and payments in one place.",
+            "Offer AI help, starting on the landing page."
+          ]
+        },
+        {
+          "type": "list",
+          "id": "ownership",
+          "title": "What I owned",
+          "intro": "I worked across design and code:",
+          "items": [
+            "UI/UX and front-end in React, Next.js and Tailwind CSS: dashboards, task and file views, and the marketing site.",
+            "Real-time collaboration over WebSockets, with shared state in Redux Toolkit.",
+            "Node.js back-end workflows, admin and user roles, and Stripe payments.",
+            "The OpenAI API integration behind the assistant."
+          ]
+        },
+        {
+          "type": "decisions",
+          "id": "decisions",
+          "title": "Three decisions behind the product",
+          "items": [
+            {
+              "title": "Real-time by default",
+              "problem": "Owners and freelancers work on the same tasks, files and dashboards, often at the same time.",
+              "decision": "Push changes over WebSockets so boards and dashboards update for everyone without a refresh.",
+              "tradeoff": "Persistent connections are harder to scale and test than plain requests. For a collaboration tool, stale screens would cost more."
+            },
+            {
+              "title": "Payments where the work lives",
+              "problem": "Freelancers need to trust they’ll be paid; owners want payment tied to the work they commissioned.",
+              "decision": "Build Stripe payments into the product instead of handling them outside it.",
+              "tradeoff": "Payments raise the bar for security and error states. In return the whole project — tasks, files and money — stays in one place."
+            },
+            {
+              "title": "Let the AI answer first",
+              "problem": "New visitors arrive unsure whether OUN is for them — as a business owner or as a freelancer.",
+              "decision": "Open the landing page with a working chat panel where OUN AI introduces itself and answers questions, not a static FAQ.",
+              "tradeoff": "Every conversation costs an API call, and the assistant has to be right from the first message. A static page is cheaper but can’t answer the question a visitor actually has."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "craft",
+          "title": "From design to production",
+          "body": [
+            "The marketing site sets the tone: a dark starfield, a particle globe in blue and gold, three plain reasons to join, and a single call to sign up.",
+            "In the app, Tailwind CSS keeps screens consistent and quick to build, and Redux Toolkit holds the shared state that live WebSocket updates change."
+          ]
+        },
+        {
+          "type": "metrics",
+          "id": "outcomes",
+          "title": "What shipped",
+          "items": [
+            {
+              "value": "Live",
+              "label": "Public site at oun.ai"
+            },
+            {
+              "value": "Real-time",
+              "label": "Collaboration over WebSockets"
+            },
+            {
+              "value": "AI + Stripe",
+              "label": "Assistant and payments built in"
+            }
+          ],
+          "body": [
+            "OUN is in beta and I have no usage numbers I can share, so I don’t quote any. What I can point to is what shipped, and the site you can open today."
+          ]
+        },
+        {
+          "type": "text",
+          "id": "learnings",
+          "title": "With more time I would…",
+          "body": [
+            "Test the assistant with both audiences and log the questions it can’t answer, then turn those gaps into clearer onboarding.",
+            "Measure how long an owner and a freelancer take to get from sign-up to their first shared project, and design against that number."
+          ]
+        }
+      ],
+      "figures": {
+        "cover": {
+          "alt": "OUN.AI landing page hero: a blue-and-gold particle globe on a dark starfield, the headline “Reshaping and Innovating Software Development” and the start of a chat with OUN AI",
+          "caption": ""
+        },
+        "full": {
+          "alt": "The full OUN.AI landing page: hero with an AI chat panel, “Why Joining OUN?” cards for projects, team members and secured payments, and a sign-up call to action",
+          "caption": "The public landing page at oun.ai: the AI assistant in the hero, three reasons to join and one call to sign up."
+        }
+      }
+    },
+    "workinaus": {
+      "title": "Work in Aus",
+      "category": "Recruitment · Job portal",
+      "headline": "A two-sided job portal for Australia, live at workinaus.com.au",
+      "summary": "Job listings, applications and filtered search for employers and job seekers.",
+      "meta": {
+        "role": "UI/UX design & front-end development",
+        "platform": "Responsive web app",
+        "industry": "Recruitment",
+        "timeline": "",
+        "team": ""
+      },
+      "tldr": {
+        "problem": "Job seekers in Australia — including people planning to move there — needed to find relevant jobs quickly, and employers needed to post jobs and receive applications, on one site.",
+        "approach": "I designed and built a responsive React and Next.js front end around search: keyword, category and suburb in the hero, quick filter chips, and separate employer and job-seeker journeys.",
+        "impact": "Live at workinaus.com.au, with search and filters on Elasticsearch and SEO-friendly pages."
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "id": "context",
+          "title": "Hiring in Australia, from both sides",
+          "body": [
+            "Work in Aus is a job portal for Australia: job seekers search and apply, and employers post jobs and review applications.",
+            "The work covered both journeys: listings, applications, search and filters, authentication and SEO, on a responsive front end."
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "users",
+          "title": "Three audiences, one portal",
+          "items": [
+            {
+              "title": "Job seekers",
+              "body": "Search by keyword, category and suburb, filter by pay and work type, and apply."
+            },
+            {
+              "title": "Employers",
+              "body": "Post jobs and review the applications that come in."
+            },
+            {
+              "title": "Newcomers to Australia",
+              "body": "People who want to move to Australia or extend their stay, reached through their own sections on the home page."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "id": "problem",
+          "title": "What the portal had to get right",
+          "intro": "",
+          "items": [
+            "Relevant results from the first search, filtered by pay type, work type, salary and date posted.",
+            "Location down to suburb and postcode, not just the city.",
+            "Listings that can be found from search engines, not only from the site’s own search."
+          ]
+        },
+        {
+          "type": "list",
+          "id": "ownership",
+          "title": "What I owned",
+          "intro": "I designed and built the front end:",
+          "items": [
+            "UI/UX for the home page, search, job listings and featured jobs.",
+            "Employer and job-seeker journeys, including sign-up and login.",
+            "Search and filters connected to Elasticsearch.",
+            "SEO-friendly pages and a responsive layout in React, Next.js, Redux and Bootstrap."
+          ]
+        },
+        {
+          "type": "decisions",
+          "id": "decisions",
+          "title": "Decisions that put search first",
+          "items": [
+            {
+              "title": "Search is the hero",
+              "problem": "Search is the reason people come to a job portal, so it can’t sit below a marketing banner.",
+              "decision": "Put the search panel — keyword, category, suburb and filters — in the hero, over the photo, under a short “Start your journey” headline.",
+              "tradeoff": "Less room above the fold to explain the brand; the promo cards and blogs further down do that job."
+            },
+            {
+              "title": "Key filters one tap away",
+              "problem": "Pay and work type often decide whether a job is worth opening, but long filter forms slow people down.",
+              "decision": "Show five filter chips under the search — pay type, work type, minimum salary, maximum salary, date posted — and keep the rest behind “Filters”.",
+              "tradeoff": "Chips take vertical space on small screens, so the row stops at five and everything else waits behind “Filters”."
+            },
+            {
+              "title": "Location the way Australians write it",
+              "problem": "A city name alone is too vague to judge a commute.",
+              "decision": "Search by suburb, and show suburb, postcode, region and state on every job card.",
+              "tradeoff": "Longer card details, but “how far is it?” is answered before anyone clicks Apply."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "craft",
+          "title": "From design to production",
+          "body": [
+            "The front end runs on React and Next.js, with Redux for shared state and Bootstrap for the responsive grid. Search and filters run on Elasticsearch.",
+            "Job pages are built to be indexed, so listings can be found from search engines as well as from the site."
+          ]
+        },
+        {
+          "type": "metrics",
+          "id": "outcomes",
+          "title": "Live at workinaus.com.au",
+          "items": [
+            {
+              "value": "Live",
+              "label": "workinaus.com.au"
+            },
+            {
+              "value": "2",
+              "label": "Journeys: employers and job seekers"
+            }
+          ],
+          "body": [
+            "The portal is live and public. I don’t have traffic or application numbers I can share, so the outcome here is the shipped product, which you can try."
+          ]
+        },
+        {
+          "type": "text",
+          "id": "learnings",
+          "title": "With more time I would…",
+          "body": [
+            "Measure the search funnel — searches, job views, applications — and tune the filter chips to what people actually use.",
+            "Run usability tests on the employer side, where posting a job and reviewing applicants are the tasks that matter most."
+          ]
+        }
+      ],
+      "figures": {
+        "cover": {
+          "alt": "Work in Aus home page: navigation for job seekers and employers, a “Start your journey” hero over a coastal road, a job search panel with filter chips and featured job cards",
+          "caption": ""
+        },
+        "full": {
+          "alt": "The full Work in Aus home page: job search hero, featured jobs, promo cards for moving to or staying in Australia, job categories, blogs, a job-sector tag cloud and the footer",
+          "caption": "The home page puts search first; the promo cards and blogs further down explain the brand."
+        }
+      }
+    },
+    "eduhub": {
+      "title": "EduHub Pak",
+      "category": "Education · Discovery platform",
+      "headline": "SEO-first education discovery for Pakistan, live at eduhubpak.com",
+      "summary": "Universities, programs, scholarships and admission deadlines in one place.",
+      "meta": {
+        "role": "UI/UX design & front-end development",
+        "platform": "Website · Next.js + headless WordPress",
+        "industry": "Education",
+        "timeline": "",
+        "team": ""
+      },
+      "tldr": {
+        "problem": "Students in Pakistan research universities, programs, scholarships and test dates across many sources. EduHub Pak brings them into one place, and it has to rank in search to reach them.",
+        "approach": "I designed and built a Next.js App Router site on headless WordPress: content arrives through WPGraphQL, pages are server-rendered and refreshed with ISR, and a custom Tailwind UI system ties it together.",
+        "impact": "Live at eduhubpak.com, with search-friendly pages for universities, programs, scholarships and news."
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "id": "context",
+          "title": "Everything a student needs to choose, in one place",
+          "body": [
+            "EduHub Pak helps students in Pakistan choose where and what to study. The promise is in the headline: “Find. Compare. Decide — Your Education Journey, Simplified.”",
+            "It covers universities and programs with advanced filters, admission deadlines and test dates, a scholarship database with eligibility filters, education news and test-prep resources."
+          ]
+        },
+        {
+          "type": "steps",
+          "id": "journey",
+          "title": "Find, compare, decide",
+          "items": [
+            {
+              "title": "Find",
+              "body": "One search box with suggested searches, and a university explorer filtered by province, city and type."
+            },
+            {
+              "title": "Compare",
+              "body": "The same facts for every university and program, and an admissions tracker with deadlines and test dates."
+            },
+            {
+              "title": "Decide",
+              "body": "Scholarships filtered by eligibility, with a University Match Calculator marked as coming next."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "id": "problem",
+          "title": "What the platform had to handle",
+          "intro": "",
+          "items": [
+            "Content that changes often: admission deadlines, test dates, scholarships and news.",
+            "Many content types that must look and behave the same way.",
+            "Organic search as a growth channel, so every page has to be indexable.",
+            "Editors who publish in WordPress, not in code."
+          ]
+        },
+        {
+          "type": "list",
+          "id": "ownership",
+          "title": "What I owned",
+          "intro": "I designed and built the site:",
+          "items": [
+            "UI/UX of the home page, university explorer, admissions tracker and scholarship pages.",
+            "A custom UI system on Tailwind CSS, reused across universities, programs, scholarships and news.",
+            "The Next.js App Router front end in TypeScript, with SSR and ISR.",
+            "The content layer: headless WordPress queried through WPGraphQL."
+          ]
+        },
+        {
+          "type": "decisions",
+          "id": "decisions",
+          "title": "Decisions behind a findable, easy-to-update site",
+          "items": [
+            {
+              "title": "Editors keep WordPress; readers get Next.js",
+              "problem": "News, deadlines and scholarships change often and must be easy to publish.",
+              "decision": "Keep WordPress as a headless CMS and render every page in Next.js, pulling content through WPGraphQL.",
+              "tradeoff": "Two systems to run and a GraphQL schema to maintain, in exchange for a familiar editor and a fully custom front end."
+            },
+            {
+              "title": "Server-rendered pages that stay current",
+              "problem": "Pages need complete HTML for search engines and quick loads for students, while dates keep changing.",
+              "decision": "Render pages on the server and regenerate them incrementally with ISR as content changes.",
+              "tradeoff": "A page can lag behind the CMS for a short window between regenerations — an acceptable price for speed and indexability on this kind of content."
+            },
+            {
+              "title": "Search first, then four clear paths",
+              "problem": "Visitors arrive with different goals: a university, a scholarship, a program, the latest news.",
+              "decision": "Lead with one search box and suggested searches, then four colored tiles: universities, scholarships, programs and news.",
+              "tradeoff": "Four tiles can’t cover everything — test prep and tools sit further down the page — but nobody needs the menu to get started."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "craft",
+          "title": "From design to production",
+          "body": [
+            "The custom UI system gives universities, programs, scholarships and news the same cards, tables and chips, so the site stays consistent as sections are added.",
+            "Pages ship as complete server-rendered HTML that search engines can index, then refresh with ISR when editors update WordPress."
+          ]
+        },
+        {
+          "type": "metrics",
+          "id": "outcomes",
+          "title": "Live at eduhubpak.com",
+          "items": [
+            {
+              "value": "Live",
+              "label": "eduhubpak.com"
+            },
+            {
+              "value": "SSR + ISR",
+              "label": "Search-friendly pages"
+            }
+          ],
+          "body": [
+            "The counters on the site — students guided, universities listed — are the client’s figures, not results I can claim. What I can point to is the live platform and pages built to be found."
+          ]
+        },
+        {
+          "type": "text",
+          "id": "learnings",
+          "title": "With more time I would…",
+          "body": [
+            "Finish and test the University Match Calculator with students; matching is where a comparison site becomes a decision tool. It was marked “coming soon” when this was captured.",
+            "Validate data between WordPress and the front end, so a missing deadline shows as “to be announced” instead of “Invalid Date”."
+          ]
+        }
+      ],
+      "figures": {
+        "cover": {
+          "alt": "EduHub Pak hero: “Find. Compare. Decide — Your Education Journey, Simplified.”, a search field with suggested searches and four colored tiles for universities, scholarships, programs and news",
+          "caption": ""
+        },
+        "full": {
+          "alt": "The full EduHub Pak home page: search hero, University Match Calculator, featured universities, university explorer, admissions tracker, scholarships, test-prep resources, FAQ and footer",
+          "caption": "The full home page. The match calculator was marked “coming soon” at capture; the counters near the end are the client’s figures."
+        }
+      }
+    },
+    "shahjee": {
+      "title": "Shah Jee Petroleum",
+      "category": "Energy · Fuel-management PWA",
+      "headline": "Fuel deliveries, QR fuel cards and invoices in one app",
+      "summary": "A fuel-management PWA for admins, clients and delivery staff across branches.",
+      "meta": {
+        "role": "UI/UX design & front-end development",
+        "platform": "Progressive web app (PWA)",
+        "industry": "Energy · Fuel distribution",
+        "timeline": "",
+        "team": ""
+      },
+      "tldr": {
+        "problem": "A fuel distributor needed to track deliveries, fuel cards and payments across branches, clients and suppliers in one system.",
+        "approach": "A role-based PWA with QR-code fuel cards, consumption charts, printable receipts and invoices, and a balance sheet.",
+        "impact": "Live at shahjeepetroleum.com."
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "id": "overview",
+          "title": "Fuel operations in one app",
+          "body": [
+            "Shah Jee Petroleum’s system tracks fuel from suppliers to clients across branches. The dashboard leads with counts of admins, clients, branches, delivery persons and transactions, then a petrol-and-diesel consumption chart that filters by admin, client, branch, supplier and date."
+          ]
+        },
+        {
+          "type": "list",
+          "id": "highlights",
+          "title": "What’s inside",
+          "intro": "",
+          "items": [
+            "Four roles: super admin, admin, clients and delivery staff.",
+            "QR-code fuel cards, scanned when fuel is delivered.",
+            "Printable receipts and invoices, and a balance sheet.",
+            "Fuel-consumption charts and totals for petrol and diesel."
+          ]
+        },
+        {
+          "type": "list",
+          "id": "ownership",
+          "title": "What I owned",
+          "intro": "",
+          "items": [
+            "UI/UX and front-end in React, Next.js and Tailwind CSS.",
+            "The progressive web app, installable like a native app.",
+            "Role-based dashboards, consumption charts, and printable receipts and invoices."
+          ]
+        }
+      ],
+      "figures": {
+        "cover": {
+          "alt": "Shah Jee Petroleum dashboard: sidebar menu, five colored stat cards for admins, clients, branches, delivery persons and transactions, and a fuel-consumption chart",
+          "caption": ""
+        },
+        "full": {
+          "alt": "Shah Jee Petroleum admin dashboard with stat cards, filters for admin, client, branch, supplier and date, a petrol-versus-diesel area chart and total-consumption cards",
+          "caption": "The admin dashboard: counts by role and branch, then fuel delivered over time. Shown with test data."
+        }
+      }
+    },
+    "peepskill": {
+      "title": "PeepSkill",
+      "category": "Sports · Social network",
+      "headline": "Athletes, coaches and fans in one sports community",
+      "summary": "A social feed filtered by sport, with live chat, communities, blogs and member roles.",
+      "meta": {
+        "role": "UI/UX design & front-end development",
+        "platform": "Web app",
+        "industry": "Sports · Social media",
+        "timeline": "",
+        "team": ""
+      },
+      "tldr": {
+        "problem": "PeepSkill needed a social home for sport, where athletes, coaches and guests post, follow sports and talk.",
+        "approach": "A three-column feed with sport filters, a post composer and trending posts, live chat over WebSockets, communities, blogs and role management.",
+        "impact": "Live at peepskill.com."
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "id": "overview",
+          "title": "A social feed organized by sport",
+          "body": [
+            "PeepSkill is a social network for athletes, coaches and fans. The home feed has three columns: sports and followed communities on one side, the feed with sport filters in the middle, and a post composer with trending posts on the other."
+          ]
+        },
+        {
+          "type": "list",
+          "id": "highlights",
+          "title": "What’s inside",
+          "intro": "",
+          "items": [
+            "A feed with sport filters, votes, comments, reposts and sharing.",
+            "Live chat and messages.",
+            "Communities, blogs and articles.",
+            "Roles for athletes, coaches and guests."
+          ]
+        },
+        {
+          "type": "list",
+          "id": "ownership",
+          "title": "What I owned",
+          "intro": "",
+          "items": [
+            "UI/UX and front-end in React, Next.js and Tailwind CSS.",
+            "The three-column feed, post composer and live chat interface.",
+            "Front-end integration with the Node.js, Express and MySQL back end, and WebSockets for chat."
+          ]
+        }
+      ],
+      "figures": {
+        "cover": {
+          "alt": "PeepSkill home feed in three columns: sport navigation on the left, a post with a photo of a baseball pitcher in the center, and a post composer and trending posts on the right",
+          "caption": ""
+        },
+        "full": {
+          "alt": "The full PeepSkill feed page: sport navigation, posts with photos, vote, comment and share bars, trending posts and footer links",
+          "caption": "The home feed with sample posts. Shown with test data."
+        }
+      }
+    },
+    "learninghub": {
+      "title": "Learning Hub",
+      "category": "E-learning · Course platform",
+      "headline": "Online courses, browsed like a streaming service",
+      "summary": "A Udemy-style course platform with community features, chat, social login and Stripe.",
+      "meta": {
+        "role": "UI/UX design & front-end development",
+        "platform": "Web app",
+        "industry": "E-learning",
+        "timeline": "",
+        "team": ""
+      },
+      "tldr": {
+        "problem": "Learning Hub set out to make online courses as easy to browse as a streaming service, with a community around them.",
+        "approach": "A streaming-style catalog in rows by category, community features (follow, like, comment), chat, social login and Stripe payments for monthly plans.",
+        "impact": "There’s no public build to link to, so this is a short write-up."
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "id": "overview",
+          "title": "Courses, browsed like a streaming service",
+          "body": [
+            "Learning Hub is a Udemy-style learning platform. Courses sit in rows by category — development, business and more — with monthly plans and a community around them."
+          ]
+        },
+        {
+          "type": "list",
+          "id": "highlights",
+          "title": "What’s inside",
+          "intro": "",
+          "items": [
+            "Streaming-style rows of courses by category.",
+            "Community features: follow, like and comment.",
+            "Built-in chat.",
+            "Social login and Stripe payments for monthly plans."
+          ]
+        },
+        {
+          "type": "list",
+          "id": "ownership",
+          "title": "What I owned",
+          "intro": "",
+          "items": [
+            "UI/UX and front-end in React, Next.js and Redux Toolkit, with Bootstrap for layout.",
+            "The streaming-style catalog and course rows.",
+            "Community features, chat, social login and Stripe payments."
+          ]
+        }
+      ],
+      "figures": {
+        "cover": {
+          "alt": "Learning Hub hero: “Can’t go to school? Learn online!” with a free-trial button over a tilted mosaic of course thumbnails",
+          "caption": "The landing hero, over a mosaic of course thumbnails."
+        },
+        "full": {
+          "alt": "The full Learning Hub home page: hero, course rows for development and business, subscription benefits, three pricing plans, trending categories, stats and footer",
+          "caption": "The full home page of the demo build, which still carries placeholder branding in its header and footer."
+        }
+      }
+    },
+    "royalvision": {
+      "title": "Royal Vision Dubai",
+      "category": "Travel · Booking & e-commerce",
+      "headline": "Dubai tours and desert safaris, bookable and payable online",
+      "summary": "A travel catalog with CCAvenue payments and TripAdvisor and Google reviews built in.",
+      "meta": {
+        "role": "UI/UX design & front-end development",
+        "platform": "Responsive website",
+        "industry": "Travel & tourism",
+        "timeline": "",
+        "team": ""
+      },
+      "tldr": {
+        "problem": "A Dubai tour operator needed to sell tours, safaris and attraction tickets online, and show its TripAdvisor and Google reviews where people decide.",
+        "approach": "A responsive catalog with booking, CCAvenue payments, TripAdvisor and Google Reviews integration and SEO, built in React, Next.js, Tailwind CSS and React Query.",
+        "impact": "Live at royalvisiondubai.com."
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "id": "overview",
+          "title": "From browsing to booked",
+          "body": [
+            "Royal Vision Dubai sells desert safaris, city tours, attraction tickets and holiday packages. The home page opens with a hero slider and one-tap booking on WhatsApp or by phone, then recommended activities with prices in AED."
+          ]
+        },
+        {
+          "type": "list",
+          "id": "highlights",
+          "title": "What’s inside",
+          "intro": "",
+          "items": [
+            "A catalog of tours, activities, tickets and holiday packages.",
+            "Online booking with CCAvenue payments.",
+            "TripAdvisor and Google reviews on the home page.",
+            "SEO and a responsive layout."
+          ]
+        },
+        {
+          "type": "list",
+          "id": "ownership",
+          "title": "What I owned",
+          "intro": "",
+          "items": [
+            "UI/UX and front-end in React, Next.js and Tailwind CSS, with React Query for data.",
+            "The booking flow with CCAvenue payments.",
+            "TripAdvisor and Google Reviews integration, and SEO."
+          ]
+        }
+      ],
+      "figures": {
+        "cover": {
+          "alt": "Royal Vision Dubai home page: winged gold logo, navigation, an “Al Ain Oasis Discovery” hero slide over a lit desert camp, and Book On WhatsApp and Book On Phone Call buttons",
+          "caption": "The hero slider, with quick booking by WhatsApp or phone."
+        },
+        "full": {
+          "alt": "The full Royal Vision Dubai home page: hero, recommended activities with prices in AED, attraction tickets, packages, TripAdvisor and Google review sections, blogs and footer",
+          "caption": "The full home page, from the hero slider to the TripAdvisor and Google review sections."
+        }
+      }
+    },
+    "papaz": {
+      "title": "Papaz Pizza",
+      "category": "Hospitality · Restaurant POS",
+      "headline": "A desktop point-of-sale for a pizza restaurant",
+      "summary": "Menus, orders and inventory in one Electron app, with staff roles and Stripe.",
+      "meta": {
+        "role": "UI/UX design & front-end development",
+        "platform": "Desktop app (Electron)",
+        "industry": "Hospitality · Restaurants",
+        "timeline": "",
+        "team": ""
+      },
+      "tldr": {
+        "problem": "A pizza restaurant needed one desktop app for taking orders, managing the menu and tracking stock.",
+        "approach": "An Electron app in React and Tailwind CSS: a category-first menu with photo tiles, pending and completed orders, inventory, roles, a dashboard with charts and Stripe payments.",
+        "impact": "Built as a desktop app for the restaurant, so there’s no public link."
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "id": "overview",
+          "title": "Big, clear targets for a busy counter",
+          "body": [
+            "Papaz Pizza’s point-of-sale opens on large photo tiles by category — pizzas, kebabs, burgers, drinks, extras — with the cart beside them and tabs for pending and completed orders."
+          ]
+        },
+        {
+          "type": "list",
+          "id": "highlights",
+          "title": "What’s inside",
+          "intro": "",
+          "items": [
+            "A category-first menu with large photo tiles.",
+            "Pending and completed orders, and a cart panel.",
+            "Inventory tracking and staff roles.",
+            "A dashboard with charts, and Stripe payments."
+          ]
+        },
+        {
+          "type": "list",
+          "id": "ownership",
+          "title": "What I owned",
+          "intro": "",
+          "items": [
+            "UI/UX and front-end of the Electron app in React and Tailwind CSS.",
+            "The category-first menu, order tabs and cart.",
+            "Inventory, staff roles, the charts dashboard and Stripe payments."
+          ]
+        }
+      ],
+      "figures": {
+        "cover": {
+          "alt": "Papaz Pizza point-of-sale: a category list on the left and a grid of food photo tiles for pizzas, kebabs, burgers, chicken, drinks and extras",
+          "caption": ""
+        },
+        "full": {
+          "alt": "The full Papaz Pizza point-of-sale screen: category list, food photo tiles and an empty cart panel on the right",
+          "caption": "The order screen: categories, photo tiles and the cart side by side."
+        }
+      }
+    },
+    "mdhov": {
+      "title": "MDHOV",
+      "category": "Marketing agency · Website",
+      "headline": "A content-rich website for a Canadian digital agency",
+      "summary": "Service pages, a client showcase, blogs and email inquiries in a responsive build.",
+      "meta": {
+        "role": "UI/UX design & front-end development",
+        "platform": "Website (WordPress)",
+        "industry": "Digital marketing agency",
+        "timeline": "",
+        "team": ""
+      },
+      "tldr": {
+        "problem": "MDHOV, a Canadian agency for web development, design and digital marketing, needed a site that explains many services and makes it easy to get in touch.",
+        "approach": "A responsive WordPress site with service pages, a how-it-works section, a client showcase, blogs and email integration, built with HTML5, CSS, Bootstrap, AJAX and Laravel.",
+        "impact": "Live at mdhov.com."
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "id": "overview",
+          "title": "Many services, one clear path to contact",
+          "body": [
+            "MDHOV is a Canadian digital agency offering web development, design and digital marketing. Its website presents a wide range of services and keeps contact close: “Let’s Start a Project”, call-back requests and email inquiries. Figures in the agency’s own copy are theirs, not my results."
+          ]
+        },
+        {
+          "type": "list",
+          "id": "highlights",
+          "title": "What’s inside",
+          "intro": "",
+          "items": [
+            "Service pages for web development, SEO and e-commerce.",
+            "A four-step “How It Works?” section and a client showcase.",
+            "Blogs and articles, with email integration for inquiries.",
+            "A responsive layout across devices."
+          ]
+        },
+        {
+          "type": "list",
+          "id": "ownership",
+          "title": "What I owned",
+          "intro": "",
+          "items": [
+            "UI/UX and front-end of the responsive site on WordPress and Laravel, with Bootstrap and AJAX.",
+            "Service pages, the how-it-works section and the client showcase.",
+            "Blogs and articles, and the email integration for inquiries."
+          ]
+        }
+      ],
+      "figures": {
+        "cover": {
+          "alt": "MDHOV agency website hero with a gradient background, a woman leaping out of a smartphone among social-media icons, and service cards below",
+          "caption": ""
+        },
+        "full": {
+          "alt": "The full MDHOV home page: hero, service cards, web-design features, a how-it-works section, client showcase, inquiry options, integration logos and footer",
+          "caption": "The home page, from services to inquiry options."
+        }
+      }
+    }
+  }
+}

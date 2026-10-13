@@ -1,0 +1,167 @@
+@use '../../../styles/mixins' as *;
+
+// Services panel (SPEC §4.3), measured on c_services.jpg at 1440 (crop px ÷ 1.2986) and checked through the
+// reference's own downscale + JPEG pipeline (border, fill and text brightness):
+// eyebrow → cards 16px · 4 cards 275px wide, 28px apart, inset 48px from the panel edge (reference 269 / 30 /
+// 48; DM Sans is wider than the reference face, so "Performance Optimization" needs the extra width to stay on
+// one line) · card padding 18 / 10 / 16 / 20 · 48px tile, radius 8, 45% gold rim · title 14px/700 centred on
+// the tile, 12px after it · description 13.5px on a 23px pitch, 12px under the tile, brighter than body copy
+// (the reference samples ≈ #BEBDB8) · "Learn more →" 12px/500 gold, ≈ 10px visible gap to the arrow
+// (8px + the glyph's side bearing), ≥ 14px under the text, pinned to the card bottom.
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+
+  @include up(md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  @include up(xl) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  @include up(xxl) {
+    gap: 28px;
+    padding-inline: 7px;
+  }
+}
+
+.item {
+  display: flex;
+  min-width: 0;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  padding-block: 18px 16px;
+  padding-inline: 20px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-card);
+  // Lit from the top like the reference cards (≈ +10 levels at the top edge, flat by the bottom).
+  background: linear-gradient(180deg, var(--white-3), transparent 75%), var(--card);
+  box-shadow: var(--shadow-panel);
+  transition:
+    border-color var(--dur-2) var(--ease),
+    background-color var(--dur-2) var(--ease);
+}
+
+// Four columns: the title may run into the end padding, as in the reference ("Performance Optimization").
+@include up(xl) {
+  .card {
+    padding-inline-end: 10px;
+  }
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.tile {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid color-mix(in srgb, var(--gold) 45%, transparent);
+  border-radius: var(--r-tile);
+  background: var(--gold-faint);
+  color: var(--gold);
+}
+
+.glyph {
+  display: block;
+  filter: drop-shadow(0 0 5px color-mix(in srgb, var(--gold) 35%, transparent));
+}
+
+.title {
+  min-width: 0;
+  color: var(--text);
+  font-size: 0.875rem; // 14px — "Performance Optimization" 181px of the 183px slot at 1440
+  font-weight: 700; // matches the reference's ink at this small size (650/600 read lighter)
+  line-height: var(--lh-h3);
+  text-wrap: balance;
+}
+
+.body {
+  margin-top: 12px;
+  color: color-mix(in srgb, var(--text-lead) 70%, var(--text-muted));
+  font-size: var(--t-small);
+  line-height: var(--lh-body);
+}
+
+.more {
+  margin-top: auto;
+  padding-top: 14px;
+  font-size: var(--t-tile);
+  line-height: var(--lh-xs);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold-text);
+  font-weight: 500;
+  transition: color var(--dur-1) var(--ease);
+}
+
+.arrow {
+  flex: none;
+}
+
+// ---- Interactive cards (the stretched "Learn more" link covers the card) ----
+.interactive:hover {
+  border-color: var(--line-gold);
+  background-color: var(--card-2);
+}
+
+.interactive:hover .link {
+  color: var(--gold-hi);
+}
+
+@include motion {
+  .arrow {
+    transition: translate var(--dur-2) var(--ease);
+  }
+
+  .interactive:hover .arrow {
+    translate: 3px 0;
+  }
+
+  [dir='rtl'] .interactive:hover .arrow {
+    translate: -3px 0;
+  }
+}
+
+// One focus ring around the whole card instead of a ring around the small link text.
+@supports selector(:has(*)) {
+  .card:has(.link:focus-visible) {
+    outline: 2px solid var(--gold-hi);
+    outline-offset: 3px;
+  }
+
+  .link:focus-visible {
+    outline: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .card,
+  .tile {
+    border-color: CanvasText;
+  }
+}

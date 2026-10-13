@@ -1,0 +1,61 @@
+{
+  "roles": {
+    "oxcoders": {
+      "title": "Full Stack Engineer (Frontend Focused)",
+      "location": "Riyadh, Saudi Arabia",
+      "mode": "Onsite",
+      "summary": "Building SaaS products; Core Web Vitals +45%.",
+      "highlights": [
+        "Built SaaS platforms, enterprise applications, admin dashboards and business-management systems with Next.js, Node.js, TypeScript and MySQL.",
+        "Improved Core Web Vitals by 45% and consistently delivered 90+ Lighthouse performance scores across projects.",
+        "Implemented secure authentication, role-based access control (RBAC), protected admin modules and user-permission management.",
+        "Built REST APIs and GraphQL integrations, and added Playwright E2E and React Testing Library automation that significantly reduced production regressions.",
+        "Led code reviews, a TypeScript migration and engineering best practices across multiple projects."
+      ]
+    },
+    "dycoders": {
+      "title": "Senior Frontend Engineer",
+      "location": "USA",
+      "mode": "Remote",
+      "summary": "UI libraries cut feature dev time by 20%.",
+      "highlights": [
+        "Delivered multiple SaaS applications with React, Next.js and Node.js.",
+        "Built reusable component libraries that reduced feature development time by 20%.",
+        "Built reporting dashboards, real-time business-monitoring features and API integrations for high-traffic SaaS apps.",
+        "Developed headless WordPress and Shopify solutions that improved SEO traffic and conversion rates.",
+        "Took part in Agile sprint planning, architecture decisions and end-to-end release cycles."
+      ]
+    },
+    "tanbits": {
+      "title": "Frontend Engineer",
+      "location": "Lahore, Pakistan",
+      "mode": "Onsite",
+      "summary": "React and Next.js apps at 90+ Lighthouse.",
+      "highlights": [
+        "Developed scalable React and Next.js applications built on reusable UI component systems.",
+        "Raised application performance to 90+ Lighthouse benchmarks across client projects.",
+        "Delivered SSR/ISR applications integrated with CMS platforms, improving SEO and load times."
+      ]
+    },
+    "mdhov": {
+      "title": "Frontend Engineer",
+      "location": "Toronto, Canada",
+      "mode": "Remote",
+      "summary": "Shopify and WordPress themes; React migration.",
+      "highlights": [
+        "Developed Shopify and WordPress themes that increased user engagement and conversion rates.",
+        "Migrated legacy front-end systems to React, significantly improving maintainability and performance."
+      ]
+    },
+    "teambee": {
+      "title": "UI/UX Developer",
+      "location": "Lahore, Pakistan",
+      "mode": "Onsite",
+      "summary": "Pixel-perfect, responsive client UIs.",
+      "highlights": [
+        "Built pixel-perfect, responsive interfaces with high design accuracy across multiple client projects.",
+        "Improved page speed and load performance through targeted front-end optimization."
+      ]
+    }
+  }
+}

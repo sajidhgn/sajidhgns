@@ -1,0 +1,83 @@
+@use '../../../styles/mixins' as *;
+
+// Featured Projects panel (SPEC §4.4), measured on d_projects.jpg at 1440: eyebrow and "View all projects →"
+// share one line (the link's arrow ends on the cards' inline-end edge) · eyebrow → cards 13px · 3 cards,
+// 23px apart (≈ 384 × 287px).
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  min-width: 0;
+}
+
+.viewAll {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 12px; // ≈ 14.6px visible (the arrow glyph's side bearing adds ~2.6px), as in the reference
+  // 32px tall target without making the header row taller than the 24px eyebrow.
+  margin-block: -4px;
+  padding-block: 4px;
+  color: var(--text-2);
+  font-size: var(--t-xs); // 12.5px — reference ≈ 12px
+  font-weight: 400;
+  line-height: 24px;
+  white-space: nowrap;
+  transition: color var(--dur-1) var(--ease);
+}
+
+.arrow {
+  color: var(--gold);
+}
+
+.viewAll:hover {
+  color: var(--gold-text);
+}
+
+@include motion {
+  .arrow {
+    transition: translate var(--dur-2) var(--ease);
+  }
+
+  .viewAll:hover .arrow {
+    translate: 3px 0;
+  }
+
+  [dir='rtl'] .viewAll:hover .arrow {
+    translate: -3px 0;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  margin: 13px 0 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: 700px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  @include up(xl) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 23px;
+  }
+}
+
+.item {
+  display: flex;
+  min-width: 0;
+}
+
+// Two columns: the odd last card takes the whole row (ProjectCard turns it into an image | text card).
+@media (min-width: 700px) and (max-width: 1099.98px) {
+  .item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}

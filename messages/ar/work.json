@@ -1,0 +1,29 @@
+{
+  "viewCaseStudy": "عرض دراسة الحالة",
+  "caseStudy": "دراسة حالة",
+  "liveSite": "الموقع المباشر",
+  "visitLiveSite": "زيارة الموقع المباشر",
+  "visitLiveAria": "زيارة موقع {title} المباشر",
+  "readCaseAria": "قراءة دراسة حالة {title}",
+  "aboutService": "عن {title}",
+  "noPublicLink": "لا يوجد رابط عام",
+  "featured": "مميز",
+  "featuredTitle": "دراسات حالة مختارة",
+  "moreTitle": "مشاريع أخرى",
+  "stats": {
+    "projects": "المشاريع",
+    "caseStudies": "دراسات الحالة",
+    "liveSites": "المواقع المنشورة"
+  },
+  "stack": "التقنيات",
+  "role": "الدور",
+  "industry": "المجال",
+  "platform": "المنصة",
+  "viewAll": "عرض جميع الأعمال",
+  "showMore": "عرض مشاريع أكثر",
+  "showLess": "عرض مشاريع أقل",
+  "filters": {
+    "label": "تصفية المشاريع",
+    "all": "الكل"
+  }
+}

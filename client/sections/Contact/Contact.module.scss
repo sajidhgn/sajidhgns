@@ -1,0 +1,155 @@
+@use '../../../styles/mixins' as *;
+
+// Contact panel (SPEC §4.7), measured on g_contact.jpg at the 1440 design scale:
+//   intro: eyebrow centre 47px below the panel top (the column sits ≈ 15px lower than the card) → divider
+//   78px (≈ 320px long) → heading cap top 114, baselines 136 / 177 (≈ 31px, 40px line pitch) → paragraph
+//   baselines 216 / 240 (14px, 24.7px pitch).
+//   card: 20px below the panel top, ≈ 780 × 284px, lighter olive surface (≈ #1c1c14 = --card-2), form ≈ 63% |
+//   1px divider | info ≈ 37%; form padding ≈ 11px block / 23px inline; info rows 60px apart, 35px icon
+//   tiles, label 13px/600, value 12.5px.
+
+.panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+@include up(lg) {
+  .panel {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 2fr);
+    column-gap: 40px;
+  }
+
+  .intro {
+    padding-block-start: 15px;
+  }
+}
+
+// ---- Intro ----
+.rule {
+  display: block;
+  inline-size: min(100%, 20rem);
+  block-size: 1px;
+  margin-block-start: 18px;
+  background: var(--line);
+}
+
+.title {
+  margin-top: 28px;
+  color: var(--text);
+  font-size: var(--t-h2-lg);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: var(--tr-h2);
+}
+
+.body {
+  max-width: 22.5em; // ≤ the heading's width, like the reference's short measure
+  margin-top: 13px;
+  color: var(--text-lead); // calibrated: the reference's small body copy reads as --text-lead
+  font-size: 0.875rem; // 14px (reference glyph widths)
+  line-height: 1.76;
+}
+
+// ---- Card: form | info ----
+.card {
+  // The reference card is a lighter surface than the panel (≈ #1c1c14), the same tone as --card-2.
+  --contact-card: var(--card-2);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--contact-card);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+@include up(md) {
+  .card {
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  }
+}
+
+.formSide {
+  min-width: 0;
+  padding: 16px;
+}
+
+@include up(md) {
+  .formSide {
+    padding: 10px 22px 11px;
+  }
+}
+
+.info {
+  display: grid;
+  align-content: start;
+  gap: 18px;
+  margin: 0;
+  padding: 20px 16px 22px;
+  border-block-start: 1px solid var(--line);
+}
+
+@include up(md) {
+  .info {
+    padding: 20px 22px;
+    border-block-start: 0;
+    border-inline-start: 1px solid var(--line);
+  }
+}
+
+.row {
+  position: relative;
+  min-height: 36px;
+  padding-inline-start: 48px;
+}
+
+.term {
+  color: var(--text);
+  font-size: 0.8125rem; // 13px
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.tile {
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-tile);
+  background: var(--white-3);
+  color: var(--gold);
+}
+
+.value {
+  margin: 4px 0 0;
+  color: var(--text-lead);
+  font-size: var(--t-xs);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  text-wrap: balance; // a long value ("Immediate joiner · Transferable Iqama") breaks evenly, at the "·"
+}
+
+// Email / phone links: standalone (not in running text), so no underline until hover.
+.link {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--dur-1) var(--ease);
+}
+
+.link:hover {
+  color: var(--gold-text);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+// Inside an Arabic line the LTR address/number keeps its own order and sits at the start (right).
+[dir='rtl'] .link {
+  unicode-bidi: isolate;
+}

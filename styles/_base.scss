@@ -1,0 +1,237 @@
+// Reset + base element styles (SPEC §2–3). Both live in low cascade layers, so any component class wins.
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd,
+  ol,
+  ul,
+  fieldset {
+    margin: 0;
+  }
+
+  ul[role='list'],
+  ol[role='list'] {
+    padding: 0;
+    list-style: none;
+  }
+
+  fieldset {
+    padding: 0;
+    border: 0;
+    min-width: 0;
+  }
+
+  img,
+  picture,
+  video,
+  canvas {
+    display: block;
+    max-width: 100%;
+  }
+
+  img,
+  video {
+    height: auto;
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+  }
+
+  button {
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    // Anchor jumps land below the sticky header.
+    scroll-padding-top: 96px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: var(--bg);
+    color: var(--text-muted);
+    font-family: var(--font-stack);
+    font-size: var(--t-body);
+    font-weight: 400;
+    line-height: var(--lh-body);
+    font-synthesis-weight: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+  }
+
+  // Arabic content: DM Sans for Latin words, Cairo for Arabic glyphs (see --font-stack-ar in _tokens.scss).
+  :lang(ar) {
+    font-family: var(--font-stack-ar);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--text);
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-size: var(--t-h2-lg);
+    line-height: var(--lh-h2-lg);
+    letter-spacing: var(--tr-h2);
+  }
+
+  h2 {
+    font-size: var(--t-h2);
+    line-height: var(--lh-h2);
+    letter-spacing: var(--tr-h2);
+  }
+
+  h3 {
+    font-size: var(--t-h3);
+    line-height: var(--lh-h3);
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: var(--t-body);
+    line-height: var(--lh-h3);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  strong,
+  b {
+    color: var(--text-2);
+    font-weight: 600;
+  }
+
+  // Links inside running text are gold and underlined (WCAG 1.4.1); standalone links style themselves.
+  :where(p, li, dd, figcaption, blockquote, td) > a:not([class]) {
+    color: var(--gold-text);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+  }
+
+  :where(p, li, dd, figcaption, blockquote, td) > a:not([class]):hover {
+    text-decoration-thickness: 2px;
+  }
+
+  ::selection {
+    background: var(--gold);
+    color: var(--on-gold);
+  }
+
+  // One focus ring for everything interactive (SPEC §3 Buttons → Focus).
+  :focus-visible {
+    outline: 2px solid var(--gold-hi);
+    outline-offset: 3px;
+  }
+
+  // Skip-link / programmatic focus targets (e.g. <main tabindex="-1">) don't need a ring.
+  [tabindex='-1']:focus {
+    outline: none;
+  }
+
+  // Inline icons (client/ui/Icon) sit on the text's centre line when used inside running text.
+  svg.icon {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  // SPEC §8 "1.6px stroke": the stroke stays 1.6 CSS px at every icon size (the reference's 18px button
+  // icons render ≈ 1.6px strokes; a scaling 1.6-unit stroke would be only 1.2px at 18px).
+  svg.icon :is(path, circle, rect, line, polyline, polygon, ellipse) {
+    vector-effect: non-scaling-stroke;
+  }
+
+  hr {
+    height: 1px;
+    margin: 0;
+    border: 0;
+    background: var(--line);
+  }
+
+  :where(input, textarea, select)::placeholder {
+    color: var(--text-subtle);
+    opacity: 1;
+  }
+
+  // Emails, phones and URLs inside Arabic text: <bdi dir="ltr">…</bdi>.
+  bdi[dir='ltr'] {
+    unicode-bidi: isolate;
+  }
+}
+
+// Arabic must never be letter-spaced or upper-cased (it breaks the connected script) — enforced over
+// component styles, which is why this sits outside the layers and uses !important.
+:root:lang(ar) :lang(ar) {
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+// Arabic headings need room for Cairo's ascenders/descenders even when a module sets a tight Latin
+// line-height; modules that want a different Arabic value can use the --lh-* tokens instead.
+:root:lang(ar) :is(h1, h2, h3, h4, h5, h6):lang(ar) {
+  line-height: var(--lh-h2);
+}

@@ -1,0 +1,8 @@
+@layer reset, base, ui, utilities;
+
+@layer ui {
+  // Accent words (hero "Experiences", About heading accent, Contact "amazing"): solid gold text.
+  .accent {
+    color: var(--gold-text);
+  }
+}

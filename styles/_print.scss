@@ -1,0 +1,64 @@
+// Print (SPEC §5 résumé): plain white page, black text, no site chrome or decoration.
+// Unlayered + !important on purpose: it must beat every screen style, including component modules.
+// Mark anything else that should not print with data-print="hide".
+
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm 16mm;
+  }
+
+  :root {
+    color-scheme: light;
+  }
+
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+  }
+
+  body {
+    font-size: 10.5pt;
+    line-height: 1.45;
+  }
+
+  .page-decor,
+  body > header,
+  body > footer,
+  [data-print='hide'] {
+    display: none !important;
+  }
+
+  // Reveal never leaves content hidden on paper.
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  img,
+  figure,
+  li {
+    break-inside: avoid;
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "hero": {
+    "badge": "Available now · Transferable Iqama",
+    "headline": [
+      {
+        "text": "I Design Intuitive"
+      },
+      {
+        "break": true
+      },
+      {
+        "text": "Digital "
+      },
+      {
+        "text": "Experiences",
+        "accent": true
+      }
+    ],
+    "summary": "Senior UI/UX designer in Riyadh. I design dashboards, SaaS and healthcare products — then build them in React and Next.js.",
+    "ctaPrimary": "Hire Me",
+    "ctaSecondary": "View My Work",
+    "followLabel": "Find me on",
+    "portraitAlt": "Sajid Ali, Senior UI/UX Designer, in a navy suit and white open-collar shirt",
+    "stats": [
+      {
+        "id": "years",
+        "value": "{years}+",
+        "label": "Years Experience"
+      },
+      {
+        "id": "projects",
+        "value": "10+",
+        "label": "Projects Delivered"
+      },
+      {
+        "id": "industries",
+        "value": "9",
+        "label": "Industries Served"
+      }
+    ]
+  },
+  "about": {
+    "label": "About Me",
+    "heading": [
+      {
+        "text": "From user flows"
+      },
+      {
+        "break": true
+      },
+      {
+        "text": "to "
+      },
+      {
+        "text": "production code.",
+        "accent": true
+      }
+    ],
+    "body": "Since 2017 I’ve turned complex workflows in healthcare, SaaS, hiring and education into clear, accessible interfaces — and built them myself.",
+    "points": [
+      "UX for complex, multi-role products",
+      "Design systems & reusable components",
+      "Fast, accessible React & Next.js UI"
+    ],
+    "cta": "Download CV",
+    "photoAlt": "Sajid Ali in a navy suit and white open-collar shirt, against a warm dark background",
+    "signature": "Sajid"
+  },
+  "skills": {
+    "label": "Skills & Stack",
+    "items": [
+      {
+        "id": "javascript",
+        "name": "JavaScript"
+      },
+      {
+        "id": "typescript",
+        "name": "TypeScript"
+      },
+      {
+        "id": "react",
+        "name": "React"
+      },
+      {
+        "id": "nextjs",
+        "name": "Next.js"
+      },
+      {
+        "id": "nodejs",
+        "name": "Node.js"
+      },
+      {
+        "id": "html5",
+        "name": "HTML5"
+      },
+      {
+        "id": "css3",
+        "name": "CSS3"
+      },
+      {
+        "id": "tailwind",
+        "name": "Tailwind CSS"
+      },
+      {
+        "id": "mongodb",
+        "name": "MongoDB"
+      },
+      {
+        "id": "mysql",
+        "name": "MySQL"
+      },
+      {
+        "id": "git",
+        "name": "Git"
+      },
+      {
+        "id": "docker",
+        "name": "Docker"
+      },
+      {
+        "id": "vercel",
+        "name": "Vercel"
+      },
+      {
+        "id": "figma",
+        "name": "Figma"
+      },
+      {
+        "id": "graphql",
+        "name": "GraphQL"
+      }
+    ],
+    "note": "Always learning new technologies"
+  },
+  "expertise": {
+    "label": "Services",
+    "items": [
+      {
+        "id": "webdev",
+        "icon": "webdev",
+        "title": "Web Development",
+        "body": "Building responsive, fast web apps, dashboards and SaaS platforms with React and Next.js.",
+        "link": {
+          "label": "Learn more",
+          "href": "/work/ounlab"
+        }
+      },
+      {
+        "id": "uiux",
+        "icon": "uiux",
+        "title": "UI/UX Design",
+        "body": "Designing intuitive interfaces for complex, multi-role workflows, from user flows to polished UI.",
+        "link": {
+          "label": "Learn more",
+          "href": "/work/healthsia"
+        }
+      },
+      {
+        "id": "api",
+        "icon": "api",
+        "title": "API Development",
+        "body": "Building secure REST and GraphQL APIs in Node.js and Express, with auth and user roles.",
+        "link": {
+          "label": "Learn more",
+          "href": "/work/workinaus"
+        }
+      },
+      {
+        "id": "performance",
+        "icon": "performance",
+        "title": "Performance Optimization",
+        "body": "Improving speed and SEO: Core Web Vitals +45% at OxCoders, 90+ Lighthouse performance.",
+        "link": {
+          "label": "Learn more",
+          "href": "/work/eduhub"
+        }
+      }
+    ]
+  },
+  "projects": {
+    "label": "Featured Projects",
+    "viewAll": "View all projects",
+    "pageLabel": "Projects",
+    "pageTitle": "Selected work",
+    "pageIntro": "Products I designed and built for healthcare, AI and SaaS, hiring, education, energy, travel and hospitality — the first four as full case studies.",
+    "ctaTitle": "Have a role or project in mind?",
+    "ctaBody": "I’m based in Riyadh with a transferable Iqama and can join immediately. Let’s talk."
+  },
+  "experience": {
+    "label": "Experience",
+    "present": "Present"
+  },
+  "testimonials": {
+    "label": "Testimonials",
+    "prev": "Previous testimonials",
+    "next": "Next testimonials",
+    "items": []
+  },
+  "contact": {
+    "label": "Get in Touch",
+    "heading": [
+      {
+        "text": "Let’s build something"
+      },
+      {
+        "break": true
+      },
+      {
+        "text": "amazing",
+        "accent": true
+      },
+      {
+        "text": " together."
+      }
+    ],
+    "body": "Hiring for a UI/UX role or planning a product? I’d love to hear from you.",
+    "info": {
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "locationLabel": "Location",
+      "availabilityLabel": "Availability",
+      "location": "Riyadh, Saudi Arabia",
+      "availability": "Immediate · Transferable Iqama"
+    }
+  }
+}

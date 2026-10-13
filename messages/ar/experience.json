@@ -1,0 +1,59 @@
+{
+  "roles": {
+    "oxcoders": {
+      "title": "Full Stack Engineer (Frontend Focused)",
+      "location": "الرياض، المملكة العربية السعودية",
+      "mode": "حضوري",
+      "summary": "TODO: 1 sentence, design-forward but true (facts from OWNER.md only)",
+      "highlights": [
+        "TODO: highlight (facts from OWNER.md only)",
+        "TODO: highlight",
+        "TODO: highlight"
+      ]
+    },
+    "dycoders": {
+      "title": "Senior Frontend Engineer",
+      "location": "الولايات المتحدة",
+      "mode": "عن بُعد",
+      "summary": "TODO: 1 sentence, design-forward but true (facts from OWNER.md only)",
+      "highlights": [
+        "TODO: highlight (facts from OWNER.md only)",
+        "TODO: highlight",
+        "TODO: highlight"
+      ]
+    },
+    "tanbits": {
+      "title": "Frontend Engineer",
+      "location": "لاهور، باكستان",
+      "mode": "حضوري",
+      "summary": "TODO: 1 sentence, design-forward but true (facts from OWNER.md only)",
+      "highlights": [
+        "TODO: highlight (facts from OWNER.md only)",
+        "TODO: highlight",
+        "TODO: highlight"
+      ]
+    },
+    "mdhov": {
+      "title": "Frontend Engineer",
+      "location": "تورونتو، كندا",
+      "mode": "عن بُعد",
+      "summary": "TODO: 1 sentence, design-forward but true (facts from OWNER.md only)",
+      "highlights": [
+        "TODO: highlight (facts from OWNER.md only)",
+        "TODO: highlight",
+        "TODO: highlight"
+      ]
+    },
+    "teambee": {
+      "title": "UI/UX Developer",
+      "location": "لاهور، باكستان",
+      "mode": "حضوري",
+      "summary": "TODO: 1 sentence, design-forward but true (facts from OWNER.md only)",
+      "highlights": [
+        "TODO: highlight (facts from OWNER.md only)",
+        "TODO: highlight",
+        "TODO: highlight"
+      ]
+    }
+  }
+}

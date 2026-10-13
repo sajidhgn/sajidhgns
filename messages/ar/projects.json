@@ -1,0 +1,924 @@
+{
+  "items": {
+    "healthsia": {
+      "title": "HealthSIA",
+      "category": "TODO: industry · platform, e.g. Healthcare · Web platform + patient app",
+      "headline": "TODO: outcome-first card one-liner, 12 words max",
+      "summary": "TODO: 1–2 sentences; also used as the meta description",
+      "meta": {
+        "role": "TODO: role on this project",
+        "platform": "TODO: platform",
+        "industry": "TODO: industry",
+        "timeline": "",
+        "team": ""
+      },
+      "tldr": {
+        "problem": "TODO: problem",
+        "approach": "TODO: approach",
+        "impact": "TODO: impact — only real outcomes"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "id": "context",
+          "title": "TODO: section title",
+          "body": [
+            "TODO: paragraph",
+            "TODO: paragraph"
+          ]
+        },
+        {
+          "type": "list",
+          "id": "problem",
+          "title": "TODO: section title",
+          "intro": "TODO: one sentence",
+          "items": [
+            "TODO: item",
+            "TODO: item"
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "users",
+          "title": "TODO: section title",
+          "items": [
+            {
+              "title": "TODO: user group",
+              "body": "TODO: one or two sentences"
+            }
+          ]
+        },
+        {
+          "type": "steps",
+          "id": "process",
+          "title": "TODO: section title",
+          "items": [
+            {
+              "title": "TODO: step",
+              "body": "TODO: one or two sentences"
+            }
+          ]
+        },
+        {
+          "type": "decisions",
+          "id": "decisions",
+          "title": "TODO: section title",
+          "items": [
+            {
+              "title": "TODO: decision",
+              "problem": "TODO: problem",
+              "decision": "TODO: decision",
+              "tradeoff": "TODO: trade-off",
+              "figure": "questionnaire-builder"
+            }
+          ]
+        },
+        {
+          "type": "figure",
+          "figure": "dashboard-light"
+        },
+        {
+          "type": "gallery",
+          "id": "gallery",
+          "title": "TODO: section title",
+          "figures": [
+            "signin-roles",
+            "dashboard-dark",
+            "patients",
+            "questionnaire-detail",
+            "app-onboarding-care-plan"
+          ]
+        },
+        {
+          "type": "metrics",
+          "id": "outcomes",
+          "title": "TODO: section title",
+          "items": [
+            {
+              "value": "TODO: value — only real, sourced numbers",
+              "label": "TODO: label"
+            }
+          ],
+          "body": [
+            "TODO: paragraph"
+          ]
+        },
+        {
+          "type": "text",
+          "id": "learnings",
+          "title": "TODO: section title",
+          "body": [
+            "TODO: paragraph"
+          ]
+        }
+      ],
+      "figures": {
+        "cover": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → cover",
+          "caption": ""
+        },
+        "signin-roles": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → signin-roles",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "dashboard-light": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → dashboard-light",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "dashboard-dark": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → dashboard-dark",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "countries": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → countries",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "races": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → races",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "clinics": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → clinics",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "clinic-admins": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → clinic-admins",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "specializations": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → specializations",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "admins": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → admins",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "admin-create-permissions": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → admin-create-permissions",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "nutritionists": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → nutritionists",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "nutritionist-create-wizard": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → nutritionist-create-wizard",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "therapists": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → therapists",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "therapist-detail": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → therapist-detail",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "therapist-edit-address": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → therapist-edit-address",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "patients": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → patients",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "search-by-therapists": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → search-by-therapists",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "exercises": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → exercises",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "food-items": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → food-items",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "food-item-create": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → food-item-create",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "food-item-detail": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → food-item-detail",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "questionnaires": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → questionnaires",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "questionnaire-categories": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → questionnaire-categories",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "questionnaire-builder": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → questionnaire-builder",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "questionnaire-detail": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → questionnaire-detail",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "surgery-questionnaires": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → surgery-questionnaires",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "app-splash": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → app-splash",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "app-onboarding-health-journey": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → app-onboarding-health-journey",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "app-onboarding-every-log-matters": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → app-onboarding-every-log-matters",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "app-onboarding-care-plan": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → app-onboarding-care-plan",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "app-onboarding-track-activities": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → app-onboarding-track-activities",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "app-onboarding-appointments": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → app-onboarding-appointments",
+          "caption": "TODO: caption, or empty string for none"
+        },
+        "app-onboarding-stay-connected": {
+          "alt": "TODO: alt text — see FIGURES.md → healthsia → app-onboarding-stay-connected",
+          "caption": "TODO: caption, or empty string for none"
+        }
+      }
+    },
+    "ounlab": {
+      "title": "OunLab (OUN.AI)",
+      "category": "TODO: industry · platform, e.g. Healthcare · Web platform + patient app",
+      "headline": "TODO: outcome-first card one-liner, 12 words max",
+      "summary": "TODO: 1–2 sentences; also used as the meta description",
+      "meta": {
+        "role": "TODO: role on this project",
+        "platform": "TODO: platform",
+        "industry": "TODO: industry",
+        "timeline": "",
+        "team": ""
+      },
+      "tldr": {
+        "problem": "TODO: problem",
+        "approach": "TODO: approach",
+        "impact": "TODO: impact — only real outcomes"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "id": "context",
+          "title": "TODO: section title",
+          "body": [
+            "TODO: paragraph",
+            "TODO: paragraph"
+          ]
+        },
+        {
+          "type": "list",
+          "id": "problem",
+          "title": "TODO: section title",
+          "intro": "TODO: one sentence",
+          "items": [
+            "TODO: item",
+            "TODO: item"
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "users",
+          "title": "TODO: section title",
+          "items": [
+            {
+              "title": "TODO: user group",
+              "body": "TODO: one or two sentences"
+            }
+          ]
+        },
+        {
+          "type": "steps",
+          "id": "process",
+          "title": "TODO: section title",
+          "items": [
+            {
+              "title": "TODO: step",
+              "body": "TODO: one or two sentences"
+            }
+          ]
+        },
+        {
+          "type": "decisions",
+          "id": "decisions",
+          "title": "TODO: section title",
+          "items": [
+            {
+              "title": "TODO: decision",
+              "problem": "TODO: problem",
+              "decision": "TODO: decision",
+              "tradeoff": "TODO: trade-off",
+              "figure": "full"
+            }
+          ]
+        },
+        {
+          "type": "figure",
+          "figure": "full"
+        },
+        {
+          "type": "gallery",
+          "id": "gallery",
+          "title": "TODO: section title",
+          "figures": [
+            "cover"
+          ]
+        },
+        {
+          "type": "metrics",
+          "id": "outcomes",
+          "title": "TODO: section title",
+          "items": [
+            {
+              "value": "TODO: value — only real, sourced numbers",
+              "label": "TODO: label"
+            }
+          ],
+          "body": [
+            "TODO: paragraph"
+          ]
+        },
+        {
+          "type": "text",
+          "id": "learnings",
+          "title": "TODO: section title",
+          "body": [
+            "TODO: paragraph"
+          ]
+        }
+      ],
+      "figures": {
+        "cover": {
+          "alt": "TODO: alt text — see FIGURES.md → ounlab → cover",
+          "caption": ""
+        },
+        "full": {
+          "alt": "TODO: alt text — see FIGURES.md → ounlab → full",
+          "caption": "TODO: caption, or empty string for none"
+        }
+      }
+    },
+    "workinaus": {
+      "title": "Work in Aus",
+      "category": "TODO: industry · platform, e.g. Healthcare · Web platform + patient app",
+      "headline": "TODO: outcome-first card one-liner, 12 words max",
+      "summary": "TODO: 1–2 sentences; also used as the meta description",
+      "meta": {
+        "role": "TODO: role on this project",
+        "platform": "TODO: platform",
+        "industry": "TODO: industry",
+        "timeline": "",
+        "team": ""
+      },
+      "tldr": {
+        "problem": "TODO: problem",
+        "approach": "TODO: approach",
+        "impact": "TODO: impact — only real outcomes"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "id": "context",
+          "title": "TODO: section title",
+          "body": [
+            "TODO: paragraph",
+            "TODO: paragraph"
+          ]
+        },
+        {
+          "type": "list",
+          "id": "problem",
+          "title": "TODO: section title",
+          "intro": "TODO: one sentence",
+          "items": [
+            "TODO: item",
+            "TODO: item"
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "users",
+          "title": "TODO: section title",
+          "items": [
+            {
+              "title": "TODO: user group",
+              "body": "TODO: one or two sentences"
+            }
+          ]
+        },
+        {
+          "type": "steps",
+          "id": "process",
+          "title": "TODO: section title",
+          "items": [
+            {
+              "title": "TODO: step",
+              "body": "TODO: one or two sentences"
+            }
+          ]
+        },
+        {
+          "type": "decisions",
+          "id": "decisions",
+          "title": "TODO: section title",
+          "items": [
+            {
+              "title": "TODO: decision",
+              "problem": "TODO: problem",
+              "decision": "TODO: decision",
+              "tradeoff": "TODO: trade-off",
+              "figure": "full"
+            }
+          ]
+        },
+        {
+          "type": "figure",
+          "figure": "full"
+        },
+        {
+          "type": "gallery",
+          "id": "gallery",
+          "title": "TODO: section title",
+          "figures": [
+            "cover"
+          ]
+        },
+        {
+          "type": "metrics",
+          "id": "outcomes",
+          "title": "TODO: section title",
+          "items": [
+            {
+              "value": "TODO: value — only real, sourced numbers",
+              "label": "TODO: label"
+            }
+          ],
+          "body": [
+            "TODO: paragraph"
+          ]
+        },
+        {
+          "type": "text",
+          "id": "learnings",
+          "title": "TODO: section title",
+          "body": [
+            "TODO: paragraph"
+          ]
+        }
+      ],
+      "figures": {
+        "cover": {
+          "alt": "TODO: alt text — see FIGURES.md → workinaus → cover",
+          "caption": ""
+        },
+        "full": {
+          "alt": "TODO: alt text — see FIGURES.md → workinaus → full",
+          "caption": "TODO: caption, or empty string for none"
+        }
+      }
+    },
+    "eduhub": {
+      "title": "EduHub Pak",
+      "category": "TODO: industry · platform, e.g. Healthcare · Web platform + patient app",
+      "headline": "TODO: outcome-first card one-liner, 12 words max",
+      "summary": "TODO: 1–2 sentences; also used as the meta description",
+      "meta": {
+        "role": "TODO: role on this project",
+        "platform": "TODO: platform",
+        "industry": "TODO: industry",
+        "timeline": "",
+        "team": ""
+      },
+      "tldr": {
+        "problem": "TODO: problem",
+        "approach": "TODO: approach",
+        "impact": "TODO: impact — only real outcomes"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "id": "context",
+          "title": "TODO: section title",
+          "body": [
+            "TODO: paragraph",
+            "TODO: paragraph"
+          ]
+        },
+        {
+          "type": "list",
+          "id": "problem",
+          "title": "TODO: section title",
+          "intro": "TODO: one sentence",
+          "items": [
+            "TODO: item",
+            "TODO: item"
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "users",
+          "title": "TODO: section title",
+          "items": [
+            {
+              "title": "TODO: user group",
+              "body": "TODO: one or two sentences"
+            }
+          ]
+        },
+        {
+          "type": "steps",
+          "id": "process",
+          "title": "TODO: section title",
+          "items": [
+            {
+              "title": "TODO: step",
+              "body": "TODO: one or two sentences"
+            }
+          ]
+        },
+        {
+          "type": "decisions",
+          "id": "decisions",
+          "title": "TODO: section title",
+          "items": [
+            {
+              "title": "TODO: decision",
+              "problem": "TODO: problem",
+              "decision": "TODO: decision",
+              "tradeoff": "TODO: trade-off",
+              "figure": "full"
+            }
+          ]
+        },
+        {
+          "type": "figure",
+          "figure": "full"
+        },
+        {
+          "type": "gallery",
+          "id": "gallery",
+          "title": "TODO: section title",
+          "figures": [
+            "cover"
+          ]
+        },
+        {
+          "type": "metrics",
+          "id": "outcomes",
+          "title": "TODO: section title",
+          "items": [
+            {
+              "value": "TODO: value — only real, sourced numbers",
+              "label": "TODO: label"
+            }
+          ],
+          "body": [
+            "TODO: paragraph"
+          ]
+        },
+        {
+          "type": "text",
+          "id": "learnings",
+          "title": "TODO: section title",
+          "body": [
+            "TODO: paragraph"
+          ]
+        }
+      ],
+      "figures": {
+        "cover": {
+          "alt": "TODO: alt text — see FIGURES.md → eduhub → cover",
+          "caption": ""
+        },
+        "full": {
+          "alt": "TODO: alt text — see FIGURES.md → eduhub → full",
+          "caption": "TODO: caption, or empty string for none"
+        }
+      }
+    },
+    "shahjee": {
+      "title": "Shah Jee Petroleum",
+      "category": "TODO: industry · platform, e.g. Healthcare · Web platform + patient app",
+      "headline": "TODO: outcome-first card one-liner, 12 words max",
+      "summary": "TODO: 1–2 sentences; also used as the meta description",
+      "meta": {
+        "role": "TODO: role on this project",
+        "platform": "TODO: platform",
+        "industry": "TODO: industry",
+        "timeline": "",
+        "team": ""
+      },
+      "tldr": {
+        "problem": "TODO: problem",
+        "approach": "TODO: approach",
+        "impact": "TODO: impact — only real outcomes"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "id": "overview",
+          "title": "TODO: section title",
+          "body": [
+            "TODO: paragraph"
+          ]
+        },
+        {
+          "type": "list",
+          "id": "highlights",
+          "title": "TODO: section title",
+          "items": [
+            "TODO: item",
+            "TODO: item",
+            "TODO: item"
+          ]
+        },
+        {
+          "type": "figure",
+          "figure": "full"
+        }
+      ],
+      "figures": {
+        "cover": {
+          "alt": "TODO: alt text — see FIGURES.md → shahjee → cover",
+          "caption": ""
+        },
+        "full": {
+          "alt": "TODO: alt text — see FIGURES.md → shahjee → full",
+          "caption": "TODO: caption, or empty string for none"
+        }
+      }
+    },
+    "peepskill": {
+      "title": "PeepSkill",
+      "category": "TODO: industry · platform, e.g. Healthcare · Web platform + patient app",
+      "headline": "TODO: outcome-first card one-liner, 12 words max",
+      "summary": "TODO: 1–2 sentences; also used as the meta description",
+      "meta": {
+        "role": "TODO: role on this project",
+        "platform": "TODO: platform",
+        "industry": "TODO: industry",
+        "timeline": "",
+        "team": ""
+      },
+      "tldr": {
+        "problem": "TODO: problem",
+        "approach": "TODO: approach",
+        "impact": "TODO: impact — only real outcomes"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "id": "overview",
+          "title": "TODO: section title",
+          "body": [
+            "TODO: paragraph"
+          ]
+        },
+        {
+          "type": "list",
+          "id": "highlights",
+          "title": "TODO: section title",
+          "items": [
+            "TODO: item",
+            "TODO: item",
+            "TODO: item"
+          ]
+        },
+        {
+          "type": "figure",
+          "figure": "full"
+        }
+      ],
+      "figures": {
+        "cover": {
+          "alt": "TODO: alt text — see FIGURES.md → peepskill → cover",
+          "caption": ""
+        },
+        "full": {
+          "alt": "TODO: alt text — see FIGURES.md → peepskill → full",
+          "caption": "TODO: caption, or empty string for none"
+        }
+      }
+    },
+    "learninghub": {
+      "title": "Learning Hub",
+      "category": "TODO: industry · platform, e.g. Healthcare · Web platform + patient app",
+      "headline": "TODO: outcome-first card one-liner, 12 words max",
+      "summary": "TODO: 1–2 sentences; also used as the meta description",
+      "meta": {
+        "role": "TODO: role on this project",
+        "platform": "TODO: platform",
+        "industry": "TODO: industry",
+        "timeline": "",
+        "team": ""
+      },
+      "tldr": {
+        "problem": "TODO: problem",
+        "approach": "TODO: approach",
+        "impact": "TODO: impact — only real outcomes"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "id": "overview",
+          "title": "TODO: section title",
+          "body": [
+            "TODO: paragraph"
+          ]
+        },
+        {
+          "type": "list",
+          "id": "highlights",
+          "title": "TODO: section title",
+          "items": [
+            "TODO: item",
+            "TODO: item",
+            "TODO: item"
+          ]
+        },
+        {
+          "type": "figure",
+          "figure": "full"
+        }
+      ],
+      "figures": {
+        "cover": {
+          "alt": "TODO: alt text — see FIGURES.md → learninghub → cover",
+          "caption": ""
+        },
+        "full": {
+          "alt": "TODO: alt text — see FIGURES.md → learninghub → full",
+          "caption": "TODO: caption, or empty string for none"
+        }
+      }
+    },
+    "royalvision": {
+      "title": "Royal Vision Dubai",
+      "category": "TODO: industry · platform, e.g. Healthcare · Web platform + patient app",
+      "headline": "TODO: outcome-first card one-liner, 12 words max",
+      "summary": "TODO: 1–2 sentences; also used as the meta description",
+      "meta": {
+        "role": "TODO: role on this project",
+        "platform": "TODO: platform",
+        "industry": "TODO: industry",
+        "timeline": "",
+        "team": ""
+      },
+      "tldr": {
+        "problem": "TODO: problem",
+        "approach": "TODO: approach",
+        "impact": "TODO: impact — only real outcomes"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "id": "overview",
+          "title": "TODO: section title",
+          "body": [
+            "TODO: paragraph"
+          ]
+        },
+        {
+          "type": "list",
+          "id": "highlights",
+          "title": "TODO: section title",
+          "items": [
+            "TODO: item",
+            "TODO: item",
+            "TODO: item"
+          ]
+        },
+        {
+          "type": "figure",
+          "figure": "full"
+        }
+      ],
+      "figures": {
+        "cover": {
+          "alt": "TODO: alt text — see FIGURES.md → royalvision → cover",
+          "caption": ""
+        },
+        "full": {
+          "alt": "TODO: alt text — see FIGURES.md → royalvision → full",
+          "caption": "TODO: caption, or empty string for none"
+        }
+      }
+    },
+    "papaz": {
+      "title": "Papaz Pizza",
+      "category": "TODO: industry · platform, e.g. Healthcare · Web platform + patient app",
+      "headline": "TODO: outcome-first card one-liner, 12 words max",
+      "summary": "TODO: 1–2 sentences; also used as the meta description",
+      "meta": {
+        "role": "TODO: role on this project",
+        "platform": "TODO: platform",
+        "industry": "TODO: industry",
+        "timeline": "",
+        "team": ""
+      },
+      "tldr": {
+        "problem": "TODO: problem",
+        "approach": "TODO: approach",
+        "impact": "TODO: impact — only real outcomes"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "id": "overview",
+          "title": "TODO: section title",
+          "body": [
+            "TODO: paragraph"
+          ]
+        },
+        {
+          "type": "list",
+          "id": "highlights",
+          "title": "TODO: section title",
+          "items": [
+            "TODO: item",
+            "TODO: item",
+            "TODO: item"
+          ]
+        },
+        {
+          "type": "figure",
+          "figure": "full"
+        }
+      ],
+      "figures": {
+        "cover": {
+          "alt": "TODO: alt text — see FIGURES.md → papaz → cover",
+          "caption": ""
+        },
+        "full": {
+          "alt": "TODO: alt text — see FIGURES.md → papaz → full",
+          "caption": "TODO: caption, or empty string for none"
+        }
+      }
+    },
+    "mdhov": {
+      "title": "MDHOV",
+      "category": "TODO: industry · platform, e.g. Healthcare · Web platform + patient app",
+      "headline": "TODO: outcome-first card one-liner, 12 words max",
+      "summary": "TODO: 1–2 sentences; also used as the meta description",
+      "meta": {
+        "role": "TODO: role on this project",
+        "platform": "TODO: platform",
+        "industry": "TODO: industry",
+        "timeline": "",
+        "team": ""
+      },
+      "tldr": {
+        "problem": "TODO: problem",
+        "approach": "TODO: approach",
+        "impact": "TODO: impact — only real outcomes"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "id": "overview",
+          "title": "TODO: section title",
+          "body": [
+            "TODO: paragraph"
+          ]
+        },
+        {
+          "type": "list",
+          "id": "highlights",
+          "title": "TODO: section title",
+          "items": [
+            "TODO: item",
+            "TODO: item",
+            "TODO: item"
+          ]
+        },
+        {
+          "type": "figure",
+          "figure": "full"
+        }
+      ],
+      "figures": {
+        "cover": {
+          "alt": "TODO: alt text — see FIGURES.md → mdhov → cover",
+          "caption": ""
+        },
+        "full": {
+          "alt": "TODO: alt text — see FIGURES.md → mdhov → full",
+          "caption": "TODO: caption, or empty string for none"
+        }
+      }
+    }
+  }
+}

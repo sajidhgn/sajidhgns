@@ -1,0 +1,88 @@
+// Shared Sass helpers for component modules. Emits no CSS by itself.
+//
+//   @use '../../../styles/mixins' as *;
+//   .grid { @include up(lg) { grid-template-columns: repeat(4, 1fr); } }
+//   .title { @include type(h2); }
+//
+@use 'sass:map';
+
+// Breakpoints (min-width) used by SPEC §3–4.
+$breakpoints: (
+  sm: 480px,
+  md: 640px,
+  tablet: 768px,
+  lg: 1024px,
+  xl: 1100px,
+  xxl: 1280px,
+);
+
+@mixin up($name) {
+  @media (min-width: map.get($breakpoints, $name)) {
+    @content;
+  }
+}
+
+@mixin down($name) {
+  @media (max-width: (map.get($breakpoints, $name) - 0.02px)) {
+    @content;
+  }
+}
+
+@mixin motion {
+  @media (prefers-reduced-motion: no-preference) {
+    @content;
+  }
+}
+
+// Type presets from SPEC §2. Line height / tracking / case come from tokens, so Arabic adapts.
+@mixin type($name) {
+  @if $name == display {
+    font-size: var(--t-display);
+    font-weight: 600;
+    line-height: var(--lh-display);
+    letter-spacing: var(--tr-display);
+  } @else if $name == h2 {
+    font-size: var(--t-h2);
+    font-weight: 600;
+    line-height: var(--lh-h2);
+    letter-spacing: var(--tr-h2);
+  } @else if $name == h2-lg {
+    font-size: var(--t-h2-lg);
+    font-weight: 600;
+    line-height: var(--lh-h2-lg);
+    letter-spacing: var(--tr-h2);
+  } @else if $name == h3 {
+    font-size: var(--t-h3);
+    font-weight: 600;
+    line-height: var(--lh-h3);
+  } @else if $name == lead {
+    font-size: var(--t-lead);
+    font-weight: 400;
+    line-height: var(--lh-lead);
+  } @else if $name == body {
+    font-size: var(--t-body);
+    font-weight: 400;
+    line-height: var(--lh-body);
+  } @else if $name == small {
+    font-size: var(--t-small);
+    font-weight: 400;
+    line-height: var(--lh-small);
+  } @else if $name == xs {
+    font-size: var(--t-xs);
+    font-weight: 400;
+    line-height: var(--lh-xs);
+  } @else if $name == label {
+    font-size: var(--t-label);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: var(--tr-label);
+    text-transform: var(--tt-label);
+  } @else if $name == stat {
+    font-size: var(--t-stat);
+    font-weight: 600;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  } @else {
+    @error "Unknown type preset `#{$name}`.";
+  }
+}

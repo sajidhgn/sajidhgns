@@ -1,0 +1,6 @@
+// The marks may use a cropped viewBox (optical sizing, see BrandIcon.js) — never clip them to the box.
+.icon {
+  display: block;
+  flex: none;
+  overflow: visible;
+}

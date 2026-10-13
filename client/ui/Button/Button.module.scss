@@ -1,0 +1,135 @@
+@layer reset, base, ui, utilities;
+
+// SPEC §3 Buttons — measured against the reference hero buttons at 1440: Hire Me 141×49.5, View My Work
+// 193×49.5, 14px labels (cap height 9.7px), ≈ 16px text→icon gap. SPEC says 52px / 15px.
+@layer ui {
+  .btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    height: 50px;
+    padding: 0 28px;
+    border: 1px solid transparent;
+    border-radius: var(--r-btn);
+    font-family: inherit;
+    font-size: var(--t-btn);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition:
+      background-color var(--dur-1) var(--ease),
+      border-color var(--dur-1) var(--ease),
+      color var(--dur-1) var(--ease),
+      filter var(--dur-1) var(--ease),
+      transform var(--dur-2) var(--ease),
+      box-shadow var(--dur-2) var(--ease);
+  }
+
+  .label {
+    display: inline-block;
+  }
+
+  .icon {
+    display: block;
+  }
+
+  // ---- Primary: gold gradient ----
+  .primary {
+    border: 0;
+    color: var(--on-gold);
+    background: linear-gradient(180deg, var(--gold-hi), var(--gold-lo));
+    box-shadow: var(--shadow-gold-btn);
+  }
+
+  .primary:hover {
+    filter: brightness(1.05);
+  }
+
+  .primary:active {
+    background: var(--gold-press);
+    filter: none;
+  }
+
+  // ---- Outline ----
+  .outline {
+    border-color: var(--line-strong);
+    color: var(--text);
+    background: var(--white-2);
+    font-weight: 500;
+  }
+
+  .outline .icon {
+    color: var(--gold);
+  }
+
+  .outline:hover {
+    border-color: var(--line-gold-hover);
+    background: var(--gold-wash);
+  }
+
+  .outline:active {
+    background: var(--gold-soft);
+  }
+
+  // ---- Icon-only ----
+  .iconOnly {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    gap: 0;
+    border-color: var(--line);
+    color: var(--text);
+    background: var(--white-2);
+  }
+
+  .iconOnly:hover {
+    border-color: var(--line-gold-hover);
+    color: var(--gold-text);
+  }
+
+  .iconOnly.sm {
+    width: 40px;
+    height: 40px;
+  }
+
+  // ---- Sizes ----
+  .sm:not(.iconOnly) {
+    height: 40px;
+    padding: 0 18px;
+    gap: 10px;
+    font-size: var(--t-small);
+  }
+
+  @media (max-width: 639.98px) {
+    .md:not(.iconOnly) {
+      height: 48px;
+      padding: 0 24px;
+    }
+  }
+
+  // ---- States ----
+  .btn:disabled,
+  .btn[aria-disabled='true'] {
+    cursor: not-allowed;
+    opacity: 0.6;
+    filter: none;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .primary:hover:not(:disabled, [aria-disabled='true']) {
+      transform: translateY(-1px);
+    }
+
+    .primary:active {
+      transform: translateY(0);
+    }
+  }
+}

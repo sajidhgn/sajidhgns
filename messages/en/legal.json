@@ -1,0 +1,141 @@
+{
+  "label": "Legal",
+  "updatedLabel": "Last updated",
+  "updated": "2026-10-12",
+  "onThisPage": "On this page",
+  "documents": "Legal documents",
+  "privacy": {
+    "title": "Privacy Policy",
+    "description": "How Sajid Ali’s portfolio handles your data: what the contact form sends, the one language cookie, hosting logs and your rights under Saudi Arabia’s PDPL.",
+    "intro": "I collect as little as possible: there are no accounts, no analytics and no advertising. This page explains in plain language what data the site handles, why, and what you can ask me to do with it.",
+    "sections": [
+      {
+        "heading": "Who runs this site",
+        "body": [
+          "This website is the personal portfolio of Sajid Ali, a Senior UI/UX Designer based in Riyadh, Saudi Arabia. I am responsible for the personal data it processes, and you can reach me at sajidhgn@gmail.com."
+        ]
+      },
+      {
+        "heading": "What the contact form sends",
+        "body": [
+          "When you submit the contact form, the site sends me one email with the name, email address, subject and message you typed, plus which version of the site (English or Arabic) you used. Your email address is set as the reply-to address so that I can answer you.",
+          "The email is delivered to my mailbox over SMTP and stored there by my email provider. The website itself keeps no copy: nothing you type is saved in a database, and the content of your message is never written to the site’s logs."
+        ]
+      },
+      {
+        "heading": "Spam protection",
+        "body": [
+          "To prevent abuse, the server accepts at most five messages from the same IP address within ten minutes. To do this, it keeps your IP address and the time of each message in its working memory only. That record is never written to disk, a database or a log, it is used for nothing else, it only counts for ten minutes, and it is erased whenever the server restarts."
+        ]
+      },
+      {
+        "heading": "How I use your message",
+        "body": [
+          "I use what you send only to read and answer your enquiry and to follow up on the conversation you started — for example about a role or a project. I won’t add you to a mailing list, I don’t sell or rent your data, and I don’t share it with anyone unless the law requires me to.",
+          "Sending the form is your choice: by sending it, you agree that I may use your details for this purpose. You can withdraw that consent at any time by asking me to delete your message."
+        ]
+      },
+      {
+        "heading": "How long it is kept",
+        "body": [
+          "Your email stays in my mailbox only as long as it is needed for our conversation and any follow-up you asked for. You can ask me to delete it at any time, and I will."
+        ]
+      },
+      {
+        "heading": "Cookies and tracking",
+        "body": [
+          "The site sets a single functional cookie, NEXT_LOCALE. It remembers whether you last used the English or the Arabic version, so that the right language opens on your next visit. It contains only “en” or “ar” and expires after one year.",
+          "There are no analytics, advertising or tracking cookies, and the site uses no tracking pixels, browser fingerprinting or embedded third-party widgets."
+        ]
+      },
+      {
+        "heading": "Fonts and files",
+        "body": [
+          "The fonts on this site — DM Sans, Cairo and Mrs Saint Delafield — are downloaded when the site is built and served from this site’s own domain, so your browser doesn’t contact Google Fonts or any other font service. Images and documents are served from this site too. Links to other sites, such as LinkedIn, GitHub, WhatsApp or live client products, load nothing until you click them."
+        ]
+      },
+      {
+        "heading": "Hosting and server logs",
+        "body": [
+          "The site is hosted by Vercel Inc. To deliver pages and keep the service secure, Vercel automatically processes technical data about each request — such as your IP address, browser type, the page requested and the time — and keeps standard request logs for a limited period, under its own privacy policy: https://vercel.com/legal/privacy-policy",
+          "Vercel’s servers and my email provider’s servers may be located outside Saudi Arabia, so this data may be processed in other countries."
+        ]
+      },
+      {
+        "heading": "Your rights",
+        "body": [
+          "Under Saudi Arabia’s Personal Data Protection Law (PDPL) — and similar laws in other countries — you can ask me to tell you what personal data I hold about you and how I use it, to give you a copy, to correct it and to delete it. You can also withdraw your consent at any time.",
+          "To use any of these rights, email me at sajidhgn@gmail.com from the address you used, so that I can find your message. I will reply within 30 days. If you are not satisfied with my answer, you can contact the Saudi Data & AI Authority (SDAIA), which oversees the PDPL."
+        ]
+      },
+      {
+        "heading": "Changes to this policy",
+        "body": [
+          "If the way this site handles data changes, I will update this page and the “Last updated” date at the top."
+        ]
+      },
+      {
+        "heading": "Contact",
+        "body": [
+          "Questions about this policy or your data? Email me at sajidhgn@gmail.com."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "description": "The terms for using Sajid Ali’s portfolio: what the site is for, who owns the screenshots and brands shown, no warranty, and links to other sites.",
+    "intro": "These short terms explain what this portfolio is for, who owns the content you see here, and the limits of what I can promise.",
+    "sections": [
+      {
+        "heading": "About this site",
+        "body": [
+          "This website is the personal portfolio of Sajid Ali, a Senior UI/UX Designer in Riyadh, Saudi Arabia. It presents my work, experience and skills so that recruiters, hiring managers and potential clients can evaluate them and get in touch. It doesn’t sell anything, and there are no user accounts. By using the site, you agree to these terms."
+        ]
+      },
+      {
+        "heading": "Ownership of content",
+        "body": [
+          "Unless stated otherwise, the written content and the photos of me on this site belong to me.",
+          "Project screenshots, product names, logos and brands shown in the case studies belong to me or to the respective clients and companies. They are shown only to illustrate my work, and you may not copy, republish or reuse them without permission. The technology logos in the skills section are trademarks of their respective owners."
+        ]
+      },
+      {
+        "heading": "Using the site",
+        "body": [
+          "You’re welcome to browse, share links to any page and get in touch. Please don’t misuse the site or the contact form — for example by sending spam, trying to break or overload the site, or pretending to be someone else."
+        ]
+      },
+      {
+        "heading": "No warranty",
+        "body": [
+          "I keep the information here as accurate and up to date as I can, but the site and its content are provided “as is”, without warranties of any kind. Case studies describe past work, and some screens are shown with test data rather than real customer data. To the extent the law allows, I am not liable for any loss that results from using the site."
+        ]
+      },
+      {
+        "heading": "Links to other sites",
+        "body": [
+          "The site links to external websites, such as live client products, LinkedIn, GitHub and WhatsApp. I don’t control those sites: a link is not an endorsement of them or their content, and their own terms and privacy policies apply."
+        ]
+      },
+      {
+        "heading": "Privacy",
+        "body": [
+          "How this site handles personal data is explained in the Privacy Policy, which you can open from the top of this page or from the footer of any page."
+        ]
+      },
+      {
+        "heading": "Changes to these terms",
+        "body": [
+          "I may update these terms from time to time. The “Last updated” date at the top shows when they last changed; if you keep using the site after a change, the updated terms apply."
+        ]
+      },
+      {
+        "heading": "Contact",
+        "body": [
+          "Questions about these terms? Email me at sajidhgn@gmail.com."
+        ]
+      }
+    ]
+  }
+}

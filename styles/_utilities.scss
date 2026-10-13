@@ -1,0 +1,74 @@
+// Global utilities (CONTRACT §6). Layered above the primitives; unlayered module styles still win.
+
+@layer utilities {
+  // Content width: 1280px max, side gutter clamp(16px, 4vw, 80px).
+  .container {
+    width: min(var(--container), 100% - 2 * var(--gutter));
+    margin-inline: auto;
+  }
+
+  // Vertical stack of panels separated by --gap (rows). Grid so children never overflow.
+  .bento {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--gap);
+  }
+
+  // Hidden visually, still announced. Becomes visible when focused (skip links).
+  .visually-hidden:not(:focus-within, :active) {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+
+  // Directional icons mirror in RTL. Uses the `scale` property (not `transform`) so hover transforms on the
+  // same element still compose — and are mirrored too.
+  [dir='rtl'] .icon-flip {
+    scale: -1 1;
+  }
+
+  // Headline line break that only exists ≥ 768px (on mobile the heading wraps naturally).
+  .br-desktop {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .br-desktop {
+      display: inline;
+    }
+  }
+
+  // Makes the nearest positioned ancestor (the card) one big click target.
+  .stretched-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  // Page scroll lock for modal sheets (MobileMenu / lightbox): toggle this class on <html> ONLY.
+  // The root's overflow goes to the viewport, so the page stops scrolling but keeps its scroll position,
+  // and the sticky header (with the menu toggle) stays on screen. Never also set overflow: hidden on
+  // <body>: body would become the header's scroll container and the header would jump to the top of
+  // the document, off screen.
+  // scrollbar-gutter keeps the space of a classic (non-overlay) scrollbar while it is hidden, so the page
+  // doesn't shift sideways or reflow. It applies only while locked: headless Chrome with hidden scrollbars
+  // (the QA harness) still reserves a 15px gutter, which would offset every normal screenshot. Locked
+  // harness shots at tablet/desktop width therefore show a 15px strip on the scrollbar side (the right,
+  // also in RTL). Real overlay-scrollbar browsers reserve nothing.
+  .scroll-lock {
+    overflow: hidden;
+    scrollbar-gutter: stable;
+  }
+
+  // Tabular figures for numbers that line up (stats, dates).
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}

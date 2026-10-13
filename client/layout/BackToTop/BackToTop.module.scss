@@ -1,0 +1,47 @@
+// BackToTop — reference (h_footer.jpg): a ≈ 38px circle with a faint ring and a soft inner glow around a
+// gold up-arrow. The link itself is a 44×44 target; the circle is drawn inside it.
+.top {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--gold);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.top::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 45%, rgba(249, 190, 78, 0.1), rgba(249, 190, 78, 0.02) 55%, var(--white-2) 100%);
+  transition:
+    border-color var(--dur-1) var(--ease),
+    background-color var(--dur-1) var(--ease);
+}
+
+.top:hover::before {
+  border-color: var(--line-gold-hover);
+  background-color: var(--gold-wash);
+}
+
+.icon {
+  position: relative;
+  filter: drop-shadow(0 0 4px rgba(249, 190, 78, 0.45));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .icon {
+    transition: transform var(--dur-2) var(--ease);
+  }
+
+  .top:hover .icon {
+    transform: translateY(-2px);
+  }
+}

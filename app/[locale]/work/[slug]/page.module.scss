@@ -1,0 +1,19 @@
+// Closing row: "Next project" | contact CTA side by side from 1024px (like the home About | Skills row).
+.closing {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--gap);
+}
+
+@media (min-width: 1024px) {
+  .closing {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: stretch;
+  }
+}
+
+// Reveal wrappers: the panel inside stretches to the row height.
+.cell {
+  display: grid;
+  min-width: 0;
+}

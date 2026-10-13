@@ -1,0 +1,176 @@
+@use '../../../styles/mixins' as *;
+
+// /work (SPEC §5) in the home page's language: hero panel, two project panels, CTA panel.
+
+// ---- Hero ----
+.hero {
+  display: grid;
+  gap: 24px;
+  padding-block: 28px 32px;
+
+  @include up(lg) {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 48px;
+    padding-block: 36px 44px;
+  }
+}
+
+.heroCopy {
+  min-width: 0;
+}
+
+// Stats card — the home hero's glass card in miniature: [icon tile + number] over a label, 3 columns
+// divided by 1px rules.
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+  padding: 18px 0;
+  border: 1px solid var(--line);
+  border-radius: var(--r-card);
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column-reverse; // number above its label; the <dt> label stays first for screen readers
+  justify-content: flex-end;
+  gap: 8px;
+  min-width: 0;
+  padding-inline: 14px;
+
+  & + & {
+    border-inline-start: 1px solid var(--line);
+  }
+
+  @include up(md) {
+    padding-inline: 24px;
+  }
+}
+
+.statValue {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: var(--text);
+  @include type(stat);
+}
+
+.statIcon {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--r-tile);
+  background: var(--gold-soft);
+  color: var(--gold);
+}
+
+.statLabel {
+  color: var(--text-muted);
+  @include type(xs);
+}
+
+.title {
+  margin-top: 18px;
+  @include type(h2-lg);
+}
+
+.intro {
+  max-width: 46em;
+  margin-top: 14px;
+  color: var(--text-lead);
+  @include type(lead);
+}
+
+// ---- Project grids (eyebrow → cards 16px, like the Services panel) ----
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: 700px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+.gridLg {
+  @include up(xl) {
+    gap: 23px;
+  }
+}
+
+.gridMd {
+  @include up(xl) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 23px;
+  }
+}
+
+.item {
+  display: flex;
+  min-width: 0;
+}
+
+// Two columns: an odd last card takes the whole row (ProjectCard turns it into an image | text card).
+@media (min-width: 700px) and (max-width: 1099.98px) {
+  .gridMd .item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 700px) {
+  .gridLg .item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+// ---- CTA ----
+.cta {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-block: 28px;
+
+  @include up(lg) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding-block: 32px;
+  }
+}
+
+.ctaCopy {
+  min-width: 0;
+}
+
+.ctaTitle {
+  @include type(h2);
+}
+
+.ctaBody {
+  max-width: 40em;
+  margin-top: 10px;
+  color: var(--text-muted);
+  @include type(small);
+}
+
+.ctaActions {
+  display: flex;
+  flex: none;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  @include up(md) {
+    gap: 20px;
+  }
+}

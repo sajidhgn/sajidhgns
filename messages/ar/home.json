@@ -1,0 +1,226 @@
+{
+  "hero": {
+    "badge": "متاح لفرص عمل جديدة",
+    "headline": [
+      {
+        "text": "أصمّم تجارب"
+      },
+      {
+        "break": true
+      },
+      {
+        "text": "رقمية "
+      },
+      {
+        "text": "بديهية",
+        "accent": true
+      }
+    ],
+    "summary": "مصمم UI/UX أول ومهندس تصميم، أصمّم منتجات واضحة وسهلة الاستخدام وأبنيها باستخدام React و Next.js.",
+    "ctaPrimary": "وظّفني",
+    "ctaSecondary": "شاهد أعمالي",
+    "followLabel": "تابعني على",
+    "portraitAlt": "ساجد علي، مصمم UI/UX أول",
+    "stats": [
+      {
+        "id": "years",
+        "value": "{years}+",
+        "label": "سنوات خبرة"
+      },
+      {
+        "id": "projects",
+        "value": "10+",
+        "label": "مشروعًا منجزًا"
+      },
+      {
+        "id": "industries",
+        "value": "9",
+        "label": "قطاعات خدمتها"
+      }
+    ]
+  },
+  "about": {
+    "label": "نبذة عني",
+    "heading": [
+      {
+        "text": "أصمّم حلولًا"
+      },
+      {
+        "break": true
+      },
+      {
+        "text": "بالبرمجة و"
+      },
+      {
+        "text": "الإبداع.",
+        "accent": true
+      }
+    ],
+    "body": "أنا مصمم واجهات وتجربة مستخدم أول ومهندس تصميم. أحوّل سير العمل المعقّد — من لوحات التحكم ومنصات SaaS إلى منتجات الرعاية الصحية والتعليم — إلى واجهات واضحة، وأبنيها بنفسي باستخدام React و Next.js.",
+    "points": [
+      "تصميم يتمحور حول المستخدم",
+      "أنظمة تصميم ومكتبات مكوّنات",
+      "واجهات سريعة جاهزة للإنتاج"
+    ],
+    "cta": "تنزيل السيرة الذاتية",
+    "photoAlt": "صورة ساجد علي بقميص داكن في مكتب",
+    "signature": "Sajid"
+  },
+  "skills": {
+    "label": "المهارات والأدوات",
+    "items": [
+      {
+        "id": "figma",
+        "name": "Figma"
+      },
+      {
+        "id": "photoshop",
+        "name": "Photoshop"
+      },
+      {
+        "id": "illustrator",
+        "name": "Illustrator"
+      },
+      {
+        "id": "html5",
+        "name": "HTML5"
+      },
+      {
+        "id": "css3",
+        "name": "CSS3"
+      },
+      {
+        "id": "javascript",
+        "name": "JavaScript"
+      },
+      {
+        "id": "typescript",
+        "name": "TypeScript"
+      },
+      {
+        "id": "react",
+        "name": "React"
+      },
+      {
+        "id": "nextjs",
+        "name": "Next.js"
+      },
+      {
+        "id": "tailwind",
+        "name": "Tailwind CSS"
+      },
+      {
+        "id": "nodejs",
+        "name": "Node.js"
+      },
+      {
+        "id": "graphql",
+        "name": "GraphQL"
+      },
+      {
+        "id": "mysql",
+        "name": "MySQL"
+      },
+      {
+        "id": "mongodb",
+        "name": "MongoDB"
+      },
+      {
+        "id": "git",
+        "name": "Git"
+      }
+    ],
+    "note": "أتعلّم تقنيات جديدة باستمرار"
+  },
+  "expertise": {
+    "label": "مجالات الخبرة",
+    "items": [
+      {
+        "id": "uiux",
+        "icon": "uiux",
+        "title": "تصميم UI/UX",
+        "body": "أحوّل سير العمل المعقّد إلى واجهات واضحة وبديهية، من مسارات المستخدم حتى الشاشات المتجاوبة.",
+        "link": {
+          "label": "اعرف المزيد",
+          "href": "/work/healthsia"
+        }
+      },
+      {
+        "id": "systems",
+        "icon": "systems",
+        "title": "أنظمة التصميم",
+        "body": "مكتبات مكوّنات وأنظمة واجهات قابلة لإعادة الاستخدام تحافظ على اتساق المنتجات، وإحداها قلّصت وقت تطوير الميزات بنسبة 20%.",
+        "link": {
+          "label": "اعرف المزيد",
+          "href": "/work/eduhub"
+        }
+      },
+      {
+        "id": "frontend",
+        "icon": "frontend",
+        "title": "هندسة الواجهات الأمامية",
+        "body": "تطبيقات React و Next.js جاهزة للإنتاج: لوحات تحكم ومنصات SaaS وأدوات إدارة بصلاحيات حسب الدور.",
+        "link": {
+          "label": "اعرف المزيد",
+          "href": "/work/ounlab"
+        }
+      },
+      {
+        "id": "performance",
+        "icon": "performance",
+        "title": "تحسين الأداء",
+        "body": "تحسين مؤشرات Core Web Vitals بنسبة 45% ودرجات Lighthouse تتجاوز 90 باستخدام SSR و ISR والتحميل الكسول.",
+        "link": {
+          "label": "اعرف المزيد",
+          "href": "/work/workinaus"
+        }
+      }
+    ]
+  },
+  "projects": {
+    "label": "مشاريع مختارة",
+    "viewAll": "عرض كل المشاريع",
+    "pageLabel": "المشاريع",
+    "pageTitle": "أعمال مختارة",
+    "pageIntro": "منتجات صمّمتها وبنيتها لقطاعات الرعاية الصحية و SaaS والتوظيف والتعليم والسفر وغيرها.",
+    "ctaTitle": "لديك دور أو مشروع في ذهنك؟",
+    "ctaBody": "أقيم في الرياض بإقامة قابلة للنقل وجاهز للانضمام فورًا. لنتحدث."
+  },
+  "experience": {
+    "label": "الخبرات",
+    "present": "حتى الآن"
+  },
+  "testimonials": {
+    "label": "آراء وتوصيات",
+    "prev": "التوصيات السابقة",
+    "next": "التوصيات التالية",
+    "items": []
+  },
+  "contact": {
+    "label": "تواصل معي",
+    "heading": [
+      {
+        "text": "لنبنِ شيئًا"
+      },
+      {
+        "break": true
+      },
+      {
+        "text": "مذهلًا",
+        "accent": true
+      },
+      {
+        "text": " معًا."
+      }
+    ],
+    "body": "لديك مشروع في ذهنك أو تريد إلقاء التحية؟ يسعدني أن أسمع منك.",
+    "info": {
+      "emailLabel": "البريد الإلكتروني",
+      "phoneLabel": "الهاتف",
+      "locationLabel": "الموقع",
+      "availabilityLabel": "التوفر",
+      "location": "الرياض، المملكة العربية السعودية",
+      "availability": "جاهز للانضمام فورًا · إقامة قابلة للنقل"
+    }
+  }
+}

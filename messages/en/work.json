@@ -1,0 +1,29 @@
+{
+  "viewCaseStudy": "View case study",
+  "caseStudy": "Case study",
+  "liveSite": "Live site",
+  "visitLiveSite": "Visit live site",
+  "visitLiveAria": "Visit the {title} live site",
+  "readCaseAria": "Read the {title} case study",
+  "aboutService": "about {title}",
+  "noPublicLink": "No public link",
+  "featured": "Featured",
+  "featuredTitle": "Featured case studies",
+  "moreTitle": "More projects",
+  "stats": {
+    "projects": "Projects",
+    "caseStudies": "Case studies",
+    "liveSites": "Live sites"
+  },
+  "stack": "Stack",
+  "role": "Role",
+  "industry": "Industry",
+  "platform": "Platform",
+  "viewAll": "View all work",
+  "showMore": "Show more projects",
+  "showLess": "Show fewer projects",
+  "filters": {
+    "label": "Filter projects",
+    "all": "All"
+  }
+}

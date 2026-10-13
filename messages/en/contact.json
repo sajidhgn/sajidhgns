@@ -1,0 +1,49 @@
+{
+  "form": {
+    "label": "Send me a message",
+    "name": "Your Name",
+    "email": "Your Email",
+    "subject": "Subject",
+    "message": "Your Message",
+    "honeypot": "Leave this field empty",
+    "submit": "Send Message",
+    "sending": "Sending…"
+  },
+  "errors": {
+    "name": {
+      "required": "Please enter your name.",
+      "too_long": "Please keep your name to 80 characters or fewer.",
+      "invalid": "Your name contains characters that can’t be sent."
+    },
+    "email": {
+      "required": "Please enter your email address.",
+      "too_long": "That email address is too long.",
+      "invalid": "Please enter a valid email address, like name@company.com."
+    },
+    "subject": {
+      "too_long": "Please keep the subject to 120 characters or fewer.",
+      "invalid": "The subject can’t contain line breaks or control characters."
+    },
+    "message": {
+      "required": "Please write a message.",
+      "too_short": "Please write at least 10 characters.",
+      "too_long": "Please keep your message to 4,000 characters or fewer.",
+      "invalid": "Your message contains characters that can’t be sent."
+    },
+    "generic": "Please check this field."
+  },
+  "status": {
+    "invalid": "Please fix the highlighted fields and try again.",
+    "success": "Thank you — your message has been sent. I’ll reply by email soon.",
+    "notConfigured": "The form can’t send messages just yet. Please email me directly at <link>{email}</link> — the link opens your email app with your message already filled in.",
+    "notConfiguredLong": "The form can’t send messages just yet. Please email me directly at <link>{email}</link> — your message is still in the form, ready to copy.",
+    "rateLimited": "You’ve sent several messages in a short time. Please wait a few minutes and try again, or email me at <link>{email}</link>.",
+    "error": "Your message couldn’t be sent. Please try again, or email me at <link>{email}</link>.",
+    "network": "Couldn’t reach the server. Check your connection and try again — your message is still here.",
+    "mailSubject": "Portfolio enquiry"
+  },
+  "testimonials": {
+    "rating": "Rated {rating} out of 5",
+    "sourceFallback": "Recommendation"
+  }
+}

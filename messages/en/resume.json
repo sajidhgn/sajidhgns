@@ -1,0 +1,120 @@
+{
+  "headline": "Senior UI/UX Designer · Design Engineer",
+  "summary": "Senior UI/UX designer and design engineer based in Riyadh, working in UI/UX and product design since 2017 across healthcare, B2B SaaS, AI, recruitment and education. Takes complex workflows — admin dashboards, role-based (RBAC) platforms, multi-step forms — from user flows, wireframing and Figma prototyping to production React, Next.js and TypeScript. Builds design systems and reusable component libraries (cut feature development time by 20% at Dycoders) and ships responsive, accessible (WCAG) interfaces; at OxCoders, improved Core Web Vitals by 45% with 90+ Lighthouse performance scores. Transferable Iqama; available to join immediately.",
+  "skills": [
+    {
+      "group": "Design",
+      "items": [
+        "UI/UX design",
+        "Product design",
+        "Figma",
+        "User flows",
+        "Wireframing",
+        "Prototyping",
+        "Design systems",
+        "Interaction design",
+        "Information architecture",
+        "Accessibility (WCAG)"
+      ]
+    },
+    {
+      "group": "Front-end",
+      "items": [
+        "React",
+        "Next.js",
+        "JavaScript",
+        "TypeScript",
+        "Redux Toolkit",
+        "Context API",
+        "React Query / TanStack Query",
+        "Tailwind CSS",
+        "HTML5",
+        "CSS3",
+        "Responsive design"
+      ]
+    },
+    {
+      "group": "Back-end & databases",
+      "items": [
+        "Node.js",
+        "Express",
+        "REST APIs",
+        "GraphQL",
+        "API integrations",
+        "JWT authentication",
+        "Role-based access control (RBAC)",
+        "WebSockets",
+        "MySQL",
+        "MongoDB"
+      ]
+    },
+    {
+      "group": "Testing & DevOps",
+      "items": [
+        "Playwright",
+        "React Testing Library",
+        "End-to-end testing",
+        "Debugging & QA",
+        "Docker",
+        "GitHub Actions",
+        "CI/CD",
+        "Vercel",
+        "Netlify"
+      ]
+    },
+    {
+      "group": "CMS & commerce",
+      "items": [
+        "Headless WordPress (WPGraphQL)",
+        "Shopify",
+        "Custom themes"
+      ]
+    },
+    {
+      "group": "Performance & SEO",
+      "items": [
+        "Core Web Vitals",
+        "Lighthouse",
+        "SEO",
+        "SSR",
+        "ISR",
+        "Code splitting",
+        "Lazy loading"
+      ]
+    }
+  ],
+  "selectedProjects": [
+    {
+      "name": "HealthSIA",
+      "summary": "Perioperative care platform with role-based dashboards and admin panels, adopted across multiple clinics; cut API response time by ~40% through query optimization and database indexes."
+    },
+    {
+      "name": "OunLab (OUN.AI)",
+      "summary": "AI project-management SaaS with real-time collaboration over WebSockets, dashboards and OpenAI API integration, built with React, Next.js and Node.js."
+    },
+    {
+      "name": "Work in Aus",
+      "summary": "Australian job portal with employer and job-seeker roles, job applications, and search and filters on Elasticsearch, built with React and Next.js."
+    },
+    {
+      "name": "ParisianGypsy",
+      "summary": "Full-stack e-commerce platform in React, Node.js, Prisma and MySQL, with payments, product workflows and optimized back-end queries."
+    }
+  ],
+  "education": {
+    "degree": "Master of Information Technology",
+    "school": "Lahore Leads University",
+    "location": "Pakistan",
+    "year": "2015"
+  },
+  "certifications": [
+    "Advanced JavaScript Development",
+    "Next.js 15 & React – The Complete Guide"
+  ],
+  "languages": [
+    "English",
+    "Urdu",
+    "Hindi",
+    "Arabic (basic)"
+  ]
+}

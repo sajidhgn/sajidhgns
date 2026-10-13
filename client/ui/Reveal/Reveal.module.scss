@@ -1,0 +1,19 @@
+@layer reset, base, ui, utilities;
+
+// The hidden state exists only after hydration (data-reveal is set by JS) and only when motion is allowed.
+@layer ui {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal[data-reveal='pending'] {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+
+    .reveal[data-reveal='shown'] {
+      opacity: 1;
+      transform: none;
+      transition:
+        opacity var(--dur-3) var(--ease) var(--reveal-delay, 0ms),
+        transform var(--dur-3) var(--ease) var(--reveal-delay, 0ms);
+    }
+  }
+}

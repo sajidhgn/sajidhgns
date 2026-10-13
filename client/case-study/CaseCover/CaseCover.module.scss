@@ -1,0 +1,13 @@
+@use '../../../styles/mixins' as *;
+
+// The screenshot sits on a soft gold glow, like the portrait in the home hero.
+.cover {
+  padding-block: 20px 24px;
+  background:
+    radial-gradient(56% 60% at 50% 0%, rgba(249, 190, 78, 0.09), transparent 72%),
+    var(--panel-grad);
+
+  @include up(lg) {
+    padding-block: 32px 36px;
+  }
+}

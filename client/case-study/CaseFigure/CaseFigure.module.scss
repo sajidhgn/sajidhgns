@@ -1,0 +1,93 @@
+@use '../../../styles/mixins' as *;
+
+.figure {
+  min-width: 0;
+  margin: 0;
+}
+
+// ---- Caption (SPEC §5: 13px --text-subtle) ----
+.caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px 12px;
+  margin-top: 14px;
+  margin-inline: auto;
+  color: var(--text-subtle);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+.captionText {
+  flex: 1 1 24ch;
+  min-width: 0;
+  max-width: 78ch;
+}
+
+// "Shown with test data": a quiet chip, never louder than the caption it belongs to.
+.note {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 6px;
+  height: 22px;
+  padding: 0 9px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--white-3);
+  color: var(--text-muted);
+  font-size: 0.71875rem;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.noteIcon {
+  color: var(--gold);
+}
+
+// ---- Phone screens ----
+.device {
+  position: relative;
+  width: 100%;
+  margin-inline: auto;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: 22px;
+  background: var(--card);
+  box-shadow:
+    0 28px 60px -36px rgba(0, 0, 0, 0.85),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.deviceImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mobile .caption {
+  max-width: 300px;
+}
+
+// A lone phone screen in a full-width panel sits beside its caption on wide screens.
+@include up(tablet) {
+  .mobile.block {
+    display: grid;
+    grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+    align-items: center;
+    gap: 48px;
+    max-width: 920px;
+    margin-inline: auto;
+  }
+
+  .mobile.block .device {
+    margin-inline: 0;
+  }
+
+  .mobile.block .caption {
+    max-width: 52ch;
+    margin: 0;
+    font-size: var(--t-small);
+  }
+}

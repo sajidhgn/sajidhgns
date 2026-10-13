@@ -1,0 +1,13 @@
+// Home page composition (SPEC §4.2): About | Skills side by side on desktop, stacked below 1024px.
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--gap);
+}
+
+@media (min-width: 1024px) {
+  .split {
+    grid-template-columns: minmax(0, 1.22fr) minmax(0, 1fr);
+    align-items: stretch;
+  }
+}

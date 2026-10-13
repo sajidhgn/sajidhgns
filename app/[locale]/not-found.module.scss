@@ -1,0 +1,114 @@
+@use '../../styles/mixins' as *;
+
+// 404 (SPEC §5): one panel in the hero's language — copy column + the gold ring as decoration.
+.panel {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+  padding-block: 40px 44px;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.title {
+  margin-top: 22px;
+  @include type(display);
+}
+
+.body {
+  max-width: 34em;
+  margin-top: 16px;
+  color: var(--text-lead);
+  @include type(lead);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 20px;
+  margin-top: 32px;
+}
+
+// ---- Decoration (aria-hidden) ----
+.visual {
+  position: relative;
+  justify-self: center;
+  width: min(72%, 230px);
+  aspect-ratio: 1;
+}
+
+.halo {
+  position: absolute;
+  inset: -20%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(249, 190, 78, 0.16), rgba(249, 190, 78, 0.05) 55%, transparent 75%);
+}
+
+.orbit {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+
+.ring {
+  position: absolute;
+  inset: 13%;
+  border: 2px solid rgba(250, 210, 130, 0.9);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 14px rgba(249, 190, 78, 0.5));
+}
+
+.code {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, var(--gold-hi) 20%, var(--gold-lo) 60%, var(--gold-press));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(3.5rem, 2.4rem + 4vw, 6rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+  filter: drop-shadow(0 0 22px rgba(249, 190, 78, 0.28));
+}
+
+.spark {
+  position: absolute;
+  top: var(--y);
+  inset-inline-start: var(--x);
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--gold-hi);
+  box-shadow: 0 0 8px 1px var(--gold-glow);
+}
+
+@include up(md) {
+  .visual {
+    width: min(100%, 300px);
+  }
+}
+
+@include up(lg) {
+  .panel {
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+    gap: 48px;
+    // Fill the window so the footer's open-bottom box meets the window edge, as on every longer page
+    // (75px = the 10px gap + the 65px footer).
+    min-height: max(440px, calc(100dvh - var(--header-h) - 75px));
+    padding: 56px 64px;
+  }
+
+  .visual {
+    width: min(100%, 400px);
+  }
+}
