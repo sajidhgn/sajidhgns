@@ -33,7 +33,7 @@ export default function BackToTop({ label = 'Back to top', className }) {
   };
 
   return (
-    <a href="#top" className={cx(styles.top, className)} aria-label={label} onClick={onClick}>
+    <a href="#top" className={cx(styles.top, className)} aria-label={label} title={label} onClick={onClick}>
       <Icon name="arrow-up" size={16} className={styles.icon} />
     </a>
   );

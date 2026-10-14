@@ -83,7 +83,8 @@ export default async function ProjectCard({ slug, locale, headingLevel = 'h3', s
               src={cover.src}
               width={cover.width}
               height={cover.height}
-              alt=""
+              alt={title}
+              title={title}
               sizes={sizes || SIZES[lg ? 'lg' : 'md']}
               priority={priority}
               className={styles.image}
@@ -113,7 +114,7 @@ export default async function ProjectCard({ slug, locale, headingLevel = 'h3', s
             </p>
           ) : null}
           <Heading className={styles.title}>
-            <Link href={href} className={cx('stretched-link', styles.titleLink)}>
+            <Link href={href} className={cx('stretched-link', styles.titleLink)} title={title}>
               {title}
             </Link>
           </Heading>

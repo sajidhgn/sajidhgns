@@ -14,7 +14,7 @@
       },
       "tldr": {
         "problem": "Merchants in Saudi Arabia need a steady stream of product photos, videos and ads, but studio shoots and agencies are slow and expensive, and most AI tools are English-only.",
-        "approach": "I build Rawbit end to end: a real-time React and Node.js app over WebSockets, LLM-driven generation with pgvector/RAG, and Saudi payments (Moyasar, N-Genius) with ZATCA e-invoicing.",
+        "approach": "I build Rawbit end to end: a real-time React and Node.js app over WebSockets, AI integrations and custom LangChain agents with pgvector/RAG behind generation, and Saudi payments (Moyasar, N-Genius) with ZATCA e-invoicing.",
         "impact": "Live at therawbit.ai in Arabic and English."
       },
       "blocks": [
@@ -42,6 +42,33 @@
           ]
         },
         {
+          "type": "cards",
+          "id": "ai",
+          "title": "AI integrations and custom agents",
+          "items": [
+            {
+              "icon": "link",
+              "title": "AI integrations",
+              "body": "LLM, image, video and voice model APIs wired into one generation pipeline, so every tool in the studio shares the same product and brand context."
+            },
+            {
+              "icon": "sparkle",
+              "title": "Custom agents",
+              "body": "Purpose-built agents, including the Rawbit Agent, that turn a plain-language idea into a plan of image, video and voice jobs and run it."
+            },
+            {
+              "icon": "layers",
+              "title": "LangChain orchestration",
+              "body": "Agents, tools and prompts composed with LangChain, so new generation tools plug into the agents without rewriting them."
+            },
+            {
+              "icon": "database",
+              "title": "RAG with pgvector",
+              "body": "Product details and Brand DNA stored as embeddings in PostgreSQL and retrieved at generation time, so output stays on-brand."
+            }
+          ]
+        },
+        {
           "type": "list",
           "id": "ownership",
           "title": "What I own",
@@ -49,7 +76,8 @@
           "items": [
             "The React front end and the real-time generation experience over WebSockets.",
             "Node.js APIs and the PostgreSQL data model, with pgvector and RAG behind brand- and product-aware generation.",
-            "LLM API integrations that turn plain-language requests into image, video and voice jobs.",
+            "AI integrations across LLM, image, video and voice model APIs.",
+            "Custom agents built with LangChain, including the Rawbit Agent, that turn plain-language requests into image, video and voice jobs.",
             "Payments with Moyasar and N-Genius, and ZATCA e-invoicing."
           ]
         },

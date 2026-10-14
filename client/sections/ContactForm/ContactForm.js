@@ -184,7 +184,7 @@ export default function ContactForm({ locale }) {
   const mailLink = (values) => {
     const { href, prefilled } = buildMailto(values, t('status.mailSubject'));
     const link = (chunks) => (
-      <a className={styles.statusLink} href={href}>
+      <a className={styles.statusLink} href={href} title={site.email}>
         <bdi dir="ltr">{chunks}</bdi>
       </a>
     );
@@ -264,7 +264,7 @@ export default function ContactForm({ locale }) {
       </div>
 
       <div className={styles.footer}>
-        <Button type="submit" className={styles.submit} aria-disabled={sending ? 'true' : undefined}>
+        <Button type="submit" variant="outline" className={styles.submit} aria-disabled={sending ? 'true' : undefined}>
           <span className={styles.submitLabels}>
             <span className={cx(styles.submitText, sending && styles.isHidden)}>{t('form.submit')}</span>
             <span className={cx(styles.submitText, !sending && styles.isHidden)}>{t('form.sending')}</span>

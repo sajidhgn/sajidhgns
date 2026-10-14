@@ -64,6 +64,7 @@ export default function LanguageSwitch({ locale, className }) {
                 locale={code}
                 lang={code}
                 hrefLang={code}
+                title={name}
                 className={styles.option}
                 onFocus={readHash}
                 onPointerEnter={readHash}

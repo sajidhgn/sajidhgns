@@ -30,7 +30,7 @@ export default async function CaseNext({ slug, locale, number, className }) {
     <Panel id="case-next" labelledBy="case-next-title" className={cx(styles.next, className)}>
       <div className={styles.head}>
         <Eyebrow as="h2" id="case-next-title" number={number} label={label('next.label')} />
-        <Link href="/work" className={styles.all}>
+        <Link href="/work" className={styles.all} title={label('next.all')}>
           {label('next.all')}
           <Icon name="arrow-right" size={16} className={styles.allIcon} />
         </Link>

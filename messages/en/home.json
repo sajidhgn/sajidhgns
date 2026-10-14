@@ -56,14 +56,30 @@
         "accent": true
       }
     ],
-    "body": "Since 2017 I’ve built web products across healthcare, SaaS, hiring and education. Today I ship AI-powered platforms end to end — frontend, APIs, databases, LLM integrations, testing and deployment.",
-    "points": [
-      "AI & LLM integrations in real products",
-      "Multi-tenant SaaS, secure APIs & RBAC",
-      "React, Next.js, Node.js & PostgreSQL"
+    "body": [
+      "For over {years} years I’ve built web products across healthcare, SaaS, hiring and education. Today I ship AI-powered platforms end to end — frontend, APIs, databases, LLM integrations, testing and deployment.",
+      "At Raw Studio in Riyadh I architect multi-tenant SaaS with secure REST APIs, RBAC and tenant isolation, connect LLM workflows to real business data, and integrate payments (Moyasar, N‑Genius) and ZATCA e-invoicing.",
+      "Before that, at OxCoders — also in Riyadh — I improved Core Web Vitals by 45% and kept projects at 90+ Lighthouse. I back every release with Playwright and React Testing Library, and deploy with Docker."
+    ],
+    "facts": [
+      {
+        "id": "location",
+        "text": "Riyadh, Saudi Arabia"
+      },
+      {
+        "id": "iqama",
+        "text": "Transferable Iqama"
+      },
+      {
+        "id": "workModes",
+        "text": "On-site · Hybrid · Remote"
+      },
+      {
+        "id": "education",
+        "text": "Master of IT · 2015"
+      }
     ],
     "cta": "Download CV",
-    "photoAlt": "Sajid Ali in a navy suit and white open-collar shirt, against a warm dark background",
     "signature": "Sajid"
   },
   "skills": {

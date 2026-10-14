@@ -5,16 +5,17 @@
  *   locale  "en" | "ar"
  *   number  eyebrow number ("01") — computed by app/[locale]/page.js from the rendered order
  *
- * Photo card (site.portrait, with the decorative "Sajid" signature in --font-script: aria-hidden, the photo has
- * its own alt) | Eyebrow as <p> → <h2> heading segments (gold accent word) → paragraph → 3 points with gold line
- * icons → Outline "Download CV" (site.resumePdf, `download`).
- * Layout follows the panel's own width (container query): photo beside the text when the panel is wide enough,
- * stacked above it otherwise.
+ * No photo here on purpose: the hero already carries the portrait.
+ *   Eyebrow as <p> → <h2> heading segments (gold accent word) → paragraphs (home.about.body: a string or an
+ *   array of paragraphs; the first one reads brighter as the lead; "{years}" = yearsOfExperience())
+ *   → fact chips (home.about.facts: location, Iqama, work modes, degree)
+ *   → Outline "Download CV" (site.resumePdf, `download`) with the decorative "Sajid" signature in --font-script
+ *     (aria-hidden) as a sign-off.
  * Messages: home.about.* (SCHEMA.md).
  */
-import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { site } from '../../../content/site';
+import { yearsOfExperience } from '../../../lib/site';
 import Panel from '../../ui/Panel/Panel';
 import Eyebrow from '../../ui/Eyebrow/Eyebrow';
 import Segments from '../../ui/Segments/Segments';
@@ -23,64 +24,63 @@ import Icon from '../../ui/Icon/Icon';
 import Reveal from '../../ui/Reveal/Reveal';
 import styles from './About.module.scss';
 
-// Solid placeholder in the photo's warm backdrop colour while it loads (the card never flashes empty).
-const PHOTO_PLACEHOLDER = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxIDEnPjxyZWN0IHdpZHRoPScxJyBoZWlnaHQ9JzEnIGZpbGw9JyMyNDFmMTknLz48L3N2Zz4=';
-
-// One gold line icon per point, in order: user-centred UX, design systems, fast front ends.
-const POINT_ICONS = ['users', 'layers', 'zap'];
+// One gold line icon per fact chip, by id.
+const FACT_ICONS = { location: 'map-pin', iqama: 'shield-check', workModes: 'monitor', education: 'award' };
 
 const list = (t, key) => (t.has(key) && Array.isArray(t.raw(key)) ? t.raw(key) : []);
 
 export default async function About({ locale, number }) {
   const t = await getTranslations({ locale, namespace: 'home' });
   const text = (key) => (t.has(key) ? t(key) : '');
-  const points = list(t, 'about.points').filter(Boolean).slice(0, 3);
+  const raw = t.has('about.body') ? t.raw('about.body') : '';
+  const years = String(yearsOfExperience());
+  const paragraphs = (Array.isArray(raw) ? raw : [raw])
+    .filter((paragraph) => typeof paragraph === 'string' && paragraph.trim())
+    .map((paragraph) => paragraph.replace('{years}', years));
+  const facts = list(t, 'about.facts').filter((fact) => fact?.text);
   const signature = text('about.signature');
 
   return (
     <Panel id="about" className={styles.panel} labelledBy="about-title">
-      <div className={styles.layout}>
-        <Reveal className={styles.photo}>
-          <Image
-            src={site.portrait.src}
-            width={site.portrait.width}
-            height={site.portrait.height}
-            alt={text('about.photoAlt')}
-            sizes="(min-width: 640px) 276px, calc(100vw - 68px)"
-            placeholder="blur"
-            blurDataURL={PHOTO_PLACEHOLDER}
-            className={styles.photoImg}
-          />
-          {signature ? (
-            <span className={styles.signature} aria-hidden="true" lang="en" dir="ltr" translate="no">
-              {signature}
-            </span>
-          ) : null}
-        </Reveal>
+      <Reveal className={styles.intro}>
+        <Eyebrow number={number} label={text('about.label')} />
+        <h2 id="about-title" className={styles.title}>
+          <Segments segments={t.has('about.heading') ? t.raw('about.heading') : ''} />
+        </h2>
+        {paragraphs.length ? (
+          <div className={styles.body}>
+            {paragraphs.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+        ) : null}
+      </Reveal>
 
-        <Reveal className={styles.content} delay={60}>
-          <Eyebrow number={number} label={text('about.label')} />
-          <h2 id="about-title" className={styles.title}>
-            <Segments segments={t.has('about.heading') ? t.raw('about.heading') : ''} />
-          </h2>
-          {text('about.body') ? <p className={styles.body}>{text('about.body')}</p> : null}
-          {points.length ? (
-            <ul className={styles.points} role="list">
-              {points.map((point, index) => (
-                <li key={index} className={styles.point}>
-                  <Icon name={POINT_ICONS[index] ?? 'check-circle'} size={16} className={styles.pointIcon} />
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
-          ) : null}
+      <Reveal className={styles.footer} delay={60}>
+        {facts.length ? (
+          <ul className={styles.facts} role="list">
+            {facts.map((fact) => (
+              <li key={fact.id ?? fact.text} className={styles.fact}>
+                <Icon name={FACT_ICONS[fact.id] ?? 'check-circle'} size={14} className={styles.factIcon} />
+                {fact.text}
+              </li>
+            ))}
+          </ul>
+        ) : null}
+
+        <div className={styles.actions}>
           {text('about.cta') ? (
             <Button href={site.resumePdf} download variant="outline" icon="download" className={styles.cta}>
               {text('about.cta')}
             </Button>
           ) : null}
-        </Reveal>
-      </div>
+          {signature ? (
+            <span className={styles.signature} aria-hidden="true" lang="en" dir="ltr" translate="no">
+              {signature}
+            </span>
+          ) : null}
+        </div>
+      </Reveal>
     </Panel>
   );
 }

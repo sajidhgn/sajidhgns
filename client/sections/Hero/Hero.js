@@ -219,6 +219,7 @@ export default async function Hero({ locale }) {
               width={site.cutout.width}
               height={site.cutout.height}
               alt={text(t, 'hero.portraitAlt', site.name[locale] ?? site.name.en)}
+              title={site.name[locale] ?? site.name.en}
               priority
               sizes="(min-width: 1200px) 620px, (min-width: 640px) 500px, 92vw"
               className={styles.portraitImg}

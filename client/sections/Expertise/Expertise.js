@@ -66,7 +66,7 @@ export default async function Expertise({ locale, number }) {
                   {body ? <p className={styles.body}>{body}</p> : null}
                   {linkLabel ? (
                     <p className={styles.more}>
-                      <Link href={href} className={cx('stretched-link', styles.link)}>
+                      <Link href={href} className={cx('stretched-link', styles.link)} title={about}>
                         {linkLabel}
                         <span className="visually-hidden"> {about}</span>
                         <Icon name="arrow-right" size={14} className={styles.arrow} />

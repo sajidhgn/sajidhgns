@@ -163,6 +163,7 @@ export default function MobileMenu({ locale, items = [], ctaLabel, ctaHref = '/#
                   <NavAnchor
                     href={item.href}
                     className={styles.link}
+                    title={item.label}
                     data-nav-id={item.id}
                     aria-current={current ? 'true' : undefined}
                   >

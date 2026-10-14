@@ -36,7 +36,7 @@ export default async function Contact({ locale, number }) {
       icon: 'mail',
       label: text('contact.info.emailLabel', 'Email'),
       value: (
-        <a className={styles.link} href={`mailto:${site.email}`} dir="ltr">
+        <a className={styles.link} href={`mailto:${site.email}`} title={site.email} dir="ltr">
           {site.email}
         </a>
       ),
@@ -46,7 +46,7 @@ export default async function Contact({ locale, number }) {
       icon: 'phone',
       label: text('contact.info.phoneLabel', 'Phone'),
       value: (
-        <a className={styles.link} href={`tel:${site.phone}`} dir="ltr">
+        <a className={styles.link} href={`tel:${site.phone}`} title={site.phoneDisplay} dir="ltr">
           {site.phoneDisplay}
         </a>
       ),

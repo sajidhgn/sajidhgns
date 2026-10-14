@@ -35,7 +35,7 @@ export default async function Projects({ locale, number }) {
           label={t.has('projects.label') ? t('projects.label') : ''}
         />
         {viewAll ? (
-          <Link href="/work" className={styles.viewAll}>
+          <Link href="/work" className={styles.viewAll} title={viewAll}>
             {viewAll}
             <Icon name="arrow-right" size={14} className={styles.arrow} />
           </Link>

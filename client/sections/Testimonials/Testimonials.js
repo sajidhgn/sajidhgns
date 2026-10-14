@@ -99,7 +99,7 @@ export default async function Testimonials({ locale, number, items: override }) 
                 </blockquote>
                 <figcaption className={styles.caption}>
                   {isText(item.avatar) ? (
-                    <Image src={item.avatar} alt="" width={48} height={48} className={styles.avatar} />
+                    <Image src={item.avatar} alt={item.name} title={item.name} width={48} height={48} className={styles.avatar} />
                   ) : (
                     <span className={cx(styles.avatar, styles.monogram)} aria-hidden="true">
                       {initials(item.name)}
@@ -115,7 +115,7 @@ export default async function Testimonials({ locale, number, items: override }) 
                       </span>
                     ) : null}
                     {isText(item.url) ? (
-                      <a className={styles.source} href={item.url} target="_blank" rel="noopener noreferrer">
+                      <a className={styles.source} href={item.url} title={`${source} — ${item.name}`} target="_blank" rel="noopener noreferrer">
                         {source}
                         <span className="visually-hidden"> {newTab}</span>
                       </a>

@@ -82,7 +82,7 @@ export default async function LegalPage({ locale, doc }) {
             <ul className={styles.docs} role="list">
               {LEGAL_DOCS.map((key) => (
                 <li key={key}>
-                  <Link href={`/${key}`} className={styles.doc} aria-current={key === doc ? 'page' : undefined}>
+                  <Link href={`/${key}`} className={styles.doc} title={t(`${key}.title`)} aria-current={key === doc ? 'page' : undefined}>
                     {t(`${key}.title`)}
                   </Link>
                 </li>
@@ -101,7 +101,7 @@ export default async function LegalPage({ locale, doc }) {
             <ol className={styles.tocList} role="list">
               {sections.map((section, index) => (
                 <li key={sectionId(index)}>
-                  <a href={`#${sectionId(index)}`} className={styles.tocLink}>
+                  <a href={`#${sectionId(index)}`} className={styles.tocLink} title={section.heading}>
                     <span className={styles.tocNum} aria-hidden="true">
                       {pad(index + 1)}
                     </span>

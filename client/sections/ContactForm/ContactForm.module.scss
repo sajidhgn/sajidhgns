@@ -216,7 +216,7 @@ textarea.control {
 .footer {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   margin-top: 13px;
 }
 
@@ -226,9 +226,22 @@ textarea.control {
   }
 }
 
-// Reference button: 185 × 43px (the Button primitive's md is 50px).
+// Full-width dark button with a gold outline and gold icon (the outline variant, in gold).
 .submit {
-  height: 44px;
+  width: 100%;
+  height: 46px;
+  border-color: var(--line-gold-hover);
+  color: var(--gold-text);
+  font-weight: 600;
+}
+
+.submit:hover:not([aria-disabled='true']) {
+  border-color: var(--gold);
+  background: var(--gold-soft);
+}
+
+.submit .submitIcon {
+  color: var(--gold);
 }
 
 @include down(md) {

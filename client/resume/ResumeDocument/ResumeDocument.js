@@ -228,7 +228,8 @@ export default async function ResumeDocument({ locale }) {
                   width={site.cutout.width}
                   height={site.cutout.height}
                   sizes="148px"
-                  alt=""
+                  alt={name}
+                  title={name}
                   priority
                   className={styles.avatarImg}
                 />
@@ -371,12 +372,17 @@ export default async function ResumeDocument({ locale }) {
                     {project.summary ? <p className={styles.projectSummary}>{project.summary}</p> : null}
                     {caseUrl ? (
                       <p className={styles.projectLink}>
-                        <Link href={`/work/${project.slug}`} className={styles.more} data-print="hide">
+                        <Link
+                          href={`/work/${project.slug}`}
+                          className={styles.more}
+                          title={`${label(ui.caseStudy, FALLBACK_UI.caseStudy)}: ${project.name}`}
+                          data-print="hide"
+                        >
                           {label(ui.caseStudy, FALLBACK_UI.caseStudy)}
                           <span className="visually-hidden">: {project.name}</span>
                           <Icon name="arrow-right" size={14} className={styles.moreIcon} />
                         </Link>
-                        <a href={caseUrl} className={styles.printUrl}>
+                        <a href={caseUrl} className={styles.printUrl} title={project.name}>
                           <bdi dir="ltr">{displayUrl(caseUrl)}</bdi>
                         </a>
                       </p>

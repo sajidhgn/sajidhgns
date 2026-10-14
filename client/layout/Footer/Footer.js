@@ -29,12 +29,12 @@ export default async function Footer({ locale }) {
           <nav className={styles.legal} aria-label={t('footer.legal')}>
             <ul className={styles.links} role="list">
               <li>
-                <Link href="/privacy" className={styles.link}>
+                <Link href="/privacy" className={styles.link} title={t('footer.privacy')}>
                   {t('footer.privacy')}
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className={styles.link}>
+                <Link href="/terms" className={styles.link} title={t('footer.terms')}>
                   {t('footer.terms')}
                 </Link>
               </li>

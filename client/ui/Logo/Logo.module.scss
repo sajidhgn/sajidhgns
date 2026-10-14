@@ -1,6 +1,7 @@
 @layer reset, base, ui, utilities;
 
-// Reference (z_logo_nav / h_footer): 34px hexagon mark, gold; wordmark 19px white, 10px after the mark.
+// Reference (z_logo_nav / h_footer): 40px two-tone mark; wordmark 19px white, 10px after the mark.
+// Recolor the mark by overriding --logo-left / --logo-right (on .logo or any parent).
 @layer ui {
   .logo {
     display: inline-flex;
@@ -16,8 +17,15 @@
   .mark {
     display: block;
     flex: none;
-    color: var(--gold);
     filter: drop-shadow(0 0 6px rgba(249, 190, 78, 0.18));
+  }
+
+  .left {
+    fill: var(--logo-left, var(--text));
+  }
+
+  .right {
+    fill: var(--logo-right, var(--gold));
   }
 
   .word {

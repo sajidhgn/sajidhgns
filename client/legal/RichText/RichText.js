@@ -30,13 +30,13 @@ export default function RichText({ text, newTabLabel = '(opens in new tab)' }) {
 
     if (match[1]) {
       parts.push(
-        <a key={key++} href={`mailto:${token}`}>
+        <a key={key++} href={`mailto:${token}`} title={token}>
           <bdi dir="ltr">{token}</bdi>
         </a>
       );
     } else {
       parts.push(
-        <a key={key++} href={token} target="_blank" rel="noopener noreferrer">
+        <a key={key++} href={token} title={token} target="_blank" rel="noopener noreferrer">
           <bdi dir="ltr">{token.replace(/^https?:\/\//, '')}</bdi>
           <span className="visually-hidden"> {newTabLabel}</span>
         </a>

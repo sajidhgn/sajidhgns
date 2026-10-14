@@ -11,7 +11,7 @@ import styles from './SkipLink.module.scss';
 export default function SkipLink() {
   const t = useTranslations('layout');
   return (
-    <a href="#main" className={styles.skip} data-skip-link="">
+    <a href="#main" className={styles.skip} data-skip-link="" title={t('skipToContent')}>
       {t('skipToContent')}
     </a>
   );

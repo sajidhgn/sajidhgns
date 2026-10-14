@@ -185,6 +185,7 @@ export default function HeaderClient({ locale, items = [], navLabel, ctaLabel })
                 <NavAnchor
                   href={item.href}
                   className={styles.link}
+                  title={item.label}
                   aria-current={item.id === active ? 'true' : undefined}
                   onClick={() => onNavigate(item.id)}
                 >
@@ -217,7 +218,7 @@ export default function HeaderClient({ locale, items = [], navLabel, ctaLabel })
           <ul className={styles.fallbackList} role="list">
             {items.map((item) => (
               <li key={item.id}>
-                <a className={styles.fallbackLink} href={`/${locale}${item.id === 'home' ? '' : `#${item.id}`}`}>
+                <a className={styles.fallbackLink} title={item.label} href={`/${locale}${item.id === 'home' ? '' : `#${item.id}`}`}>
                   {item.label}
                 </a>
               </li>

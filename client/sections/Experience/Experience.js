@@ -81,7 +81,7 @@ export default async function Experience({ locale, number }) {
                 <Reveal className={styles.content} delay={index * 60}>
                   <span className={cx(styles.logo, fullBleed && styles.logoFull)}>
                     {role.logo ? (
-                      <Image src={role.logo} alt="" width={size} height={size} className={styles.logoImg} />
+                      <Image src={role.logo} alt={role.company} title={role.company} width={size} height={size} className={styles.logoImg} />
                     ) : null}
                   </span>
                   <div className={styles.body}>
@@ -91,7 +91,7 @@ export default async function Experience({ locale, number }) {
                     </h3>
                     <p className={styles.company}>
                       {role.url ? (
-                        <a className={styles.companyLink} href={role.url} target="_blank" rel="noopener noreferrer">
+                        <a className={styles.companyLink} href={role.url} title={role.company} target="_blank" rel="noopener noreferrer">
                           <bdi>{role.company}</bdi>
                           <span className="visually-hidden"> {newTab}</span>
                         </a>

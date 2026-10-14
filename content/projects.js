@@ -51,7 +51,7 @@ export const projects = [
       full: img("/images/project/rawbit.jpg", 1440, 2300),
       "studio-ar": img("/images/project/rawbit-ar.jpg", 1440, 900),
     },
-    stack: ["React", "Node.js", "PostgreSQL", "pgvector", "WebSockets", "LLM APIs", "Moyasar", "N-Genius", "ZATCA"],
+    stack: ["React", "Node.js", "PostgreSQL", "pgvector", "WebSockets", "LLM APIs", "LangChain", "AI agents", "Moyasar", "N-Genius", "ZATCA"],
   },
   {
     slug: "healthsia",

@@ -41,7 +41,7 @@ export default async function CaseCta({ locale, number, className }) {
         <ul role="list" className={styles.contacts}>
           {contacts.map((item) => (
             <li key={item.id}>
-              <a href={item.href} className={styles.contact}>
+              <a href={item.href} className={styles.contact} title={`${item.label}: ${item.value}`}>
                 <span className={styles.tile} aria-hidden="true">
                   <Icon name={item.icon} size={18} />
                 </span>

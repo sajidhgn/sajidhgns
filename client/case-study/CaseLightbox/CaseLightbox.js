@@ -159,7 +159,7 @@ export default function CaseLightbox({ items = [], title = '', sizes }) {
               onClick={(event) => onThumbClick(event, entryIndex)}
             >
               <span className={cx(styles.thumbMedia, entry.kind === 'mobile' && styles.thumbMobile)}>
-                <Image src={entry.src} alt={entry.alt} fill sizes={sizes} quality={70} className={styles.thumbImage} />
+                <Image src={entry.src} alt={entry.alt} title={entry.alt} fill sizes={sizes} quality={70} className={styles.thumbImage} />
               </span>
               <span className={styles.zoom} aria-hidden="true">
                 <Icon name="maximize" size={15} />
@@ -211,6 +211,7 @@ export default function CaseLightbox({ items = [], title = '', sizes }) {
                   width={item.width}
                   height={item.height}
                   alt={item.alt}
+                  title={item.alt}
                   sizes={viewerSizes(item, scroll)}
                   quality={85}
                   className={styles.image}

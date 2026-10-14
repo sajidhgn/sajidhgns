@@ -17,6 +17,7 @@
  *   download      true or a file name → <a download>
  *   ariaLabel     accessible name — REQUIRED for variant="icon" (unless children are given; they become
  *                 visually hidden text)
+ *   title         tooltip; defaults to ariaLabel, else the label when it is plain text
  *   children      label
  *   className     extra class (module styles override the primitive: it lives in the `ui` cascade layer)
  *   …rest         passed to the element (e.g. disabled, aria-*, data-*, form, prefetch)
@@ -46,6 +47,7 @@ export default function Button({
   external,
   download,
   ariaLabel,
+  title,
   children,
   className,
   ...rest
@@ -75,7 +77,8 @@ export default function Button({
     </>
   );
 
-  const a11y = { 'aria-label': ariaLabel || undefined };
+  const tooltip = title ?? (ariaLabel || (typeof children === 'string' ? children : undefined));
+  const a11y = { 'aria-label': ariaLabel || undefined, title: tooltip };
 
   if (!href) {
     return (
@@ -98,6 +101,7 @@ export default function Button({
         onClick={onClick}
         // An aria-label replaces the content, so the new-tab hint has to be part of it.
         aria-label={ariaLabel ? `${ariaLabel} ${newTab}` : undefined}
+        title={tooltip}
         {...rest}
       >
         {content}

@@ -30,7 +30,7 @@ export default async function CaseHero({ slug, locale }) {
   return (
     <Panel labelledBy="case-title" glow className={styles.hero}>
       <div className={styles.copy}>
-        <Link href="/work" className={styles.back}>
+        <Link href="/work" className={styles.back} title={label('backToWork')}>
           <Icon name="arrow-left" size={16} className={styles.backIcon} />
           {label('backToWork')}
         </Link>
